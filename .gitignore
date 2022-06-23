@@ -1,0 +1,16 @@
+obj
+*.suo
+*.user
+*.ncb
+*.plg
+*.opt
+*.aps
+*.aps
+*.sdf
+*.opensdf
+*.exp
+*.idb
+*.ilk
+*.pdb
+*.chw
+*.obj

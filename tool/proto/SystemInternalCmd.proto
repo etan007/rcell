@@ -1,0 +1,147 @@
+syntax = "proto2";
+
+import "xCommond.proto";
+import "Entity.proto";
+
+// 协议ID枚举
+enum PBSystemCmdType {
+	
+	//注册公共实体
+	PB_LOBBYGATE_REGISTER_PUBLIC_ENTITY_REQ = 1;
+	PB_LOBBYGATE_REGISTER_PUBLIC_ENTITY_RSP = 2;
+	//新增加公共实体
+	PB_LOBBYGATE_ADD_PUBLIC_ENTITY = 3;
+	
+	//发送消息给公共实体
+	PB_LOBBYGATE_SEND_MSG_2_PUBLIC_ENTITY = 4;
+	//请求LobbyCenter通过负载均衡在某个lobbygate上创建一个实体
+	PB_LOBBYGATE_CREATE_ENTITY_ANYWHERE_REQ = 5;
+	//lobbycenter通知某个lobbygate创建指定一个实体
+	PB_LOBBYGATE_CREATE_ENTITY_FROM_LOBBYCENTER = 6;	
+	
+	//通知lobbycenter所有服务器已连接
+	PB_All_Server_Connected = 7;	
+	//LobbyCenter通知所有服务器同时开始初始化
+	PB_All_Server_StartNow = 8;	
+}
+
+
+// 协议大类定义
+message PBSystemCmd
+{
+    optional CmdType cmd = 1 [default = PB_SYSTEM_INTERNAL_CMD];
+}
+
+
+	//通知lobbycenter所有服务器已连接
+message PBAllServerConnected
+{
+	enum MsgID { ID = 1001; }
+    // 协议类型定义
+    optional PBSystemCmd cmdID = 1; 
+    optional PBSystemCmdType param = 2 [default = PB_All_Server_Connected];
+    // 协议数据
+	optional uint32	sguid = 3;					//自己的sguid
+}
+
+	//LobbyCenter通知所有服务器同时开始初始化
+message PBAllServerStartNow
+{
+	enum MsgID { ID = 1002; }
+    // 协议类型定义
+    optional PBSystemCmd cmdID = 1; 
+    optional PBSystemCmdType param = 2 [default = PB_All_Server_StartNow];
+    // 协议数据
+	optional uint32	bStart = 3;					//是否开始
+}
+
+
+//注册公共实体
+message PBLobbyGateRegisterGlobalEntityReq
+{
+	enum MsgID { ID = 1003; }
+    // 协议类型定义
+    optional PBSystemCmd cmdID = 1; 
+    optional PBSystemCmdType param = 2 [default = PB_LOBBYGATE_REGISTER_PUBLIC_ENTITY_REQ];
+    // 协议数据
+	optional bytes entity_name = 3;					//实体类型名称
+	optional PBEntityMailbox entity_mb = 4;					//实体的Mb
+}
+
+//注册公共实体的返回
+message PBLobbyGateRegisterGlobalEntityRsp
+{
+	enum MsgID { ID = 1004; }
+    // 协议类型定义
+    optional PBSystemCmd cmdID = 1; 
+    optional PBSystemCmdType param = 2 [default = PB_LOBBYGATE_REGISTER_PUBLIC_ENTITY_RSP];
+    // 协议数据
+	optional bytes entity_name = 3;					//实体类型名称
+	optional PBEntityMailbox entity_mb = 4;				//实体的Mb
+	optional uint32 code = 5;							//注册结果(0表示成功，其他表示失败）
+}
+
+message PBGlobalEntityInfo
+{
+	optional bytes entity_name = 1;					//实体类型名称
+	optional PBEntityMailbox entity_mb = 2;				//实体的Mb
+}
+
+//新增加公共实体
+message PBLobbyGateAddGlobalEntity
+{
+	enum MsgID { ID = 1005; }
+    // 协议类型定义
+    optional PBSystemCmd cmdID = 1; 
+    optional PBSystemCmdType param = 2 [default = PB_LOBBYGATE_ADD_PUBLIC_ENTITY];
+    // 协议数据
+	repeated PBGlobalEntityInfo global_entities = 3;					//全局实体列表
+}
+
+
+
+//转发消息给实体
+message PBLobbyGateForwardMsg2Entity
+{
+	enum MsgID { ID = 1006; }
+    // 协议类型定义
+    optional PBSystemCmd cmdID = 1; 
+    optional PBSystemCmdType param = 2 [default = PB_LOBBYGATE_SEND_MSG_2_PUBLIC_ENTITY];
+    // 协议数据
+	optional uint32 sub_CmdId = 3;
+	optional uint32 sub_Param = 4;
+	optional bytes forward_data = 5;					//转发的数据
+	
+	optional uint64 target_eid = 6;						//目标实体id
+	optional PBEntityMailbox sender_mb = 7;				//发送者的邮箱
+	optional bool send2Client = 8;						//是否自动发给客户端
+}
+
+
+//请求LobbyCenter通过负载均衡在某个lobbygate上创建一个实体
+message PBLobbyGateCreateEntityAnyWhere
+{
+	enum MsgID { ID = 1007; }
+    // 协议类型定义
+    optional PBSystemCmd cmdID = 1; 
+    optional PBSystemCmdType param = 2 [default = PB_LOBBYGATE_CREATE_ENTITY_ANYWHERE_REQ];
+    // 协议数据
+	optional bytes entity_name = 3;					//实体类型名称
+	optional bytes entity_data = 4;					//实体数据（pb结构）
+}
+
+//lobbycenter通知某个lobbygate创建指定一个实体
+message PBLobbyGateCreateEntityFromCenter
+{
+	enum MsgID { ID = 1008; }
+    // 协议类型定义
+    optional PBSystemCmd cmdID = 1; 
+    optional PBSystemCmdType param = 2 [default = PB_LOBBYGATE_CREATE_ENTITY_FROM_LOBBYCENTER];
+    // 协议数据
+	optional bytes entity_name = 3;					//实体类型名称
+	optional bytes entity_data = 4;					//实体数据（pb结构）
+}
+
+
+
+

@@ -1,0 +1,72 @@
+syntax = "proto2";
+
+enum CmdType {
+	// 系统内部协议
+	PB_SYSTEM_INTERNAL_CMD  = 1;
+	//系统通用协议
+	PB_COMMON_CMD  = 2;	
+	
+    // 集群管理服务器协议
+    PB_SMANAGER_CMD         = 100;
+    // 物理机 服务器启停管理协议
+    PB_SLAUNCHER_CMD        = 101;
+    // 数据中心协议 
+    PB_DATARECORD_CMD       = 102;
+    // 登录网关 协议
+    PB_LOGIN_GATE_CMD       = 103;
+    // 游戏大厅网关 协议
+    PB_LOBBY_GATE_CMD       = 104;
+    // 游戏大厅网关 协议
+    PB_LOBBY_CENTER_CMD     = 105;
+    // 匹配协议
+    PB_MATCH_CMD            = 106;
+    // 好友协议
+    PB_FRIEND_CMD           = 107;
+    // 好友充值路由管理层协议
+    PB_FM_ROUTE_CMD         = 108;
+    // 聊天协议
+    PB_CHAT_CMD             = 109;
+	// 交易行协议
+    PB_TradeBank_CMD        = 110;
+
+    // 战斗服务器 协议
+    PB_BATTLE_CMD           = 120;
+    // 充值服务器 协议
+    PB_MARKET_CMD           = 130;
+    // 邮件协议    
+    PB_MAIL_CMD             = 140;
+
+    // 游戏日志服务器
+    PB_GAMELOG_CMD          = 150;
+
+    // 家园服务器
+    PB_HOME_CMD             = 160;
+    
+    // 战报协议
+    PB_BATTLE_REPORT_CMD    = 165;
+
+    // 服务器测试log协议    
+    PB_SLOG_CMD             = 170;
+
+    // 跨服数据操作 带超时
+    PB_SG_OPERAROR_CMD      = 171;
+
+    // 服务器 GM 协议 
+    PB_GM_CMD               = 178;
+
+    // 负载均衡同步    
+    PB_GAMELOAD_CMD         = 180;
+
+    // 服务器负载信息模块
+    PB_SERVER_LOAD_CMD      = 190;
+	
+	// 公会服务器
+    PB_GUILD_CMD             = 200;
+	
+	
+
+	
+	
+	PB_COMMAND_MAX					 = 255;		//最大不要超过255
+}
+

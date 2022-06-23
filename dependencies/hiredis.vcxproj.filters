@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="adapters">
+      <UniqueIdentifier>{D924D5FC-C5F1-2F08-EE0A-1EB0DA366596}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hiredis\adapters\ae.h">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis\adapters\glib.h">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis\adapters\ivykis.h">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis\adapters\libev.h">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis\adapters\libevent.h">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis\adapters\libuv.h">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis\adapters\macosx.h">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis\adapters\qt.h">
+      <Filter>adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="hiredis\alloc.h" />
+    <ClInclude Include="hiredis\async.h" />
+    <ClInclude Include="hiredis\async_private.h" />
+    <ClInclude Include="hiredis\dict.h" />
+    <ClInclude Include="hiredis\fmacros.h" />
+    <ClInclude Include="hiredis\hiredis.h" />
+    <ClInclude Include="hiredis\hiredis_ssl.h" />
+    <ClInclude Include="hiredis\net.h" />
+    <ClInclude Include="hiredis\read.h" />
+    <ClInclude Include="hiredis\sds.h" />
+    <ClInclude Include="hiredis\sdsalloc.h" />
+    <ClInclude Include="hiredis\sockcompat.h" />
+    <ClInclude Include="hiredis\win32.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="hiredis\alloc.c" />
+    <ClCompile Include="hiredis\async.c" />
+    <ClCompile Include="hiredis\dict.c" />
+    <ClCompile Include="hiredis\hiredis.c" />
+    <ClCompile Include="hiredis\net.c" />
+    <ClCompile Include="hiredis\read.c" />
+    <ClCompile Include="hiredis\sds.c" />
+    <ClCompile Include="hiredis\sockcompat.c" />
+  </ItemGroup>
+</Project>

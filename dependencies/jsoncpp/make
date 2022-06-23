@@ -1,0 +1,16 @@
+gcc -c -fPIC -I./ -g3 json_value.cpp -o json_value.o
+gcc -c -fPIC -I./ -g3 json_reader.cpp -o json_reader.o
+gcc -c -fPIC -I./ -g3 json_writer.cpp -o json_writer.o
+
+ar cr libJsonCpp.a json_value.o json_reader.o json_writer.o
+
+rm -rf ../../../lib/libXBase/include/jsoncpp/
+rm -rf ../../../lib/libXBase/include/jsoncpp/json/
+
+mkdir ../../../lib/libXBase/include/jsoncpp/
+mkdir ../../../lib/libXBase/include/jsoncpp/json/
+
+cp ./libJsonCpp.a ../../../lib/libXBase/include/jsoncpp/
+cp ./*.h ../../../lib/libXBase/include/jsoncpp/
+cp -rf ./json/*.h ../../../lib/libXBase/include/jsoncpp/json/
+
