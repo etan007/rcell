@@ -18,7 +18,7 @@ KcpServer::KcpServer()
 			m_vtNewSession.push_back(session_ptr);
 			m_ConnListMutex.unlock();
 		});
-	server.bind_disconnect([](auto& session_ptr)
+	server.bind_disconnect([&](auto& session_ptr)
 		{
 			printf("client leave : %s %u %s\n",
 				session_ptr->remote_address().c_str(), session_ptr->remote_port(),
