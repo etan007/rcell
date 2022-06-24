@@ -5,7 +5,17 @@
 // 存放在udp_session userdata中,用来标记连接
 struct ConnectData
 {
-	int32_t connect_id;
+	ConnectData()
+	{
+		connect_id = 0;
+		uid = 0;
+	}
+	ConnectData(uint32_t cid, int64_t id)
+		:connect_id(cid), uid(id)
+	{
+	 
+	}
+	uint32_t connect_id;
 	int64_t  uid;
 };
 
@@ -15,8 +25,13 @@ class CConnection
 public:
 	CConnection(std::shared_ptr<asio2::udp_session>& session_ptr);
 	virtual ~CConnection();
+	bool Stop();
+	bool CheckHeader(char* pPacket, int32_t nLen);
+	std::shared_ptr<asio2::udp_session> getSession() { return m_session; }
+	uint32_t GetConnectID();
 private:
 	std::shared_ptr<asio2::udp_session> m_session;
+	int32_t m_nCheckNo;
 };
 
 class CConnectMgr
@@ -29,9 +44,9 @@ public:
 
 	CConnection* CreateConnection(std::shared_ptr<asio2::udp_session>& session_ptr);
 
-	bool         DeleteConnection(int32_t nConnID);
+	bool         DeleteConnection(uint32_t nConnID);
 
-	CConnection* GetConnectionByID(int32_t nConnID);
+	CConnection* GetConnectionByID(uint32_t nConnID);
 
 	bool         CloseAllConnection();
 
@@ -40,5 +55,6 @@ public:
 	 
 
 private:
-	std::unordered_map<int32_t,CConnection*> m_conns;
+	std::unordered_map<uint32_t,CConnection*> m_conns;
+	uint32_t m_curid ;
 };

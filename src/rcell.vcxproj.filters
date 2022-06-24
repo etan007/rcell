@@ -2571,10 +2571,19 @@
     <ClInclude Include="network\Connection.h">
       <Filter>network</Filter>
     </ClInclude>
+    <ClInclude Include="network\DataBuffer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\IBufferHandler.h">
+      <Filter>network</Filter>
+    </ClInclude>
     <ClInclude Include="network\KcpClient.h">
       <Filter>network</Filter>
     </ClInclude>
     <ClInclude Include="network\KcpServer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\PacketHeader.h">
       <Filter>network</Filter>
     </ClInclude>
     <ClInclude Include="network\TcpClient.h">
@@ -2730,6 +2739,9 @@
       <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="network\Connection.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\DataBuffer.cpp">
       <Filter>network</Filter>
     </ClCompile>
     <ClCompile Include="network\KcpClient.cpp">

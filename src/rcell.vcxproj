@@ -916,8 +916,11 @@
     <ClInclude Include="db\RedisResult.h" />
     <ClInclude Include="network\BasePacket.h" />
     <ClInclude Include="network\Connection.h" />
+    <ClInclude Include="network\DataBuffer.h" />
+    <ClInclude Include="network\IBufferHandler.h" />
     <ClInclude Include="network\KcpClient.h" />
     <ClInclude Include="network\KcpServer.h" />
+    <ClInclude Include="network\PacketHeader.h" />
     <ClInclude Include="network\TcpClient.h" />
     <ClInclude Include="network\TcpServer.h" />
     <ClInclude Include="network\xMsgDispatcher.h" />
@@ -971,6 +974,7 @@
     <ClCompile Include="db\RedisResult.cpp" />
     <ClCompile Include="network\BasePacket.cpp" />
     <ClCompile Include="network\Connection.cpp" />
+    <ClCompile Include="network\DataBuffer.cpp" />
     <ClCompile Include="network\KcpClient.cpp" />
     <ClCompile Include="network\KcpServer.cpp" />
     <ClCompile Include="network\TcpClient.cpp" />

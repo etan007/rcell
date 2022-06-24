@@ -1,12 +1,29 @@
 #include "KcpServer.h"
+#include "Connection.h"
+#include "DataBuffer.h"
 
 KcpServer::KcpServer()
 {
-	server.bind_recv([](std::shared_ptr<asio2::udp_session>& session_ptr, std::string_view data)
+	server.bind_recv([&](std::shared_ptr<asio2::udp_session>& session_ptr, std::string_view data)
 		{
-			//session_ptr->set_user_data(111);
 			printf("recv : %zu %.*s\n", data.size(), (int)data.size(), data.data());
+			// udp不考虑粘包的情况
+			if (data.size() >= HEADER_LEN && data.size() < MAX_PACK_SIZE)
+			{
+				IDataBuffer* pDataBuffer = CBufferAllocator::GetInstancePtr()->AllocDataBuff(data.size());
+				memcpy(pDataBuffer->GetBuffer(), data.data(), data.size());
+				pDataBuffer->SetTotalLenth(data.size());
+				KMsg kmsg = { pDataBuffer,session_ptr };
+				m_MsgListMutex.lock();
+				m_lMsg.push_back(kmsg);
+				m_MsgListMutex.unlock();
 
+			}
+			else
+			{
+				XERR("bind_recv len err,data.size() = %d", (int)data.size());
+			}
+		
 			
 		});
 	server.bind_connect([&](auto& session_ptr)
@@ -15,7 +32,7 @@ KcpServer::KcpServer()
 				session_ptr->remote_address().c_str(), session_ptr->remote_port(),
 				session_ptr->local_address().c_str(), session_ptr->local_port());
 			m_ConnListMutex.lock();
-			m_vtNewSession.push_back(session_ptr);
+			m_lNewSession.push_back(session_ptr);
 			m_ConnListMutex.unlock();
 		});
 	server.bind_disconnect([&](auto& session_ptr)
@@ -24,7 +41,7 @@ KcpServer::KcpServer()
 				session_ptr->remote_address().c_str(), session_ptr->remote_port(),
 				asio2::last_error_msg().c_str());
 			m_ConnListMutex.lock();
-			m_vtDelSession.push_back(session_ptr);
+			m_lDelSession.push_back(session_ptr);
 			m_ConnListMutex.unlock();
 		});
 	server.bind_handshake([](auto& session_ptr)
@@ -75,8 +92,55 @@ void KcpServer::stop()
 
 bool KcpServer::runOneStep()
 {
-	// 处理新连接
-	// 处理数据
-	// 处理删除连接
+	// 1.处理新连接
+	m_ConnListMutex.lock();
+	auto templNewSession = std::move(m_lNewSession);
+	auto templDelSession = std::move(m_lDelSession);
+	m_ConnListMutex.unlock();
+	for (auto& iter : templNewSession)
+	{
+		onConnect(iter);
+	}
+
+	// 2.处理数据
+	m_MsgListMutex.lock();
+	auto templMsg = std::move(m_lMsg);
+	m_MsgListMutex.unlock();
+	for (auto& iter : templMsg)
+	{
+		std::string_view data();
+		onMsg(iter.s_ptr,iter.pdata);
+		iter.pdata->Release();
+	}
+
+	// 3.处理删除连接
+	for (auto& iter : templDelSession)
+	{
+		onClose(iter);
+	}
+
 	return false;
 }
+
+void KcpServer::onConnect(std::shared_ptr<asio2::udp_session>& session_ptr) {
+	CConnection* pConnection = CConnectMgr::GetInstancePtr()->CreateConnection(session_ptr);
+	if (pConnection == nullptr)
+	{
+		XERR("CreateConnection==NULL");
+		return;
+	}
+	if (on_connect)on_connect(pConnection->GetConnectID());
+};
+
+void KcpServer::onClose(std::shared_ptr<asio2::udp_session>& session_ptr) {
+
+	ConnectData& data = session_ptr->get_user_data<ConnectData>();
+	CConnectMgr::GetInstancePtr()->DeleteConnection(data.connect_id);
+	if (on_close)on_close(data.connect_id);
+};
+
+void KcpServer::onMsg(std::shared_ptr<asio2::udp_session>& session_ptr, IDataBuffer* pdata) {
+	ConnectData& data = session_ptr->get_user_data<ConnectData>();
+
+	if (on_msg)on_msg(data.connect_id, pdata->GetBuffer(),pdata->GetTotalLenth());
+};
