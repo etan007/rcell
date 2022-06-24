@@ -119,7 +119,7 @@ bool KcpServer::runOneStep()
 		onClose(iter);
 	}
 
-	return false;
+	return true;
 }
 
 void KcpServer::onConnect(std::shared_ptr<asio2::udp_session>& session_ptr) {
