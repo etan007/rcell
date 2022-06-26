@@ -2496,6 +2496,9 @@
     <ClInclude Include="common\base64.h">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
     <ClInclude Include="common\sha1.h">
       <Filter>common</Filter>
     </ClInclude>
@@ -2613,6 +2616,9 @@
     <ClInclude Include="utils\util.h">
       <Filter>utils</Filter>
     </ClInclude>
+    <ClInclude Include="xserver\CellApp.h">
+      <Filter>xserver</Filter>
+    </ClInclude>
     <ClInclude Include="xserver\Entity.h">
       <Filter>xserver</Filter>
     </ClInclude>
@@ -2629,6 +2635,9 @@
       <Filter>xserver</Filter>
     </ClInclude>
     <ClInclude Include="xserver\LocalIDPool.h">
+      <Filter>xserver</Filter>
+    </ClInclude>
+    <ClInclude Include="xserver\ServerConfig.h">
       <Filter>xserver</Filter>
     </ClInclude>
     <ClInclude Include="xserver\balance.h">
@@ -2777,6 +2786,9 @@
     <ClCompile Include="script\pb.c">
       <Filter>script</Filter>
     </ClCompile>
+    <ClCompile Include="xserver\CellApp.cpp">
+      <Filter>xserver</Filter>
+    </ClCompile>
     <ClCompile Include="xserver\Entity.cpp">
       <Filter>xserver</Filter>
     </ClCompile>
@@ -2790,6 +2802,9 @@
       <Filter>xserver</Filter>
     </ClCompile>
     <ClCompile Include="xserver\EntityRegisterMgr.cpp">
+      <Filter>xserver</Filter>
+    </ClCompile>
+    <ClCompile Include="xserver\ServerConfig.cpp">
       <Filter>xserver</Filter>
     </ClCompile>
     <ClCompile Include="xserver\balance.cpp">

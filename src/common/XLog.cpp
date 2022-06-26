@@ -184,7 +184,7 @@ void XLog::print(int level, std::string& str)
 
 		printf("%s", str.c_str());
 
-		//���ûذ�ɫ
+		//设置回白色
 		if (level == LL_WARNING || level == LL_ERROR)
 		{
 			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);

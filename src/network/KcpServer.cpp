@@ -3,10 +3,11 @@
 #include "DataBuffer.h"
 
 KcpServer::KcpServer()
+	:m_pPacketDispatcher(nullptr)
 {
 	server.bind_recv([&](std::shared_ptr<asio2::udp_session>& session_ptr, std::string_view data)
 		{
-			printf("recv : %zu %.*s\n", data.size(), (int)data.size(), data.data());
+			XLOG("recv : %zu %.*s\n", data.size(), (int)data.size(), data.data());
 			// udp不考虑粘包的情况
 			if (data.size() >= HEADER_LEN && data.size() < MAX_PACK_SIZE)
 			{
@@ -28,7 +29,7 @@ KcpServer::KcpServer()
 		});
 	server.bind_connect([&](auto& session_ptr)
 		{
-			printf("client enter : %s %u %s %u\n",
+			XLOG("client enter : %s %u %s %u\n",
 				session_ptr->remote_address().c_str(), session_ptr->remote_port(),
 				session_ptr->local_address().c_str(), session_ptr->local_port());
 			m_ConnListMutex.lock();
@@ -37,7 +38,7 @@ KcpServer::KcpServer()
 		});
 	server.bind_disconnect([&](auto& session_ptr)
 		{
-			printf("client leave : %s %u %s\n",
+			XLOG("client leave : %s %u %s\n",
 				session_ptr->remote_address().c_str(), session_ptr->remote_port(),
 				asio2::last_error_msg().c_str());
 			m_ConnListMutex.lock();
@@ -46,22 +47,22 @@ KcpServer::KcpServer()
 		});
 	server.bind_handshake([](auto& session_ptr)
 		{
-			printf("client handshake : %s %u %d %s\n",
+			XLOG("client handshake : %s %u %d %s\n",
 				session_ptr->remote_address().c_str(), session_ptr->remote_port(),
 				asio2::last_error_val(), asio2::last_error_msg().c_str());
 		});
 	server.bind_start([&]()
 		{
 			if (asio2::get_last_error())
-				printf("start udp server kcp failure : %d %s\n",
+				XERR("start udp server kcp failure : %d %s\n",
 					asio2::last_error_val(), asio2::last_error_msg().c_str());
 			else
-				printf("start udp server kcp success : %s %u\n",
+				XLOG("start udp server kcp success : %s %u\n",
 					server.listen_address().c_str(), server.listen_port());
 		});
 	server.bind_stop([&]()
 		{
-			printf("stop udp server kcp : %d %s\n",
+			XLOG("stop udp server kcp : %d %s\n",
 				asio2::last_error_val(), asio2::last_error_msg().c_str());
 		});
 	server.bind_init([&]()
@@ -79,8 +80,9 @@ KcpServer::~KcpServer()
 
 }
 
-bool KcpServer::start(std::string host, int16_t port)
+bool KcpServer::start(std::string host, uint16_t port,IPacketDispatcher* pDispather)
 {
+	m_pPacketDispatcher = pDispather;
 	return server.start(host, port, asio2::use_kcp);
 	 
 }
@@ -123,24 +125,44 @@ bool KcpServer::runOneStep()
 }
 
 void KcpServer::onConnect(std::shared_ptr<asio2::udp_session>& session_ptr) {
+	
 	CConnection* pConnection = CConnectMgr::GetInstancePtr()->CreateConnection(session_ptr);
 	if (pConnection == nullptr)
 	{
 		XERR("CreateConnection==NULL");
 		return;
 	}
-	if (on_connect)on_connect(pConnection->GetConnectID());
+	
+	if(m_pPacketDispatcher)
+		m_pPacketDispatcher->OnNewConnect(pConnection->GetConnectID());
+	
+	if (on_connect)
+		on_connect(pConnection->GetConnectID());
 };
 
 void KcpServer::onClose(std::shared_ptr<asio2::udp_session>& session_ptr) {
 
 	ConnectData& data = session_ptr->get_user_data<ConnectData>();
 	CConnectMgr::GetInstancePtr()->DeleteConnection(data.connect_id);
-	if (on_close)on_close(data.connect_id);
+
+	if(m_pPacketDispatcher)
+		m_pPacketDispatcher->OnCloseConnect(data.connect_id);
+	
+	if (on_close)
+		on_close(data.connect_id);
 };
 
 void KcpServer::onMsg(std::shared_ptr<asio2::udp_session>& session_ptr, IDataBuffer* pdata) {
 	ConnectData& data = session_ptr->get_user_data<ConnectData>();
 
-	if (on_msg)on_msg(data.connect_id, pdata->GetBuffer(),pdata->GetTotalLenth());
+	if(m_pPacketDispatcher)
+	{
+		PacketHeader* pHeader = (PacketHeader*)pdata->GetBuffer();
+		NetPacket np(data.connect_id,pdata,pHeader->nMsgID);
+		m_pPacketDispatcher->DispatchPacket(&np);
+	}
+		
+	
+	if (on_msg)
+		on_msg(data.connect_id, pdata->GetBuffer(),pdata->GetTotalLenth());
 };

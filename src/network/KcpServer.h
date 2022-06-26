@@ -17,7 +17,7 @@ public:
 	virtual void onClose(std::shared_ptr<asio2::udp_session>& session_ptr);
 	virtual void onMsg(std::shared_ptr<asio2::udp_session>& session_ptr, IDataBuffer* pdata);
 public:
-	bool start(std::string host,int16_t port);
+	bool start(std::string host,uint16_t port,IPacketDispatcher* pDispather);
 	void stop();
 	bool runOneStep();
 
@@ -29,10 +29,11 @@ protected:
 
 	std::list< std::shared_ptr<asio2::udp_session> >   m_lNewSession;            //待处理新连接列表
 	std::list< std::shared_ptr<asio2::udp_session> >   m_lDelSession;			 //待处理断开连接列表
-	std::mutex                  m_ConnListMutex;
+	std::mutex                                         m_ConnListMutex;
 
-	std::list<KMsg>                                        m_lMsg;
-	std::mutex                                             m_MsgListMutex;
-
+	std::list<KMsg>                                    m_lMsg;
+	std::mutex                                         m_MsgListMutex;
+	IPacketDispatcher*                                 m_pPacketDispatcher;
+	
 };
 

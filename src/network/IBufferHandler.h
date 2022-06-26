@@ -29,16 +29,16 @@ public:
 
 struct IDataHandler
 {
-    virtual bool OnDataHandle( IDataBuffer* pDataBuffer, int32_t nConnID) = 0;
-    virtual bool OnCloseConnect(int32_t nConnID) = 0;
-    virtual bool OnNewConnect(int32_t nConnID) = 0;
+    virtual bool OnDataHandle( IDataBuffer* pDataBuffer, uint32_t nConnID) = 0;
+    virtual bool OnCloseConnect(uint32_t nConnID) = 0;
+    virtual bool OnNewConnect(uint32_t nConnID) = 0;
 };
 
 struct IPacketDispatcher
 {
     virtual bool DispatchPacket( NetPacket* pNetPacket) = 0;
-    virtual bool OnCloseConnect(int32_t nConnID) = 0;
-    virtual bool OnNewConnect(int32_t nConnID) = 0;
+    virtual bool OnCloseConnect(uint32_t nConnID) = 0;
+    virtual bool OnNewConnect(uint32_t nConnID) = 0;
     virtual bool OnSecondTimer() = 0;
 };
 

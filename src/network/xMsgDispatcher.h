@@ -13,14 +13,14 @@ typedef bool(*OnProtoMsgCallBack)(UInt32 sguid, xNetProcessor *pNetProcess, cons
 typedef bool(*OnBinMsgCallBack)(UInt32 sguid, xNetProcessor *pNetProcess, const unsigned char *buff, unsigned int len);
 
 
-// ´óĞ¡Ğ­ÒéºÏ²¢Ç°×º
+// å¤§å°åè®®åˆå¹¶å‰ç¼€
 #define CMD_ID_PRIFX_ 10000
-// ¼àÌıËùÓĞĞ¡Ğ­Òé
+// ç›‘å¬æ‰€æœ‰å°åè®®
 #define ALL_CMD_ID (CMD_ID_PRIFX_-1)
 
 
 
-// ¸ºÔğĞ­Òéµ½ÉÏ²ãÂß¼­µÄ×ª·¢
+// è´Ÿè´£åè®®åˆ°ä¸Šå±‚é€»è¾‘çš„è½¬å‘
 class MsgDispatcher : public xSingleton<MsgDispatcher>
 {
 public:
@@ -28,7 +28,7 @@ public:
     void RegistBinCallBack(int msgType, int msgID, CMD_RUN_THREAD_TYPE runThreadType, OnBinMsgCallBack callBack);
 
 public:
-    //´¦ÀíÏµÍ³ÄÚ²¿ÏûÏ¢
+    //å¤„ç†ç³»ç»Ÿå†…éƒ¨æ¶ˆæ¯
     bool OnSystemInternalMsg(uint8_t cmdId, uint8_t param, char * data, uint32_t len);
     bool OnMsg(UInt32 sguid, CMD_RUN_THREAD_TYPE runThreadType, xNetProcessor *pNetProcess, const unsigned char *buff, unsigned int len);
 
@@ -38,32 +38,32 @@ private:
 };
 
 
-// ×¢²áĞ­Òé´¦Àí»Øµ÷ ¿ªÊ¼
+// æ³¨å†Œåè®®å¤„ç†å›è°ƒ å¼€å§‹
 #define REGIST_MSG_CALLBACK_BEGIN(rname) \
 struct RegistCmdCallBack_##rname{\
     RegistCmdCallBack_##rname() {\
 
-// ×¢²áĞ­Òé´¦Àí»Øµ÷ ×¢²áprotoĞ­Òé ½Ó¿Ú
+// æ³¨å†Œåè®®å¤„ç†å›è°ƒ æ³¨å†Œprotoåè®® æ¥å£
 #define REGIST_PROTO_MSG_CALLBACK(threadType, pbmsg, callback){\
     pbmsg *_msg = new pbmsg();\
     MsgDispatcher::getMe().RegistProtoCallBack(_msg->cmdid().cmd(), _msg->param(), threadType, _msg, callback);}
 
-// ×¢²áĞ­Òé´¦Àí»Øµ÷ ×¢²á¶ş½øÖÆĞ­Òé ½Ó¿Ú
+// æ³¨å†Œåè®®å¤„ç†å›è°ƒ æ³¨å†ŒäºŒè¿›åˆ¶åè®® æ¥å£
 #define REGIST_BIN_MSG_CALLBACK(threadType, cmdid, msgid, callback)\
     MsgDispatcher::getMe().RegistBinCallBack(cmdid, msgid, threadType, callback);
 
-// ×¢²áĞ­Òé´¦Àí»Øµ÷ ×¢²á¶ş½øÖÆĞ­Òé ´óĞ­ÒéIDËùÓĞĞ­Òé
+// æ³¨å†Œåè®®å¤„ç†å›è°ƒ æ³¨å†ŒäºŒè¿›åˆ¶åè®® å¤§åè®®IDæ‰€æœ‰åè®®
 #define REGIST_ALLID_BIN_MSG_CALLBACK(threadType, cmdid, callback)\
     MsgDispatcher::getMe().RegistBinCallBack(cmdid, ALL_CMD_ID, threadType, _msg, callback);
 
-// ×¢²áĞ­Òé´¦Àí»Øµ÷ ½áÊø
+// æ³¨å†Œåè®®å¤„ç†å›è°ƒ ç»“æŸ
 #define REGIST_MSG_CALLBACK_END(rname) \
     }\
 };\
 RegistCmdCallBack_##rname _temp_reg_##rname;\
 
 
-// ×¢²áÀı×Ó
+// æ³¨å†Œä¾‹å­
 //bool On_PB_CLIENT_CONECCT_CHECK_REQ_CMD(xNetProcessor *pNetProcess, const ::google::protobuf::Message &stMsg) {
 //}
 //BEGIN_REGIST_MSG_CALLBACK(PB_CLIENT)
