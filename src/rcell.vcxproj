@@ -948,7 +948,6 @@
     <ClCompile Include="..\dependencies\json\json_writer.cpp" />
     <ClCompile Include="common\ByteBuffer.cpp" />
     <ClCompile Include="common\CBase64.cpp" />
-    <ClCompile Include="common\common.cpp" />
     <ClCompile Include="common\CsvParser.cpp" />
     <ClCompile Include="common\GCBinarryReader.cpp" />
     <ClCompile Include="common\Heap.cpp" />
@@ -965,6 +964,7 @@
     <ClCompile Include="common\XLog.cpp" />
     <ClCompile Include="common\XTime.cpp" />
     <ClCompile Include="common\base64.cpp" />
+    <ClCompile Include="common\common.cpp" />
     <ClCompile Include="common\sha1.cpp" />
     <ClCompile Include="common\xGUIDMaker.cpp" />
     <ClCompile Include="common\xLanguage.cpp" />

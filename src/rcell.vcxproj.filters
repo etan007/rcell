@@ -2711,6 +2711,9 @@
     <ClCompile Include="common\base64.cpp">
       <Filter>common</Filter>
     </ClCompile>
+    <ClCompile Include="common\common.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
     <ClCompile Include="common\sha1.cpp">
       <Filter>common</Filter>
     </ClCompile>

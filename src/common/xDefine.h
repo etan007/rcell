@@ -80,7 +80,7 @@ typedef void*                SMHandle;
 #define MAX_DNAMESIZE        64
 #define MAX_SNUIDSIZE        64
 #define MAX_SGUIDSIZE        64
-#define MAX_ROLENAMESIZE    18//åˆ›å»ºè§’è‰²åå­—é•¿åº¦
+#define MAX_ROLENAMESIZE    18//´´½¨½ÇÉ«Ãû×Ö³¤¶È
 #define MAX_ROLE_SIZE        3
 #define MAX_DBCHAR128_SIZE    128
 #define MAX_DBCHAR256_SIZE    256
@@ -88,10 +88,10 @@ typedef void*                SMHandle;
 #define SHA1_LEN            40
 
 
-//æ— æ•ˆçš„IDå€¼
+//ÎŞĞ§µÄIDÖµ
 #define INVALID_ID            -1
 
-//è¿æ¥åç­‰å¾…å‘é€æ¶ˆæ¯çš„æœ€é•¿æ—¶é—´
+//Á¬½ÓºóµÈ´ı·¢ËÍÏûÏ¢µÄ×î³¤Ê±¼ä
 #define MAX_WAIT_SEND_CMD_TIME 6
 
 

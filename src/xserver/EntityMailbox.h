@@ -28,12 +28,8 @@ public:
         m_nServerId = pBMailbox.server_id();
     }
 
-    bool IsLocalServer() const
-    {
-       // todo sky
-       // return (m_nServerId == SServerStartConfig::getMe().GetServerSGUID());
-        return false;
-    }
+    bool IsLocalServer() const;
+ 
 
     void Clear()
     {

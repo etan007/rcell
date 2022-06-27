@@ -21,9 +21,10 @@ using namespace std::placeholders;
 //公共实体类型
 enum enEntityType
 {
-    PET_DEFAULT = 0,		    //本地默认实体
-    PET_CLIENT = 1,         //客户端实体
-    PET_GLOBAL_ENTITY = 2     //全局实体
+    PET_DEFAULT = 0,		 //本地默认实体
+    PET_CLIENT  = 1,         //客户端实体
+    PET_DS      = 2,         //DS实体
+    PET_GLOBAL_ENTITY = 2   //全局实体
 };
 
 typedef std::function<bool(EntityMailBox& mb, ::google::protobuf::Message *pMsg)> OnEntityPBCallBack;
@@ -334,6 +335,14 @@ class TClientEntity : public TDynamicEntity<TType>
 {
 public:
     TClientEntity() { this->m_eType = PET_CLIENT; }
+};
+
+//DS实体
+template<class TType>
+class TDSEntity : public TDynamicEntity<TType>
+{
+public:
+    TDSEntity() { this->m_eType = PET_DS; }
 };
 
 //全局实体

@@ -4,54 +4,54 @@
 
  
 
-    /** å®‰å…¨çš„é‡Šæ”¾ä¸€ä¸ªæŒ‡é’ˆå†…å­˜ */
-    #define RCELL_SAFE_RELEASE(p)								\
-        if (p)											\
-        {												\
-        delete p;										\
-        p = nullptr;									\
-        }
+/** °²È«µÄÊÍ·ÅÒ»¸öÖ¸ÕëÄÚ´æ */
+#define RCELL_SAFE_RELEASE(p)					    \
+    if (p)											\
+    {												\
+    delete p;										\
+    p = nullptr;									\
+    }
 
-    /** å®‰å…¨çš„é‡Šæ”¾ä¸€ä¸ªæŒ‡é’ˆæ•°ç»„å†…å­˜ */
-    #define RCELL_RELEASE_ARRAY(p)						\
-        if (p)											\
-        {												\
-        delete[] p;										\
-        p = nullptr;									\
-        }
+/** °²È«µÄÊÍ·ÅÒ»¸öÖ¸ÕëÊý×éÄÚ´æ */
+#define RCELL_RELEASE_ARRAY(p)						\
+    if (p)											\
+    {												\
+    delete[] p;										\
+    p = nullptr;									\
+    }
 
-    /** å®šä¹‰æœåŠ¡å™¨å„ç»„ä»¶çŠ¶æ€ */
-    enum COMPONENT_STATE
-    {
-        // åˆå§‹çŠ¶æ€
-        COMPONENT_STATE_INIT = 0,
+/** ¶¨Òå·þÎñÆ÷¸÷×é¼þ×´Ì¬ */
+enum COMPONENT_STATE
+{
+    // ³õÊ¼×´Ì¬
+    COMPONENT_STATE_INIT = 0,
 
-        // è¿›ç¨‹æ­£åœ¨è¿è¡Œä¸­
-        COMPONENT_STATE_RUN = 1,
+    // ½ø³ÌÕýÔÚÔËÐÐÖÐ
+    COMPONENT_STATE_RUN = 1,
 
-        // è¿›ç¨‹å¼€å§‹å…³é—­
-        COMPONENT_STATE_SHUTTINGDOWN_BEGIN = 2,
+    // ½ø³Ì¿ªÊ¼¹Ø±Õ
+    COMPONENT_STATE_SHUTTINGDOWN_BEGIN = 2,
 
-        // è¿›ç¨‹æ­£åœ¨å…³é—­
-        COMPONENT_STATE_SHUTTINGDOWN_RUNNING = 3,
+    // ½ø³ÌÕýÔÚ¹Ø±Õ
+    COMPONENT_STATE_SHUTTINGDOWN_RUNNING = 3,
 
-        // è¿›ç¨‹å…³é—­å®Œæˆäº†
-        COMPONENT_STATE_STOP = 4
-    };
+    // ½ø³Ì¹Ø±ÕÍê³ÉÁË
+    COMPONENT_STATE_STOP = 4
+};
 
-    /** å®šä¹‰æœåŠ¡å™¨å„ç»„ä»¶ç±»åˆ« */
-    enum COMPONENT_TYPE
-    {
-        UNKNOWN_COMPONENT_TYPE	= 0,
-        CWORKER_TYPE			= 1,
-        SWORKER_TYPE			= 2,
-        CELLMGR_TYPE            = 3,
-        BASEAPP_TYPE			= 4,
-        RCELL_TYPE			    = 5,
-        WATCHER_TYPE			= 6,
-        TOOL_TYPE				= 7,
-        COMPONENT_END_TYPE		= 8,
-    };
+/** ¶¨Òå·þÎñÆ÷¸÷×é¼þÀà±ð */
+enum COMPONENT_TYPE
+{
+    UNKNOWN_COMPONENT_TYPE	= 0,
+    CWORKER_TYPE			= 1,
+    SWORKER_TYPE			= 2,
+    CELLMGR_TYPE            = 3,
+    BASEAPP_TYPE			= 4,
+    RCELL_TYPE			    = 5,
+    WATCHER_TYPE			= 6,
+    TOOL_TYPE				= 7,
+    COMPONENT_END_TYPE		= 8,
+};
 namespace CommonFunc
 {
     UInt64          GetTickCount();

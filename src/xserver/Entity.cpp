@@ -4,7 +4,7 @@
 //通用的消息分发点
 bool EntityDispatcher::OnDispatchMsg(EntityMailBox& sender_mb, int nCmdId, int nCmdParam, const std::string& sData)
 {
-    auto nCmdType = nCmdId * CMD_ID_PRIFX_ + nCmdParam;
+    /*auto nCmdType = nCmdId * CMD_ID_PRIFX_ + nCmdParam;
     auto pHandler = GetHandler(nCmdType);
     if (!pHandler)
     {
@@ -18,7 +18,8 @@ bool EntityDispatcher::OnDispatchMsg(EntityMailBox& sender_mb, int nCmdId, int n
     }
     XLOG("EntityDispatcher::OnDispatchMsg Succ!eId:%llu, cmd:%d,param:%d,data size=%d", sender_mb.m_eId, nCmdId, nCmdParam, sData.size());
 
-    return pHandler->m_handler(sender_mb, pMsg);
+    return pHandler->m_handler(sender_mb, pMsg);*/
+    return true;
 }
 
 
