@@ -7,11 +7,14 @@ message PBWorkerCmd
 }
 
 // 协议ID枚举
-enum PBWorkerCmdType {
-	
+enum PBWorker_OpType {
+	 // 断开连接
      WORKER_OP_TYPE_DISCONNECT = 1;
+     // 标记更新
      WORKER_OP_TYPE_FLAG_UPDATE = 2;
+     // 日志消息
      WORKER_OP_TYPE_LOG_MESSAGE = 3;
+     // 指标操作
      WORKER_OP_TYPE_METRICS = 4;
      WORKER_OP_TYPE_CRITICAL_SECTION = 5;
      WORKER_OP_TYPE_ADD_ENTITY = 6;
@@ -39,3 +42,102 @@ message PBWorkerTestCmd
     // 协议数据
 }*/
 
+// 断开连接数据
+message PBWorker_DisconnectOp
+{
+   optional uint8 connection_status_code = 1;
+   optional string reason = 2;
+}
+
+// 标记更新数据
+message PBWorker_FlagUpdateOp
+{
+    optional string name = 1;
+    optional string value = 2;
+}
+
+// 日志消息数据
+message PBWorker_LogMessageOp
+{
+    optional int8 level = 1;
+    optional string message = 2;
+}
+
+// 仪表度量参数
+message PBWorker_GaugeMetric
+{
+    // 指标名字
+    optional string key = 1;
+    // 指标值
+    optional double value = 2;
+}
+
+// 直方图度量桶参数
+message PBWorker_HistogramMetricBucket
+{
+    // 上限
+    optional double upper_bound = 1;
+    // 小于或等于上限的观察数
+    optional uint32 samples = 2;
+}
+// 直方图度量参数
+message PBWorker_HistogramMetric
+{
+    // 指标名字
+    optional string key = 1;
+    // 所有观测值的总和
+    optional double sum = 2;
+    // 桶数量
+    optional uint32 bucket_count = 3;
+    // 桶数组
+    repeated PBWorker_HistogramMetricBucket buckets = 4;
+}
+
+// 发送到rcell的指标参数
+message PBWorker_Metrics
+{
+    // 本worker的负载值,没有就不上报该值
+    optional double load = 1;
+    // 仪表度量数量 todo 该值可以省略...
+    optional uint32 gauge_metric_count = 2;
+    // 仪表度量数组
+    repeated PBWorker_GaugeMetric gauge_metrics = 3;
+    // 直方图度量数量
+    optional uint32 histogram_metric_count = 4;
+    // 直方图度量数组
+    repeated PBWorker_HistogramMetric histogram_metrics = 5;
+}
+
+// 内置指标数据
+message PBWorker_MetricsOp
+{
+    optional PBWorker_Metrics metrics = 1;
+    
+}
+
+message PBWorker_Op_Union
+{
+  optional PBWorker_DisconnectOp disconnect                                      = 1;
+  optional PBWorker_FlagUpdateOp flag_update                                     = 2;
+  optional PBWorker_LogMessageOp log_message                                     = 3;
+  optional PBWorker_MetricsOp metrics                                            = 4;
+  optional PBWorker_CriticalSectionOp critical_section                           = 5;
+  optional PBWorker_AddEntityOp add_entity                                       = 6;
+  optional PBWorker_RemoveEntityOp remove_entity                                 = 7;
+  optional PBWorker_ReserveEntityIdsResponseOp reserve_entity_ids_response       = 8;
+  optional PBWorker_CreateEntityResponseOp create_entity_response                = 9;
+  optional PBWorker_DeleteEntityResponseOp delete_entity_response                = 10;
+  optional PBWorker_EntityQueryResponseOp entity_query_response                  = 11;
+  optional PBWorker_AddComponentOp add_component                                 = 12;
+  optional PBWorker_RemoveComponentOp remove_component                           = 13;
+  optional PBWorker_AuthorityChangeOp authority_change                           = 14;
+  optional PBWorker_ComponentUpdateOp component_update                           = 15;
+  optional PBWorker_CommandRequestOp command_request                             = 16;
+  optional PBWorker_CommandResponseOp command_response                           = 17;
+  optional PBWorker_ComponentSetAuthorityChangeOp component_set_authority_change = 18;
+}
+message PBWorker_Op
+{
+   PBWorker_OpType op_type = 1;
+   PBWorker_Op_Union op = 2;
+}
