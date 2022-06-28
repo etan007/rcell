@@ -1,5 +1,5 @@
 import "xCommond.proto";
-
+import "WorkerData.proto";
 // 协议大类定义
 message PBWorkerCmd
 {
@@ -16,11 +16,17 @@ enum PBWorker_OpType {
      WORKER_OP_TYPE_LOG_MESSAGE = 3;
      // 指标操作
      WORKER_OP_TYPE_METRICS = 4;
+     // 临界边界进入离开
      WORKER_OP_TYPE_CRITICAL_SECTION = 5;
+     // 添加实体
      WORKER_OP_TYPE_ADD_ENTITY = 6;
+     // 删除实体
      WORKER_OP_TYPE_REMOVE_ENTITY = 7;
+     // 保留待响应的实体id列表
      WORKER_OP_TYPE_RESERVE_ENTITY_IDS_RESPONSE = 8;
+     // 创建实体响应
      WORKER_OP_TYPE_CREATE_ENTITY_RESPONSE = 9;
+     // 删除实体响应
      WORKER_OP_TYPE_DELETE_ENTITY_RESPONSE = 10;
      WORKER_OP_TYPE_ENTITY_QUERY_RESPONSE = 11;
      WORKER_OP_TYPE_ADD_COMPONENT = 12;
@@ -113,6 +119,54 @@ message PBWorker_MetricsOp
 {
     optional PBWorker_Metrics metrics = 1;
     
+}
+
+// 临界截面边界（进入或离开）操作的数据
+message PBWorker_CriticalSectionOp
+{
+    optional uint8 in_critical_section = 1;
+}
+
+// 添加实体数据
+message PBWorker_AddEntityOp
+{
+    // 添加到模拟工作视图中的实体ID
+    optional int64 entity_id = 1;
+}
+
+// 删除实体数据
+message PBWorker_RemoveEntityOp
+{
+    // 从模拟工作视图中删除的实体ID
+    optional int64 entity_id = 1;
+}
+
+// 保留待响应的实体id列表
+message PBWorker_ReserveEntityIdsResponseOp
+{
+    // 有响应的请求ID
+    optional int64 request_id = 1;
+    // 响应的状态代码，使用Worker_StatusCode
+    optional PBWorker_StatusCode status_code = 2;
+    // 错误消息
+    optional string message = 3;
+    // 如果成功，则为新分配实体连续范围中的第一个ID保证在当前部署中未使用的ID
+    optional int64 first_entity_id = 4;
+    // 如果成功，则为连续范围内保留的ID数，否则为0。
+    optional uint32 number_of_entity_ids = 5;
+}
+
+// 创建实体响应数据
+message PBWorker_CreateEntityResponseOp
+{
+    // 有响应的请求ID
+    optional int64 request_id = 1;
+    // 响应的状态代码，使用Worker_StatusCode
+    optional PBWorker_StatusCode status_code = 2;
+    // 错误消息
+    optional string message = 3;
+    // 如果成功，则为新创建实体的实体ID。
+    optional int64 entity_id = 4; 
 }
 
 message PBWorker_Op_Union

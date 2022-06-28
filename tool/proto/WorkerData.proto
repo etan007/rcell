@@ -1,0 +1,43 @@
+enum PBWorker_StatusCode
+{
+    	/** The request was successfully executed and returned a response. */
+		WORKER_STATUS_CODE_SUCCESS = 1;
+		/**
+		 * The request timed out before a response was received. It can be retried, but carefully - this
+		 * usually means the deployment is overloaded, so some sort of backoff should be used to avoid
+		 * making the problem worse. This can also be caused by the target worker's handling code failing
+		 * to respond to the command at all, perhaps due to a bug in its implementation.
+		 */
+		WORKER_STATUS_CODE_TIMEOUT = 2;
+		/**
+		 * The target entity did not exist, or did not have the target component. This probably means the
+		 * entity either hasn't been created yet or has already been deleted. It might make sense to retry
+		 * the request if there is reason to believe the entity hasn't yet been created but will be soon.
+		 */
+		WORKER_STATUS_CODE_NOT_FOUND = 3;
+		/**
+		 * The request could not be executed by a worker, either because the worker lost authority over
+		 * the entity while handling the request, the entity was deleted while handling the request, or no
+		 * worker was authoritative over the entity at all. Assuming the deployment isn't irrecoverably
+		 * broken (e.g. due to misconfigured loadbalancing or crash-looping workers) this is a transient
+		 * failure and can be retried immediately.
+		 */
+		WORKER_STATUS_CODE_AUTHORITY_LOST = 4;
+		/**
+		 * The worker did not have the required permissions to make the request. Permissions do not change
+		 * at runtime, so it doesn't make sense to retry the request.
+		 */
+		WORKER_STATUS_CODE_PERMISSION_DENIED = 5;
+		/**
+		 * The command was delivered successfully, but the handler rejected it. Either the command was
+		 * delivered to a worker that explicitly rejected it by calling
+		 * Worker_Connection_SendCommandFailure, or the request data was rejected as invalid by SpatialOS
+		 * itself. In the latter case, in particular, Worker_Connection_SendCreateEntityRequest will
+		 * return kApplicationError if an entity ID reservation has expired, and
+		 * Worker_Connection_SendEntityQueryResult will return kApplicationError if the result set is
+		 * incomplete.
+		 */
+		WORKER_STATUS_CODE_APPLICATION_ERROR = 6;
+		/** Some other error occurred. This likely indicates a bug in SpatialOS and should be reported. */
+		WORKER_STATUS_CODE_INTERNAL_ERROR = 7;
+}
