@@ -28,13 +28,21 @@ enum PBWorker_OpType {
      WORKER_OP_TYPE_CREATE_ENTITY_RESPONSE = 9;
      // 删除实体响应
      WORKER_OP_TYPE_DELETE_ENTITY_RESPONSE = 10;
+     // 实体查询请求结果
      WORKER_OP_TYPE_ENTITY_QUERY_RESPONSE = 11;
+     // 添加组件
      WORKER_OP_TYPE_ADD_COMPONENT = 12;
+     // 删除组件
      WORKER_OP_TYPE_REMOVE_COMPONENT = 13;
+     // 权限更改操作
      WORKER_OP_TYPE_AUTHORITY_CHANGE = 14;
+     // 组件更新
      WORKER_OP_TYPE_COMPONENT_UPDATE = 15;
+     // 指令请求
      WORKER_OP_TYPE_COMMAND_REQUEST = 16;
+     // 指令请求响应
      WORKER_OP_TYPE_COMMAND_RESPONSE = 17;
+
      WORKER_OP_TYPE_COMPONENT_SET_AUTHORITY_CHANGE = 18;
  
 }
@@ -48,100 +56,55 @@ message PBWorkerTestCmd
     // 协议数据
 }*/
 
-// 断开连接数据
+// 1.断开连接数据
 message PBWorker_DisconnectOp
 {
    optional uint8 connection_status_code = 1;
    optional string reason = 2;
 }
 
-// 标记更新数据
+// 2.标记更新数据
 message PBWorker_FlagUpdateOp
 {
     optional string name = 1;
     optional string value = 2;
 }
 
-// 日志消息数据
+// 3.日志消息数据
 message PBWorker_LogMessageOp
 {
     optional int8 level = 1;
     optional string message = 2;
 }
 
-// 仪表度量参数
-message PBWorker_GaugeMetric
-{
-    // 指标名字
-    optional string key = 1;
-    // 指标值
-    optional double value = 2;
-}
-
-// 直方图度量桶参数
-message PBWorker_HistogramMetricBucket
-{
-    // 上限
-    optional double upper_bound = 1;
-    // 小于或等于上限的观察数
-    optional uint32 samples = 2;
-}
-// 直方图度量参数
-message PBWorker_HistogramMetric
-{
-    // 指标名字
-    optional string key = 1;
-    // 所有观测值的总和
-    optional double sum = 2;
-    // 桶数量
-    optional uint32 bucket_count = 3;
-    // 桶数组
-    repeated PBWorker_HistogramMetricBucket buckets = 4;
-}
-
-// 发送到rcell的指标参数
-message PBWorker_Metrics
-{
-    // 本worker的负载值,没有就不上报该值
-    optional double load = 1;
-    // 仪表度量数量 todo 该值可以省略...
-    optional uint32 gauge_metric_count = 2;
-    // 仪表度量数组
-    repeated PBWorker_GaugeMetric gauge_metrics = 3;
-    // 直方图度量数量
-    optional uint32 histogram_metric_count = 4;
-    // 直方图度量数组
-    repeated PBWorker_HistogramMetric histogram_metrics = 5;
-}
-
-// 内置指标数据
+// 4.内置指标数据
 message PBWorker_MetricsOp
 {
     optional PBWorker_Metrics metrics = 1;
     
 }
 
-// 临界截面边界（进入或离开）操作的数据
+// 5.临界截面边界（进入或离开）操作的数据
 message PBWorker_CriticalSectionOp
 {
     optional uint8 in_critical_section = 1;
 }
 
-// 添加实体数据
+// 6.添加实体数据
 message PBWorker_AddEntityOp
 {
     // 添加到模拟工作视图中的实体ID
     optional int64 entity_id = 1;
 }
 
-// 删除实体数据
+// 7.删除实体数据
 message PBWorker_RemoveEntityOp
 {
     // 从模拟工作视图中删除的实体ID
     optional int64 entity_id = 1;
 }
 
-// 保留待响应的实体id列表
+// 8.保留待响应的实体id列表
 message PBWorker_ReserveEntityIdsResponseOp
 {
     // 有响应的请求ID
@@ -156,7 +119,7 @@ message PBWorker_ReserveEntityIdsResponseOp
     optional uint32 number_of_entity_ids = 5;
 }
 
-// 创建实体响应数据
+// 9.创建实体响应数据
 message PBWorker_CreateEntityResponseOp
 {
     // 有响应的请求ID
@@ -169,6 +132,120 @@ message PBWorker_CreateEntityResponseOp
     optional int64 entity_id = 4; 
 }
 
+// 10.删除实体响应数据
+message PBWorker_DeleteEntityResponseOp
+{
+    // 有响应的请求ID
+    optional int64 request_id = 1;
+    // 目标实体id
+    optional int64 entity_id = 2; 
+    // 响应的状态代码，使用Worker_StatusCode
+    optional PBWorker_StatusCode status_code = 3;
+    // 错误消息
+    optional string message = 4;
+}
+
+// 11.实体查询请求结果
+message PBWorker_EntityQueryResponseOp
+{
+    // 有响应的请求ID
+    optional int64 request_id = 1;
+    // 响应的状态代码，使用Worker_StatusCode
+    optional PBWorker_StatusCode status_code = 2;
+    // 错误消息
+    optional string message = 3;
+    // 实体数量
+    optional uint32 result_count = 4;
+    // 实体数组
+    repeated PBWorker_Entity results = 5;
+}
+
+// 12.实体添加组件
+message PBWorker_AddComponentOp
+{
+   // 要添加组件的实体id 
+   optional int64 entity_id = 1; 
+   // 新组件的初始数据
+   optional PBWorker_ComponentData data = 2;
+}
+
+// 13.实体删除组件
+message PBWorker_RemoveComponentOp
+{
+   // 要删除组件的实体id 
+   optional int64 entity_id = 1; 
+   // 组件id
+   optional uint32 component_id = 2;
+}
+
+// 14.权限更改操作
+message PBWorker_AuthorityChangeOp
+{
+   // 实体id 
+   optional int64 entity_id = 1; 
+   // 组件id
+   optional uint32 component_id = 2;
+   // 组件权限状态
+   optional PBWorker_Authority authority = 3;
+}
+
+// 15.组件更新操作
+message PBWorker_ComponentUpdateOp
+{
+   // 实体id 
+   optional int64 entity_id = 1; 
+   // 更新实体的新组件数据
+   optional PBWorker_ComponentUpdate update = 2;
+}
+
+// 16.指令请求操作
+message PBWorker_CommandRequestOp
+{
+    // 有响应的请求ID
+    optional int64 request_id = 1;
+    // 实体id 
+    optional int64 entity_id = 2;
+    // 超时上限
+    optional  uint32 timeout_millis = 3;
+    // 调用者工作id
+    optional uint32 caller_worker_id = 4;
+    // 调用者工作实体Id
+    optional int64 caller_worker_entity_id = 5;
+    // 调用者工作进程的属性
+    optional PBWorker_WorkerAttributes caller_attribute_set = 6;
+    // 
+    optional PBWorker_CommandRequest request = 7;
+}
+
+// 17.指令请求响应
+message PBWorker_CommandResponseOp
+{
+    // 有响应的请求ID
+    optional int64 request_id = 1;
+    // 实体id 
+    optional int64 entity_id = 2;
+    // 响应的状态代码，使用Worker_StatusCode
+    optional PBWorker_StatusCode status_code = 3;
+    // 错误消息
+    optional string message = 4;
+    // 指令响应数据
+    optional PBWorker_CommandResponse response = 4;
+}
+
+// 18.组件集权限操作
+message PBcomponent_set_authority_changeOp
+{
+     
+    // 实体id 
+    optional int64 entity_id = 1;
+    // 组件集id
+    optional uint32 component_set_id = 2;
+    // 权限
+    optional PBWorker_Authority authority = 3;
+}
+
+
+// Worker操作指令集
 message PBWorker_Op_Union
 {
   optional PBWorker_DisconnectOp disconnect                                      = 1;
