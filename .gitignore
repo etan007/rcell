@@ -16,3 +16,4 @@ obj
 *.obj
 /libs/d_liblua.lib
 /libs/d_redis.lib
+/.idea
