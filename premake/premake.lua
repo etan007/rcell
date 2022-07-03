@@ -112,5 +112,37 @@ project "rcell"
 		links {'r_liblua'}
 		links {'r_redis'}
 	filter {}
-		
- 
+-------------------------------------------------------------------------------------------------------------------------------------		
+ project "WorkerSDK"
+-- 工程生成目录
+	location "../src"
+-- 附加包含目录
+includedirs {
+    "../dependencies",
+    "../src",
+	"../src/WorkerSDK",
+}
+language "C++"
+cppdialect "C++17"
+kind "SharedLib"
+local codedir = "../src/WorkerSDK/improbable";
+files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp",codedir .. "/Source.def" }
+local codedir = "../src/WorkerSDK/automaton/core/io";
+files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
+local codedir = "../src/WorkerSDK/automaton/core/data";
+files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
+local codedir = "../src/WorkerSDK/automaton/core/data/protobuf";
+files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
+
+libdirs{"../libs"}
+targetdir "../bin"
+
+filter "system:windows"
+        defines 'WorkerSDK_DLL_EXPORTS'
+		links {'libprotobuf'}
+		links {'g3log'}
+filter "system:not windows"
+
+filter {}		 
+	 
+	
