@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="data">
+      <UniqueIdentifier>{5F91957C-4BC8-960D-F4B4-7C10E0CA120F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data\protobuf">
+      <UniqueIdentifier>{7FC2C702-EB82-4339-B4BD-8CB6203D8815}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io">
+      <UniqueIdentifier>{3D785900-2904-880B-92B2-880B7E5D880B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="automaton\core\data\data_exception.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="automaton\core\data\factory.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="automaton\core\data\msg.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="automaton\core\data\protobuf\protobuf_factory.h">
+      <Filter>data\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="automaton\core\data\protobuf\protobuf_msg.h">
+      <Filter>data\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="automaton\core\data\protobuf\protobuf_schema.h">
+      <Filter>data\protobuf</Filter>
+    </ClInclude>
+    <ClInclude Include="automaton\core\data\schema.h">
+      <Filter>data</Filter>
+    </ClInclude>
+    <ClInclude Include="automaton\core\io\blob.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="automaton\core\io\io.h">
+      <Filter>io</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="automaton\core\data\factory.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="automaton\core\data\msg.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="automaton\core\data\protobuf\protobuf_factory.cc">
+      <Filter>data\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="automaton\core\data\protobuf\protobuf_msg.cc">
+      <Filter>data\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="automaton\core\data\protobuf\protobuf_schema.cc">
+      <Filter>data\protobuf</Filter>
+    </ClCompile>
+    <ClCompile Include="automaton\core\data\schema.cc">
+      <Filter>data</Filter>
+    </ClCompile>
+    <ClCompile Include="automaton\core\io\blob.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="automaton\core\io\io.cc">
+      <Filter>io</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

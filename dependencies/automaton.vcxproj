@@ -19,32 +19,32 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{01E15C41-6D4B-11B8-B689-C25D2233EF0C}</ProjectGuid>
+    <ProjectGuid>{FD6795FB-69D2-4972-B210-FB171EBA27C7}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>WorkerSDK</RootNamespace>
+    <RootNamespace>automaton</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
@@ -66,116 +66,101 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\</OutDir>
-    <IntDir>obj\x32\Debug\WorkerSDK\</IntDir>
-    <TargetName>WorkerSDK</TargetName>
-    <TargetExt>.dll</TargetExt>
+    <OutDir>..\libs\</OutDir>
+    <IntDir>obj\x32\Debug\automaton\</IntDir>
+    <TargetName>d_automaton</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\</OutDir>
-    <IntDir>obj\x64\Debug\WorkerSDK\</IntDir>
-    <TargetName>WorkerSDK</TargetName>
-    <TargetExt>.dll</TargetExt>
+    <OutDir>..\libs\</OutDir>
+    <IntDir>obj\x64\Debug\automaton\</IntDir>
+    <TargetName>d_automaton</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\</OutDir>
-    <IntDir>obj\x32\Release\WorkerSDK\</IntDir>
-    <TargetName>WorkerSDK</TargetName>
-    <TargetExt>.dll</TargetExt>
+    <OutDir>..\libs\</OutDir>
+    <IntDir>obj\x32\Release\automaton\</IntDir>
+    <TargetName>r_automaton</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\</OutDir>
-    <IntDir>obj\x64\Release\WorkerSDK\</IntDir>
-    <TargetName>WorkerSDK</TargetName>
-    <TargetExt>.dll</TargetExt>
+    <OutDir>..\libs\</OutDir>
+    <IntDir>obj\x64\Release\automaton\</IntDir>
+    <TargetName>r_automaton</TargetName>
+    <TargetExt>.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WorkerSDK_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\dependencies;..\dependencies\automaton;.;WorkerSDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libprotobuf.lib;g3log.lib;d_automaton.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\bin\WorkerSDK.lib</ImportLibrary>
-      <ModuleDefinitionFile>WorkerSDK/improbable/Source.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WorkerSDK_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\dependencies;..\dependencies\automaton;.;WorkerSDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libprotobuf.lib;g3log.lib;d_automaton.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\bin\WorkerSDK.lib</ImportLibrary>
-      <ModuleDefinitionFile>WorkerSDK/improbable/Source.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WorkerSDK_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\dependencies;..\dependencies\automaton;.;WorkerSDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libprotobuf.lib;g3log.lib;r_automaton.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\bin\WorkerSDK.lib</ImportLibrary>
-      <ModuleDefinitionFile>WorkerSDK/improbable/Source.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WorkerSDK_DLL_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\dependencies;..\dependencies\automaton;.;WorkerSDK;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>libprotobuf.lib;g3log.lib;r_automaton.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\bin\WorkerSDK.lib</ImportLibrary>
-      <ModuleDefinitionFile>WorkerSDK/improbable/Source.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="WorkerSDK\improbable\c_io.h" />
-    <ClInclude Include="WorkerSDK\improbable\c_schema.h" />
-    <ClInclude Include="WorkerSDK\improbable\c_trace.h" />
-    <ClInclude Include="WorkerSDK\improbable\c_worker.h" />
-    <ClInclude Include="WorkerSDK\improbable\pch.h" />
+    <ClInclude Include="automaton\core\data\data_exception.h" />
+    <ClInclude Include="automaton\core\data\factory.h" />
+    <ClInclude Include="automaton\core\data\msg.h" />
+    <ClInclude Include="automaton\core\data\protobuf\protobuf_factory.h" />
+    <ClInclude Include="automaton\core\data\protobuf\protobuf_msg.h" />
+    <ClInclude Include="automaton\core\data\protobuf\protobuf_schema.h" />
+    <ClInclude Include="automaton\core\data\schema.h" />
+    <ClInclude Include="automaton\core\io\blob.h" />
+    <ClInclude Include="automaton\core\io\io.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WorkerSDK\improbable\c_io.cpp" />
-    <ClCompile Include="WorkerSDK\improbable\c_schema.cpp" />
-    <ClCompile Include="WorkerSDK\improbable\c_trace.cpp" />
-    <ClCompile Include="WorkerSDK\improbable\c_worker.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="WorkerSDK\improbable\Source.def" />
+    <ClCompile Include="automaton\core\data\factory.cc" />
+    <ClCompile Include="automaton\core\data\msg.cc" />
+    <ClCompile Include="automaton\core\data\protobuf\protobuf_factory.cc" />
+    <ClCompile Include="automaton\core\data\protobuf\protobuf_msg.cc" />
+    <ClCompile Include="automaton\core\data\protobuf\protobuf_schema.cc" />
+    <ClCompile Include="automaton\core\data\schema.cc" />
+    <ClCompile Include="automaton\core\io\blob.cc" />
+    <ClCompile Include="automaton\core\io\io.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

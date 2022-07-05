@@ -27,25 +27,13 @@ static constexpr ::_pbi::MigrationSchema* schemas = nullptr;
 static constexpr ::_pb::Message* const* file_default_instances = nullptr;
 
 const char descriptor_table_protodef_xCommond_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016xCommond.proto*\257\004\n\007CmdType\022\032\n\026PB_SYSTE"
-  "M_INTERNAL_CMD\020\001\022\021\n\rPB_COMMON_CMD\020\002\022\023\n\017P"
-  "B_SMANAGER_CMD\020d\022\024\n\020PB_SLAUNCHER_CMD\020e\022\025"
-  "\n\021PB_DATARECORD_CMD\020f\022\025\n\021PB_LOGIN_GATE_C"
-  "MD\020g\022\025\n\021PB_LOBBY_GATE_CMD\020h\022\027\n\023PB_LOBBY_"
-  "CENTER_CMD\020i\022\020\n\014PB_MATCH_CMD\020j\022\021\n\rPB_FRI"
-  "END_CMD\020k\022\023\n\017PB_FM_ROUTE_CMD\020l\022\017\n\013PB_CHA"
-  "T_CMD\020m\022\024\n\020PB_TradeBank_CMD\020n\022\021\n\rPB_BATT"
-  "LE_CMD\020x\022\022\n\rPB_MARKET_CMD\020\202\001\022\020\n\013PB_MAIL_"
-  "CMD\020\214\001\022\023\n\016PB_GAMELOG_CMD\020\226\001\022\020\n\013PB_HOME_C"
-  "MD\020\240\001\022\031\n\024PB_BATTLE_REPORT_CMD\020\245\001\022\020\n\013PB_S"
-  "LOG_CMD\020\252\001\022\027\n\022PB_SG_OPERAROR_CMD\020\253\001\022\016\n\tP"
-  "B_GM_CMD\020\262\001\022\024\n\017PB_GAMELOAD_CMD\020\264\001\022\027\n\022PB_"
-  "SERVER_LOAD_CMD\020\276\001\022\021\n\014PB_GUILD_CMD\020\310\001\022\023\n"
-  "\016PB_COMMAND_MAX\020\377\001"
+  "\n\016xCommond.proto*^\n\007CmdType\022\032\n\026PB_SYSTEM"
+  "_INTERNAL_CMD\020\001\022\021\n\rPB_COMMON_CMD\020\002\022\017\n\013PB"
+  "_WORK_CMD\020\003\022\023\n\016PB_COMMAND_MAX\020\377\001"
   ;
 static ::_pbi::once_flag descriptor_table_xCommond_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_xCommond_2eproto = {
-    false, false, 578, descriptor_table_protodef_xCommond_2eproto,
+    false, false, 112, descriptor_table_protodef_xCommond_2eproto,
     "xCommond.proto",
     &descriptor_table_xCommond_2eproto_once, nullptr, 0, 0,
     schemas, file_default_instances, TableStruct_xCommond_2eproto::offsets,
@@ -66,29 +54,7 @@ bool CmdType_IsValid(int value) {
   switch (value) {
     case 1:
     case 2:
-    case 100:
-    case 101:
-    case 102:
-    case 103:
-    case 104:
-    case 105:
-    case 106:
-    case 107:
-    case 108:
-    case 109:
-    case 110:
-    case 120:
-    case 130:
-    case 140:
-    case 150:
-    case 160:
-    case 165:
-    case 170:
-    case 171:
-    case 178:
-    case 180:
-    case 190:
-    case 200:
+    case 3:
     case 255:
       return true;
     default:

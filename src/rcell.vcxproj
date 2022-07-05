@@ -104,7 +104,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;Psapi.lib;Userenv.lib;libprotobuf.lib;d_liblua.lib;d_redis.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;Psapi.lib;Userenv.lib;libprotobuf.lib;d_liblua.lib;d_redis.lib;d_automaton.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\libs;..\libs\Windows;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -119,7 +119,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;Psapi.lib;Userenv.lib;libprotobuf.lib;d_liblua.lib;d_redis.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;Psapi.lib;Userenv.lib;libprotobuf.lib;d_liblua.lib;d_redis.lib;d_automaton.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\libs;..\libs\Windows;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -134,7 +134,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;Psapi.lib;Userenv.lib;libprotobuf.lib;r_liblua.lib;r_redis.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;Psapi.lib;Userenv.lib;libprotobuf.lib;r_liblua.lib;r_redis.lib;r_automaton.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\libs;..\libs\Windows;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -149,7 +149,7 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;Psapi.lib;Userenv.lib;libprotobuf.lib;r_liblua.lib;r_redis.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ws2_32.lib;Iphlpapi.lib;Psapi.lib;Userenv.lib;libprotobuf.lib;r_liblua.lib;r_redis.lib;r_automaton.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>..\libs;..\libs\Windows;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -928,6 +928,8 @@
     <ClInclude Include="pb\CommonCmd.pb.h" />
     <ClInclude Include="pb\Entity.pb.h" />
     <ClInclude Include="pb\SystemInternalCmd.pb.h" />
+    <ClInclude Include="pb\WorkerData.pb.h" />
+    <ClInclude Include="pb\dynamic_msg_mgr.h" />
     <ClInclude Include="pb\xCommond.pb.h" />
     <ClInclude Include="script\pb.h" />
     <ClInclude Include="utils\util.h" />
@@ -987,6 +989,8 @@
     <ClCompile Include="pb\CommonCmd.pb.cc" />
     <ClCompile Include="pb\Entity.pb.cc" />
     <ClCompile Include="pb\SystemInternalCmd.pb.cc" />
+    <ClCompile Include="pb\WorkerData.pb.cc" />
+    <ClCompile Include="pb\dynamic_msg_mgr.cpp" />
     <ClCompile Include="pb\xCommond.pb.cc" />
     <ClCompile Include="script\main.cpp" />
     <ClCompile Include="script\pb.c" />

@@ -87,6 +87,16 @@ message PBWorker_Metrics
     // 直方图度量数组
     repeated PBWorker_HistogramMetric histogram_metrics = 5;
 }
+message PBSchema_ComponentData
+{
+    optional uint32 schema_id = 1;
+    optional bytes data = 2;
+}
+
+message PBWorker_ComponentDataHandle
+{
+
+}
 
 // 用于通过原始架构数据或某些用户定义的句柄类型
 message PBWorker_ComponentData

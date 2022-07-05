@@ -2607,6 +2607,12 @@
     <ClInclude Include="pb\SystemInternalCmd.pb.h">
       <Filter>pb</Filter>
     </ClInclude>
+    <ClInclude Include="pb\WorkerData.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\dynamic_msg_mgr.h">
+      <Filter>pb</Filter>
+    </ClInclude>
     <ClInclude Include="pb\xCommond.pb.h">
       <Filter>pb</Filter>
     </ClInclude>
@@ -2778,6 +2784,12 @@
       <Filter>pb</Filter>
     </ClCompile>
     <ClCompile Include="pb\SystemInternalCmd.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\WorkerData.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\dynamic_msg_mgr.cpp">
       <Filter>pb</Filter>
     </ClCompile>
     <ClCompile Include="pb\xCommond.pb.cc">

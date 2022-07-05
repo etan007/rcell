@@ -10,7 +10,7 @@ platforms {'x32', 'x64'}
  end
 
  
-
+-----------------------------------------------------------------------------
 project "liblua"
 	-- 工程生成目录
 	location "../dependencies"
@@ -29,7 +29,7 @@ project "liblua"
 		targetname "d_liblua"
 	filter "configurations:Release"
 		targetname "r_liblua"
-		
+---------------------------------------------------------------------------------		
 project "hiredis"
 	-- 工程生成目录
 	location "../dependencies"
@@ -49,7 +49,32 @@ project "hiredis"
 		targetname "d_redis"
 	filter "configurations:Release"
 		targetname "r_redis"
-		
+-------------------------------------------------------------------------------------------
+project "automaton"
+	-- 工程生成目录
+	location "../dependencies"
+	-- 附加包含目录
+	includedirs{
+		"../dependencies",
+	}
+	language "C++"
+	cppdialect "C++17"
+	kind "StaticLib"
+	local codedir = "../dependencies/automaton";
+    files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
+    local codedir = "../dependencies/automaton/core/io";
+    files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
+    local codedir = "../dependencies/automaton/core/data";
+    files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
+    local codedir = "../dependencies/automaton/core/data/protobuf";
+    files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
+	 
+	targetdir "../libs"
+	filter "configurations:Debug"
+		targetname "d_automaton"
+	filter "configurations:Release"
+		targetname "r_automaton"
+-------------------------------------------------------------------------------------------		
 project "rcell"
 	-- 工程生成目录
 	location "../src"
@@ -108,9 +133,11 @@ project "rcell"
 	filter "configurations:Debug"
 		links {'d_liblua'}
 		links {'d_redis'}
+		links {'d_automaton'}
 	filter "configurations:Release"
 		links {'r_liblua'}
 		links {'r_redis'}
+		links {'r_automaton'}
 	filter {}
 -------------------------------------------------------------------------------------------------------------------------------------		
  project "WorkerSDK"
@@ -119,6 +146,7 @@ project "rcell"
 -- 附加包含目录
 includedirs {
     "../dependencies",
+	"../dependencies/automaton",
     "../src",
 	"../src/WorkerSDK",
 }
@@ -127,12 +155,7 @@ cppdialect "C++17"
 kind "SharedLib"
 local codedir = "../src/WorkerSDK/improbable";
 files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp",codedir .. "/Source.def" }
-local codedir = "../src/WorkerSDK/automaton/core/io";
-files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
-local codedir = "../src/WorkerSDK/automaton/core/data";
-files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
-local codedir = "../src/WorkerSDK/automaton/core/data/protobuf";
-files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp" }
+
 
 libdirs{"../libs"}
 targetdir "../bin"
@@ -142,7 +165,10 @@ filter "system:windows"
 		links {'libprotobuf'}
 		links {'g3log'}
 filter "system:not windows"
-
-filter {}		 
+filter "configurations:Debug"
+		links {'d_automaton'}
+filter "configurations:Release"
+		links {'r_automaton'}
+filter {}	 
 	 
 	

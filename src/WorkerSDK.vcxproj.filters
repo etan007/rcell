@@ -1,110 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="automaton">
-      <UniqueIdentifier>{FD6795FB-69D2-4972-B210-FB171EBA27C7}</UniqueIdentifier>
+    <Filter Include="WorkerSDK">
+      <UniqueIdentifier>{01E15C41-6D4B-11B8-B689-C25D2233EF0C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="automaton\core">
-      <UniqueIdentifier>{959EC115-816C-B51B-6A00-2642566D9180}</UniqueIdentifier>
+    <Filter Include="WorkerSDK\improbable">
+      <UniqueIdentifier>{CD9885B1-B927-0F7B-6246-23764EB41F21}</UniqueIdentifier>
     </Filter>
-    <Filter Include="automaton\core\data">
-      <UniqueIdentifier>{3E0590C4-AA66-6DD2-33D4-B3849F34A491}</UniqueIdentifier>
+    <Filter Include="dependencies">
+      <UniqueIdentifier>{8CAD9F58-7810-2FFD-2196-67B30DD8FA7F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="automaton\core\data\protobuf">
-      <UniqueIdentifier>{3E016828-2ABC-57D4-D373-D01EBF0DA264}</UniqueIdentifier>
+    <Filter Include="dependencies\automaton">
+      <UniqueIdentifier>{F38EF847-DF88-219A-C8F5-B7AAB48E8706}</UniqueIdentifier>
     </Filter>
-    <Filter Include="automaton\core\io">
-      <UniqueIdentifier>{5C681721-C87E-15B7-11F6-A0D87D4BE63E}</UniqueIdentifier>
+    <Filter Include="dependencies\automaton\core">
+      <UniqueIdentifier>{4B8FE179-B79C-0F60-4083-0B4BAC8FDB16}</UniqueIdentifier>
     </Filter>
-    <Filter Include="improbable">
-      <UniqueIdentifier>{C2924C25-AE4A-8E72-1752-67CE03292963}</UniqueIdentifier>
+    <Filter Include="dependencies\automaton\core\data">
+      <UniqueIdentifier>{B4D7B012-A028-9C54-C98C-8A16B53C2FBE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\automaton\core\data\protobuf">
+      <UniqueIdentifier>{74F873E2-E012-D783-2935-E717958EFE8A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\automaton\core\io">
+      <UniqueIdentifier>{5225D588-3E4B-9FEF-2791-24BB1356C4BB}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="WorkerSDK\automaton\core\data\data_exception.h">
-      <Filter>automaton\core\data</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\data\data_exception.h">
+      <Filter>dependencies\automaton\core\data</Filter>
     </ClInclude>
-    <ClInclude Include="WorkerSDK\automaton\core\data\factory.h">
-      <Filter>automaton\core\data</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\data\factory.h">
+      <Filter>dependencies\automaton\core\data</Filter>
     </ClInclude>
-    <ClInclude Include="WorkerSDK\automaton\core\data\msg.h">
-      <Filter>automaton\core\data</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\data\msg.h">
+      <Filter>dependencies\automaton\core\data</Filter>
     </ClInclude>
-    <ClInclude Include="WorkerSDK\automaton\core\data\protobuf\protobuf_factory.h">
-      <Filter>automaton\core\data\protobuf</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\data\protobuf\protobuf_factory.h">
+      <Filter>dependencies\automaton\core\data\protobuf</Filter>
     </ClInclude>
-    <ClInclude Include="WorkerSDK\automaton\core\data\protobuf\protobuf_msg.h">
-      <Filter>automaton\core\data\protobuf</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\data\protobuf\protobuf_msg.h">
+      <Filter>dependencies\automaton\core\data\protobuf</Filter>
     </ClInclude>
-    <ClInclude Include="WorkerSDK\automaton\core\data\protobuf\protobuf_schema.h">
-      <Filter>automaton\core\data\protobuf</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\data\protobuf\protobuf_schema.h">
+      <Filter>dependencies\automaton\core\data\protobuf</Filter>
     </ClInclude>
-    <ClInclude Include="WorkerSDK\automaton\core\data\schema.h">
-      <Filter>automaton\core\data</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\data\schema.h">
+      <Filter>dependencies\automaton\core\data</Filter>
     </ClInclude>
-    <ClInclude Include="WorkerSDK\automaton\core\io\blob.h">
-      <Filter>automaton\core\io</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\io\blob.h">
+      <Filter>dependencies\automaton\core\io</Filter>
     </ClInclude>
-    <ClInclude Include="WorkerSDK\automaton\core\io\io.h">
-      <Filter>automaton\core\io</Filter>
+    <ClInclude Include="..\dependencies\automaton\core\io\io.h">
+      <Filter>dependencies\automaton\core\io</Filter>
     </ClInclude>
     <ClInclude Include="WorkerSDK\improbable\c_io.h">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClInclude>
     <ClInclude Include="WorkerSDK\improbable\c_schema.h">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClInclude>
     <ClInclude Include="WorkerSDK\improbable\c_trace.h">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClInclude>
     <ClInclude Include="WorkerSDK\improbable\c_worker.h">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClInclude>
     <ClInclude Include="WorkerSDK\improbable\pch.h">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="WorkerSDK\automaton\core\data\factory.cc">
-      <Filter>automaton\core\data</Filter>
+    <ClCompile Include="..\dependencies\automaton\core\data\factory.cc">
+      <Filter>dependencies\automaton\core\data</Filter>
     </ClCompile>
-    <ClCompile Include="WorkerSDK\automaton\core\data\msg.cc">
-      <Filter>automaton\core\data</Filter>
+    <ClCompile Include="..\dependencies\automaton\core\data\msg.cc">
+      <Filter>dependencies\automaton\core\data</Filter>
     </ClCompile>
-    <ClCompile Include="WorkerSDK\automaton\core\data\protobuf\protobuf_factory.cc">
-      <Filter>automaton\core\data\protobuf</Filter>
+    <ClCompile Include="..\dependencies\automaton\core\data\protobuf\protobuf_factory.cc">
+      <Filter>dependencies\automaton\core\data\protobuf</Filter>
     </ClCompile>
-    <ClCompile Include="WorkerSDK\automaton\core\data\protobuf\protobuf_msg.cc">
-      <Filter>automaton\core\data\protobuf</Filter>
+    <ClCompile Include="..\dependencies\automaton\core\data\protobuf\protobuf_msg.cc">
+      <Filter>dependencies\automaton\core\data\protobuf</Filter>
     </ClCompile>
-    <ClCompile Include="WorkerSDK\automaton\core\data\protobuf\protobuf_schema.cc">
-      <Filter>automaton\core\data\protobuf</Filter>
+    <ClCompile Include="..\dependencies\automaton\core\data\protobuf\protobuf_schema.cc">
+      <Filter>dependencies\automaton\core\data\protobuf</Filter>
     </ClCompile>
-    <ClCompile Include="WorkerSDK\automaton\core\data\schema.cc">
-      <Filter>automaton\core\data</Filter>
+    <ClCompile Include="..\dependencies\automaton\core\data\schema.cc">
+      <Filter>dependencies\automaton\core\data</Filter>
     </ClCompile>
-    <ClCompile Include="WorkerSDK\automaton\core\io\blob.cc">
-      <Filter>automaton\core\io</Filter>
+    <ClCompile Include="..\dependencies\automaton\core\io\blob.cc">
+      <Filter>dependencies\automaton\core\io</Filter>
     </ClCompile>
-    <ClCompile Include="WorkerSDK\automaton\core\io\io.cc">
-      <Filter>automaton\core\io</Filter>
+    <ClCompile Include="..\dependencies\automaton\core\io\io.cc">
+      <Filter>dependencies\automaton\core\io</Filter>
     </ClCompile>
     <ClCompile Include="WorkerSDK\improbable\c_io.cpp">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClCompile>
     <ClCompile Include="WorkerSDK\improbable\c_schema.cpp">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClCompile>
     <ClCompile Include="WorkerSDK\improbable\c_trace.cpp">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClCompile>
     <ClCompile Include="WorkerSDK\improbable\c_worker.cpp">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="WorkerSDK\improbable\Source.def">
-      <Filter>improbable</Filter>
+      <Filter>WorkerSDK\improbable</Filter>
     </None>
   </ItemGroup>
 </Project>
