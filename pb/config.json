@@ -1,0 +1,8 @@
+{
+  "schemas":[
+               "xCommond.proto",
+			   "WorkerData.proto",
+               "WorkerCmd.proto"
+            ]
+   
+}

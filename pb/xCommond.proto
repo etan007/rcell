@@ -1,0 +1,13 @@
+syntax = "proto2";
+
+enum CmdType {
+	// 系统内部协议
+	PB_SYSTEM_INTERNAL_CMD  = 1;
+	// 系统通用协议
+	PB_COMMON_CMD  = 2;	
+    // WorkCmd
+    PB_WORK_CMD = 3;
+    
+	PB_COMMAND_MAX					 = 255;		//最大不要超过255
+}
+

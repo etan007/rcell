@@ -1,4 +1,5 @@
-enum PBWorker_StatusCode
+syntax = "proto2";
+enum PBWorkerStatusCode
 {
     	/** The request was successfully executed and returned a response. */
 		WORKER_STATUS_CODE_SUCCESS = 1;
@@ -44,7 +45,7 @@ enum PBWorker_StatusCode
 
 
 // 仪表度量参数
-message PBWorker_GaugeMetric
+message PBWorkerGaugeMetric
 {
     // 指标名字
     optional string key = 1;
@@ -53,7 +54,7 @@ message PBWorker_GaugeMetric
 }
 
 // 直方图度量桶参数
-message PBWorker_HistogramMetricBucket
+message PBWorkerHistogramMetricBucket
 {
     // 上限
     optional double upper_bound = 1;
@@ -61,7 +62,7 @@ message PBWorker_HistogramMetricBucket
     optional uint32 samples = 2;
 }
 // 直方图度量参数
-message PBWorker_HistogramMetric
+message PBWorkerHistogramMetric
 {
     // 指标名字
     optional string key = 1;
@@ -70,77 +71,77 @@ message PBWorker_HistogramMetric
     // 桶数量
     optional uint32 bucket_count = 3;
     // 桶数组
-    repeated PBWorker_HistogramMetricBucket buckets = 4;
+    repeated PBWorkerHistogramMetricBucket buckets = 4;
 }
 
 // 发送到rcell的指标参数
-message PBWorker_Metrics
+message PBWorkerMetrics
 {
     // 本worker的负载值,没有就不上报该值
     optional double load = 1;
     // 仪表度量数量 todo 该值可以省略...
     optional uint32 gauge_metric_count = 2;
     // 仪表度量数组
-    repeated PBWorker_GaugeMetric gauge_metrics = 3;
+    repeated PBWorkerGaugeMetric gauge_metrics = 3;
     // 直方图度量数量
     optional uint32 histogram_metric_count = 4;
     // 直方图度量数组
-    repeated PBWorker_HistogramMetric histogram_metrics = 5;
+    repeated PBWorkerHistogramMetric histogram_metrics = 5;
 }
-message PBSchema_ComponentData
+message PBSchemaComponentData
 {
     optional uint32 schema_id = 1;
     optional bytes data = 2;
 }
 
-message PBWorker_ComponentDataHandle
+message PBWorkerComponentDataHandle
 {
 
 }
 
 // 用于通过原始架构数据或某些用户定义的句柄类型
-message PBWorker_ComponentData
+message PBWorkerComponentData
 {
     // 保留数据
     optional bytes reserved = 1;					
     // 组件id
     optional uint32 component_id = 2;
     // todo 组件架构数据
-    optional PBSchema_ComponentData schema_type = 3;
+    optional PBSchemaComponentData schema_type = 3;
     // todo 组件数据句柄
-    optional PBWorker_ComponentDataHandle user_handle = 4;
+    optional PBWorkerComponentDataHandle user_handle = 4;
 }
 // 表示具有ID和组件数据快照的实体
-message PBWorker_Entity
+message PBWorkerEntity
 {
    optional int64 entity_id = 1; 
    // 实体组件数量
    optional uint32 component_count = 2;
    // 实体组件数据数组
-   repeated PBWorker_ComponentData components = 3;
+   repeated PBWorkerComponentData components = 3;
 }
 
 // 组件权限状态
-enum PBWorker_Authority
+enum PBWorkerAuthority
 {
 	WORKER_AUTHORITY_NOT_AUTHORITATIVE = 0;
 	WORKER_AUTHORITY_AUTHORITATIVE = 1;
 	WORKER_AUTHORITY_AUTHORITY_LOSS_IMMINENT = 2;
 }
 
-message PBWorker_ComponentUpdate
+message PBWorkerComponentUpdate
 {
     // 保留数据
     optional bytes reserved = 1;	
     // 组件id
     optional uint32 component_id = 2;
     // todo 组件架构数据
-    optional PBSchema_ComponentData schema_type = 3;
+    optional PBSchemaComponentData schema_type = 3;
     // todo 组件数据句柄
-    optional PBWorker_ComponentDataHandle user_handle = 4;
+    optional PBWorkerComponentDataHandle user_handle = 4;
 }
 
-message PBWorker_WorkerAttributes
+message PBWorkerWorkerAttributes
 {
     // 工作进程属性数量
     optional uint32 attribute_count = 1;
@@ -148,26 +149,26 @@ message PBWorker_WorkerAttributes
     repeated bytes attributes = 2;
 }
 
-message PBWorker_CommandRequest
+message PBWorkerCommandRequest
 {
     // 保留数据
     optional bytes reserved = 1;
     // 组件id
     optional uint32 component_id = 2;
     // todo 组件架构数据
-    optional PBSchema_ComponentData schema_type = 3;
+    optional PBSchemaComponentData schema_type = 3;
     // todo 组件数据句柄
-    optional PBWorker_ComponentDataHandle user_handle = 4;
+    optional PBWorkerComponentDataHandle user_handle = 4;
 }
 
-message PBWorker_CommandResponse
+message PBWorkerCommandResponse
 {
     // 保留数据
     optional bytes reserved = 1;
     // 组件id
     optional uint32 component_id = 2;
     // todo 组件架构数据
-    optional PBSchema_ComponentData schema_type = 3;
+    optional PBSchemaComponentData schema_type = 3;
     // todo 组件数据句柄
-    optional PBWorker_ComponentDataHandle user_handle = 4;
+    optional PBWorkerComponentDataHandle user_handle = 4;
 }

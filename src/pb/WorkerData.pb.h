@@ -46,58 +46,58 @@ struct TableStruct_WorkerData_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_WorkerData_2eproto;
-class PBSchema_ComponentData;
-struct PBSchema_ComponentDataDefaultTypeInternal;
-extern PBSchema_ComponentDataDefaultTypeInternal _PBSchema_ComponentData_default_instance_;
-class PBWorker_CommandRequest;
-struct PBWorker_CommandRequestDefaultTypeInternal;
-extern PBWorker_CommandRequestDefaultTypeInternal _PBWorker_CommandRequest_default_instance_;
-class PBWorker_CommandResponse;
-struct PBWorker_CommandResponseDefaultTypeInternal;
-extern PBWorker_CommandResponseDefaultTypeInternal _PBWorker_CommandResponse_default_instance_;
-class PBWorker_ComponentData;
-struct PBWorker_ComponentDataDefaultTypeInternal;
-extern PBWorker_ComponentDataDefaultTypeInternal _PBWorker_ComponentData_default_instance_;
-class PBWorker_ComponentDataHandle;
-struct PBWorker_ComponentDataHandleDefaultTypeInternal;
-extern PBWorker_ComponentDataHandleDefaultTypeInternal _PBWorker_ComponentDataHandle_default_instance_;
-class PBWorker_ComponentUpdate;
-struct PBWorker_ComponentUpdateDefaultTypeInternal;
-extern PBWorker_ComponentUpdateDefaultTypeInternal _PBWorker_ComponentUpdate_default_instance_;
-class PBWorker_Entity;
-struct PBWorker_EntityDefaultTypeInternal;
-extern PBWorker_EntityDefaultTypeInternal _PBWorker_Entity_default_instance_;
-class PBWorker_GaugeMetric;
-struct PBWorker_GaugeMetricDefaultTypeInternal;
-extern PBWorker_GaugeMetricDefaultTypeInternal _PBWorker_GaugeMetric_default_instance_;
-class PBWorker_HistogramMetric;
-struct PBWorker_HistogramMetricDefaultTypeInternal;
-extern PBWorker_HistogramMetricDefaultTypeInternal _PBWorker_HistogramMetric_default_instance_;
-class PBWorker_HistogramMetricBucket;
-struct PBWorker_HistogramMetricBucketDefaultTypeInternal;
-extern PBWorker_HistogramMetricBucketDefaultTypeInternal _PBWorker_HistogramMetricBucket_default_instance_;
-class PBWorker_Metrics;
-struct PBWorker_MetricsDefaultTypeInternal;
-extern PBWorker_MetricsDefaultTypeInternal _PBWorker_Metrics_default_instance_;
-class PBWorker_WorkerAttributes;
-struct PBWorker_WorkerAttributesDefaultTypeInternal;
-extern PBWorker_WorkerAttributesDefaultTypeInternal _PBWorker_WorkerAttributes_default_instance_;
+class PBSchemaComponentData;
+struct PBSchemaComponentDataDefaultTypeInternal;
+extern PBSchemaComponentDataDefaultTypeInternal _PBSchemaComponentData_default_instance_;
+class PBWorkerCommandRequest;
+struct PBWorkerCommandRequestDefaultTypeInternal;
+extern PBWorkerCommandRequestDefaultTypeInternal _PBWorkerCommandRequest_default_instance_;
+class PBWorkerCommandResponse;
+struct PBWorkerCommandResponseDefaultTypeInternal;
+extern PBWorkerCommandResponseDefaultTypeInternal _PBWorkerCommandResponse_default_instance_;
+class PBWorkerComponentData;
+struct PBWorkerComponentDataDefaultTypeInternal;
+extern PBWorkerComponentDataDefaultTypeInternal _PBWorkerComponentData_default_instance_;
+class PBWorkerComponentDataHandle;
+struct PBWorkerComponentDataHandleDefaultTypeInternal;
+extern PBWorkerComponentDataHandleDefaultTypeInternal _PBWorkerComponentDataHandle_default_instance_;
+class PBWorkerComponentUpdate;
+struct PBWorkerComponentUpdateDefaultTypeInternal;
+extern PBWorkerComponentUpdateDefaultTypeInternal _PBWorkerComponentUpdate_default_instance_;
+class PBWorkerEntity;
+struct PBWorkerEntityDefaultTypeInternal;
+extern PBWorkerEntityDefaultTypeInternal _PBWorkerEntity_default_instance_;
+class PBWorkerGaugeMetric;
+struct PBWorkerGaugeMetricDefaultTypeInternal;
+extern PBWorkerGaugeMetricDefaultTypeInternal _PBWorkerGaugeMetric_default_instance_;
+class PBWorkerHistogramMetric;
+struct PBWorkerHistogramMetricDefaultTypeInternal;
+extern PBWorkerHistogramMetricDefaultTypeInternal _PBWorkerHistogramMetric_default_instance_;
+class PBWorkerHistogramMetricBucket;
+struct PBWorkerHistogramMetricBucketDefaultTypeInternal;
+extern PBWorkerHistogramMetricBucketDefaultTypeInternal _PBWorkerHistogramMetricBucket_default_instance_;
+class PBWorkerMetrics;
+struct PBWorkerMetricsDefaultTypeInternal;
+extern PBWorkerMetricsDefaultTypeInternal _PBWorkerMetrics_default_instance_;
+class PBWorkerWorkerAttributes;
+struct PBWorkerWorkerAttributesDefaultTypeInternal;
+extern PBWorkerWorkerAttributesDefaultTypeInternal _PBWorkerWorkerAttributes_default_instance_;
 PROTOBUF_NAMESPACE_OPEN
-template<> ::PBSchema_ComponentData* Arena::CreateMaybeMessage<::PBSchema_ComponentData>(Arena*);
-template<> ::PBWorker_CommandRequest* Arena::CreateMaybeMessage<::PBWorker_CommandRequest>(Arena*);
-template<> ::PBWorker_CommandResponse* Arena::CreateMaybeMessage<::PBWorker_CommandResponse>(Arena*);
-template<> ::PBWorker_ComponentData* Arena::CreateMaybeMessage<::PBWorker_ComponentData>(Arena*);
-template<> ::PBWorker_ComponentDataHandle* Arena::CreateMaybeMessage<::PBWorker_ComponentDataHandle>(Arena*);
-template<> ::PBWorker_ComponentUpdate* Arena::CreateMaybeMessage<::PBWorker_ComponentUpdate>(Arena*);
-template<> ::PBWorker_Entity* Arena::CreateMaybeMessage<::PBWorker_Entity>(Arena*);
-template<> ::PBWorker_GaugeMetric* Arena::CreateMaybeMessage<::PBWorker_GaugeMetric>(Arena*);
-template<> ::PBWorker_HistogramMetric* Arena::CreateMaybeMessage<::PBWorker_HistogramMetric>(Arena*);
-template<> ::PBWorker_HistogramMetricBucket* Arena::CreateMaybeMessage<::PBWorker_HistogramMetricBucket>(Arena*);
-template<> ::PBWorker_Metrics* Arena::CreateMaybeMessage<::PBWorker_Metrics>(Arena*);
-template<> ::PBWorker_WorkerAttributes* Arena::CreateMaybeMessage<::PBWorker_WorkerAttributes>(Arena*);
+template<> ::PBSchemaComponentData* Arena::CreateMaybeMessage<::PBSchemaComponentData>(Arena*);
+template<> ::PBWorkerCommandRequest* Arena::CreateMaybeMessage<::PBWorkerCommandRequest>(Arena*);
+template<> ::PBWorkerCommandResponse* Arena::CreateMaybeMessage<::PBWorkerCommandResponse>(Arena*);
+template<> ::PBWorkerComponentData* Arena::CreateMaybeMessage<::PBWorkerComponentData>(Arena*);
+template<> ::PBWorkerComponentDataHandle* Arena::CreateMaybeMessage<::PBWorkerComponentDataHandle>(Arena*);
+template<> ::PBWorkerComponentUpdate* Arena::CreateMaybeMessage<::PBWorkerComponentUpdate>(Arena*);
+template<> ::PBWorkerEntity* Arena::CreateMaybeMessage<::PBWorkerEntity>(Arena*);
+template<> ::PBWorkerGaugeMetric* Arena::CreateMaybeMessage<::PBWorkerGaugeMetric>(Arena*);
+template<> ::PBWorkerHistogramMetric* Arena::CreateMaybeMessage<::PBWorkerHistogramMetric>(Arena*);
+template<> ::PBWorkerHistogramMetricBucket* Arena::CreateMaybeMessage<::PBWorkerHistogramMetricBucket>(Arena*);
+template<> ::PBWorkerMetrics* Arena::CreateMaybeMessage<::PBWorkerMetrics>(Arena*);
+template<> ::PBWorkerWorkerAttributes* Arena::CreateMaybeMessage<::PBWorkerWorkerAttributes>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 
-enum PBWorker_StatusCode : int {
+enum PBWorkerStatusCode : int {
   WORKER_STATUS_CODE_SUCCESS = 1,
   WORKER_STATUS_CODE_TIMEOUT = 2,
   WORKER_STATUS_CODE_NOT_FOUND = 3,
@@ -106,69 +106,69 @@ enum PBWorker_StatusCode : int {
   WORKER_STATUS_CODE_APPLICATION_ERROR = 6,
   WORKER_STATUS_CODE_INTERNAL_ERROR = 7
 };
-bool PBWorker_StatusCode_IsValid(int value);
-constexpr PBWorker_StatusCode PBWorker_StatusCode_MIN = WORKER_STATUS_CODE_SUCCESS;
-constexpr PBWorker_StatusCode PBWorker_StatusCode_MAX = WORKER_STATUS_CODE_INTERNAL_ERROR;
-constexpr int PBWorker_StatusCode_ARRAYSIZE = PBWorker_StatusCode_MAX + 1;
+bool PBWorkerStatusCode_IsValid(int value);
+constexpr PBWorkerStatusCode PBWorkerStatusCode_MIN = WORKER_STATUS_CODE_SUCCESS;
+constexpr PBWorkerStatusCode PBWorkerStatusCode_MAX = WORKER_STATUS_CODE_INTERNAL_ERROR;
+constexpr int PBWorkerStatusCode_ARRAYSIZE = PBWorkerStatusCode_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PBWorker_StatusCode_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PBWorkerStatusCode_descriptor();
 template<typename T>
-inline const std::string& PBWorker_StatusCode_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, PBWorker_StatusCode>::value ||
+inline const std::string& PBWorkerStatusCode_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, PBWorkerStatusCode>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function PBWorker_StatusCode_Name.");
+    "Incorrect type passed to function PBWorkerStatusCode_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    PBWorker_StatusCode_descriptor(), enum_t_value);
+    PBWorkerStatusCode_descriptor(), enum_t_value);
 }
-inline bool PBWorker_StatusCode_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, PBWorker_StatusCode* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<PBWorker_StatusCode>(
-    PBWorker_StatusCode_descriptor(), name, value);
+inline bool PBWorkerStatusCode_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, PBWorkerStatusCode* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<PBWorkerStatusCode>(
+    PBWorkerStatusCode_descriptor(), name, value);
 }
-enum PBWorker_Authority : int {
+enum PBWorkerAuthority : int {
   WORKER_AUTHORITY_NOT_AUTHORITATIVE = 0,
   WORKER_AUTHORITY_AUTHORITATIVE = 1,
   WORKER_AUTHORITY_AUTHORITY_LOSS_IMMINENT = 2
 };
-bool PBWorker_Authority_IsValid(int value);
-constexpr PBWorker_Authority PBWorker_Authority_MIN = WORKER_AUTHORITY_NOT_AUTHORITATIVE;
-constexpr PBWorker_Authority PBWorker_Authority_MAX = WORKER_AUTHORITY_AUTHORITY_LOSS_IMMINENT;
-constexpr int PBWorker_Authority_ARRAYSIZE = PBWorker_Authority_MAX + 1;
+bool PBWorkerAuthority_IsValid(int value);
+constexpr PBWorkerAuthority PBWorkerAuthority_MIN = WORKER_AUTHORITY_NOT_AUTHORITATIVE;
+constexpr PBWorkerAuthority PBWorkerAuthority_MAX = WORKER_AUTHORITY_AUTHORITY_LOSS_IMMINENT;
+constexpr int PBWorkerAuthority_ARRAYSIZE = PBWorkerAuthority_MAX + 1;
 
-const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PBWorker_Authority_descriptor();
+const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PBWorkerAuthority_descriptor();
 template<typename T>
-inline const std::string& PBWorker_Authority_Name(T enum_t_value) {
-  static_assert(::std::is_same<T, PBWorker_Authority>::value ||
+inline const std::string& PBWorkerAuthority_Name(T enum_t_value) {
+  static_assert(::std::is_same<T, PBWorkerAuthority>::value ||
     ::std::is_integral<T>::value,
-    "Incorrect type passed to function PBWorker_Authority_Name.");
+    "Incorrect type passed to function PBWorkerAuthority_Name.");
   return ::PROTOBUF_NAMESPACE_ID::internal::NameOfEnum(
-    PBWorker_Authority_descriptor(), enum_t_value);
+    PBWorkerAuthority_descriptor(), enum_t_value);
 }
-inline bool PBWorker_Authority_Parse(
-    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, PBWorker_Authority* value) {
-  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<PBWorker_Authority>(
-    PBWorker_Authority_descriptor(), name, value);
+inline bool PBWorkerAuthority_Parse(
+    ::PROTOBUF_NAMESPACE_ID::ConstStringParam name, PBWorkerAuthority* value) {
+  return ::PROTOBUF_NAMESPACE_ID::internal::ParseNamedEnum<PBWorkerAuthority>(
+    PBWorkerAuthority_descriptor(), name, value);
 }
 // ===================================================================
 
-class PBWorker_GaugeMetric final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_GaugeMetric) */ {
+class PBWorkerGaugeMetric final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerGaugeMetric) */ {
  public:
-  inline PBWorker_GaugeMetric() : PBWorker_GaugeMetric(nullptr) {}
-  ~PBWorker_GaugeMetric() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_GaugeMetric(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerGaugeMetric() : PBWorkerGaugeMetric(nullptr) {}
+  ~PBWorkerGaugeMetric() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerGaugeMetric(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_GaugeMetric(const PBWorker_GaugeMetric& from);
-  PBWorker_GaugeMetric(PBWorker_GaugeMetric&& from) noexcept
-    : PBWorker_GaugeMetric() {
+  PBWorkerGaugeMetric(const PBWorkerGaugeMetric& from);
+  PBWorkerGaugeMetric(PBWorkerGaugeMetric&& from) noexcept
+    : PBWorkerGaugeMetric() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_GaugeMetric& operator=(const PBWorker_GaugeMetric& from) {
+  inline PBWorkerGaugeMetric& operator=(const PBWorkerGaugeMetric& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_GaugeMetric& operator=(PBWorker_GaugeMetric&& from) noexcept {
+  inline PBWorkerGaugeMetric& operator=(PBWorkerGaugeMetric&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -198,20 +198,20 @@ class PBWorker_GaugeMetric final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_GaugeMetric& default_instance() {
+  static const PBWorkerGaugeMetric& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_GaugeMetric* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_GaugeMetric*>(
-               &_PBWorker_GaugeMetric_default_instance_);
+  static inline const PBWorkerGaugeMetric* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerGaugeMetric*>(
+               &_PBWorkerGaugeMetric_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     0;
 
-  friend void swap(PBWorker_GaugeMetric& a, PBWorker_GaugeMetric& b) {
+  friend void swap(PBWorkerGaugeMetric& a, PBWorkerGaugeMetric& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_GaugeMetric* other) {
+  inline void Swap(PBWorkerGaugeMetric* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -224,7 +224,7 @@ class PBWorker_GaugeMetric final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_GaugeMetric* other) {
+  void UnsafeArenaSwap(PBWorkerGaugeMetric* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -232,14 +232,14 @@ class PBWorker_GaugeMetric final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_GaugeMetric* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_GaugeMetric>(arena);
+  PBWorkerGaugeMetric* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerGaugeMetric>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_GaugeMetric& from);
+  void CopyFrom(const PBWorkerGaugeMetric& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_GaugeMetric& from) {
-    PBWorker_GaugeMetric::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerGaugeMetric& from) {
+    PBWorkerGaugeMetric::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -257,15 +257,15 @@ class PBWorker_GaugeMetric final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_GaugeMetric* other);
+  void InternalSwap(PBWorkerGaugeMetric* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_GaugeMetric";
+    return "PBWorkerGaugeMetric";
   }
   protected:
-  explicit PBWorker_GaugeMetric(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerGaugeMetric(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -313,7 +313,7 @@ class PBWorker_GaugeMetric final :
   void _internal_set_value(double value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_GaugeMetric)
+  // @@protoc_insertion_point(class_scope:PBWorkerGaugeMetric)
  private:
   class _Internal;
 
@@ -331,24 +331,24 @@ class PBWorker_GaugeMetric final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_HistogramMetricBucket final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_HistogramMetricBucket) */ {
+class PBWorkerHistogramMetricBucket final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerHistogramMetricBucket) */ {
  public:
-  inline PBWorker_HistogramMetricBucket() : PBWorker_HistogramMetricBucket(nullptr) {}
-  ~PBWorker_HistogramMetricBucket() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_HistogramMetricBucket(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerHistogramMetricBucket() : PBWorkerHistogramMetricBucket(nullptr) {}
+  ~PBWorkerHistogramMetricBucket() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerHistogramMetricBucket(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_HistogramMetricBucket(const PBWorker_HistogramMetricBucket& from);
-  PBWorker_HistogramMetricBucket(PBWorker_HistogramMetricBucket&& from) noexcept
-    : PBWorker_HistogramMetricBucket() {
+  PBWorkerHistogramMetricBucket(const PBWorkerHistogramMetricBucket& from);
+  PBWorkerHistogramMetricBucket(PBWorkerHistogramMetricBucket&& from) noexcept
+    : PBWorkerHistogramMetricBucket() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_HistogramMetricBucket& operator=(const PBWorker_HistogramMetricBucket& from) {
+  inline PBWorkerHistogramMetricBucket& operator=(const PBWorkerHistogramMetricBucket& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_HistogramMetricBucket& operator=(PBWorker_HistogramMetricBucket&& from) noexcept {
+  inline PBWorkerHistogramMetricBucket& operator=(PBWorkerHistogramMetricBucket&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -378,20 +378,20 @@ class PBWorker_HistogramMetricBucket final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_HistogramMetricBucket& default_instance() {
+  static const PBWorkerHistogramMetricBucket& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_HistogramMetricBucket* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_HistogramMetricBucket*>(
-               &_PBWorker_HistogramMetricBucket_default_instance_);
+  static inline const PBWorkerHistogramMetricBucket* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerHistogramMetricBucket*>(
+               &_PBWorkerHistogramMetricBucket_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(PBWorker_HistogramMetricBucket& a, PBWorker_HistogramMetricBucket& b) {
+  friend void swap(PBWorkerHistogramMetricBucket& a, PBWorkerHistogramMetricBucket& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_HistogramMetricBucket* other) {
+  inline void Swap(PBWorkerHistogramMetricBucket* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -404,7 +404,7 @@ class PBWorker_HistogramMetricBucket final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_HistogramMetricBucket* other) {
+  void UnsafeArenaSwap(PBWorkerHistogramMetricBucket* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -412,14 +412,14 @@ class PBWorker_HistogramMetricBucket final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_HistogramMetricBucket* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_HistogramMetricBucket>(arena);
+  PBWorkerHistogramMetricBucket* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerHistogramMetricBucket>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_HistogramMetricBucket& from);
+  void CopyFrom(const PBWorkerHistogramMetricBucket& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_HistogramMetricBucket& from) {
-    PBWorker_HistogramMetricBucket::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerHistogramMetricBucket& from) {
+    PBWorkerHistogramMetricBucket::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -437,15 +437,15 @@ class PBWorker_HistogramMetricBucket final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_HistogramMetricBucket* other);
+  void InternalSwap(PBWorkerHistogramMetricBucket* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_HistogramMetricBucket";
+    return "PBWorkerHistogramMetricBucket";
   }
   protected:
-  explicit PBWorker_HistogramMetricBucket(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerHistogramMetricBucket(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -488,7 +488,7 @@ class PBWorker_HistogramMetricBucket final :
   void _internal_set_samples(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_HistogramMetricBucket)
+  // @@protoc_insertion_point(class_scope:PBWorkerHistogramMetricBucket)
  private:
   class _Internal;
 
@@ -506,24 +506,24 @@ class PBWorker_HistogramMetricBucket final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_HistogramMetric final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_HistogramMetric) */ {
+class PBWorkerHistogramMetric final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerHistogramMetric) */ {
  public:
-  inline PBWorker_HistogramMetric() : PBWorker_HistogramMetric(nullptr) {}
-  ~PBWorker_HistogramMetric() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_HistogramMetric(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerHistogramMetric() : PBWorkerHistogramMetric(nullptr) {}
+  ~PBWorkerHistogramMetric() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerHistogramMetric(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_HistogramMetric(const PBWorker_HistogramMetric& from);
-  PBWorker_HistogramMetric(PBWorker_HistogramMetric&& from) noexcept
-    : PBWorker_HistogramMetric() {
+  PBWorkerHistogramMetric(const PBWorkerHistogramMetric& from);
+  PBWorkerHistogramMetric(PBWorkerHistogramMetric&& from) noexcept
+    : PBWorkerHistogramMetric() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_HistogramMetric& operator=(const PBWorker_HistogramMetric& from) {
+  inline PBWorkerHistogramMetric& operator=(const PBWorkerHistogramMetric& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_HistogramMetric& operator=(PBWorker_HistogramMetric&& from) noexcept {
+  inline PBWorkerHistogramMetric& operator=(PBWorkerHistogramMetric&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -553,20 +553,20 @@ class PBWorker_HistogramMetric final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_HistogramMetric& default_instance() {
+  static const PBWorkerHistogramMetric& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_HistogramMetric* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_HistogramMetric*>(
-               &_PBWorker_HistogramMetric_default_instance_);
+  static inline const PBWorkerHistogramMetric* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerHistogramMetric*>(
+               &_PBWorkerHistogramMetric_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     2;
 
-  friend void swap(PBWorker_HistogramMetric& a, PBWorker_HistogramMetric& b) {
+  friend void swap(PBWorkerHistogramMetric& a, PBWorkerHistogramMetric& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_HistogramMetric* other) {
+  inline void Swap(PBWorkerHistogramMetric* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -579,7 +579,7 @@ class PBWorker_HistogramMetric final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_HistogramMetric* other) {
+  void UnsafeArenaSwap(PBWorkerHistogramMetric* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -587,14 +587,14 @@ class PBWorker_HistogramMetric final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_HistogramMetric* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_HistogramMetric>(arena);
+  PBWorkerHistogramMetric* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerHistogramMetric>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_HistogramMetric& from);
+  void CopyFrom(const PBWorkerHistogramMetric& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_HistogramMetric& from) {
-    PBWorker_HistogramMetric::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerHistogramMetric& from) {
+    PBWorkerHistogramMetric::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -612,15 +612,15 @@ class PBWorker_HistogramMetric final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_HistogramMetric* other);
+  void InternalSwap(PBWorkerHistogramMetric* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_HistogramMetric";
+    return "PBWorkerHistogramMetric";
   }
   protected:
-  explicit PBWorker_HistogramMetric(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerHistogramMetric(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -639,22 +639,22 @@ class PBWorker_HistogramMetric final :
     kSumFieldNumber = 2,
     kBucketCountFieldNumber = 3,
   };
-  // repeated .PBWorker_HistogramMetricBucket buckets = 4;
+  // repeated .PBWorkerHistogramMetricBucket buckets = 4;
   int buckets_size() const;
   private:
   int _internal_buckets_size() const;
   public:
   void clear_buckets();
-  ::PBWorker_HistogramMetricBucket* mutable_buckets(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetricBucket >*
+  ::PBWorkerHistogramMetricBucket* mutable_buckets(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetricBucket >*
       mutable_buckets();
   private:
-  const ::PBWorker_HistogramMetricBucket& _internal_buckets(int index) const;
-  ::PBWorker_HistogramMetricBucket* _internal_add_buckets();
+  const ::PBWorkerHistogramMetricBucket& _internal_buckets(int index) const;
+  ::PBWorkerHistogramMetricBucket* _internal_add_buckets();
   public:
-  const ::PBWorker_HistogramMetricBucket& buckets(int index) const;
-  ::PBWorker_HistogramMetricBucket* add_buckets();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetricBucket >&
+  const ::PBWorkerHistogramMetricBucket& buckets(int index) const;
+  ::PBWorkerHistogramMetricBucket* add_buckets();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetricBucket >&
       buckets() const;
 
   // optional string key = 1;
@@ -701,7 +701,7 @@ class PBWorker_HistogramMetric final :
   void _internal_set_bucket_count(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_HistogramMetric)
+  // @@protoc_insertion_point(class_scope:PBWorkerHistogramMetric)
  private:
   class _Internal;
 
@@ -711,7 +711,7 @@ class PBWorker_HistogramMetric final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetricBucket > buckets_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetricBucket > buckets_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr key_;
     double sum_;
     uint32_t bucket_count_;
@@ -721,24 +721,24 @@ class PBWorker_HistogramMetric final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_Metrics final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_Metrics) */ {
+class PBWorkerMetrics final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerMetrics) */ {
  public:
-  inline PBWorker_Metrics() : PBWorker_Metrics(nullptr) {}
-  ~PBWorker_Metrics() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_Metrics(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerMetrics() : PBWorkerMetrics(nullptr) {}
+  ~PBWorkerMetrics() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerMetrics(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_Metrics(const PBWorker_Metrics& from);
-  PBWorker_Metrics(PBWorker_Metrics&& from) noexcept
-    : PBWorker_Metrics() {
+  PBWorkerMetrics(const PBWorkerMetrics& from);
+  PBWorkerMetrics(PBWorkerMetrics&& from) noexcept
+    : PBWorkerMetrics() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_Metrics& operator=(const PBWorker_Metrics& from) {
+  inline PBWorkerMetrics& operator=(const PBWorkerMetrics& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_Metrics& operator=(PBWorker_Metrics&& from) noexcept {
+  inline PBWorkerMetrics& operator=(PBWorkerMetrics&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -768,20 +768,20 @@ class PBWorker_Metrics final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_Metrics& default_instance() {
+  static const PBWorkerMetrics& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_Metrics* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_Metrics*>(
-               &_PBWorker_Metrics_default_instance_);
+  static inline const PBWorkerMetrics* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerMetrics*>(
+               &_PBWorkerMetrics_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     3;
 
-  friend void swap(PBWorker_Metrics& a, PBWorker_Metrics& b) {
+  friend void swap(PBWorkerMetrics& a, PBWorkerMetrics& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_Metrics* other) {
+  inline void Swap(PBWorkerMetrics* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -794,7 +794,7 @@ class PBWorker_Metrics final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_Metrics* other) {
+  void UnsafeArenaSwap(PBWorkerMetrics* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -802,14 +802,14 @@ class PBWorker_Metrics final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_Metrics* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_Metrics>(arena);
+  PBWorkerMetrics* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerMetrics>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_Metrics& from);
+  void CopyFrom(const PBWorkerMetrics& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_Metrics& from) {
-    PBWorker_Metrics::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerMetrics& from) {
+    PBWorkerMetrics::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -827,15 +827,15 @@ class PBWorker_Metrics final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_Metrics* other);
+  void InternalSwap(PBWorkerMetrics* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_Metrics";
+    return "PBWorkerMetrics";
   }
   protected:
-  explicit PBWorker_Metrics(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerMetrics(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -855,40 +855,40 @@ class PBWorker_Metrics final :
     kGaugeMetricCountFieldNumber = 2,
     kHistogramMetricCountFieldNumber = 4,
   };
-  // repeated .PBWorker_GaugeMetric gauge_metrics = 3;
+  // repeated .PBWorkerGaugeMetric gauge_metrics = 3;
   int gauge_metrics_size() const;
   private:
   int _internal_gauge_metrics_size() const;
   public:
   void clear_gauge_metrics();
-  ::PBWorker_GaugeMetric* mutable_gauge_metrics(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_GaugeMetric >*
+  ::PBWorkerGaugeMetric* mutable_gauge_metrics(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerGaugeMetric >*
       mutable_gauge_metrics();
   private:
-  const ::PBWorker_GaugeMetric& _internal_gauge_metrics(int index) const;
-  ::PBWorker_GaugeMetric* _internal_add_gauge_metrics();
+  const ::PBWorkerGaugeMetric& _internal_gauge_metrics(int index) const;
+  ::PBWorkerGaugeMetric* _internal_add_gauge_metrics();
   public:
-  const ::PBWorker_GaugeMetric& gauge_metrics(int index) const;
-  ::PBWorker_GaugeMetric* add_gauge_metrics();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_GaugeMetric >&
+  const ::PBWorkerGaugeMetric& gauge_metrics(int index) const;
+  ::PBWorkerGaugeMetric* add_gauge_metrics();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerGaugeMetric >&
       gauge_metrics() const;
 
-  // repeated .PBWorker_HistogramMetric histogram_metrics = 5;
+  // repeated .PBWorkerHistogramMetric histogram_metrics = 5;
   int histogram_metrics_size() const;
   private:
   int _internal_histogram_metrics_size() const;
   public:
   void clear_histogram_metrics();
-  ::PBWorker_HistogramMetric* mutable_histogram_metrics(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetric >*
+  ::PBWorkerHistogramMetric* mutable_histogram_metrics(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetric >*
       mutable_histogram_metrics();
   private:
-  const ::PBWorker_HistogramMetric& _internal_histogram_metrics(int index) const;
-  ::PBWorker_HistogramMetric* _internal_add_histogram_metrics();
+  const ::PBWorkerHistogramMetric& _internal_histogram_metrics(int index) const;
+  ::PBWorkerHistogramMetric* _internal_add_histogram_metrics();
   public:
-  const ::PBWorker_HistogramMetric& histogram_metrics(int index) const;
-  ::PBWorker_HistogramMetric* add_histogram_metrics();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetric >&
+  const ::PBWorkerHistogramMetric& histogram_metrics(int index) const;
+  ::PBWorkerHistogramMetric* add_histogram_metrics();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetric >&
       histogram_metrics() const;
 
   // optional double load = 1;
@@ -930,7 +930,7 @@ class PBWorker_Metrics final :
   void _internal_set_histogram_metric_count(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_Metrics)
+  // @@protoc_insertion_point(class_scope:PBWorkerMetrics)
  private:
   class _Internal;
 
@@ -940,8 +940,8 @@ class PBWorker_Metrics final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_GaugeMetric > gauge_metrics_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetric > histogram_metrics_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerGaugeMetric > gauge_metrics_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetric > histogram_metrics_;
     double load_;
     uint32_t gauge_metric_count_;
     uint32_t histogram_metric_count_;
@@ -951,24 +951,24 @@ class PBWorker_Metrics final :
 };
 // -------------------------------------------------------------------
 
-class PBSchema_ComponentData final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBSchema_ComponentData) */ {
+class PBSchemaComponentData final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBSchemaComponentData) */ {
  public:
-  inline PBSchema_ComponentData() : PBSchema_ComponentData(nullptr) {}
-  ~PBSchema_ComponentData() override;
-  explicit PROTOBUF_CONSTEXPR PBSchema_ComponentData(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBSchemaComponentData() : PBSchemaComponentData(nullptr) {}
+  ~PBSchemaComponentData() override;
+  explicit PROTOBUF_CONSTEXPR PBSchemaComponentData(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBSchema_ComponentData(const PBSchema_ComponentData& from);
-  PBSchema_ComponentData(PBSchema_ComponentData&& from) noexcept
-    : PBSchema_ComponentData() {
+  PBSchemaComponentData(const PBSchemaComponentData& from);
+  PBSchemaComponentData(PBSchemaComponentData&& from) noexcept
+    : PBSchemaComponentData() {
     *this = ::std::move(from);
   }
 
-  inline PBSchema_ComponentData& operator=(const PBSchema_ComponentData& from) {
+  inline PBSchemaComponentData& operator=(const PBSchemaComponentData& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBSchema_ComponentData& operator=(PBSchema_ComponentData&& from) noexcept {
+  inline PBSchemaComponentData& operator=(PBSchemaComponentData&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -998,20 +998,20 @@ class PBSchema_ComponentData final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBSchema_ComponentData& default_instance() {
+  static const PBSchemaComponentData& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBSchema_ComponentData* internal_default_instance() {
-    return reinterpret_cast<const PBSchema_ComponentData*>(
-               &_PBSchema_ComponentData_default_instance_);
+  static inline const PBSchemaComponentData* internal_default_instance() {
+    return reinterpret_cast<const PBSchemaComponentData*>(
+               &_PBSchemaComponentData_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     4;
 
-  friend void swap(PBSchema_ComponentData& a, PBSchema_ComponentData& b) {
+  friend void swap(PBSchemaComponentData& a, PBSchemaComponentData& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBSchema_ComponentData* other) {
+  inline void Swap(PBSchemaComponentData* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1024,7 +1024,7 @@ class PBSchema_ComponentData final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBSchema_ComponentData* other) {
+  void UnsafeArenaSwap(PBSchemaComponentData* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1032,14 +1032,14 @@ class PBSchema_ComponentData final :
 
   // implements Message ----------------------------------------------
 
-  PBSchema_ComponentData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBSchema_ComponentData>(arena);
+  PBSchemaComponentData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBSchemaComponentData>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBSchema_ComponentData& from);
+  void CopyFrom(const PBSchemaComponentData& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBSchema_ComponentData& from) {
-    PBSchema_ComponentData::MergeImpl(*this, from);
+  void MergeFrom( const PBSchemaComponentData& from) {
+    PBSchemaComponentData::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1057,15 +1057,15 @@ class PBSchema_ComponentData final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBSchema_ComponentData* other);
+  void InternalSwap(PBSchemaComponentData* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBSchema_ComponentData";
+    return "PBSchemaComponentData";
   }
   protected:
-  explicit PBSchema_ComponentData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBSchemaComponentData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1113,7 +1113,7 @@ class PBSchema_ComponentData final :
   void _internal_set_schema_id(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBSchema_ComponentData)
+  // @@protoc_insertion_point(class_scope:PBSchemaComponentData)
  private:
   class _Internal;
 
@@ -1131,23 +1131,23 @@ class PBSchema_ComponentData final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_ComponentDataHandle final :
-    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:PBWorker_ComponentDataHandle) */ {
+class PBWorkerComponentDataHandle final :
+    public ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase /* @@protoc_insertion_point(class_definition:PBWorkerComponentDataHandle) */ {
  public:
-  inline PBWorker_ComponentDataHandle() : PBWorker_ComponentDataHandle(nullptr) {}
-  explicit PROTOBUF_CONSTEXPR PBWorker_ComponentDataHandle(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerComponentDataHandle() : PBWorkerComponentDataHandle(nullptr) {}
+  explicit PROTOBUF_CONSTEXPR PBWorkerComponentDataHandle(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_ComponentDataHandle(const PBWorker_ComponentDataHandle& from);
-  PBWorker_ComponentDataHandle(PBWorker_ComponentDataHandle&& from) noexcept
-    : PBWorker_ComponentDataHandle() {
+  PBWorkerComponentDataHandle(const PBWorkerComponentDataHandle& from);
+  PBWorkerComponentDataHandle(PBWorkerComponentDataHandle&& from) noexcept
+    : PBWorkerComponentDataHandle() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_ComponentDataHandle& operator=(const PBWorker_ComponentDataHandle& from) {
+  inline PBWorkerComponentDataHandle& operator=(const PBWorkerComponentDataHandle& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_ComponentDataHandle& operator=(PBWorker_ComponentDataHandle&& from) noexcept {
+  inline PBWorkerComponentDataHandle& operator=(PBWorkerComponentDataHandle&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1177,20 +1177,20 @@ class PBWorker_ComponentDataHandle final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_ComponentDataHandle& default_instance() {
+  static const PBWorkerComponentDataHandle& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_ComponentDataHandle* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_ComponentDataHandle*>(
-               &_PBWorker_ComponentDataHandle_default_instance_);
+  static inline const PBWorkerComponentDataHandle* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerComponentDataHandle*>(
+               &_PBWorkerComponentDataHandle_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     5;
 
-  friend void swap(PBWorker_ComponentDataHandle& a, PBWorker_ComponentDataHandle& b) {
+  friend void swap(PBWorkerComponentDataHandle& a, PBWorkerComponentDataHandle& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_ComponentDataHandle* other) {
+  inline void Swap(PBWorkerComponentDataHandle* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1203,7 +1203,7 @@ class PBWorker_ComponentDataHandle final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_ComponentDataHandle* other) {
+  void UnsafeArenaSwap(PBWorkerComponentDataHandle* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1211,15 +1211,15 @@ class PBWorker_ComponentDataHandle final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_ComponentDataHandle* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_ComponentDataHandle>(arena);
+  PBWorkerComponentDataHandle* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerComponentDataHandle>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyFrom;
-  inline void CopyFrom(const PBWorker_ComponentDataHandle& from) {
+  inline void CopyFrom(const PBWorkerComponentDataHandle& from) {
     ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl(*this, from);
   }
   using ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeFrom;
-  void MergeFrom(const PBWorker_ComponentDataHandle& from) {
+  void MergeFrom(const PBWorkerComponentDataHandle& from) {
     ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl(*this, from);
   }
   public:
@@ -1227,10 +1227,10 @@ class PBWorker_ComponentDataHandle final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_ComponentDataHandle";
+    return "PBWorkerComponentDataHandle";
   }
   protected:
-  explicit PBWorker_ComponentDataHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerComponentDataHandle(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1243,7 +1243,7 @@ class PBWorker_ComponentDataHandle final :
 
   // accessors -------------------------------------------------------
 
-  // @@protoc_insertion_point(class_scope:PBWorker_ComponentDataHandle)
+  // @@protoc_insertion_point(class_scope:PBWorkerComponentDataHandle)
  private:
   class _Internal;
 
@@ -1256,24 +1256,24 @@ class PBWorker_ComponentDataHandle final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_ComponentData final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_ComponentData) */ {
+class PBWorkerComponentData final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerComponentData) */ {
  public:
-  inline PBWorker_ComponentData() : PBWorker_ComponentData(nullptr) {}
-  ~PBWorker_ComponentData() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_ComponentData(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerComponentData() : PBWorkerComponentData(nullptr) {}
+  ~PBWorkerComponentData() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerComponentData(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_ComponentData(const PBWorker_ComponentData& from);
-  PBWorker_ComponentData(PBWorker_ComponentData&& from) noexcept
-    : PBWorker_ComponentData() {
+  PBWorkerComponentData(const PBWorkerComponentData& from);
+  PBWorkerComponentData(PBWorkerComponentData&& from) noexcept
+    : PBWorkerComponentData() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_ComponentData& operator=(const PBWorker_ComponentData& from) {
+  inline PBWorkerComponentData& operator=(const PBWorkerComponentData& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_ComponentData& operator=(PBWorker_ComponentData&& from) noexcept {
+  inline PBWorkerComponentData& operator=(PBWorkerComponentData&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1303,20 +1303,20 @@ class PBWorker_ComponentData final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_ComponentData& default_instance() {
+  static const PBWorkerComponentData& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_ComponentData* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_ComponentData*>(
-               &_PBWorker_ComponentData_default_instance_);
+  static inline const PBWorkerComponentData* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerComponentData*>(
+               &_PBWorkerComponentData_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     6;
 
-  friend void swap(PBWorker_ComponentData& a, PBWorker_ComponentData& b) {
+  friend void swap(PBWorkerComponentData& a, PBWorkerComponentData& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_ComponentData* other) {
+  inline void Swap(PBWorkerComponentData* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1329,7 +1329,7 @@ class PBWorker_ComponentData final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_ComponentData* other) {
+  void UnsafeArenaSwap(PBWorkerComponentData* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1337,14 +1337,14 @@ class PBWorker_ComponentData final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_ComponentData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_ComponentData>(arena);
+  PBWorkerComponentData* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerComponentData>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_ComponentData& from);
+  void CopyFrom(const PBWorkerComponentData& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_ComponentData& from) {
-    PBWorker_ComponentData::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerComponentData& from) {
+    PBWorkerComponentData::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1362,15 +1362,15 @@ class PBWorker_ComponentData final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_ComponentData* other);
+  void InternalSwap(PBWorkerComponentData* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_ComponentData";
+    return "PBWorkerComponentData";
   }
   protected:
-  explicit PBWorker_ComponentData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerComponentData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1407,41 +1407,41 @@ class PBWorker_ComponentData final :
   std::string* _internal_mutable_reserved();
   public:
 
-  // optional .PBSchema_ComponentData schema_type = 3;
+  // optional .PBSchemaComponentData schema_type = 3;
   bool has_schema_type() const;
   private:
   bool _internal_has_schema_type() const;
   public:
   void clear_schema_type();
-  const ::PBSchema_ComponentData& schema_type() const;
-  PROTOBUF_NODISCARD ::PBSchema_ComponentData* release_schema_type();
-  ::PBSchema_ComponentData* mutable_schema_type();
-  void set_allocated_schema_type(::PBSchema_ComponentData* schema_type);
+  const ::PBSchemaComponentData& schema_type() const;
+  PROTOBUF_NODISCARD ::PBSchemaComponentData* release_schema_type();
+  ::PBSchemaComponentData* mutable_schema_type();
+  void set_allocated_schema_type(::PBSchemaComponentData* schema_type);
   private:
-  const ::PBSchema_ComponentData& _internal_schema_type() const;
-  ::PBSchema_ComponentData* _internal_mutable_schema_type();
+  const ::PBSchemaComponentData& _internal_schema_type() const;
+  ::PBSchemaComponentData* _internal_mutable_schema_type();
   public:
   void unsafe_arena_set_allocated_schema_type(
-      ::PBSchema_ComponentData* schema_type);
-  ::PBSchema_ComponentData* unsafe_arena_release_schema_type();
+      ::PBSchemaComponentData* schema_type);
+  ::PBSchemaComponentData* unsafe_arena_release_schema_type();
 
-  // optional .PBWorker_ComponentDataHandle user_handle = 4;
+  // optional .PBWorkerComponentDataHandle user_handle = 4;
   bool has_user_handle() const;
   private:
   bool _internal_has_user_handle() const;
   public:
   void clear_user_handle();
-  const ::PBWorker_ComponentDataHandle& user_handle() const;
-  PROTOBUF_NODISCARD ::PBWorker_ComponentDataHandle* release_user_handle();
-  ::PBWorker_ComponentDataHandle* mutable_user_handle();
-  void set_allocated_user_handle(::PBWorker_ComponentDataHandle* user_handle);
+  const ::PBWorkerComponentDataHandle& user_handle() const;
+  PROTOBUF_NODISCARD ::PBWorkerComponentDataHandle* release_user_handle();
+  ::PBWorkerComponentDataHandle* mutable_user_handle();
+  void set_allocated_user_handle(::PBWorkerComponentDataHandle* user_handle);
   private:
-  const ::PBWorker_ComponentDataHandle& _internal_user_handle() const;
-  ::PBWorker_ComponentDataHandle* _internal_mutable_user_handle();
+  const ::PBWorkerComponentDataHandle& _internal_user_handle() const;
+  ::PBWorkerComponentDataHandle* _internal_mutable_user_handle();
   public:
   void unsafe_arena_set_allocated_user_handle(
-      ::PBWorker_ComponentDataHandle* user_handle);
-  ::PBWorker_ComponentDataHandle* unsafe_arena_release_user_handle();
+      ::PBWorkerComponentDataHandle* user_handle);
+  ::PBWorkerComponentDataHandle* unsafe_arena_release_user_handle();
 
   // optional uint32 component_id = 2;
   bool has_component_id() const;
@@ -1456,7 +1456,7 @@ class PBWorker_ComponentData final :
   void _internal_set_component_id(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_ComponentData)
+  // @@protoc_insertion_point(class_scope:PBWorkerComponentData)
  private:
   class _Internal;
 
@@ -1467,8 +1467,8 @@ class PBWorker_ComponentData final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reserved_;
-    ::PBSchema_ComponentData* schema_type_;
-    ::PBWorker_ComponentDataHandle* user_handle_;
+    ::PBSchemaComponentData* schema_type_;
+    ::PBWorkerComponentDataHandle* user_handle_;
     uint32_t component_id_;
   };
   union { Impl_ _impl_; };
@@ -1476,24 +1476,24 @@ class PBWorker_ComponentData final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_Entity final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_Entity) */ {
+class PBWorkerEntity final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerEntity) */ {
  public:
-  inline PBWorker_Entity() : PBWorker_Entity(nullptr) {}
-  ~PBWorker_Entity() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_Entity(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerEntity() : PBWorkerEntity(nullptr) {}
+  ~PBWorkerEntity() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerEntity(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_Entity(const PBWorker_Entity& from);
-  PBWorker_Entity(PBWorker_Entity&& from) noexcept
-    : PBWorker_Entity() {
+  PBWorkerEntity(const PBWorkerEntity& from);
+  PBWorkerEntity(PBWorkerEntity&& from) noexcept
+    : PBWorkerEntity() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_Entity& operator=(const PBWorker_Entity& from) {
+  inline PBWorkerEntity& operator=(const PBWorkerEntity& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_Entity& operator=(PBWorker_Entity&& from) noexcept {
+  inline PBWorkerEntity& operator=(PBWorkerEntity&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1523,20 +1523,20 @@ class PBWorker_Entity final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_Entity& default_instance() {
+  static const PBWorkerEntity& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_Entity* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_Entity*>(
-               &_PBWorker_Entity_default_instance_);
+  static inline const PBWorkerEntity* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerEntity*>(
+               &_PBWorkerEntity_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     7;
 
-  friend void swap(PBWorker_Entity& a, PBWorker_Entity& b) {
+  friend void swap(PBWorkerEntity& a, PBWorkerEntity& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_Entity* other) {
+  inline void Swap(PBWorkerEntity* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1549,7 +1549,7 @@ class PBWorker_Entity final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_Entity* other) {
+  void UnsafeArenaSwap(PBWorkerEntity* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1557,14 +1557,14 @@ class PBWorker_Entity final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_Entity* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_Entity>(arena);
+  PBWorkerEntity* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerEntity>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_Entity& from);
+  void CopyFrom(const PBWorkerEntity& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_Entity& from) {
-    PBWorker_Entity::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerEntity& from) {
+    PBWorkerEntity::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1582,15 +1582,15 @@ class PBWorker_Entity final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_Entity* other);
+  void InternalSwap(PBWorkerEntity* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_Entity";
+    return "PBWorkerEntity";
   }
   protected:
-  explicit PBWorker_Entity(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerEntity(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1608,22 +1608,22 @@ class PBWorker_Entity final :
     kEntityIdFieldNumber = 1,
     kComponentCountFieldNumber = 2,
   };
-  // repeated .PBWorker_ComponentData components = 3;
+  // repeated .PBWorkerComponentData components = 3;
   int components_size() const;
   private:
   int _internal_components_size() const;
   public:
   void clear_components();
-  ::PBWorker_ComponentData* mutable_components(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_ComponentData >*
+  ::PBWorkerComponentData* mutable_components(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerComponentData >*
       mutable_components();
   private:
-  const ::PBWorker_ComponentData& _internal_components(int index) const;
-  ::PBWorker_ComponentData* _internal_add_components();
+  const ::PBWorkerComponentData& _internal_components(int index) const;
+  ::PBWorkerComponentData* _internal_add_components();
   public:
-  const ::PBWorker_ComponentData& components(int index) const;
-  ::PBWorker_ComponentData* add_components();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_ComponentData >&
+  const ::PBWorkerComponentData& components(int index) const;
+  ::PBWorkerComponentData* add_components();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerComponentData >&
       components() const;
 
   // optional int64 entity_id = 1;
@@ -1652,7 +1652,7 @@ class PBWorker_Entity final :
   void _internal_set_component_count(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_Entity)
+  // @@protoc_insertion_point(class_scope:PBWorkerEntity)
  private:
   class _Internal;
 
@@ -1662,7 +1662,7 @@ class PBWorker_Entity final :
   struct Impl_ {
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_ComponentData > components_;
+    ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerComponentData > components_;
     int64_t entity_id_;
     uint32_t component_count_;
   };
@@ -1671,24 +1671,24 @@ class PBWorker_Entity final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_ComponentUpdate final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_ComponentUpdate) */ {
+class PBWorkerComponentUpdate final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerComponentUpdate) */ {
  public:
-  inline PBWorker_ComponentUpdate() : PBWorker_ComponentUpdate(nullptr) {}
-  ~PBWorker_ComponentUpdate() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_ComponentUpdate(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerComponentUpdate() : PBWorkerComponentUpdate(nullptr) {}
+  ~PBWorkerComponentUpdate() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerComponentUpdate(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_ComponentUpdate(const PBWorker_ComponentUpdate& from);
-  PBWorker_ComponentUpdate(PBWorker_ComponentUpdate&& from) noexcept
-    : PBWorker_ComponentUpdate() {
+  PBWorkerComponentUpdate(const PBWorkerComponentUpdate& from);
+  PBWorkerComponentUpdate(PBWorkerComponentUpdate&& from) noexcept
+    : PBWorkerComponentUpdate() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_ComponentUpdate& operator=(const PBWorker_ComponentUpdate& from) {
+  inline PBWorkerComponentUpdate& operator=(const PBWorkerComponentUpdate& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_ComponentUpdate& operator=(PBWorker_ComponentUpdate&& from) noexcept {
+  inline PBWorkerComponentUpdate& operator=(PBWorkerComponentUpdate&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1718,20 +1718,20 @@ class PBWorker_ComponentUpdate final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_ComponentUpdate& default_instance() {
+  static const PBWorkerComponentUpdate& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_ComponentUpdate* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_ComponentUpdate*>(
-               &_PBWorker_ComponentUpdate_default_instance_);
+  static inline const PBWorkerComponentUpdate* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerComponentUpdate*>(
+               &_PBWorkerComponentUpdate_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     8;
 
-  friend void swap(PBWorker_ComponentUpdate& a, PBWorker_ComponentUpdate& b) {
+  friend void swap(PBWorkerComponentUpdate& a, PBWorkerComponentUpdate& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_ComponentUpdate* other) {
+  inline void Swap(PBWorkerComponentUpdate* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1744,7 +1744,7 @@ class PBWorker_ComponentUpdate final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_ComponentUpdate* other) {
+  void UnsafeArenaSwap(PBWorkerComponentUpdate* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1752,14 +1752,14 @@ class PBWorker_ComponentUpdate final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_ComponentUpdate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_ComponentUpdate>(arena);
+  PBWorkerComponentUpdate* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerComponentUpdate>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_ComponentUpdate& from);
+  void CopyFrom(const PBWorkerComponentUpdate& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_ComponentUpdate& from) {
-    PBWorker_ComponentUpdate::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerComponentUpdate& from) {
+    PBWorkerComponentUpdate::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1777,15 +1777,15 @@ class PBWorker_ComponentUpdate final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_ComponentUpdate* other);
+  void InternalSwap(PBWorkerComponentUpdate* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_ComponentUpdate";
+    return "PBWorkerComponentUpdate";
   }
   protected:
-  explicit PBWorker_ComponentUpdate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerComponentUpdate(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -1822,41 +1822,41 @@ class PBWorker_ComponentUpdate final :
   std::string* _internal_mutable_reserved();
   public:
 
-  // optional .PBSchema_ComponentData schema_type = 3;
+  // optional .PBSchemaComponentData schema_type = 3;
   bool has_schema_type() const;
   private:
   bool _internal_has_schema_type() const;
   public:
   void clear_schema_type();
-  const ::PBSchema_ComponentData& schema_type() const;
-  PROTOBUF_NODISCARD ::PBSchema_ComponentData* release_schema_type();
-  ::PBSchema_ComponentData* mutable_schema_type();
-  void set_allocated_schema_type(::PBSchema_ComponentData* schema_type);
+  const ::PBSchemaComponentData& schema_type() const;
+  PROTOBUF_NODISCARD ::PBSchemaComponentData* release_schema_type();
+  ::PBSchemaComponentData* mutable_schema_type();
+  void set_allocated_schema_type(::PBSchemaComponentData* schema_type);
   private:
-  const ::PBSchema_ComponentData& _internal_schema_type() const;
-  ::PBSchema_ComponentData* _internal_mutable_schema_type();
+  const ::PBSchemaComponentData& _internal_schema_type() const;
+  ::PBSchemaComponentData* _internal_mutable_schema_type();
   public:
   void unsafe_arena_set_allocated_schema_type(
-      ::PBSchema_ComponentData* schema_type);
-  ::PBSchema_ComponentData* unsafe_arena_release_schema_type();
+      ::PBSchemaComponentData* schema_type);
+  ::PBSchemaComponentData* unsafe_arena_release_schema_type();
 
-  // optional .PBWorker_ComponentDataHandle user_handle = 4;
+  // optional .PBWorkerComponentDataHandle user_handle = 4;
   bool has_user_handle() const;
   private:
   bool _internal_has_user_handle() const;
   public:
   void clear_user_handle();
-  const ::PBWorker_ComponentDataHandle& user_handle() const;
-  PROTOBUF_NODISCARD ::PBWorker_ComponentDataHandle* release_user_handle();
-  ::PBWorker_ComponentDataHandle* mutable_user_handle();
-  void set_allocated_user_handle(::PBWorker_ComponentDataHandle* user_handle);
+  const ::PBWorkerComponentDataHandle& user_handle() const;
+  PROTOBUF_NODISCARD ::PBWorkerComponentDataHandle* release_user_handle();
+  ::PBWorkerComponentDataHandle* mutable_user_handle();
+  void set_allocated_user_handle(::PBWorkerComponentDataHandle* user_handle);
   private:
-  const ::PBWorker_ComponentDataHandle& _internal_user_handle() const;
-  ::PBWorker_ComponentDataHandle* _internal_mutable_user_handle();
+  const ::PBWorkerComponentDataHandle& _internal_user_handle() const;
+  ::PBWorkerComponentDataHandle* _internal_mutable_user_handle();
   public:
   void unsafe_arena_set_allocated_user_handle(
-      ::PBWorker_ComponentDataHandle* user_handle);
-  ::PBWorker_ComponentDataHandle* unsafe_arena_release_user_handle();
+      ::PBWorkerComponentDataHandle* user_handle);
+  ::PBWorkerComponentDataHandle* unsafe_arena_release_user_handle();
 
   // optional uint32 component_id = 2;
   bool has_component_id() const;
@@ -1871,7 +1871,7 @@ class PBWorker_ComponentUpdate final :
   void _internal_set_component_id(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_ComponentUpdate)
+  // @@protoc_insertion_point(class_scope:PBWorkerComponentUpdate)
  private:
   class _Internal;
 
@@ -1882,8 +1882,8 @@ class PBWorker_ComponentUpdate final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reserved_;
-    ::PBSchema_ComponentData* schema_type_;
-    ::PBWorker_ComponentDataHandle* user_handle_;
+    ::PBSchemaComponentData* schema_type_;
+    ::PBWorkerComponentDataHandle* user_handle_;
     uint32_t component_id_;
   };
   union { Impl_ _impl_; };
@@ -1891,24 +1891,24 @@ class PBWorker_ComponentUpdate final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_WorkerAttributes final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_WorkerAttributes) */ {
+class PBWorkerWorkerAttributes final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerWorkerAttributes) */ {
  public:
-  inline PBWorker_WorkerAttributes() : PBWorker_WorkerAttributes(nullptr) {}
-  ~PBWorker_WorkerAttributes() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_WorkerAttributes(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerWorkerAttributes() : PBWorkerWorkerAttributes(nullptr) {}
+  ~PBWorkerWorkerAttributes() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerWorkerAttributes(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_WorkerAttributes(const PBWorker_WorkerAttributes& from);
-  PBWorker_WorkerAttributes(PBWorker_WorkerAttributes&& from) noexcept
-    : PBWorker_WorkerAttributes() {
+  PBWorkerWorkerAttributes(const PBWorkerWorkerAttributes& from);
+  PBWorkerWorkerAttributes(PBWorkerWorkerAttributes&& from) noexcept
+    : PBWorkerWorkerAttributes() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_WorkerAttributes& operator=(const PBWorker_WorkerAttributes& from) {
+  inline PBWorkerWorkerAttributes& operator=(const PBWorkerWorkerAttributes& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_WorkerAttributes& operator=(PBWorker_WorkerAttributes&& from) noexcept {
+  inline PBWorkerWorkerAttributes& operator=(PBWorkerWorkerAttributes&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -1938,20 +1938,20 @@ class PBWorker_WorkerAttributes final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_WorkerAttributes& default_instance() {
+  static const PBWorkerWorkerAttributes& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_WorkerAttributes* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_WorkerAttributes*>(
-               &_PBWorker_WorkerAttributes_default_instance_);
+  static inline const PBWorkerWorkerAttributes* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerWorkerAttributes*>(
+               &_PBWorkerWorkerAttributes_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     9;
 
-  friend void swap(PBWorker_WorkerAttributes& a, PBWorker_WorkerAttributes& b) {
+  friend void swap(PBWorkerWorkerAttributes& a, PBWorkerWorkerAttributes& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_WorkerAttributes* other) {
+  inline void Swap(PBWorkerWorkerAttributes* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -1964,7 +1964,7 @@ class PBWorker_WorkerAttributes final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_WorkerAttributes* other) {
+  void UnsafeArenaSwap(PBWorkerWorkerAttributes* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -1972,14 +1972,14 @@ class PBWorker_WorkerAttributes final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_WorkerAttributes* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_WorkerAttributes>(arena);
+  PBWorkerWorkerAttributes* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerWorkerAttributes>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_WorkerAttributes& from);
+  void CopyFrom(const PBWorkerWorkerAttributes& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_WorkerAttributes& from) {
-    PBWorker_WorkerAttributes::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerWorkerAttributes& from) {
+    PBWorkerWorkerAttributes::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -1997,15 +1997,15 @@ class PBWorker_WorkerAttributes final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_WorkerAttributes* other);
+  void InternalSwap(PBWorkerWorkerAttributes* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_WorkerAttributes";
+    return "PBWorkerWorkerAttributes";
   }
   protected:
-  explicit PBWorker_WorkerAttributes(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerWorkerAttributes(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2059,7 +2059,7 @@ class PBWorker_WorkerAttributes final :
   void _internal_set_attribute_count(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_WorkerAttributes)
+  // @@protoc_insertion_point(class_scope:PBWorkerWorkerAttributes)
  private:
   class _Internal;
 
@@ -2077,24 +2077,24 @@ class PBWorker_WorkerAttributes final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_CommandRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_CommandRequest) */ {
+class PBWorkerCommandRequest final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerCommandRequest) */ {
  public:
-  inline PBWorker_CommandRequest() : PBWorker_CommandRequest(nullptr) {}
-  ~PBWorker_CommandRequest() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_CommandRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerCommandRequest() : PBWorkerCommandRequest(nullptr) {}
+  ~PBWorkerCommandRequest() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerCommandRequest(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_CommandRequest(const PBWorker_CommandRequest& from);
-  PBWorker_CommandRequest(PBWorker_CommandRequest&& from) noexcept
-    : PBWorker_CommandRequest() {
+  PBWorkerCommandRequest(const PBWorkerCommandRequest& from);
+  PBWorkerCommandRequest(PBWorkerCommandRequest&& from) noexcept
+    : PBWorkerCommandRequest() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_CommandRequest& operator=(const PBWorker_CommandRequest& from) {
+  inline PBWorkerCommandRequest& operator=(const PBWorkerCommandRequest& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_CommandRequest& operator=(PBWorker_CommandRequest&& from) noexcept {
+  inline PBWorkerCommandRequest& operator=(PBWorkerCommandRequest&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2124,20 +2124,20 @@ class PBWorker_CommandRequest final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_CommandRequest& default_instance() {
+  static const PBWorkerCommandRequest& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_CommandRequest* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_CommandRequest*>(
-               &_PBWorker_CommandRequest_default_instance_);
+  static inline const PBWorkerCommandRequest* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerCommandRequest*>(
+               &_PBWorkerCommandRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     10;
 
-  friend void swap(PBWorker_CommandRequest& a, PBWorker_CommandRequest& b) {
+  friend void swap(PBWorkerCommandRequest& a, PBWorkerCommandRequest& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_CommandRequest* other) {
+  inline void Swap(PBWorkerCommandRequest* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2150,7 +2150,7 @@ class PBWorker_CommandRequest final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_CommandRequest* other) {
+  void UnsafeArenaSwap(PBWorkerCommandRequest* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2158,14 +2158,14 @@ class PBWorker_CommandRequest final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_CommandRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_CommandRequest>(arena);
+  PBWorkerCommandRequest* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerCommandRequest>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_CommandRequest& from);
+  void CopyFrom(const PBWorkerCommandRequest& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_CommandRequest& from) {
-    PBWorker_CommandRequest::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerCommandRequest& from) {
+    PBWorkerCommandRequest::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2183,15 +2183,15 @@ class PBWorker_CommandRequest final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_CommandRequest* other);
+  void InternalSwap(PBWorkerCommandRequest* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_CommandRequest";
+    return "PBWorkerCommandRequest";
   }
   protected:
-  explicit PBWorker_CommandRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerCommandRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2228,41 +2228,41 @@ class PBWorker_CommandRequest final :
   std::string* _internal_mutable_reserved();
   public:
 
-  // optional .PBSchema_ComponentData schema_type = 3;
+  // optional .PBSchemaComponentData schema_type = 3;
   bool has_schema_type() const;
   private:
   bool _internal_has_schema_type() const;
   public:
   void clear_schema_type();
-  const ::PBSchema_ComponentData& schema_type() const;
-  PROTOBUF_NODISCARD ::PBSchema_ComponentData* release_schema_type();
-  ::PBSchema_ComponentData* mutable_schema_type();
-  void set_allocated_schema_type(::PBSchema_ComponentData* schema_type);
+  const ::PBSchemaComponentData& schema_type() const;
+  PROTOBUF_NODISCARD ::PBSchemaComponentData* release_schema_type();
+  ::PBSchemaComponentData* mutable_schema_type();
+  void set_allocated_schema_type(::PBSchemaComponentData* schema_type);
   private:
-  const ::PBSchema_ComponentData& _internal_schema_type() const;
-  ::PBSchema_ComponentData* _internal_mutable_schema_type();
+  const ::PBSchemaComponentData& _internal_schema_type() const;
+  ::PBSchemaComponentData* _internal_mutable_schema_type();
   public:
   void unsafe_arena_set_allocated_schema_type(
-      ::PBSchema_ComponentData* schema_type);
-  ::PBSchema_ComponentData* unsafe_arena_release_schema_type();
+      ::PBSchemaComponentData* schema_type);
+  ::PBSchemaComponentData* unsafe_arena_release_schema_type();
 
-  // optional .PBWorker_ComponentDataHandle user_handle = 4;
+  // optional .PBWorkerComponentDataHandle user_handle = 4;
   bool has_user_handle() const;
   private:
   bool _internal_has_user_handle() const;
   public:
   void clear_user_handle();
-  const ::PBWorker_ComponentDataHandle& user_handle() const;
-  PROTOBUF_NODISCARD ::PBWorker_ComponentDataHandle* release_user_handle();
-  ::PBWorker_ComponentDataHandle* mutable_user_handle();
-  void set_allocated_user_handle(::PBWorker_ComponentDataHandle* user_handle);
+  const ::PBWorkerComponentDataHandle& user_handle() const;
+  PROTOBUF_NODISCARD ::PBWorkerComponentDataHandle* release_user_handle();
+  ::PBWorkerComponentDataHandle* mutable_user_handle();
+  void set_allocated_user_handle(::PBWorkerComponentDataHandle* user_handle);
   private:
-  const ::PBWorker_ComponentDataHandle& _internal_user_handle() const;
-  ::PBWorker_ComponentDataHandle* _internal_mutable_user_handle();
+  const ::PBWorkerComponentDataHandle& _internal_user_handle() const;
+  ::PBWorkerComponentDataHandle* _internal_mutable_user_handle();
   public:
   void unsafe_arena_set_allocated_user_handle(
-      ::PBWorker_ComponentDataHandle* user_handle);
-  ::PBWorker_ComponentDataHandle* unsafe_arena_release_user_handle();
+      ::PBWorkerComponentDataHandle* user_handle);
+  ::PBWorkerComponentDataHandle* unsafe_arena_release_user_handle();
 
   // optional uint32 component_id = 2;
   bool has_component_id() const;
@@ -2277,7 +2277,7 @@ class PBWorker_CommandRequest final :
   void _internal_set_component_id(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_CommandRequest)
+  // @@protoc_insertion_point(class_scope:PBWorkerCommandRequest)
  private:
   class _Internal;
 
@@ -2288,8 +2288,8 @@ class PBWorker_CommandRequest final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reserved_;
-    ::PBSchema_ComponentData* schema_type_;
-    ::PBWorker_ComponentDataHandle* user_handle_;
+    ::PBSchemaComponentData* schema_type_;
+    ::PBWorkerComponentDataHandle* user_handle_;
     uint32_t component_id_;
   };
   union { Impl_ _impl_; };
@@ -2297,24 +2297,24 @@ class PBWorker_CommandRequest final :
 };
 // -------------------------------------------------------------------
 
-class PBWorker_CommandResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorker_CommandResponse) */ {
+class PBWorkerCommandResponse final :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:PBWorkerCommandResponse) */ {
  public:
-  inline PBWorker_CommandResponse() : PBWorker_CommandResponse(nullptr) {}
-  ~PBWorker_CommandResponse() override;
-  explicit PROTOBUF_CONSTEXPR PBWorker_CommandResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline PBWorkerCommandResponse() : PBWorkerCommandResponse(nullptr) {}
+  ~PBWorkerCommandResponse() override;
+  explicit PROTOBUF_CONSTEXPR PBWorkerCommandResponse(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  PBWorker_CommandResponse(const PBWorker_CommandResponse& from);
-  PBWorker_CommandResponse(PBWorker_CommandResponse&& from) noexcept
-    : PBWorker_CommandResponse() {
+  PBWorkerCommandResponse(const PBWorkerCommandResponse& from);
+  PBWorkerCommandResponse(PBWorkerCommandResponse&& from) noexcept
+    : PBWorkerCommandResponse() {
     *this = ::std::move(from);
   }
 
-  inline PBWorker_CommandResponse& operator=(const PBWorker_CommandResponse& from) {
+  inline PBWorkerCommandResponse& operator=(const PBWorkerCommandResponse& from) {
     CopyFrom(from);
     return *this;
   }
-  inline PBWorker_CommandResponse& operator=(PBWorker_CommandResponse&& from) noexcept {
+  inline PBWorkerCommandResponse& operator=(PBWorkerCommandResponse&& from) noexcept {
     if (this == &from) return *this;
     if (GetOwningArena() == from.GetOwningArena()
   #ifdef PROTOBUF_FORCE_COPY_IN_MOVE
@@ -2344,20 +2344,20 @@ class PBWorker_CommandResponse final :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return default_instance().GetMetadata().reflection;
   }
-  static const PBWorker_CommandResponse& default_instance() {
+  static const PBWorkerCommandResponse& default_instance() {
     return *internal_default_instance();
   }
-  static inline const PBWorker_CommandResponse* internal_default_instance() {
-    return reinterpret_cast<const PBWorker_CommandResponse*>(
-               &_PBWorker_CommandResponse_default_instance_);
+  static inline const PBWorkerCommandResponse* internal_default_instance() {
+    return reinterpret_cast<const PBWorkerCommandResponse*>(
+               &_PBWorkerCommandResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     11;
 
-  friend void swap(PBWorker_CommandResponse& a, PBWorker_CommandResponse& b) {
+  friend void swap(PBWorkerCommandResponse& a, PBWorkerCommandResponse& b) {
     a.Swap(&b);
   }
-  inline void Swap(PBWorker_CommandResponse* other) {
+  inline void Swap(PBWorkerCommandResponse* other) {
     if (other == this) return;
   #ifdef PROTOBUF_FORCE_COPY_IN_SWAP
     if (GetOwningArena() != nullptr &&
@@ -2370,7 +2370,7 @@ class PBWorker_CommandResponse final :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(PBWorker_CommandResponse* other) {
+  void UnsafeArenaSwap(PBWorkerCommandResponse* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetOwningArena() == other->GetOwningArena());
     InternalSwap(other);
@@ -2378,14 +2378,14 @@ class PBWorker_CommandResponse final :
 
   // implements Message ----------------------------------------------
 
-  PBWorker_CommandResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
-    return CreateMaybeMessage<PBWorker_CommandResponse>(arena);
+  PBWorkerCommandResponse* New(::PROTOBUF_NAMESPACE_ID::Arena* arena = nullptr) const final {
+    return CreateMaybeMessage<PBWorkerCommandResponse>(arena);
   }
   using ::PROTOBUF_NAMESPACE_ID::Message::CopyFrom;
-  void CopyFrom(const PBWorker_CommandResponse& from);
+  void CopyFrom(const PBWorkerCommandResponse& from);
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
-  void MergeFrom( const PBWorker_CommandResponse& from) {
-    PBWorker_CommandResponse::MergeImpl(*this, from);
+  void MergeFrom( const PBWorkerCommandResponse& from) {
+    PBWorkerCommandResponse::MergeImpl(*this, from);
   }
   private:
   static void MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg);
@@ -2403,15 +2403,15 @@ class PBWorker_CommandResponse final :
   void SharedCtor(::PROTOBUF_NAMESPACE_ID::Arena* arena, bool is_message_owned);
   void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(PBWorker_CommandResponse* other);
+  void InternalSwap(PBWorkerCommandResponse* other);
 
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "PBWorker_CommandResponse";
+    return "PBWorkerCommandResponse";
   }
   protected:
-  explicit PBWorker_CommandResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+  explicit PBWorkerCommandResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                        bool is_message_owned = false);
   public:
 
@@ -2448,41 +2448,41 @@ class PBWorker_CommandResponse final :
   std::string* _internal_mutable_reserved();
   public:
 
-  // optional .PBSchema_ComponentData schema_type = 3;
+  // optional .PBSchemaComponentData schema_type = 3;
   bool has_schema_type() const;
   private:
   bool _internal_has_schema_type() const;
   public:
   void clear_schema_type();
-  const ::PBSchema_ComponentData& schema_type() const;
-  PROTOBUF_NODISCARD ::PBSchema_ComponentData* release_schema_type();
-  ::PBSchema_ComponentData* mutable_schema_type();
-  void set_allocated_schema_type(::PBSchema_ComponentData* schema_type);
+  const ::PBSchemaComponentData& schema_type() const;
+  PROTOBUF_NODISCARD ::PBSchemaComponentData* release_schema_type();
+  ::PBSchemaComponentData* mutable_schema_type();
+  void set_allocated_schema_type(::PBSchemaComponentData* schema_type);
   private:
-  const ::PBSchema_ComponentData& _internal_schema_type() const;
-  ::PBSchema_ComponentData* _internal_mutable_schema_type();
+  const ::PBSchemaComponentData& _internal_schema_type() const;
+  ::PBSchemaComponentData* _internal_mutable_schema_type();
   public:
   void unsafe_arena_set_allocated_schema_type(
-      ::PBSchema_ComponentData* schema_type);
-  ::PBSchema_ComponentData* unsafe_arena_release_schema_type();
+      ::PBSchemaComponentData* schema_type);
+  ::PBSchemaComponentData* unsafe_arena_release_schema_type();
 
-  // optional .PBWorker_ComponentDataHandle user_handle = 4;
+  // optional .PBWorkerComponentDataHandle user_handle = 4;
   bool has_user_handle() const;
   private:
   bool _internal_has_user_handle() const;
   public:
   void clear_user_handle();
-  const ::PBWorker_ComponentDataHandle& user_handle() const;
-  PROTOBUF_NODISCARD ::PBWorker_ComponentDataHandle* release_user_handle();
-  ::PBWorker_ComponentDataHandle* mutable_user_handle();
-  void set_allocated_user_handle(::PBWorker_ComponentDataHandle* user_handle);
+  const ::PBWorkerComponentDataHandle& user_handle() const;
+  PROTOBUF_NODISCARD ::PBWorkerComponentDataHandle* release_user_handle();
+  ::PBWorkerComponentDataHandle* mutable_user_handle();
+  void set_allocated_user_handle(::PBWorkerComponentDataHandle* user_handle);
   private:
-  const ::PBWorker_ComponentDataHandle& _internal_user_handle() const;
-  ::PBWorker_ComponentDataHandle* _internal_mutable_user_handle();
+  const ::PBWorkerComponentDataHandle& _internal_user_handle() const;
+  ::PBWorkerComponentDataHandle* _internal_mutable_user_handle();
   public:
   void unsafe_arena_set_allocated_user_handle(
-      ::PBWorker_ComponentDataHandle* user_handle);
-  ::PBWorker_ComponentDataHandle* unsafe_arena_release_user_handle();
+      ::PBWorkerComponentDataHandle* user_handle);
+  ::PBWorkerComponentDataHandle* unsafe_arena_release_user_handle();
 
   // optional uint32 component_id = 2;
   bool has_component_id() const;
@@ -2497,7 +2497,7 @@ class PBWorker_CommandResponse final :
   void _internal_set_component_id(uint32_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:PBWorker_CommandResponse)
+  // @@protoc_insertion_point(class_scope:PBWorkerCommandResponse)
  private:
   class _Internal;
 
@@ -2508,8 +2508,8 @@ class PBWorker_CommandResponse final :
     ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
     mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr reserved_;
-    ::PBSchema_ComponentData* schema_type_;
-    ::PBWorker_ComponentDataHandle* user_handle_;
+    ::PBSchemaComponentData* schema_type_;
+    ::PBWorkerComponentDataHandle* user_handle_;
     uint32_t component_id_;
   };
   union { Impl_ _impl_; };
@@ -2524,49 +2524,49 @@ class PBWorker_CommandResponse final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
-// PBWorker_GaugeMetric
+// PBWorkerGaugeMetric
 
 // optional string key = 1;
-inline bool PBWorker_GaugeMetric::_internal_has_key() const {
+inline bool PBWorkerGaugeMetric::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_GaugeMetric::has_key() const {
+inline bool PBWorkerGaugeMetric::has_key() const {
   return _internal_has_key();
 }
-inline void PBWorker_GaugeMetric::clear_key() {
+inline void PBWorkerGaugeMetric::clear_key() {
   _impl_.key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PBWorker_GaugeMetric::key() const {
-  // @@protoc_insertion_point(field_get:PBWorker_GaugeMetric.key)
+inline const std::string& PBWorkerGaugeMetric::key() const {
+  // @@protoc_insertion_point(field_get:PBWorkerGaugeMetric.key)
   return _internal_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PBWorker_GaugeMetric::set_key(ArgT0&& arg0, ArgT... args) {
+void PBWorkerGaugeMetric::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:PBWorker_GaugeMetric.key)
+  // @@protoc_insertion_point(field_set:PBWorkerGaugeMetric.key)
 }
-inline std::string* PBWorker_GaugeMetric::mutable_key() {
+inline std::string* PBWorkerGaugeMetric::mutable_key() {
   std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:PBWorker_GaugeMetric.key)
+  // @@protoc_insertion_point(field_mutable:PBWorkerGaugeMetric.key)
   return _s;
 }
-inline const std::string& PBWorker_GaugeMetric::_internal_key() const {
+inline const std::string& PBWorkerGaugeMetric::_internal_key() const {
   return _impl_.key_.Get();
 }
-inline void PBWorker_GaugeMetric::_internal_set_key(const std::string& value) {
+inline void PBWorkerGaugeMetric::_internal_set_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PBWorker_GaugeMetric::_internal_mutable_key() {
+inline std::string* PBWorkerGaugeMetric::_internal_mutable_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PBWorker_GaugeMetric::release_key() {
-  // @@protoc_insertion_point(field_release:PBWorker_GaugeMetric.key)
+inline std::string* PBWorkerGaugeMetric::release_key() {
+  // @@protoc_insertion_point(field_release:PBWorkerGaugeMetric.key)
   if (!_internal_has_key()) {
     return nullptr;
   }
@@ -2579,7 +2579,7 @@ inline std::string* PBWorker_GaugeMetric::release_key() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PBWorker_GaugeMetric::set_allocated_key(std::string* key) {
+inline void PBWorkerGaugeMetric::set_allocated_key(std::string* key) {
   if (key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -2591,142 +2591,142 @@ inline void PBWorker_GaugeMetric::set_allocated_key(std::string* key) {
     _impl_.key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_GaugeMetric.key)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerGaugeMetric.key)
 }
 
 // optional double value = 2;
-inline bool PBWorker_GaugeMetric::_internal_has_value() const {
+inline bool PBWorkerGaugeMetric::_internal_has_value() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool PBWorker_GaugeMetric::has_value() const {
+inline bool PBWorkerGaugeMetric::has_value() const {
   return _internal_has_value();
 }
-inline void PBWorker_GaugeMetric::clear_value() {
+inline void PBWorkerGaugeMetric::clear_value() {
   _impl_.value_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline double PBWorker_GaugeMetric::_internal_value() const {
+inline double PBWorkerGaugeMetric::_internal_value() const {
   return _impl_.value_;
 }
-inline double PBWorker_GaugeMetric::value() const {
-  // @@protoc_insertion_point(field_get:PBWorker_GaugeMetric.value)
+inline double PBWorkerGaugeMetric::value() const {
+  // @@protoc_insertion_point(field_get:PBWorkerGaugeMetric.value)
   return _internal_value();
 }
-inline void PBWorker_GaugeMetric::_internal_set_value(double value) {
+inline void PBWorkerGaugeMetric::_internal_set_value(double value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.value_ = value;
 }
-inline void PBWorker_GaugeMetric::set_value(double value) {
+inline void PBWorkerGaugeMetric::set_value(double value) {
   _internal_set_value(value);
-  // @@protoc_insertion_point(field_set:PBWorker_GaugeMetric.value)
+  // @@protoc_insertion_point(field_set:PBWorkerGaugeMetric.value)
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_HistogramMetricBucket
+// PBWorkerHistogramMetricBucket
 
 // optional double upper_bound = 1;
-inline bool PBWorker_HistogramMetricBucket::_internal_has_upper_bound() const {
+inline bool PBWorkerHistogramMetricBucket::_internal_has_upper_bound() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_HistogramMetricBucket::has_upper_bound() const {
+inline bool PBWorkerHistogramMetricBucket::has_upper_bound() const {
   return _internal_has_upper_bound();
 }
-inline void PBWorker_HistogramMetricBucket::clear_upper_bound() {
+inline void PBWorkerHistogramMetricBucket::clear_upper_bound() {
   _impl_.upper_bound_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double PBWorker_HistogramMetricBucket::_internal_upper_bound() const {
+inline double PBWorkerHistogramMetricBucket::_internal_upper_bound() const {
   return _impl_.upper_bound_;
 }
-inline double PBWorker_HistogramMetricBucket::upper_bound() const {
-  // @@protoc_insertion_point(field_get:PBWorker_HistogramMetricBucket.upper_bound)
+inline double PBWorkerHistogramMetricBucket::upper_bound() const {
+  // @@protoc_insertion_point(field_get:PBWorkerHistogramMetricBucket.upper_bound)
   return _internal_upper_bound();
 }
-inline void PBWorker_HistogramMetricBucket::_internal_set_upper_bound(double value) {
+inline void PBWorkerHistogramMetricBucket::_internal_set_upper_bound(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.upper_bound_ = value;
 }
-inline void PBWorker_HistogramMetricBucket::set_upper_bound(double value) {
+inline void PBWorkerHistogramMetricBucket::set_upper_bound(double value) {
   _internal_set_upper_bound(value);
-  // @@protoc_insertion_point(field_set:PBWorker_HistogramMetricBucket.upper_bound)
+  // @@protoc_insertion_point(field_set:PBWorkerHistogramMetricBucket.upper_bound)
 }
 
 // optional uint32 samples = 2;
-inline bool PBWorker_HistogramMetricBucket::_internal_has_samples() const {
+inline bool PBWorkerHistogramMetricBucket::_internal_has_samples() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool PBWorker_HistogramMetricBucket::has_samples() const {
+inline bool PBWorkerHistogramMetricBucket::has_samples() const {
   return _internal_has_samples();
 }
-inline void PBWorker_HistogramMetricBucket::clear_samples() {
+inline void PBWorkerHistogramMetricBucket::clear_samples() {
   _impl_.samples_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t PBWorker_HistogramMetricBucket::_internal_samples() const {
+inline uint32_t PBWorkerHistogramMetricBucket::_internal_samples() const {
   return _impl_.samples_;
 }
-inline uint32_t PBWorker_HistogramMetricBucket::samples() const {
-  // @@protoc_insertion_point(field_get:PBWorker_HistogramMetricBucket.samples)
+inline uint32_t PBWorkerHistogramMetricBucket::samples() const {
+  // @@protoc_insertion_point(field_get:PBWorkerHistogramMetricBucket.samples)
   return _internal_samples();
 }
-inline void PBWorker_HistogramMetricBucket::_internal_set_samples(uint32_t value) {
+inline void PBWorkerHistogramMetricBucket::_internal_set_samples(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.samples_ = value;
 }
-inline void PBWorker_HistogramMetricBucket::set_samples(uint32_t value) {
+inline void PBWorkerHistogramMetricBucket::set_samples(uint32_t value) {
   _internal_set_samples(value);
-  // @@protoc_insertion_point(field_set:PBWorker_HistogramMetricBucket.samples)
+  // @@protoc_insertion_point(field_set:PBWorkerHistogramMetricBucket.samples)
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_HistogramMetric
+// PBWorkerHistogramMetric
 
 // optional string key = 1;
-inline bool PBWorker_HistogramMetric::_internal_has_key() const {
+inline bool PBWorkerHistogramMetric::_internal_has_key() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_HistogramMetric::has_key() const {
+inline bool PBWorkerHistogramMetric::has_key() const {
   return _internal_has_key();
 }
-inline void PBWorker_HistogramMetric::clear_key() {
+inline void PBWorkerHistogramMetric::clear_key() {
   _impl_.key_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PBWorker_HistogramMetric::key() const {
-  // @@protoc_insertion_point(field_get:PBWorker_HistogramMetric.key)
+inline const std::string& PBWorkerHistogramMetric::key() const {
+  // @@protoc_insertion_point(field_get:PBWorkerHistogramMetric.key)
   return _internal_key();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PBWorker_HistogramMetric::set_key(ArgT0&& arg0, ArgT... args) {
+void PBWorkerHistogramMetric::set_key(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:PBWorker_HistogramMetric.key)
+  // @@protoc_insertion_point(field_set:PBWorkerHistogramMetric.key)
 }
-inline std::string* PBWorker_HistogramMetric::mutable_key() {
+inline std::string* PBWorkerHistogramMetric::mutable_key() {
   std::string* _s = _internal_mutable_key();
-  // @@protoc_insertion_point(field_mutable:PBWorker_HistogramMetric.key)
+  // @@protoc_insertion_point(field_mutable:PBWorkerHistogramMetric.key)
   return _s;
 }
-inline const std::string& PBWorker_HistogramMetric::_internal_key() const {
+inline const std::string& PBWorkerHistogramMetric::_internal_key() const {
   return _impl_.key_.Get();
 }
-inline void PBWorker_HistogramMetric::_internal_set_key(const std::string& value) {
+inline void PBWorkerHistogramMetric::_internal_set_key(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.key_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PBWorker_HistogramMetric::_internal_mutable_key() {
+inline std::string* PBWorkerHistogramMetric::_internal_mutable_key() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.key_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PBWorker_HistogramMetric::release_key() {
-  // @@protoc_insertion_point(field_release:PBWorker_HistogramMetric.key)
+inline std::string* PBWorkerHistogramMetric::release_key() {
+  // @@protoc_insertion_point(field_release:PBWorkerHistogramMetric.key)
   if (!_internal_has_key()) {
     return nullptr;
   }
@@ -2739,7 +2739,7 @@ inline std::string* PBWorker_HistogramMetric::release_key() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PBWorker_HistogramMetric::set_allocated_key(std::string* key) {
+inline void PBWorkerHistogramMetric::set_allocated_key(std::string* key) {
   if (key != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -2751,346 +2751,346 @@ inline void PBWorker_HistogramMetric::set_allocated_key(std::string* key) {
     _impl_.key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_HistogramMetric.key)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerHistogramMetric.key)
 }
 
 // optional double sum = 2;
-inline bool PBWorker_HistogramMetric::_internal_has_sum() const {
+inline bool PBWorkerHistogramMetric::_internal_has_sum() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool PBWorker_HistogramMetric::has_sum() const {
+inline bool PBWorkerHistogramMetric::has_sum() const {
   return _internal_has_sum();
 }
-inline void PBWorker_HistogramMetric::clear_sum() {
+inline void PBWorkerHistogramMetric::clear_sum() {
   _impl_.sum_ = 0;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline double PBWorker_HistogramMetric::_internal_sum() const {
+inline double PBWorkerHistogramMetric::_internal_sum() const {
   return _impl_.sum_;
 }
-inline double PBWorker_HistogramMetric::sum() const {
-  // @@protoc_insertion_point(field_get:PBWorker_HistogramMetric.sum)
+inline double PBWorkerHistogramMetric::sum() const {
+  // @@protoc_insertion_point(field_get:PBWorkerHistogramMetric.sum)
   return _internal_sum();
 }
-inline void PBWorker_HistogramMetric::_internal_set_sum(double value) {
+inline void PBWorkerHistogramMetric::_internal_set_sum(double value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.sum_ = value;
 }
-inline void PBWorker_HistogramMetric::set_sum(double value) {
+inline void PBWorkerHistogramMetric::set_sum(double value) {
   _internal_set_sum(value);
-  // @@protoc_insertion_point(field_set:PBWorker_HistogramMetric.sum)
+  // @@protoc_insertion_point(field_set:PBWorkerHistogramMetric.sum)
 }
 
 // optional uint32 bucket_count = 3;
-inline bool PBWorker_HistogramMetric::_internal_has_bucket_count() const {
+inline bool PBWorkerHistogramMetric::_internal_has_bucket_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool PBWorker_HistogramMetric::has_bucket_count() const {
+inline bool PBWorkerHistogramMetric::has_bucket_count() const {
   return _internal_has_bucket_count();
 }
-inline void PBWorker_HistogramMetric::clear_bucket_count() {
+inline void PBWorkerHistogramMetric::clear_bucket_count() {
   _impl_.bucket_count_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t PBWorker_HistogramMetric::_internal_bucket_count() const {
+inline uint32_t PBWorkerHistogramMetric::_internal_bucket_count() const {
   return _impl_.bucket_count_;
 }
-inline uint32_t PBWorker_HistogramMetric::bucket_count() const {
-  // @@protoc_insertion_point(field_get:PBWorker_HistogramMetric.bucket_count)
+inline uint32_t PBWorkerHistogramMetric::bucket_count() const {
+  // @@protoc_insertion_point(field_get:PBWorkerHistogramMetric.bucket_count)
   return _internal_bucket_count();
 }
-inline void PBWorker_HistogramMetric::_internal_set_bucket_count(uint32_t value) {
+inline void PBWorkerHistogramMetric::_internal_set_bucket_count(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.bucket_count_ = value;
 }
-inline void PBWorker_HistogramMetric::set_bucket_count(uint32_t value) {
+inline void PBWorkerHistogramMetric::set_bucket_count(uint32_t value) {
   _internal_set_bucket_count(value);
-  // @@protoc_insertion_point(field_set:PBWorker_HistogramMetric.bucket_count)
+  // @@protoc_insertion_point(field_set:PBWorkerHistogramMetric.bucket_count)
 }
 
-// repeated .PBWorker_HistogramMetricBucket buckets = 4;
-inline int PBWorker_HistogramMetric::_internal_buckets_size() const {
+// repeated .PBWorkerHistogramMetricBucket buckets = 4;
+inline int PBWorkerHistogramMetric::_internal_buckets_size() const {
   return _impl_.buckets_.size();
 }
-inline int PBWorker_HistogramMetric::buckets_size() const {
+inline int PBWorkerHistogramMetric::buckets_size() const {
   return _internal_buckets_size();
 }
-inline void PBWorker_HistogramMetric::clear_buckets() {
+inline void PBWorkerHistogramMetric::clear_buckets() {
   _impl_.buckets_.Clear();
 }
-inline ::PBWorker_HistogramMetricBucket* PBWorker_HistogramMetric::mutable_buckets(int index) {
-  // @@protoc_insertion_point(field_mutable:PBWorker_HistogramMetric.buckets)
+inline ::PBWorkerHistogramMetricBucket* PBWorkerHistogramMetric::mutable_buckets(int index) {
+  // @@protoc_insertion_point(field_mutable:PBWorkerHistogramMetric.buckets)
   return _impl_.buckets_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetricBucket >*
-PBWorker_HistogramMetric::mutable_buckets() {
-  // @@protoc_insertion_point(field_mutable_list:PBWorker_HistogramMetric.buckets)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetricBucket >*
+PBWorkerHistogramMetric::mutable_buckets() {
+  // @@protoc_insertion_point(field_mutable_list:PBWorkerHistogramMetric.buckets)
   return &_impl_.buckets_;
 }
-inline const ::PBWorker_HistogramMetricBucket& PBWorker_HistogramMetric::_internal_buckets(int index) const {
+inline const ::PBWorkerHistogramMetricBucket& PBWorkerHistogramMetric::_internal_buckets(int index) const {
   return _impl_.buckets_.Get(index);
 }
-inline const ::PBWorker_HistogramMetricBucket& PBWorker_HistogramMetric::buckets(int index) const {
-  // @@protoc_insertion_point(field_get:PBWorker_HistogramMetric.buckets)
+inline const ::PBWorkerHistogramMetricBucket& PBWorkerHistogramMetric::buckets(int index) const {
+  // @@protoc_insertion_point(field_get:PBWorkerHistogramMetric.buckets)
   return _internal_buckets(index);
 }
-inline ::PBWorker_HistogramMetricBucket* PBWorker_HistogramMetric::_internal_add_buckets() {
+inline ::PBWorkerHistogramMetricBucket* PBWorkerHistogramMetric::_internal_add_buckets() {
   return _impl_.buckets_.Add();
 }
-inline ::PBWorker_HistogramMetricBucket* PBWorker_HistogramMetric::add_buckets() {
-  ::PBWorker_HistogramMetricBucket* _add = _internal_add_buckets();
-  // @@protoc_insertion_point(field_add:PBWorker_HistogramMetric.buckets)
+inline ::PBWorkerHistogramMetricBucket* PBWorkerHistogramMetric::add_buckets() {
+  ::PBWorkerHistogramMetricBucket* _add = _internal_add_buckets();
+  // @@protoc_insertion_point(field_add:PBWorkerHistogramMetric.buckets)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetricBucket >&
-PBWorker_HistogramMetric::buckets() const {
-  // @@protoc_insertion_point(field_list:PBWorker_HistogramMetric.buckets)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetricBucket >&
+PBWorkerHistogramMetric::buckets() const {
+  // @@protoc_insertion_point(field_list:PBWorkerHistogramMetric.buckets)
   return _impl_.buckets_;
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_Metrics
+// PBWorkerMetrics
 
 // optional double load = 1;
-inline bool PBWorker_Metrics::_internal_has_load() const {
+inline bool PBWorkerMetrics::_internal_has_load() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_Metrics::has_load() const {
+inline bool PBWorkerMetrics::has_load() const {
   return _internal_has_load();
 }
-inline void PBWorker_Metrics::clear_load() {
+inline void PBWorkerMetrics::clear_load() {
   _impl_.load_ = 0;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline double PBWorker_Metrics::_internal_load() const {
+inline double PBWorkerMetrics::_internal_load() const {
   return _impl_.load_;
 }
-inline double PBWorker_Metrics::load() const {
-  // @@protoc_insertion_point(field_get:PBWorker_Metrics.load)
+inline double PBWorkerMetrics::load() const {
+  // @@protoc_insertion_point(field_get:PBWorkerMetrics.load)
   return _internal_load();
 }
-inline void PBWorker_Metrics::_internal_set_load(double value) {
+inline void PBWorkerMetrics::_internal_set_load(double value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.load_ = value;
 }
-inline void PBWorker_Metrics::set_load(double value) {
+inline void PBWorkerMetrics::set_load(double value) {
   _internal_set_load(value);
-  // @@protoc_insertion_point(field_set:PBWorker_Metrics.load)
+  // @@protoc_insertion_point(field_set:PBWorkerMetrics.load)
 }
 
 // optional uint32 gauge_metric_count = 2;
-inline bool PBWorker_Metrics::_internal_has_gauge_metric_count() const {
+inline bool PBWorkerMetrics::_internal_has_gauge_metric_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool PBWorker_Metrics::has_gauge_metric_count() const {
+inline bool PBWorkerMetrics::has_gauge_metric_count() const {
   return _internal_has_gauge_metric_count();
 }
-inline void PBWorker_Metrics::clear_gauge_metric_count() {
+inline void PBWorkerMetrics::clear_gauge_metric_count() {
   _impl_.gauge_metric_count_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t PBWorker_Metrics::_internal_gauge_metric_count() const {
+inline uint32_t PBWorkerMetrics::_internal_gauge_metric_count() const {
   return _impl_.gauge_metric_count_;
 }
-inline uint32_t PBWorker_Metrics::gauge_metric_count() const {
-  // @@protoc_insertion_point(field_get:PBWorker_Metrics.gauge_metric_count)
+inline uint32_t PBWorkerMetrics::gauge_metric_count() const {
+  // @@protoc_insertion_point(field_get:PBWorkerMetrics.gauge_metric_count)
   return _internal_gauge_metric_count();
 }
-inline void PBWorker_Metrics::_internal_set_gauge_metric_count(uint32_t value) {
+inline void PBWorkerMetrics::_internal_set_gauge_metric_count(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.gauge_metric_count_ = value;
 }
-inline void PBWorker_Metrics::set_gauge_metric_count(uint32_t value) {
+inline void PBWorkerMetrics::set_gauge_metric_count(uint32_t value) {
   _internal_set_gauge_metric_count(value);
-  // @@protoc_insertion_point(field_set:PBWorker_Metrics.gauge_metric_count)
+  // @@protoc_insertion_point(field_set:PBWorkerMetrics.gauge_metric_count)
 }
 
-// repeated .PBWorker_GaugeMetric gauge_metrics = 3;
-inline int PBWorker_Metrics::_internal_gauge_metrics_size() const {
+// repeated .PBWorkerGaugeMetric gauge_metrics = 3;
+inline int PBWorkerMetrics::_internal_gauge_metrics_size() const {
   return _impl_.gauge_metrics_.size();
 }
-inline int PBWorker_Metrics::gauge_metrics_size() const {
+inline int PBWorkerMetrics::gauge_metrics_size() const {
   return _internal_gauge_metrics_size();
 }
-inline void PBWorker_Metrics::clear_gauge_metrics() {
+inline void PBWorkerMetrics::clear_gauge_metrics() {
   _impl_.gauge_metrics_.Clear();
 }
-inline ::PBWorker_GaugeMetric* PBWorker_Metrics::mutable_gauge_metrics(int index) {
-  // @@protoc_insertion_point(field_mutable:PBWorker_Metrics.gauge_metrics)
+inline ::PBWorkerGaugeMetric* PBWorkerMetrics::mutable_gauge_metrics(int index) {
+  // @@protoc_insertion_point(field_mutable:PBWorkerMetrics.gauge_metrics)
   return _impl_.gauge_metrics_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_GaugeMetric >*
-PBWorker_Metrics::mutable_gauge_metrics() {
-  // @@protoc_insertion_point(field_mutable_list:PBWorker_Metrics.gauge_metrics)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerGaugeMetric >*
+PBWorkerMetrics::mutable_gauge_metrics() {
+  // @@protoc_insertion_point(field_mutable_list:PBWorkerMetrics.gauge_metrics)
   return &_impl_.gauge_metrics_;
 }
-inline const ::PBWorker_GaugeMetric& PBWorker_Metrics::_internal_gauge_metrics(int index) const {
+inline const ::PBWorkerGaugeMetric& PBWorkerMetrics::_internal_gauge_metrics(int index) const {
   return _impl_.gauge_metrics_.Get(index);
 }
-inline const ::PBWorker_GaugeMetric& PBWorker_Metrics::gauge_metrics(int index) const {
-  // @@protoc_insertion_point(field_get:PBWorker_Metrics.gauge_metrics)
+inline const ::PBWorkerGaugeMetric& PBWorkerMetrics::gauge_metrics(int index) const {
+  // @@protoc_insertion_point(field_get:PBWorkerMetrics.gauge_metrics)
   return _internal_gauge_metrics(index);
 }
-inline ::PBWorker_GaugeMetric* PBWorker_Metrics::_internal_add_gauge_metrics() {
+inline ::PBWorkerGaugeMetric* PBWorkerMetrics::_internal_add_gauge_metrics() {
   return _impl_.gauge_metrics_.Add();
 }
-inline ::PBWorker_GaugeMetric* PBWorker_Metrics::add_gauge_metrics() {
-  ::PBWorker_GaugeMetric* _add = _internal_add_gauge_metrics();
-  // @@protoc_insertion_point(field_add:PBWorker_Metrics.gauge_metrics)
+inline ::PBWorkerGaugeMetric* PBWorkerMetrics::add_gauge_metrics() {
+  ::PBWorkerGaugeMetric* _add = _internal_add_gauge_metrics();
+  // @@protoc_insertion_point(field_add:PBWorkerMetrics.gauge_metrics)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_GaugeMetric >&
-PBWorker_Metrics::gauge_metrics() const {
-  // @@protoc_insertion_point(field_list:PBWorker_Metrics.gauge_metrics)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerGaugeMetric >&
+PBWorkerMetrics::gauge_metrics() const {
+  // @@protoc_insertion_point(field_list:PBWorkerMetrics.gauge_metrics)
   return _impl_.gauge_metrics_;
 }
 
 // optional uint32 histogram_metric_count = 4;
-inline bool PBWorker_Metrics::_internal_has_histogram_metric_count() const {
+inline bool PBWorkerMetrics::_internal_has_histogram_metric_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   return value;
 }
-inline bool PBWorker_Metrics::has_histogram_metric_count() const {
+inline bool PBWorkerMetrics::has_histogram_metric_count() const {
   return _internal_has_histogram_metric_count();
 }
-inline void PBWorker_Metrics::clear_histogram_metric_count() {
+inline void PBWorkerMetrics::clear_histogram_metric_count() {
   _impl_.histogram_metric_count_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline uint32_t PBWorker_Metrics::_internal_histogram_metric_count() const {
+inline uint32_t PBWorkerMetrics::_internal_histogram_metric_count() const {
   return _impl_.histogram_metric_count_;
 }
-inline uint32_t PBWorker_Metrics::histogram_metric_count() const {
-  // @@protoc_insertion_point(field_get:PBWorker_Metrics.histogram_metric_count)
+inline uint32_t PBWorkerMetrics::histogram_metric_count() const {
+  // @@protoc_insertion_point(field_get:PBWorkerMetrics.histogram_metric_count)
   return _internal_histogram_metric_count();
 }
-inline void PBWorker_Metrics::_internal_set_histogram_metric_count(uint32_t value) {
+inline void PBWorkerMetrics::_internal_set_histogram_metric_count(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000004u;
   _impl_.histogram_metric_count_ = value;
 }
-inline void PBWorker_Metrics::set_histogram_metric_count(uint32_t value) {
+inline void PBWorkerMetrics::set_histogram_metric_count(uint32_t value) {
   _internal_set_histogram_metric_count(value);
-  // @@protoc_insertion_point(field_set:PBWorker_Metrics.histogram_metric_count)
+  // @@protoc_insertion_point(field_set:PBWorkerMetrics.histogram_metric_count)
 }
 
-// repeated .PBWorker_HistogramMetric histogram_metrics = 5;
-inline int PBWorker_Metrics::_internal_histogram_metrics_size() const {
+// repeated .PBWorkerHistogramMetric histogram_metrics = 5;
+inline int PBWorkerMetrics::_internal_histogram_metrics_size() const {
   return _impl_.histogram_metrics_.size();
 }
-inline int PBWorker_Metrics::histogram_metrics_size() const {
+inline int PBWorkerMetrics::histogram_metrics_size() const {
   return _internal_histogram_metrics_size();
 }
-inline void PBWorker_Metrics::clear_histogram_metrics() {
+inline void PBWorkerMetrics::clear_histogram_metrics() {
   _impl_.histogram_metrics_.Clear();
 }
-inline ::PBWorker_HistogramMetric* PBWorker_Metrics::mutable_histogram_metrics(int index) {
-  // @@protoc_insertion_point(field_mutable:PBWorker_Metrics.histogram_metrics)
+inline ::PBWorkerHistogramMetric* PBWorkerMetrics::mutable_histogram_metrics(int index) {
+  // @@protoc_insertion_point(field_mutable:PBWorkerMetrics.histogram_metrics)
   return _impl_.histogram_metrics_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetric >*
-PBWorker_Metrics::mutable_histogram_metrics() {
-  // @@protoc_insertion_point(field_mutable_list:PBWorker_Metrics.histogram_metrics)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetric >*
+PBWorkerMetrics::mutable_histogram_metrics() {
+  // @@protoc_insertion_point(field_mutable_list:PBWorkerMetrics.histogram_metrics)
   return &_impl_.histogram_metrics_;
 }
-inline const ::PBWorker_HistogramMetric& PBWorker_Metrics::_internal_histogram_metrics(int index) const {
+inline const ::PBWorkerHistogramMetric& PBWorkerMetrics::_internal_histogram_metrics(int index) const {
   return _impl_.histogram_metrics_.Get(index);
 }
-inline const ::PBWorker_HistogramMetric& PBWorker_Metrics::histogram_metrics(int index) const {
-  // @@protoc_insertion_point(field_get:PBWorker_Metrics.histogram_metrics)
+inline const ::PBWorkerHistogramMetric& PBWorkerMetrics::histogram_metrics(int index) const {
+  // @@protoc_insertion_point(field_get:PBWorkerMetrics.histogram_metrics)
   return _internal_histogram_metrics(index);
 }
-inline ::PBWorker_HistogramMetric* PBWorker_Metrics::_internal_add_histogram_metrics() {
+inline ::PBWorkerHistogramMetric* PBWorkerMetrics::_internal_add_histogram_metrics() {
   return _impl_.histogram_metrics_.Add();
 }
-inline ::PBWorker_HistogramMetric* PBWorker_Metrics::add_histogram_metrics() {
-  ::PBWorker_HistogramMetric* _add = _internal_add_histogram_metrics();
-  // @@protoc_insertion_point(field_add:PBWorker_Metrics.histogram_metrics)
+inline ::PBWorkerHistogramMetric* PBWorkerMetrics::add_histogram_metrics() {
+  ::PBWorkerHistogramMetric* _add = _internal_add_histogram_metrics();
+  // @@protoc_insertion_point(field_add:PBWorkerMetrics.histogram_metrics)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_HistogramMetric >&
-PBWorker_Metrics::histogram_metrics() const {
-  // @@protoc_insertion_point(field_list:PBWorker_Metrics.histogram_metrics)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerHistogramMetric >&
+PBWorkerMetrics::histogram_metrics() const {
+  // @@protoc_insertion_point(field_list:PBWorkerMetrics.histogram_metrics)
   return _impl_.histogram_metrics_;
 }
 
 // -------------------------------------------------------------------
 
-// PBSchema_ComponentData
+// PBSchemaComponentData
 
 // optional uint32 schema_id = 1;
-inline bool PBSchema_ComponentData::_internal_has_schema_id() const {
+inline bool PBSchemaComponentData::_internal_has_schema_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool PBSchema_ComponentData::has_schema_id() const {
+inline bool PBSchemaComponentData::has_schema_id() const {
   return _internal_has_schema_id();
 }
-inline void PBSchema_ComponentData::clear_schema_id() {
+inline void PBSchemaComponentData::clear_schema_id() {
   _impl_.schema_id_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t PBSchema_ComponentData::_internal_schema_id() const {
+inline uint32_t PBSchemaComponentData::_internal_schema_id() const {
   return _impl_.schema_id_;
 }
-inline uint32_t PBSchema_ComponentData::schema_id() const {
-  // @@protoc_insertion_point(field_get:PBSchema_ComponentData.schema_id)
+inline uint32_t PBSchemaComponentData::schema_id() const {
+  // @@protoc_insertion_point(field_get:PBSchemaComponentData.schema_id)
   return _internal_schema_id();
 }
-inline void PBSchema_ComponentData::_internal_set_schema_id(uint32_t value) {
+inline void PBSchemaComponentData::_internal_set_schema_id(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.schema_id_ = value;
 }
-inline void PBSchema_ComponentData::set_schema_id(uint32_t value) {
+inline void PBSchemaComponentData::set_schema_id(uint32_t value) {
   _internal_set_schema_id(value);
-  // @@protoc_insertion_point(field_set:PBSchema_ComponentData.schema_id)
+  // @@protoc_insertion_point(field_set:PBSchemaComponentData.schema_id)
 }
 
 // optional bytes data = 2;
-inline bool PBSchema_ComponentData::_internal_has_data() const {
+inline bool PBSchemaComponentData::_internal_has_data() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBSchema_ComponentData::has_data() const {
+inline bool PBSchemaComponentData::has_data() const {
   return _internal_has_data();
 }
-inline void PBSchema_ComponentData::clear_data() {
+inline void PBSchemaComponentData::clear_data() {
   _impl_.data_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PBSchema_ComponentData::data() const {
-  // @@protoc_insertion_point(field_get:PBSchema_ComponentData.data)
+inline const std::string& PBSchemaComponentData::data() const {
+  // @@protoc_insertion_point(field_get:PBSchemaComponentData.data)
   return _internal_data();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PBSchema_ComponentData::set_data(ArgT0&& arg0, ArgT... args) {
+void PBSchemaComponentData::set_data(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.data_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:PBSchema_ComponentData.data)
+  // @@protoc_insertion_point(field_set:PBSchemaComponentData.data)
 }
-inline std::string* PBSchema_ComponentData::mutable_data() {
+inline std::string* PBSchemaComponentData::mutable_data() {
   std::string* _s = _internal_mutable_data();
-  // @@protoc_insertion_point(field_mutable:PBSchema_ComponentData.data)
+  // @@protoc_insertion_point(field_mutable:PBSchemaComponentData.data)
   return _s;
 }
-inline const std::string& PBSchema_ComponentData::_internal_data() const {
+inline const std::string& PBSchemaComponentData::_internal_data() const {
   return _impl_.data_.Get();
 }
-inline void PBSchema_ComponentData::_internal_set_data(const std::string& value) {
+inline void PBSchemaComponentData::_internal_set_data(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.data_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PBSchema_ComponentData::_internal_mutable_data() {
+inline std::string* PBSchemaComponentData::_internal_mutable_data() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.data_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PBSchema_ComponentData::release_data() {
-  // @@protoc_insertion_point(field_release:PBSchema_ComponentData.data)
+inline std::string* PBSchemaComponentData::release_data() {
+  // @@protoc_insertion_point(field_release:PBSchemaComponentData.data)
   if (!_internal_has_data()) {
     return nullptr;
   }
@@ -3103,7 +3103,7 @@ inline std::string* PBSchema_ComponentData::release_data() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PBSchema_ComponentData::set_allocated_data(std::string* data) {
+inline void PBSchemaComponentData::set_allocated_data(std::string* data) {
   if (data != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3115,58 +3115,58 @@ inline void PBSchema_ComponentData::set_allocated_data(std::string* data) {
     _impl_.data_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:PBSchema_ComponentData.data)
+  // @@protoc_insertion_point(field_set_allocated:PBSchemaComponentData.data)
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_ComponentDataHandle
+// PBWorkerComponentDataHandle
 
 // -------------------------------------------------------------------
 
-// PBWorker_ComponentData
+// PBWorkerComponentData
 
 // optional bytes reserved = 1;
-inline bool PBWorker_ComponentData::_internal_has_reserved() const {
+inline bool PBWorkerComponentData::_internal_has_reserved() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_ComponentData::has_reserved() const {
+inline bool PBWorkerComponentData::has_reserved() const {
   return _internal_has_reserved();
 }
-inline void PBWorker_ComponentData::clear_reserved() {
+inline void PBWorkerComponentData::clear_reserved() {
   _impl_.reserved_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PBWorker_ComponentData::reserved() const {
-  // @@protoc_insertion_point(field_get:PBWorker_ComponentData.reserved)
+inline const std::string& PBWorkerComponentData::reserved() const {
+  // @@protoc_insertion_point(field_get:PBWorkerComponentData.reserved)
   return _internal_reserved();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PBWorker_ComponentData::set_reserved(ArgT0&& arg0, ArgT... args) {
+void PBWorkerComponentData::set_reserved(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.reserved_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:PBWorker_ComponentData.reserved)
+  // @@protoc_insertion_point(field_set:PBWorkerComponentData.reserved)
 }
-inline std::string* PBWorker_ComponentData::mutable_reserved() {
+inline std::string* PBWorkerComponentData::mutable_reserved() {
   std::string* _s = _internal_mutable_reserved();
-  // @@protoc_insertion_point(field_mutable:PBWorker_ComponentData.reserved)
+  // @@protoc_insertion_point(field_mutable:PBWorkerComponentData.reserved)
   return _s;
 }
-inline const std::string& PBWorker_ComponentData::_internal_reserved() const {
+inline const std::string& PBWorkerComponentData::_internal_reserved() const {
   return _impl_.reserved_.Get();
 }
-inline void PBWorker_ComponentData::_internal_set_reserved(const std::string& value) {
+inline void PBWorkerComponentData::_internal_set_reserved(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.reserved_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PBWorker_ComponentData::_internal_mutable_reserved() {
+inline std::string* PBWorkerComponentData::_internal_mutable_reserved() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.reserved_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PBWorker_ComponentData::release_reserved() {
-  // @@protoc_insertion_point(field_release:PBWorker_ComponentData.reserved)
+inline std::string* PBWorkerComponentData::release_reserved() {
+  // @@protoc_insertion_point(field_release:PBWorkerComponentData.reserved)
   if (!_internal_has_reserved()) {
     return nullptr;
   }
@@ -3179,7 +3179,7 @@ inline std::string* PBWorker_ComponentData::release_reserved() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PBWorker_ComponentData::set_allocated_reserved(std::string* reserved) {
+inline void PBWorkerComponentData::set_allocated_reserved(std::string* reserved) {
   if (reserved != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3191,61 +3191,61 @@ inline void PBWorker_ComponentData::set_allocated_reserved(std::string* reserved
     _impl_.reserved_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_ComponentData.reserved)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerComponentData.reserved)
 }
 
 // optional uint32 component_id = 2;
-inline bool PBWorker_ComponentData::_internal_has_component_id() const {
+inline bool PBWorkerComponentData::_internal_has_component_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool PBWorker_ComponentData::has_component_id() const {
+inline bool PBWorkerComponentData::has_component_id() const {
   return _internal_has_component_id();
 }
-inline void PBWorker_ComponentData::clear_component_id() {
+inline void PBWorkerComponentData::clear_component_id() {
   _impl_.component_id_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t PBWorker_ComponentData::_internal_component_id() const {
+inline uint32_t PBWorkerComponentData::_internal_component_id() const {
   return _impl_.component_id_;
 }
-inline uint32_t PBWorker_ComponentData::component_id() const {
-  // @@protoc_insertion_point(field_get:PBWorker_ComponentData.component_id)
+inline uint32_t PBWorkerComponentData::component_id() const {
+  // @@protoc_insertion_point(field_get:PBWorkerComponentData.component_id)
   return _internal_component_id();
 }
-inline void PBWorker_ComponentData::_internal_set_component_id(uint32_t value) {
+inline void PBWorkerComponentData::_internal_set_component_id(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.component_id_ = value;
 }
-inline void PBWorker_ComponentData::set_component_id(uint32_t value) {
+inline void PBWorkerComponentData::set_component_id(uint32_t value) {
   _internal_set_component_id(value);
-  // @@protoc_insertion_point(field_set:PBWorker_ComponentData.component_id)
+  // @@protoc_insertion_point(field_set:PBWorkerComponentData.component_id)
 }
 
-// optional .PBSchema_ComponentData schema_type = 3;
-inline bool PBWorker_ComponentData::_internal_has_schema_type() const {
+// optional .PBSchemaComponentData schema_type = 3;
+inline bool PBWorkerComponentData::_internal_has_schema_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.schema_type_ != nullptr);
   return value;
 }
-inline bool PBWorker_ComponentData::has_schema_type() const {
+inline bool PBWorkerComponentData::has_schema_type() const {
   return _internal_has_schema_type();
 }
-inline void PBWorker_ComponentData::clear_schema_type() {
+inline void PBWorkerComponentData::clear_schema_type() {
   if (_impl_.schema_type_ != nullptr) _impl_.schema_type_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::PBSchema_ComponentData& PBWorker_ComponentData::_internal_schema_type() const {
-  const ::PBSchema_ComponentData* p = _impl_.schema_type_;
-  return p != nullptr ? *p : reinterpret_cast<const ::PBSchema_ComponentData&>(
-      ::_PBSchema_ComponentData_default_instance_);
+inline const ::PBSchemaComponentData& PBWorkerComponentData::_internal_schema_type() const {
+  const ::PBSchemaComponentData* p = _impl_.schema_type_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PBSchemaComponentData&>(
+      ::_PBSchemaComponentData_default_instance_);
 }
-inline const ::PBSchema_ComponentData& PBWorker_ComponentData::schema_type() const {
-  // @@protoc_insertion_point(field_get:PBWorker_ComponentData.schema_type)
+inline const ::PBSchemaComponentData& PBWorkerComponentData::schema_type() const {
+  // @@protoc_insertion_point(field_get:PBWorkerComponentData.schema_type)
   return _internal_schema_type();
 }
-inline void PBWorker_ComponentData::unsafe_arena_set_allocated_schema_type(
-    ::PBSchema_ComponentData* schema_type) {
+inline void PBWorkerComponentData::unsafe_arena_set_allocated_schema_type(
+    ::PBSchemaComponentData* schema_type) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.schema_type_);
   }
@@ -3255,11 +3255,11 @@ inline void PBWorker_ComponentData::unsafe_arena_set_allocated_schema_type(
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorker_ComponentData.schema_type)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorkerComponentData.schema_type)
 }
-inline ::PBSchema_ComponentData* PBWorker_ComponentData::release_schema_type() {
+inline ::PBSchemaComponentData* PBWorkerComponentData::release_schema_type() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::PBSchema_ComponentData* temp = _impl_.schema_type_;
+  ::PBSchemaComponentData* temp = _impl_.schema_type_;
   _impl_.schema_type_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3272,27 +3272,27 @@ inline ::PBSchema_ComponentData* PBWorker_ComponentData::release_schema_type() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::PBSchema_ComponentData* PBWorker_ComponentData::unsafe_arena_release_schema_type() {
-  // @@protoc_insertion_point(field_release:PBWorker_ComponentData.schema_type)
+inline ::PBSchemaComponentData* PBWorkerComponentData::unsafe_arena_release_schema_type() {
+  // @@protoc_insertion_point(field_release:PBWorkerComponentData.schema_type)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::PBSchema_ComponentData* temp = _impl_.schema_type_;
+  ::PBSchemaComponentData* temp = _impl_.schema_type_;
   _impl_.schema_type_ = nullptr;
   return temp;
 }
-inline ::PBSchema_ComponentData* PBWorker_ComponentData::_internal_mutable_schema_type() {
+inline ::PBSchemaComponentData* PBWorkerComponentData::_internal_mutable_schema_type() {
   _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.schema_type_ == nullptr) {
-    auto* p = CreateMaybeMessage<::PBSchema_ComponentData>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::PBSchemaComponentData>(GetArenaForAllocation());
     _impl_.schema_type_ = p;
   }
   return _impl_.schema_type_;
 }
-inline ::PBSchema_ComponentData* PBWorker_ComponentData::mutable_schema_type() {
-  ::PBSchema_ComponentData* _msg = _internal_mutable_schema_type();
-  // @@protoc_insertion_point(field_mutable:PBWorker_ComponentData.schema_type)
+inline ::PBSchemaComponentData* PBWorkerComponentData::mutable_schema_type() {
+  ::PBSchemaComponentData* _msg = _internal_mutable_schema_type();
+  // @@protoc_insertion_point(field_mutable:PBWorkerComponentData.schema_type)
   return _msg;
 }
-inline void PBWorker_ComponentData::set_allocated_schema_type(::PBSchema_ComponentData* schema_type) {
+inline void PBWorkerComponentData::set_allocated_schema_type(::PBSchemaComponentData* schema_type) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.schema_type_;
@@ -3309,33 +3309,33 @@ inline void PBWorker_ComponentData::set_allocated_schema_type(::PBSchema_Compone
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.schema_type_ = schema_type;
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_ComponentData.schema_type)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerComponentData.schema_type)
 }
 
-// optional .PBWorker_ComponentDataHandle user_handle = 4;
-inline bool PBWorker_ComponentData::_internal_has_user_handle() const {
+// optional .PBWorkerComponentDataHandle user_handle = 4;
+inline bool PBWorkerComponentData::_internal_has_user_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.user_handle_ != nullptr);
   return value;
 }
-inline bool PBWorker_ComponentData::has_user_handle() const {
+inline bool PBWorkerComponentData::has_user_handle() const {
   return _internal_has_user_handle();
 }
-inline void PBWorker_ComponentData::clear_user_handle() {
+inline void PBWorkerComponentData::clear_user_handle() {
   if (_impl_.user_handle_ != nullptr) _impl_.user_handle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::PBWorker_ComponentDataHandle& PBWorker_ComponentData::_internal_user_handle() const {
-  const ::PBWorker_ComponentDataHandle* p = _impl_.user_handle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::PBWorker_ComponentDataHandle&>(
-      ::_PBWorker_ComponentDataHandle_default_instance_);
+inline const ::PBWorkerComponentDataHandle& PBWorkerComponentData::_internal_user_handle() const {
+  const ::PBWorkerComponentDataHandle* p = _impl_.user_handle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PBWorkerComponentDataHandle&>(
+      ::_PBWorkerComponentDataHandle_default_instance_);
 }
-inline const ::PBWorker_ComponentDataHandle& PBWorker_ComponentData::user_handle() const {
-  // @@protoc_insertion_point(field_get:PBWorker_ComponentData.user_handle)
+inline const ::PBWorkerComponentDataHandle& PBWorkerComponentData::user_handle() const {
+  // @@protoc_insertion_point(field_get:PBWorkerComponentData.user_handle)
   return _internal_user_handle();
 }
-inline void PBWorker_ComponentData::unsafe_arena_set_allocated_user_handle(
-    ::PBWorker_ComponentDataHandle* user_handle) {
+inline void PBWorkerComponentData::unsafe_arena_set_allocated_user_handle(
+    ::PBWorkerComponentDataHandle* user_handle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.user_handle_);
   }
@@ -3345,11 +3345,11 @@ inline void PBWorker_ComponentData::unsafe_arena_set_allocated_user_handle(
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorker_ComponentData.user_handle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorkerComponentData.user_handle)
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentData::release_user_handle() {
+inline ::PBWorkerComponentDataHandle* PBWorkerComponentData::release_user_handle() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::PBWorker_ComponentDataHandle* temp = _impl_.user_handle_;
+  ::PBWorkerComponentDataHandle* temp = _impl_.user_handle_;
   _impl_.user_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3362,27 +3362,27 @@ inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentData::release_user_hand
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentData::unsafe_arena_release_user_handle() {
-  // @@protoc_insertion_point(field_release:PBWorker_ComponentData.user_handle)
+inline ::PBWorkerComponentDataHandle* PBWorkerComponentData::unsafe_arena_release_user_handle() {
+  // @@protoc_insertion_point(field_release:PBWorkerComponentData.user_handle)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::PBWorker_ComponentDataHandle* temp = _impl_.user_handle_;
+  ::PBWorkerComponentDataHandle* temp = _impl_.user_handle_;
   _impl_.user_handle_ = nullptr;
   return temp;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentData::_internal_mutable_user_handle() {
+inline ::PBWorkerComponentDataHandle* PBWorkerComponentData::_internal_mutable_user_handle() {
   _impl_._has_bits_[0] |= 0x00000004u;
   if (_impl_.user_handle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::PBWorker_ComponentDataHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::PBWorkerComponentDataHandle>(GetArenaForAllocation());
     _impl_.user_handle_ = p;
   }
   return _impl_.user_handle_;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentData::mutable_user_handle() {
-  ::PBWorker_ComponentDataHandle* _msg = _internal_mutable_user_handle();
-  // @@protoc_insertion_point(field_mutable:PBWorker_ComponentData.user_handle)
+inline ::PBWorkerComponentDataHandle* PBWorkerComponentData::mutable_user_handle() {
+  ::PBWorkerComponentDataHandle* _msg = _internal_mutable_user_handle();
+  // @@protoc_insertion_point(field_mutable:PBWorkerComponentData.user_handle)
   return _msg;
 }
-inline void PBWorker_ComponentData::set_allocated_user_handle(::PBWorker_ComponentDataHandle* user_handle) {
+inline void PBWorkerComponentData::set_allocated_user_handle(::PBWorkerComponentDataHandle* user_handle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.user_handle_;
@@ -3399,154 +3399,154 @@ inline void PBWorker_ComponentData::set_allocated_user_handle(::PBWorker_Compone
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.user_handle_ = user_handle;
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_ComponentData.user_handle)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerComponentData.user_handle)
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_Entity
+// PBWorkerEntity
 
 // optional int64 entity_id = 1;
-inline bool PBWorker_Entity::_internal_has_entity_id() const {
+inline bool PBWorkerEntity::_internal_has_entity_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_Entity::has_entity_id() const {
+inline bool PBWorkerEntity::has_entity_id() const {
   return _internal_has_entity_id();
 }
-inline void PBWorker_Entity::clear_entity_id() {
+inline void PBWorkerEntity::clear_entity_id() {
   _impl_.entity_id_ = int64_t{0};
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline int64_t PBWorker_Entity::_internal_entity_id() const {
+inline int64_t PBWorkerEntity::_internal_entity_id() const {
   return _impl_.entity_id_;
 }
-inline int64_t PBWorker_Entity::entity_id() const {
-  // @@protoc_insertion_point(field_get:PBWorker_Entity.entity_id)
+inline int64_t PBWorkerEntity::entity_id() const {
+  // @@protoc_insertion_point(field_get:PBWorkerEntity.entity_id)
   return _internal_entity_id();
 }
-inline void PBWorker_Entity::_internal_set_entity_id(int64_t value) {
+inline void PBWorkerEntity::_internal_set_entity_id(int64_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.entity_id_ = value;
 }
-inline void PBWorker_Entity::set_entity_id(int64_t value) {
+inline void PBWorkerEntity::set_entity_id(int64_t value) {
   _internal_set_entity_id(value);
-  // @@protoc_insertion_point(field_set:PBWorker_Entity.entity_id)
+  // @@protoc_insertion_point(field_set:PBWorkerEntity.entity_id)
 }
 
 // optional uint32 component_count = 2;
-inline bool PBWorker_Entity::_internal_has_component_count() const {
+inline bool PBWorkerEntity::_internal_has_component_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool PBWorker_Entity::has_component_count() const {
+inline bool PBWorkerEntity::has_component_count() const {
   return _internal_has_component_count();
 }
-inline void PBWorker_Entity::clear_component_count() {
+inline void PBWorkerEntity::clear_component_count() {
   _impl_.component_count_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline uint32_t PBWorker_Entity::_internal_component_count() const {
+inline uint32_t PBWorkerEntity::_internal_component_count() const {
   return _impl_.component_count_;
 }
-inline uint32_t PBWorker_Entity::component_count() const {
-  // @@protoc_insertion_point(field_get:PBWorker_Entity.component_count)
+inline uint32_t PBWorkerEntity::component_count() const {
+  // @@protoc_insertion_point(field_get:PBWorkerEntity.component_count)
   return _internal_component_count();
 }
-inline void PBWorker_Entity::_internal_set_component_count(uint32_t value) {
+inline void PBWorkerEntity::_internal_set_component_count(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000002u;
   _impl_.component_count_ = value;
 }
-inline void PBWorker_Entity::set_component_count(uint32_t value) {
+inline void PBWorkerEntity::set_component_count(uint32_t value) {
   _internal_set_component_count(value);
-  // @@protoc_insertion_point(field_set:PBWorker_Entity.component_count)
+  // @@protoc_insertion_point(field_set:PBWorkerEntity.component_count)
 }
 
-// repeated .PBWorker_ComponentData components = 3;
-inline int PBWorker_Entity::_internal_components_size() const {
+// repeated .PBWorkerComponentData components = 3;
+inline int PBWorkerEntity::_internal_components_size() const {
   return _impl_.components_.size();
 }
-inline int PBWorker_Entity::components_size() const {
+inline int PBWorkerEntity::components_size() const {
   return _internal_components_size();
 }
-inline void PBWorker_Entity::clear_components() {
+inline void PBWorkerEntity::clear_components() {
   _impl_.components_.Clear();
 }
-inline ::PBWorker_ComponentData* PBWorker_Entity::mutable_components(int index) {
-  // @@protoc_insertion_point(field_mutable:PBWorker_Entity.components)
+inline ::PBWorkerComponentData* PBWorkerEntity::mutable_components(int index) {
+  // @@protoc_insertion_point(field_mutable:PBWorkerEntity.components)
   return _impl_.components_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_ComponentData >*
-PBWorker_Entity::mutable_components() {
-  // @@protoc_insertion_point(field_mutable_list:PBWorker_Entity.components)
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerComponentData >*
+PBWorkerEntity::mutable_components() {
+  // @@protoc_insertion_point(field_mutable_list:PBWorkerEntity.components)
   return &_impl_.components_;
 }
-inline const ::PBWorker_ComponentData& PBWorker_Entity::_internal_components(int index) const {
+inline const ::PBWorkerComponentData& PBWorkerEntity::_internal_components(int index) const {
   return _impl_.components_.Get(index);
 }
-inline const ::PBWorker_ComponentData& PBWorker_Entity::components(int index) const {
-  // @@protoc_insertion_point(field_get:PBWorker_Entity.components)
+inline const ::PBWorkerComponentData& PBWorkerEntity::components(int index) const {
+  // @@protoc_insertion_point(field_get:PBWorkerEntity.components)
   return _internal_components(index);
 }
-inline ::PBWorker_ComponentData* PBWorker_Entity::_internal_add_components() {
+inline ::PBWorkerComponentData* PBWorkerEntity::_internal_add_components() {
   return _impl_.components_.Add();
 }
-inline ::PBWorker_ComponentData* PBWorker_Entity::add_components() {
-  ::PBWorker_ComponentData* _add = _internal_add_components();
-  // @@protoc_insertion_point(field_add:PBWorker_Entity.components)
+inline ::PBWorkerComponentData* PBWorkerEntity::add_components() {
+  ::PBWorkerComponentData* _add = _internal_add_components();
+  // @@protoc_insertion_point(field_add:PBWorkerEntity.components)
   return _add;
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorker_ComponentData >&
-PBWorker_Entity::components() const {
-  // @@protoc_insertion_point(field_list:PBWorker_Entity.components)
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::PBWorkerComponentData >&
+PBWorkerEntity::components() const {
+  // @@protoc_insertion_point(field_list:PBWorkerEntity.components)
   return _impl_.components_;
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_ComponentUpdate
+// PBWorkerComponentUpdate
 
 // optional bytes reserved = 1;
-inline bool PBWorker_ComponentUpdate::_internal_has_reserved() const {
+inline bool PBWorkerComponentUpdate::_internal_has_reserved() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_ComponentUpdate::has_reserved() const {
+inline bool PBWorkerComponentUpdate::has_reserved() const {
   return _internal_has_reserved();
 }
-inline void PBWorker_ComponentUpdate::clear_reserved() {
+inline void PBWorkerComponentUpdate::clear_reserved() {
   _impl_.reserved_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PBWorker_ComponentUpdate::reserved() const {
-  // @@protoc_insertion_point(field_get:PBWorker_ComponentUpdate.reserved)
+inline const std::string& PBWorkerComponentUpdate::reserved() const {
+  // @@protoc_insertion_point(field_get:PBWorkerComponentUpdate.reserved)
   return _internal_reserved();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PBWorker_ComponentUpdate::set_reserved(ArgT0&& arg0, ArgT... args) {
+void PBWorkerComponentUpdate::set_reserved(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.reserved_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:PBWorker_ComponentUpdate.reserved)
+  // @@protoc_insertion_point(field_set:PBWorkerComponentUpdate.reserved)
 }
-inline std::string* PBWorker_ComponentUpdate::mutable_reserved() {
+inline std::string* PBWorkerComponentUpdate::mutable_reserved() {
   std::string* _s = _internal_mutable_reserved();
-  // @@protoc_insertion_point(field_mutable:PBWorker_ComponentUpdate.reserved)
+  // @@protoc_insertion_point(field_mutable:PBWorkerComponentUpdate.reserved)
   return _s;
 }
-inline const std::string& PBWorker_ComponentUpdate::_internal_reserved() const {
+inline const std::string& PBWorkerComponentUpdate::_internal_reserved() const {
   return _impl_.reserved_.Get();
 }
-inline void PBWorker_ComponentUpdate::_internal_set_reserved(const std::string& value) {
+inline void PBWorkerComponentUpdate::_internal_set_reserved(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.reserved_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PBWorker_ComponentUpdate::_internal_mutable_reserved() {
+inline std::string* PBWorkerComponentUpdate::_internal_mutable_reserved() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.reserved_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PBWorker_ComponentUpdate::release_reserved() {
-  // @@protoc_insertion_point(field_release:PBWorker_ComponentUpdate.reserved)
+inline std::string* PBWorkerComponentUpdate::release_reserved() {
+  // @@protoc_insertion_point(field_release:PBWorkerComponentUpdate.reserved)
   if (!_internal_has_reserved()) {
     return nullptr;
   }
@@ -3559,7 +3559,7 @@ inline std::string* PBWorker_ComponentUpdate::release_reserved() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PBWorker_ComponentUpdate::set_allocated_reserved(std::string* reserved) {
+inline void PBWorkerComponentUpdate::set_allocated_reserved(std::string* reserved) {
   if (reserved != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3571,61 +3571,61 @@ inline void PBWorker_ComponentUpdate::set_allocated_reserved(std::string* reserv
     _impl_.reserved_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_ComponentUpdate.reserved)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerComponentUpdate.reserved)
 }
 
 // optional uint32 component_id = 2;
-inline bool PBWorker_ComponentUpdate::_internal_has_component_id() const {
+inline bool PBWorkerComponentUpdate::_internal_has_component_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool PBWorker_ComponentUpdate::has_component_id() const {
+inline bool PBWorkerComponentUpdate::has_component_id() const {
   return _internal_has_component_id();
 }
-inline void PBWorker_ComponentUpdate::clear_component_id() {
+inline void PBWorkerComponentUpdate::clear_component_id() {
   _impl_.component_id_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t PBWorker_ComponentUpdate::_internal_component_id() const {
+inline uint32_t PBWorkerComponentUpdate::_internal_component_id() const {
   return _impl_.component_id_;
 }
-inline uint32_t PBWorker_ComponentUpdate::component_id() const {
-  // @@protoc_insertion_point(field_get:PBWorker_ComponentUpdate.component_id)
+inline uint32_t PBWorkerComponentUpdate::component_id() const {
+  // @@protoc_insertion_point(field_get:PBWorkerComponentUpdate.component_id)
   return _internal_component_id();
 }
-inline void PBWorker_ComponentUpdate::_internal_set_component_id(uint32_t value) {
+inline void PBWorkerComponentUpdate::_internal_set_component_id(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.component_id_ = value;
 }
-inline void PBWorker_ComponentUpdate::set_component_id(uint32_t value) {
+inline void PBWorkerComponentUpdate::set_component_id(uint32_t value) {
   _internal_set_component_id(value);
-  // @@protoc_insertion_point(field_set:PBWorker_ComponentUpdate.component_id)
+  // @@protoc_insertion_point(field_set:PBWorkerComponentUpdate.component_id)
 }
 
-// optional .PBSchema_ComponentData schema_type = 3;
-inline bool PBWorker_ComponentUpdate::_internal_has_schema_type() const {
+// optional .PBSchemaComponentData schema_type = 3;
+inline bool PBWorkerComponentUpdate::_internal_has_schema_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.schema_type_ != nullptr);
   return value;
 }
-inline bool PBWorker_ComponentUpdate::has_schema_type() const {
+inline bool PBWorkerComponentUpdate::has_schema_type() const {
   return _internal_has_schema_type();
 }
-inline void PBWorker_ComponentUpdate::clear_schema_type() {
+inline void PBWorkerComponentUpdate::clear_schema_type() {
   if (_impl_.schema_type_ != nullptr) _impl_.schema_type_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::PBSchema_ComponentData& PBWorker_ComponentUpdate::_internal_schema_type() const {
-  const ::PBSchema_ComponentData* p = _impl_.schema_type_;
-  return p != nullptr ? *p : reinterpret_cast<const ::PBSchema_ComponentData&>(
-      ::_PBSchema_ComponentData_default_instance_);
+inline const ::PBSchemaComponentData& PBWorkerComponentUpdate::_internal_schema_type() const {
+  const ::PBSchemaComponentData* p = _impl_.schema_type_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PBSchemaComponentData&>(
+      ::_PBSchemaComponentData_default_instance_);
 }
-inline const ::PBSchema_ComponentData& PBWorker_ComponentUpdate::schema_type() const {
-  // @@protoc_insertion_point(field_get:PBWorker_ComponentUpdate.schema_type)
+inline const ::PBSchemaComponentData& PBWorkerComponentUpdate::schema_type() const {
+  // @@protoc_insertion_point(field_get:PBWorkerComponentUpdate.schema_type)
   return _internal_schema_type();
 }
-inline void PBWorker_ComponentUpdate::unsafe_arena_set_allocated_schema_type(
-    ::PBSchema_ComponentData* schema_type) {
+inline void PBWorkerComponentUpdate::unsafe_arena_set_allocated_schema_type(
+    ::PBSchemaComponentData* schema_type) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.schema_type_);
   }
@@ -3635,11 +3635,11 @@ inline void PBWorker_ComponentUpdate::unsafe_arena_set_allocated_schema_type(
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorker_ComponentUpdate.schema_type)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorkerComponentUpdate.schema_type)
 }
-inline ::PBSchema_ComponentData* PBWorker_ComponentUpdate::release_schema_type() {
+inline ::PBSchemaComponentData* PBWorkerComponentUpdate::release_schema_type() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::PBSchema_ComponentData* temp = _impl_.schema_type_;
+  ::PBSchemaComponentData* temp = _impl_.schema_type_;
   _impl_.schema_type_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3652,27 +3652,27 @@ inline ::PBSchema_ComponentData* PBWorker_ComponentUpdate::release_schema_type()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::PBSchema_ComponentData* PBWorker_ComponentUpdate::unsafe_arena_release_schema_type() {
-  // @@protoc_insertion_point(field_release:PBWorker_ComponentUpdate.schema_type)
+inline ::PBSchemaComponentData* PBWorkerComponentUpdate::unsafe_arena_release_schema_type() {
+  // @@protoc_insertion_point(field_release:PBWorkerComponentUpdate.schema_type)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::PBSchema_ComponentData* temp = _impl_.schema_type_;
+  ::PBSchemaComponentData* temp = _impl_.schema_type_;
   _impl_.schema_type_ = nullptr;
   return temp;
 }
-inline ::PBSchema_ComponentData* PBWorker_ComponentUpdate::_internal_mutable_schema_type() {
+inline ::PBSchemaComponentData* PBWorkerComponentUpdate::_internal_mutable_schema_type() {
   _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.schema_type_ == nullptr) {
-    auto* p = CreateMaybeMessage<::PBSchema_ComponentData>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::PBSchemaComponentData>(GetArenaForAllocation());
     _impl_.schema_type_ = p;
   }
   return _impl_.schema_type_;
 }
-inline ::PBSchema_ComponentData* PBWorker_ComponentUpdate::mutable_schema_type() {
-  ::PBSchema_ComponentData* _msg = _internal_mutable_schema_type();
-  // @@protoc_insertion_point(field_mutable:PBWorker_ComponentUpdate.schema_type)
+inline ::PBSchemaComponentData* PBWorkerComponentUpdate::mutable_schema_type() {
+  ::PBSchemaComponentData* _msg = _internal_mutable_schema_type();
+  // @@protoc_insertion_point(field_mutable:PBWorkerComponentUpdate.schema_type)
   return _msg;
 }
-inline void PBWorker_ComponentUpdate::set_allocated_schema_type(::PBSchema_ComponentData* schema_type) {
+inline void PBWorkerComponentUpdate::set_allocated_schema_type(::PBSchemaComponentData* schema_type) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.schema_type_;
@@ -3689,33 +3689,33 @@ inline void PBWorker_ComponentUpdate::set_allocated_schema_type(::PBSchema_Compo
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.schema_type_ = schema_type;
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_ComponentUpdate.schema_type)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerComponentUpdate.schema_type)
 }
 
-// optional .PBWorker_ComponentDataHandle user_handle = 4;
-inline bool PBWorker_ComponentUpdate::_internal_has_user_handle() const {
+// optional .PBWorkerComponentDataHandle user_handle = 4;
+inline bool PBWorkerComponentUpdate::_internal_has_user_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.user_handle_ != nullptr);
   return value;
 }
-inline bool PBWorker_ComponentUpdate::has_user_handle() const {
+inline bool PBWorkerComponentUpdate::has_user_handle() const {
   return _internal_has_user_handle();
 }
-inline void PBWorker_ComponentUpdate::clear_user_handle() {
+inline void PBWorkerComponentUpdate::clear_user_handle() {
   if (_impl_.user_handle_ != nullptr) _impl_.user_handle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::PBWorker_ComponentDataHandle& PBWorker_ComponentUpdate::_internal_user_handle() const {
-  const ::PBWorker_ComponentDataHandle* p = _impl_.user_handle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::PBWorker_ComponentDataHandle&>(
-      ::_PBWorker_ComponentDataHandle_default_instance_);
+inline const ::PBWorkerComponentDataHandle& PBWorkerComponentUpdate::_internal_user_handle() const {
+  const ::PBWorkerComponentDataHandle* p = _impl_.user_handle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PBWorkerComponentDataHandle&>(
+      ::_PBWorkerComponentDataHandle_default_instance_);
 }
-inline const ::PBWorker_ComponentDataHandle& PBWorker_ComponentUpdate::user_handle() const {
-  // @@protoc_insertion_point(field_get:PBWorker_ComponentUpdate.user_handle)
+inline const ::PBWorkerComponentDataHandle& PBWorkerComponentUpdate::user_handle() const {
+  // @@protoc_insertion_point(field_get:PBWorkerComponentUpdate.user_handle)
   return _internal_user_handle();
 }
-inline void PBWorker_ComponentUpdate::unsafe_arena_set_allocated_user_handle(
-    ::PBWorker_ComponentDataHandle* user_handle) {
+inline void PBWorkerComponentUpdate::unsafe_arena_set_allocated_user_handle(
+    ::PBWorkerComponentDataHandle* user_handle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.user_handle_);
   }
@@ -3725,11 +3725,11 @@ inline void PBWorker_ComponentUpdate::unsafe_arena_set_allocated_user_handle(
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorker_ComponentUpdate.user_handle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorkerComponentUpdate.user_handle)
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentUpdate::release_user_handle() {
+inline ::PBWorkerComponentDataHandle* PBWorkerComponentUpdate::release_user_handle() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::PBWorker_ComponentDataHandle* temp = _impl_.user_handle_;
+  ::PBWorkerComponentDataHandle* temp = _impl_.user_handle_;
   _impl_.user_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -3742,27 +3742,27 @@ inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentUpdate::release_user_ha
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentUpdate::unsafe_arena_release_user_handle() {
-  // @@protoc_insertion_point(field_release:PBWorker_ComponentUpdate.user_handle)
+inline ::PBWorkerComponentDataHandle* PBWorkerComponentUpdate::unsafe_arena_release_user_handle() {
+  // @@protoc_insertion_point(field_release:PBWorkerComponentUpdate.user_handle)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::PBWorker_ComponentDataHandle* temp = _impl_.user_handle_;
+  ::PBWorkerComponentDataHandle* temp = _impl_.user_handle_;
   _impl_.user_handle_ = nullptr;
   return temp;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentUpdate::_internal_mutable_user_handle() {
+inline ::PBWorkerComponentDataHandle* PBWorkerComponentUpdate::_internal_mutable_user_handle() {
   _impl_._has_bits_[0] |= 0x00000004u;
   if (_impl_.user_handle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::PBWorker_ComponentDataHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::PBWorkerComponentDataHandle>(GetArenaForAllocation());
     _impl_.user_handle_ = p;
   }
   return _impl_.user_handle_;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_ComponentUpdate::mutable_user_handle() {
-  ::PBWorker_ComponentDataHandle* _msg = _internal_mutable_user_handle();
-  // @@protoc_insertion_point(field_mutable:PBWorker_ComponentUpdate.user_handle)
+inline ::PBWorkerComponentDataHandle* PBWorkerComponentUpdate::mutable_user_handle() {
+  ::PBWorkerComponentDataHandle* _msg = _internal_mutable_user_handle();
+  // @@protoc_insertion_point(field_mutable:PBWorkerComponentUpdate.user_handle)
   return _msg;
 }
-inline void PBWorker_ComponentUpdate::set_allocated_user_handle(::PBWorker_ComponentDataHandle* user_handle) {
+inline void PBWorkerComponentUpdate::set_allocated_user_handle(::PBWorkerComponentDataHandle* user_handle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.user_handle_;
@@ -3779,161 +3779,161 @@ inline void PBWorker_ComponentUpdate::set_allocated_user_handle(::PBWorker_Compo
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.user_handle_ = user_handle;
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_ComponentUpdate.user_handle)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerComponentUpdate.user_handle)
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_WorkerAttributes
+// PBWorkerWorkerAttributes
 
 // optional uint32 attribute_count = 1;
-inline bool PBWorker_WorkerAttributes::_internal_has_attribute_count() const {
+inline bool PBWorkerWorkerAttributes::_internal_has_attribute_count() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_WorkerAttributes::has_attribute_count() const {
+inline bool PBWorkerWorkerAttributes::has_attribute_count() const {
   return _internal_has_attribute_count();
 }
-inline void PBWorker_WorkerAttributes::clear_attribute_count() {
+inline void PBWorkerWorkerAttributes::clear_attribute_count() {
   _impl_.attribute_count_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline uint32_t PBWorker_WorkerAttributes::_internal_attribute_count() const {
+inline uint32_t PBWorkerWorkerAttributes::_internal_attribute_count() const {
   return _impl_.attribute_count_;
 }
-inline uint32_t PBWorker_WorkerAttributes::attribute_count() const {
-  // @@protoc_insertion_point(field_get:PBWorker_WorkerAttributes.attribute_count)
+inline uint32_t PBWorkerWorkerAttributes::attribute_count() const {
+  // @@protoc_insertion_point(field_get:PBWorkerWorkerAttributes.attribute_count)
   return _internal_attribute_count();
 }
-inline void PBWorker_WorkerAttributes::_internal_set_attribute_count(uint32_t value) {
+inline void PBWorkerWorkerAttributes::_internal_set_attribute_count(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.attribute_count_ = value;
 }
-inline void PBWorker_WorkerAttributes::set_attribute_count(uint32_t value) {
+inline void PBWorkerWorkerAttributes::set_attribute_count(uint32_t value) {
   _internal_set_attribute_count(value);
-  // @@protoc_insertion_point(field_set:PBWorker_WorkerAttributes.attribute_count)
+  // @@protoc_insertion_point(field_set:PBWorkerWorkerAttributes.attribute_count)
 }
 
 // repeated bytes attributes = 2;
-inline int PBWorker_WorkerAttributes::_internal_attributes_size() const {
+inline int PBWorkerWorkerAttributes::_internal_attributes_size() const {
   return _impl_.attributes_.size();
 }
-inline int PBWorker_WorkerAttributes::attributes_size() const {
+inline int PBWorkerWorkerAttributes::attributes_size() const {
   return _internal_attributes_size();
 }
-inline void PBWorker_WorkerAttributes::clear_attributes() {
+inline void PBWorkerWorkerAttributes::clear_attributes() {
   _impl_.attributes_.Clear();
 }
-inline std::string* PBWorker_WorkerAttributes::add_attributes() {
+inline std::string* PBWorkerWorkerAttributes::add_attributes() {
   std::string* _s = _internal_add_attributes();
-  // @@protoc_insertion_point(field_add_mutable:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_add_mutable:PBWorkerWorkerAttributes.attributes)
   return _s;
 }
-inline const std::string& PBWorker_WorkerAttributes::_internal_attributes(int index) const {
+inline const std::string& PBWorkerWorkerAttributes::_internal_attributes(int index) const {
   return _impl_.attributes_.Get(index);
 }
-inline const std::string& PBWorker_WorkerAttributes::attributes(int index) const {
-  // @@protoc_insertion_point(field_get:PBWorker_WorkerAttributes.attributes)
+inline const std::string& PBWorkerWorkerAttributes::attributes(int index) const {
+  // @@protoc_insertion_point(field_get:PBWorkerWorkerAttributes.attributes)
   return _internal_attributes(index);
 }
-inline std::string* PBWorker_WorkerAttributes::mutable_attributes(int index) {
-  // @@protoc_insertion_point(field_mutable:PBWorker_WorkerAttributes.attributes)
+inline std::string* PBWorkerWorkerAttributes::mutable_attributes(int index) {
+  // @@protoc_insertion_point(field_mutable:PBWorkerWorkerAttributes.attributes)
   return _impl_.attributes_.Mutable(index);
 }
-inline void PBWorker_WorkerAttributes::set_attributes(int index, const std::string& value) {
+inline void PBWorkerWorkerAttributes::set_attributes(int index, const std::string& value) {
   _impl_.attributes_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_set:PBWorkerWorkerAttributes.attributes)
 }
-inline void PBWorker_WorkerAttributes::set_attributes(int index, std::string&& value) {
+inline void PBWorkerWorkerAttributes::set_attributes(int index, std::string&& value) {
   _impl_.attributes_.Mutable(index)->assign(std::move(value));
-  // @@protoc_insertion_point(field_set:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_set:PBWorkerWorkerAttributes.attributes)
 }
-inline void PBWorker_WorkerAttributes::set_attributes(int index, const char* value) {
+inline void PBWorkerWorkerAttributes::set_attributes(int index, const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _impl_.attributes_.Mutable(index)->assign(value);
-  // @@protoc_insertion_point(field_set_char:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_set_char:PBWorkerWorkerAttributes.attributes)
 }
-inline void PBWorker_WorkerAttributes::set_attributes(int index, const void* value, size_t size) {
+inline void PBWorkerWorkerAttributes::set_attributes(int index, const void* value, size_t size) {
   _impl_.attributes_.Mutable(index)->assign(
     reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_set_pointer:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_set_pointer:PBWorkerWorkerAttributes.attributes)
 }
-inline std::string* PBWorker_WorkerAttributes::_internal_add_attributes() {
+inline std::string* PBWorkerWorkerAttributes::_internal_add_attributes() {
   return _impl_.attributes_.Add();
 }
-inline void PBWorker_WorkerAttributes::add_attributes(const std::string& value) {
+inline void PBWorkerWorkerAttributes::add_attributes(const std::string& value) {
   _impl_.attributes_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_add:PBWorkerWorkerAttributes.attributes)
 }
-inline void PBWorker_WorkerAttributes::add_attributes(std::string&& value) {
+inline void PBWorkerWorkerAttributes::add_attributes(std::string&& value) {
   _impl_.attributes_.Add(std::move(value));
-  // @@protoc_insertion_point(field_add:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_add:PBWorkerWorkerAttributes.attributes)
 }
-inline void PBWorker_WorkerAttributes::add_attributes(const char* value) {
+inline void PBWorkerWorkerAttributes::add_attributes(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _impl_.attributes_.Add()->assign(value);
-  // @@protoc_insertion_point(field_add_char:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_add_char:PBWorkerWorkerAttributes.attributes)
 }
-inline void PBWorker_WorkerAttributes::add_attributes(const void* value, size_t size) {
+inline void PBWorkerWorkerAttributes::add_attributes(const void* value, size_t size) {
   _impl_.attributes_.Add()->assign(reinterpret_cast<const char*>(value), size);
-  // @@protoc_insertion_point(field_add_pointer:PBWorker_WorkerAttributes.attributes)
+  // @@protoc_insertion_point(field_add_pointer:PBWorkerWorkerAttributes.attributes)
 }
 inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
-PBWorker_WorkerAttributes::attributes() const {
-  // @@protoc_insertion_point(field_list:PBWorker_WorkerAttributes.attributes)
+PBWorkerWorkerAttributes::attributes() const {
+  // @@protoc_insertion_point(field_list:PBWorkerWorkerAttributes.attributes)
   return _impl_.attributes_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
-PBWorker_WorkerAttributes::mutable_attributes() {
-  // @@protoc_insertion_point(field_mutable_list:PBWorker_WorkerAttributes.attributes)
+PBWorkerWorkerAttributes::mutable_attributes() {
+  // @@protoc_insertion_point(field_mutable_list:PBWorkerWorkerAttributes.attributes)
   return &_impl_.attributes_;
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_CommandRequest
+// PBWorkerCommandRequest
 
 // optional bytes reserved = 1;
-inline bool PBWorker_CommandRequest::_internal_has_reserved() const {
+inline bool PBWorkerCommandRequest::_internal_has_reserved() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_CommandRequest::has_reserved() const {
+inline bool PBWorkerCommandRequest::has_reserved() const {
   return _internal_has_reserved();
 }
-inline void PBWorker_CommandRequest::clear_reserved() {
+inline void PBWorkerCommandRequest::clear_reserved() {
   _impl_.reserved_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PBWorker_CommandRequest::reserved() const {
-  // @@protoc_insertion_point(field_get:PBWorker_CommandRequest.reserved)
+inline const std::string& PBWorkerCommandRequest::reserved() const {
+  // @@protoc_insertion_point(field_get:PBWorkerCommandRequest.reserved)
   return _internal_reserved();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PBWorker_CommandRequest::set_reserved(ArgT0&& arg0, ArgT... args) {
+void PBWorkerCommandRequest::set_reserved(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.reserved_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:PBWorker_CommandRequest.reserved)
+  // @@protoc_insertion_point(field_set:PBWorkerCommandRequest.reserved)
 }
-inline std::string* PBWorker_CommandRequest::mutable_reserved() {
+inline std::string* PBWorkerCommandRequest::mutable_reserved() {
   std::string* _s = _internal_mutable_reserved();
-  // @@protoc_insertion_point(field_mutable:PBWorker_CommandRequest.reserved)
+  // @@protoc_insertion_point(field_mutable:PBWorkerCommandRequest.reserved)
   return _s;
 }
-inline const std::string& PBWorker_CommandRequest::_internal_reserved() const {
+inline const std::string& PBWorkerCommandRequest::_internal_reserved() const {
   return _impl_.reserved_.Get();
 }
-inline void PBWorker_CommandRequest::_internal_set_reserved(const std::string& value) {
+inline void PBWorkerCommandRequest::_internal_set_reserved(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.reserved_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PBWorker_CommandRequest::_internal_mutable_reserved() {
+inline std::string* PBWorkerCommandRequest::_internal_mutable_reserved() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.reserved_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PBWorker_CommandRequest::release_reserved() {
-  // @@protoc_insertion_point(field_release:PBWorker_CommandRequest.reserved)
+inline std::string* PBWorkerCommandRequest::release_reserved() {
+  // @@protoc_insertion_point(field_release:PBWorkerCommandRequest.reserved)
   if (!_internal_has_reserved()) {
     return nullptr;
   }
@@ -3946,7 +3946,7 @@ inline std::string* PBWorker_CommandRequest::release_reserved() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PBWorker_CommandRequest::set_allocated_reserved(std::string* reserved) {
+inline void PBWorkerCommandRequest::set_allocated_reserved(std::string* reserved) {
   if (reserved != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -3958,61 +3958,61 @@ inline void PBWorker_CommandRequest::set_allocated_reserved(std::string* reserve
     _impl_.reserved_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_CommandRequest.reserved)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerCommandRequest.reserved)
 }
 
 // optional uint32 component_id = 2;
-inline bool PBWorker_CommandRequest::_internal_has_component_id() const {
+inline bool PBWorkerCommandRequest::_internal_has_component_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool PBWorker_CommandRequest::has_component_id() const {
+inline bool PBWorkerCommandRequest::has_component_id() const {
   return _internal_has_component_id();
 }
-inline void PBWorker_CommandRequest::clear_component_id() {
+inline void PBWorkerCommandRequest::clear_component_id() {
   _impl_.component_id_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t PBWorker_CommandRequest::_internal_component_id() const {
+inline uint32_t PBWorkerCommandRequest::_internal_component_id() const {
   return _impl_.component_id_;
 }
-inline uint32_t PBWorker_CommandRequest::component_id() const {
-  // @@protoc_insertion_point(field_get:PBWorker_CommandRequest.component_id)
+inline uint32_t PBWorkerCommandRequest::component_id() const {
+  // @@protoc_insertion_point(field_get:PBWorkerCommandRequest.component_id)
   return _internal_component_id();
 }
-inline void PBWorker_CommandRequest::_internal_set_component_id(uint32_t value) {
+inline void PBWorkerCommandRequest::_internal_set_component_id(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.component_id_ = value;
 }
-inline void PBWorker_CommandRequest::set_component_id(uint32_t value) {
+inline void PBWorkerCommandRequest::set_component_id(uint32_t value) {
   _internal_set_component_id(value);
-  // @@protoc_insertion_point(field_set:PBWorker_CommandRequest.component_id)
+  // @@protoc_insertion_point(field_set:PBWorkerCommandRequest.component_id)
 }
 
-// optional .PBSchema_ComponentData schema_type = 3;
-inline bool PBWorker_CommandRequest::_internal_has_schema_type() const {
+// optional .PBSchemaComponentData schema_type = 3;
+inline bool PBWorkerCommandRequest::_internal_has_schema_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.schema_type_ != nullptr);
   return value;
 }
-inline bool PBWorker_CommandRequest::has_schema_type() const {
+inline bool PBWorkerCommandRequest::has_schema_type() const {
   return _internal_has_schema_type();
 }
-inline void PBWorker_CommandRequest::clear_schema_type() {
+inline void PBWorkerCommandRequest::clear_schema_type() {
   if (_impl_.schema_type_ != nullptr) _impl_.schema_type_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::PBSchema_ComponentData& PBWorker_CommandRequest::_internal_schema_type() const {
-  const ::PBSchema_ComponentData* p = _impl_.schema_type_;
-  return p != nullptr ? *p : reinterpret_cast<const ::PBSchema_ComponentData&>(
-      ::_PBSchema_ComponentData_default_instance_);
+inline const ::PBSchemaComponentData& PBWorkerCommandRequest::_internal_schema_type() const {
+  const ::PBSchemaComponentData* p = _impl_.schema_type_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PBSchemaComponentData&>(
+      ::_PBSchemaComponentData_default_instance_);
 }
-inline const ::PBSchema_ComponentData& PBWorker_CommandRequest::schema_type() const {
-  // @@protoc_insertion_point(field_get:PBWorker_CommandRequest.schema_type)
+inline const ::PBSchemaComponentData& PBWorkerCommandRequest::schema_type() const {
+  // @@protoc_insertion_point(field_get:PBWorkerCommandRequest.schema_type)
   return _internal_schema_type();
 }
-inline void PBWorker_CommandRequest::unsafe_arena_set_allocated_schema_type(
-    ::PBSchema_ComponentData* schema_type) {
+inline void PBWorkerCommandRequest::unsafe_arena_set_allocated_schema_type(
+    ::PBSchemaComponentData* schema_type) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.schema_type_);
   }
@@ -4022,11 +4022,11 @@ inline void PBWorker_CommandRequest::unsafe_arena_set_allocated_schema_type(
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorker_CommandRequest.schema_type)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorkerCommandRequest.schema_type)
 }
-inline ::PBSchema_ComponentData* PBWorker_CommandRequest::release_schema_type() {
+inline ::PBSchemaComponentData* PBWorkerCommandRequest::release_schema_type() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::PBSchema_ComponentData* temp = _impl_.schema_type_;
+  ::PBSchemaComponentData* temp = _impl_.schema_type_;
   _impl_.schema_type_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -4039,27 +4039,27 @@ inline ::PBSchema_ComponentData* PBWorker_CommandRequest::release_schema_type() 
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::PBSchema_ComponentData* PBWorker_CommandRequest::unsafe_arena_release_schema_type() {
-  // @@protoc_insertion_point(field_release:PBWorker_CommandRequest.schema_type)
+inline ::PBSchemaComponentData* PBWorkerCommandRequest::unsafe_arena_release_schema_type() {
+  // @@protoc_insertion_point(field_release:PBWorkerCommandRequest.schema_type)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::PBSchema_ComponentData* temp = _impl_.schema_type_;
+  ::PBSchemaComponentData* temp = _impl_.schema_type_;
   _impl_.schema_type_ = nullptr;
   return temp;
 }
-inline ::PBSchema_ComponentData* PBWorker_CommandRequest::_internal_mutable_schema_type() {
+inline ::PBSchemaComponentData* PBWorkerCommandRequest::_internal_mutable_schema_type() {
   _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.schema_type_ == nullptr) {
-    auto* p = CreateMaybeMessage<::PBSchema_ComponentData>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::PBSchemaComponentData>(GetArenaForAllocation());
     _impl_.schema_type_ = p;
   }
   return _impl_.schema_type_;
 }
-inline ::PBSchema_ComponentData* PBWorker_CommandRequest::mutable_schema_type() {
-  ::PBSchema_ComponentData* _msg = _internal_mutable_schema_type();
-  // @@protoc_insertion_point(field_mutable:PBWorker_CommandRequest.schema_type)
+inline ::PBSchemaComponentData* PBWorkerCommandRequest::mutable_schema_type() {
+  ::PBSchemaComponentData* _msg = _internal_mutable_schema_type();
+  // @@protoc_insertion_point(field_mutable:PBWorkerCommandRequest.schema_type)
   return _msg;
 }
-inline void PBWorker_CommandRequest::set_allocated_schema_type(::PBSchema_ComponentData* schema_type) {
+inline void PBWorkerCommandRequest::set_allocated_schema_type(::PBSchemaComponentData* schema_type) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.schema_type_;
@@ -4076,33 +4076,33 @@ inline void PBWorker_CommandRequest::set_allocated_schema_type(::PBSchema_Compon
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.schema_type_ = schema_type;
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_CommandRequest.schema_type)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerCommandRequest.schema_type)
 }
 
-// optional .PBWorker_ComponentDataHandle user_handle = 4;
-inline bool PBWorker_CommandRequest::_internal_has_user_handle() const {
+// optional .PBWorkerComponentDataHandle user_handle = 4;
+inline bool PBWorkerCommandRequest::_internal_has_user_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.user_handle_ != nullptr);
   return value;
 }
-inline bool PBWorker_CommandRequest::has_user_handle() const {
+inline bool PBWorkerCommandRequest::has_user_handle() const {
   return _internal_has_user_handle();
 }
-inline void PBWorker_CommandRequest::clear_user_handle() {
+inline void PBWorkerCommandRequest::clear_user_handle() {
   if (_impl_.user_handle_ != nullptr) _impl_.user_handle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::PBWorker_ComponentDataHandle& PBWorker_CommandRequest::_internal_user_handle() const {
-  const ::PBWorker_ComponentDataHandle* p = _impl_.user_handle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::PBWorker_ComponentDataHandle&>(
-      ::_PBWorker_ComponentDataHandle_default_instance_);
+inline const ::PBWorkerComponentDataHandle& PBWorkerCommandRequest::_internal_user_handle() const {
+  const ::PBWorkerComponentDataHandle* p = _impl_.user_handle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PBWorkerComponentDataHandle&>(
+      ::_PBWorkerComponentDataHandle_default_instance_);
 }
-inline const ::PBWorker_ComponentDataHandle& PBWorker_CommandRequest::user_handle() const {
-  // @@protoc_insertion_point(field_get:PBWorker_CommandRequest.user_handle)
+inline const ::PBWorkerComponentDataHandle& PBWorkerCommandRequest::user_handle() const {
+  // @@protoc_insertion_point(field_get:PBWorkerCommandRequest.user_handle)
   return _internal_user_handle();
 }
-inline void PBWorker_CommandRequest::unsafe_arena_set_allocated_user_handle(
-    ::PBWorker_ComponentDataHandle* user_handle) {
+inline void PBWorkerCommandRequest::unsafe_arena_set_allocated_user_handle(
+    ::PBWorkerComponentDataHandle* user_handle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.user_handle_);
   }
@@ -4112,11 +4112,11 @@ inline void PBWorker_CommandRequest::unsafe_arena_set_allocated_user_handle(
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorker_CommandRequest.user_handle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorkerCommandRequest.user_handle)
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_CommandRequest::release_user_handle() {
+inline ::PBWorkerComponentDataHandle* PBWorkerCommandRequest::release_user_handle() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::PBWorker_ComponentDataHandle* temp = _impl_.user_handle_;
+  ::PBWorkerComponentDataHandle* temp = _impl_.user_handle_;
   _impl_.user_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -4129,27 +4129,27 @@ inline ::PBWorker_ComponentDataHandle* PBWorker_CommandRequest::release_user_han
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_CommandRequest::unsafe_arena_release_user_handle() {
-  // @@protoc_insertion_point(field_release:PBWorker_CommandRequest.user_handle)
+inline ::PBWorkerComponentDataHandle* PBWorkerCommandRequest::unsafe_arena_release_user_handle() {
+  // @@protoc_insertion_point(field_release:PBWorkerCommandRequest.user_handle)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::PBWorker_ComponentDataHandle* temp = _impl_.user_handle_;
+  ::PBWorkerComponentDataHandle* temp = _impl_.user_handle_;
   _impl_.user_handle_ = nullptr;
   return temp;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_CommandRequest::_internal_mutable_user_handle() {
+inline ::PBWorkerComponentDataHandle* PBWorkerCommandRequest::_internal_mutable_user_handle() {
   _impl_._has_bits_[0] |= 0x00000004u;
   if (_impl_.user_handle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::PBWorker_ComponentDataHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::PBWorkerComponentDataHandle>(GetArenaForAllocation());
     _impl_.user_handle_ = p;
   }
   return _impl_.user_handle_;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_CommandRequest::mutable_user_handle() {
-  ::PBWorker_ComponentDataHandle* _msg = _internal_mutable_user_handle();
-  // @@protoc_insertion_point(field_mutable:PBWorker_CommandRequest.user_handle)
+inline ::PBWorkerComponentDataHandle* PBWorkerCommandRequest::mutable_user_handle() {
+  ::PBWorkerComponentDataHandle* _msg = _internal_mutable_user_handle();
+  // @@protoc_insertion_point(field_mutable:PBWorkerCommandRequest.user_handle)
   return _msg;
 }
-inline void PBWorker_CommandRequest::set_allocated_user_handle(::PBWorker_ComponentDataHandle* user_handle) {
+inline void PBWorkerCommandRequest::set_allocated_user_handle(::PBWorkerComponentDataHandle* user_handle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.user_handle_;
@@ -4166,54 +4166,54 @@ inline void PBWorker_CommandRequest::set_allocated_user_handle(::PBWorker_Compon
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.user_handle_ = user_handle;
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_CommandRequest.user_handle)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerCommandRequest.user_handle)
 }
 
 // -------------------------------------------------------------------
 
-// PBWorker_CommandResponse
+// PBWorkerCommandResponse
 
 // optional bytes reserved = 1;
-inline bool PBWorker_CommandResponse::_internal_has_reserved() const {
+inline bool PBWorkerCommandResponse::_internal_has_reserved() const {
   bool value = (_impl_._has_bits_[0] & 0x00000001u) != 0;
   return value;
 }
-inline bool PBWorker_CommandResponse::has_reserved() const {
+inline bool PBWorkerCommandResponse::has_reserved() const {
   return _internal_has_reserved();
 }
-inline void PBWorker_CommandResponse::clear_reserved() {
+inline void PBWorkerCommandResponse::clear_reserved() {
   _impl_.reserved_.ClearToEmpty();
   _impl_._has_bits_[0] &= ~0x00000001u;
 }
-inline const std::string& PBWorker_CommandResponse::reserved() const {
-  // @@protoc_insertion_point(field_get:PBWorker_CommandResponse.reserved)
+inline const std::string& PBWorkerCommandResponse::reserved() const {
+  // @@protoc_insertion_point(field_get:PBWorkerCommandResponse.reserved)
   return _internal_reserved();
 }
 template <typename ArgT0, typename... ArgT>
 inline PROTOBUF_ALWAYS_INLINE
-void PBWorker_CommandResponse::set_reserved(ArgT0&& arg0, ArgT... args) {
+void PBWorkerCommandResponse::set_reserved(ArgT0&& arg0, ArgT... args) {
  _impl_._has_bits_[0] |= 0x00000001u;
  _impl_.reserved_.SetBytes(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:PBWorker_CommandResponse.reserved)
+  // @@protoc_insertion_point(field_set:PBWorkerCommandResponse.reserved)
 }
-inline std::string* PBWorker_CommandResponse::mutable_reserved() {
+inline std::string* PBWorkerCommandResponse::mutable_reserved() {
   std::string* _s = _internal_mutable_reserved();
-  // @@protoc_insertion_point(field_mutable:PBWorker_CommandResponse.reserved)
+  // @@protoc_insertion_point(field_mutable:PBWorkerCommandResponse.reserved)
   return _s;
 }
-inline const std::string& PBWorker_CommandResponse::_internal_reserved() const {
+inline const std::string& PBWorkerCommandResponse::_internal_reserved() const {
   return _impl_.reserved_.Get();
 }
-inline void PBWorker_CommandResponse::_internal_set_reserved(const std::string& value) {
+inline void PBWorkerCommandResponse::_internal_set_reserved(const std::string& value) {
   _impl_._has_bits_[0] |= 0x00000001u;
   _impl_.reserved_.Set(value, GetArenaForAllocation());
 }
-inline std::string* PBWorker_CommandResponse::_internal_mutable_reserved() {
+inline std::string* PBWorkerCommandResponse::_internal_mutable_reserved() {
   _impl_._has_bits_[0] |= 0x00000001u;
   return _impl_.reserved_.Mutable(GetArenaForAllocation());
 }
-inline std::string* PBWorker_CommandResponse::release_reserved() {
-  // @@protoc_insertion_point(field_release:PBWorker_CommandResponse.reserved)
+inline std::string* PBWorkerCommandResponse::release_reserved() {
+  // @@protoc_insertion_point(field_release:PBWorkerCommandResponse.reserved)
   if (!_internal_has_reserved()) {
     return nullptr;
   }
@@ -4226,7 +4226,7 @@ inline std::string* PBWorker_CommandResponse::release_reserved() {
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   return p;
 }
-inline void PBWorker_CommandResponse::set_allocated_reserved(std::string* reserved) {
+inline void PBWorkerCommandResponse::set_allocated_reserved(std::string* reserved) {
   if (reserved != nullptr) {
     _impl_._has_bits_[0] |= 0x00000001u;
   } else {
@@ -4238,61 +4238,61 @@ inline void PBWorker_CommandResponse::set_allocated_reserved(std::string* reserv
     _impl_.reserved_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_CommandResponse.reserved)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerCommandResponse.reserved)
 }
 
 // optional uint32 component_id = 2;
-inline bool PBWorker_CommandResponse::_internal_has_component_id() const {
+inline bool PBWorkerCommandResponse::_internal_has_component_id() const {
   bool value = (_impl_._has_bits_[0] & 0x00000008u) != 0;
   return value;
 }
-inline bool PBWorker_CommandResponse::has_component_id() const {
+inline bool PBWorkerCommandResponse::has_component_id() const {
   return _internal_has_component_id();
 }
-inline void PBWorker_CommandResponse::clear_component_id() {
+inline void PBWorkerCommandResponse::clear_component_id() {
   _impl_.component_id_ = 0u;
   _impl_._has_bits_[0] &= ~0x00000008u;
 }
-inline uint32_t PBWorker_CommandResponse::_internal_component_id() const {
+inline uint32_t PBWorkerCommandResponse::_internal_component_id() const {
   return _impl_.component_id_;
 }
-inline uint32_t PBWorker_CommandResponse::component_id() const {
-  // @@protoc_insertion_point(field_get:PBWorker_CommandResponse.component_id)
+inline uint32_t PBWorkerCommandResponse::component_id() const {
+  // @@protoc_insertion_point(field_get:PBWorkerCommandResponse.component_id)
   return _internal_component_id();
 }
-inline void PBWorker_CommandResponse::_internal_set_component_id(uint32_t value) {
+inline void PBWorkerCommandResponse::_internal_set_component_id(uint32_t value) {
   _impl_._has_bits_[0] |= 0x00000008u;
   _impl_.component_id_ = value;
 }
-inline void PBWorker_CommandResponse::set_component_id(uint32_t value) {
+inline void PBWorkerCommandResponse::set_component_id(uint32_t value) {
   _internal_set_component_id(value);
-  // @@protoc_insertion_point(field_set:PBWorker_CommandResponse.component_id)
+  // @@protoc_insertion_point(field_set:PBWorkerCommandResponse.component_id)
 }
 
-// optional .PBSchema_ComponentData schema_type = 3;
-inline bool PBWorker_CommandResponse::_internal_has_schema_type() const {
+// optional .PBSchemaComponentData schema_type = 3;
+inline bool PBWorkerCommandResponse::_internal_has_schema_type() const {
   bool value = (_impl_._has_bits_[0] & 0x00000002u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.schema_type_ != nullptr);
   return value;
 }
-inline bool PBWorker_CommandResponse::has_schema_type() const {
+inline bool PBWorkerCommandResponse::has_schema_type() const {
   return _internal_has_schema_type();
 }
-inline void PBWorker_CommandResponse::clear_schema_type() {
+inline void PBWorkerCommandResponse::clear_schema_type() {
   if (_impl_.schema_type_ != nullptr) _impl_.schema_type_->Clear();
   _impl_._has_bits_[0] &= ~0x00000002u;
 }
-inline const ::PBSchema_ComponentData& PBWorker_CommandResponse::_internal_schema_type() const {
-  const ::PBSchema_ComponentData* p = _impl_.schema_type_;
-  return p != nullptr ? *p : reinterpret_cast<const ::PBSchema_ComponentData&>(
-      ::_PBSchema_ComponentData_default_instance_);
+inline const ::PBSchemaComponentData& PBWorkerCommandResponse::_internal_schema_type() const {
+  const ::PBSchemaComponentData* p = _impl_.schema_type_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PBSchemaComponentData&>(
+      ::_PBSchemaComponentData_default_instance_);
 }
-inline const ::PBSchema_ComponentData& PBWorker_CommandResponse::schema_type() const {
-  // @@protoc_insertion_point(field_get:PBWorker_CommandResponse.schema_type)
+inline const ::PBSchemaComponentData& PBWorkerCommandResponse::schema_type() const {
+  // @@protoc_insertion_point(field_get:PBWorkerCommandResponse.schema_type)
   return _internal_schema_type();
 }
-inline void PBWorker_CommandResponse::unsafe_arena_set_allocated_schema_type(
-    ::PBSchema_ComponentData* schema_type) {
+inline void PBWorkerCommandResponse::unsafe_arena_set_allocated_schema_type(
+    ::PBSchemaComponentData* schema_type) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.schema_type_);
   }
@@ -4302,11 +4302,11 @@ inline void PBWorker_CommandResponse::unsafe_arena_set_allocated_schema_type(
   } else {
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorker_CommandResponse.schema_type)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorkerCommandResponse.schema_type)
 }
-inline ::PBSchema_ComponentData* PBWorker_CommandResponse::release_schema_type() {
+inline ::PBSchemaComponentData* PBWorkerCommandResponse::release_schema_type() {
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::PBSchema_ComponentData* temp = _impl_.schema_type_;
+  ::PBSchemaComponentData* temp = _impl_.schema_type_;
   _impl_.schema_type_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -4319,27 +4319,27 @@ inline ::PBSchema_ComponentData* PBWorker_CommandResponse::release_schema_type()
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::PBSchema_ComponentData* PBWorker_CommandResponse::unsafe_arena_release_schema_type() {
-  // @@protoc_insertion_point(field_release:PBWorker_CommandResponse.schema_type)
+inline ::PBSchemaComponentData* PBWorkerCommandResponse::unsafe_arena_release_schema_type() {
+  // @@protoc_insertion_point(field_release:PBWorkerCommandResponse.schema_type)
   _impl_._has_bits_[0] &= ~0x00000002u;
-  ::PBSchema_ComponentData* temp = _impl_.schema_type_;
+  ::PBSchemaComponentData* temp = _impl_.schema_type_;
   _impl_.schema_type_ = nullptr;
   return temp;
 }
-inline ::PBSchema_ComponentData* PBWorker_CommandResponse::_internal_mutable_schema_type() {
+inline ::PBSchemaComponentData* PBWorkerCommandResponse::_internal_mutable_schema_type() {
   _impl_._has_bits_[0] |= 0x00000002u;
   if (_impl_.schema_type_ == nullptr) {
-    auto* p = CreateMaybeMessage<::PBSchema_ComponentData>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::PBSchemaComponentData>(GetArenaForAllocation());
     _impl_.schema_type_ = p;
   }
   return _impl_.schema_type_;
 }
-inline ::PBSchema_ComponentData* PBWorker_CommandResponse::mutable_schema_type() {
-  ::PBSchema_ComponentData* _msg = _internal_mutable_schema_type();
-  // @@protoc_insertion_point(field_mutable:PBWorker_CommandResponse.schema_type)
+inline ::PBSchemaComponentData* PBWorkerCommandResponse::mutable_schema_type() {
+  ::PBSchemaComponentData* _msg = _internal_mutable_schema_type();
+  // @@protoc_insertion_point(field_mutable:PBWorkerCommandResponse.schema_type)
   return _msg;
 }
-inline void PBWorker_CommandResponse::set_allocated_schema_type(::PBSchema_ComponentData* schema_type) {
+inline void PBWorkerCommandResponse::set_allocated_schema_type(::PBSchemaComponentData* schema_type) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.schema_type_;
@@ -4356,33 +4356,33 @@ inline void PBWorker_CommandResponse::set_allocated_schema_type(::PBSchema_Compo
     _impl_._has_bits_[0] &= ~0x00000002u;
   }
   _impl_.schema_type_ = schema_type;
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_CommandResponse.schema_type)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerCommandResponse.schema_type)
 }
 
-// optional .PBWorker_ComponentDataHandle user_handle = 4;
-inline bool PBWorker_CommandResponse::_internal_has_user_handle() const {
+// optional .PBWorkerComponentDataHandle user_handle = 4;
+inline bool PBWorkerCommandResponse::_internal_has_user_handle() const {
   bool value = (_impl_._has_bits_[0] & 0x00000004u) != 0;
   PROTOBUF_ASSUME(!value || _impl_.user_handle_ != nullptr);
   return value;
 }
-inline bool PBWorker_CommandResponse::has_user_handle() const {
+inline bool PBWorkerCommandResponse::has_user_handle() const {
   return _internal_has_user_handle();
 }
-inline void PBWorker_CommandResponse::clear_user_handle() {
+inline void PBWorkerCommandResponse::clear_user_handle() {
   if (_impl_.user_handle_ != nullptr) _impl_.user_handle_->Clear();
   _impl_._has_bits_[0] &= ~0x00000004u;
 }
-inline const ::PBWorker_ComponentDataHandle& PBWorker_CommandResponse::_internal_user_handle() const {
-  const ::PBWorker_ComponentDataHandle* p = _impl_.user_handle_;
-  return p != nullptr ? *p : reinterpret_cast<const ::PBWorker_ComponentDataHandle&>(
-      ::_PBWorker_ComponentDataHandle_default_instance_);
+inline const ::PBWorkerComponentDataHandle& PBWorkerCommandResponse::_internal_user_handle() const {
+  const ::PBWorkerComponentDataHandle* p = _impl_.user_handle_;
+  return p != nullptr ? *p : reinterpret_cast<const ::PBWorkerComponentDataHandle&>(
+      ::_PBWorkerComponentDataHandle_default_instance_);
 }
-inline const ::PBWorker_ComponentDataHandle& PBWorker_CommandResponse::user_handle() const {
-  // @@protoc_insertion_point(field_get:PBWorker_CommandResponse.user_handle)
+inline const ::PBWorkerComponentDataHandle& PBWorkerCommandResponse::user_handle() const {
+  // @@protoc_insertion_point(field_get:PBWorkerCommandResponse.user_handle)
   return _internal_user_handle();
 }
-inline void PBWorker_CommandResponse::unsafe_arena_set_allocated_user_handle(
-    ::PBWorker_ComponentDataHandle* user_handle) {
+inline void PBWorkerCommandResponse::unsafe_arena_set_allocated_user_handle(
+    ::PBWorkerComponentDataHandle* user_handle) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(_impl_.user_handle_);
   }
@@ -4392,11 +4392,11 @@ inline void PBWorker_CommandResponse::unsafe_arena_set_allocated_user_handle(
   } else {
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorker_CommandResponse.user_handle)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:PBWorkerCommandResponse.user_handle)
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_CommandResponse::release_user_handle() {
+inline ::PBWorkerComponentDataHandle* PBWorkerCommandResponse::release_user_handle() {
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::PBWorker_ComponentDataHandle* temp = _impl_.user_handle_;
+  ::PBWorkerComponentDataHandle* temp = _impl_.user_handle_;
   _impl_.user_handle_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -4409,27 +4409,27 @@ inline ::PBWorker_ComponentDataHandle* PBWorker_CommandResponse::release_user_ha
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_CommandResponse::unsafe_arena_release_user_handle() {
-  // @@protoc_insertion_point(field_release:PBWorker_CommandResponse.user_handle)
+inline ::PBWorkerComponentDataHandle* PBWorkerCommandResponse::unsafe_arena_release_user_handle() {
+  // @@protoc_insertion_point(field_release:PBWorkerCommandResponse.user_handle)
   _impl_._has_bits_[0] &= ~0x00000004u;
-  ::PBWorker_ComponentDataHandle* temp = _impl_.user_handle_;
+  ::PBWorkerComponentDataHandle* temp = _impl_.user_handle_;
   _impl_.user_handle_ = nullptr;
   return temp;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_CommandResponse::_internal_mutable_user_handle() {
+inline ::PBWorkerComponentDataHandle* PBWorkerCommandResponse::_internal_mutable_user_handle() {
   _impl_._has_bits_[0] |= 0x00000004u;
   if (_impl_.user_handle_ == nullptr) {
-    auto* p = CreateMaybeMessage<::PBWorker_ComponentDataHandle>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::PBWorkerComponentDataHandle>(GetArenaForAllocation());
     _impl_.user_handle_ = p;
   }
   return _impl_.user_handle_;
 }
-inline ::PBWorker_ComponentDataHandle* PBWorker_CommandResponse::mutable_user_handle() {
-  ::PBWorker_ComponentDataHandle* _msg = _internal_mutable_user_handle();
-  // @@protoc_insertion_point(field_mutable:PBWorker_CommandResponse.user_handle)
+inline ::PBWorkerComponentDataHandle* PBWorkerCommandResponse::mutable_user_handle() {
+  ::PBWorkerComponentDataHandle* _msg = _internal_mutable_user_handle();
+  // @@protoc_insertion_point(field_mutable:PBWorkerCommandResponse.user_handle)
   return _msg;
 }
-inline void PBWorker_CommandResponse::set_allocated_user_handle(::PBWorker_ComponentDataHandle* user_handle) {
+inline void PBWorkerCommandResponse::set_allocated_user_handle(::PBWorkerComponentDataHandle* user_handle) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete _impl_.user_handle_;
@@ -4446,7 +4446,7 @@ inline void PBWorker_CommandResponse::set_allocated_user_handle(::PBWorker_Compo
     _impl_._has_bits_[0] &= ~0x00000004u;
   }
   _impl_.user_handle_ = user_handle;
-  // @@protoc_insertion_point(field_set_allocated:PBWorker_CommandResponse.user_handle)
+  // @@protoc_insertion_point(field_set_allocated:PBWorkerCommandResponse.user_handle)
 }
 
 #ifdef __GNUC__
@@ -4480,15 +4480,15 @@ inline void PBWorker_CommandResponse::set_allocated_user_handle(::PBWorker_Compo
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::PBWorker_StatusCode> : ::std::true_type {};
+template <> struct is_proto_enum< ::PBWorkerStatusCode> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::PBWorker_StatusCode>() {
-  return ::PBWorker_StatusCode_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::PBWorkerStatusCode>() {
+  return ::PBWorkerStatusCode_descriptor();
 }
-template <> struct is_proto_enum< ::PBWorker_Authority> : ::std::true_type {};
+template <> struct is_proto_enum< ::PBWorkerAuthority> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::PBWorker_Authority>() {
-  return ::PBWorker_Authority_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::PBWorkerAuthority>() {
+  return ::PBWorkerAuthority_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

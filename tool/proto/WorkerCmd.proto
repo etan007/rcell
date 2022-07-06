@@ -1,3 +1,5 @@
+syntax = "proto2";
+
 import "xCommond.proto";
 import "WorkerData.proto";
 // 协议大类定义
@@ -7,7 +9,7 @@ message PBWorkerCmd
 }
 
 // 协议ID枚举
-enum PBWorker_OpType {
+enum PBWorkerOpType {
 	 // 断开连接
      WORKER_OP_TYPE_DISCONNECT = 1;
      // 标记更新
@@ -57,60 +59,60 @@ message PBWorkerTestCmd
 }*/
 
 // 1.断开连接数据
-message PBWorker_DisconnectOp
+message PBWorkerDisconnectOp
 {
-   optional uint8 connection_status_code = 1;
+   optional uint32 connection_status_code = 1;
    optional string reason = 2;
 }
 
 // 2.标记更新数据
-message PBWorker_FlagUpdateOp
+message PBWorkerFlagUpdateOp
 {
     optional string name = 1;
     optional string value = 2;
 }
 
 // 3.日志消息数据
-message PBWorker_LogMessageOp
+message PBWorkerLogMessageOp
 {
-    optional int8 level = 1;
+    optional int32 level = 1;
     optional string message = 2;
 }
 
 // 4.内置指标数据
-message PBWorker_MetricsOp
+message PBWorkerMetricsOp
 {
-    optional PBWorker_Metrics metrics = 1;
+    optional PBWorkerMetrics metrics = 1;
     
 }
 
 // 5.临界截面边界（进入或离开）操作的数据
-message PBWorker_CriticalSectionOp
+message PBWorkerCriticalSectionOp
 {
-    optional uint8 in_critical_section = 1;
+    optional uint32 in_critical_section = 1;
 }
 
 // 6.添加实体数据
-message PBWorker_AddEntityOp
+message PBWorkerAddEntityOp
 {
     // 添加到模拟工作视图中的实体ID
     optional int64 entity_id = 1;
 }
 
 // 7.删除实体数据
-message PBWorker_RemoveEntityOp
+message PBWorkerRemoveEntityOp
 {
     // 从模拟工作视图中删除的实体ID
     optional int64 entity_id = 1;
 }
 
 // 8.保留待响应的实体id列表
-message PBWorker_ReserveEntityIdsResponseOp
+message PBWorkerReserveEntityIdsResponseOp
 {
     // 有响应的请求ID
     optional int64 request_id = 1;
     // 响应的状态代码，使用Worker_StatusCode
-    optional PBWorker_StatusCode status_code = 2;
+    optional PBWorkerStatusCode status_code = 2;
     // 错误消息
     optional string message = 3;
     // 如果成功，则为新分配实体连续范围中的第一个ID保证在当前部署中未使用的ID
@@ -120,12 +122,12 @@ message PBWorker_ReserveEntityIdsResponseOp
 }
 
 // 9.创建实体响应数据
-message PBWorker_CreateEntityResponseOp
+message PBWorkerCreateEntityResponseOp
 {
     // 有响应的请求ID
     optional int64 request_id = 1;
     // 响应的状态代码，使用Worker_StatusCode
-    optional PBWorker_StatusCode status_code = 2;
+    optional PBWorkerStatusCode status_code = 2;
     // 错误消息
     optional string message = 3;
     // 如果成功，则为新创建实体的实体ID。
@@ -133,44 +135,44 @@ message PBWorker_CreateEntityResponseOp
 }
 
 // 10.删除实体响应数据
-message PBWorker_DeleteEntityResponseOp
+message PBWorkerDeleteEntityResponseOp
 {
     // 有响应的请求ID
     optional int64 request_id = 1;
     // 目标实体id
     optional int64 entity_id = 2; 
     // 响应的状态代码，使用Worker_StatusCode
-    optional PBWorker_StatusCode status_code = 3;
+    optional PBWorkerStatusCode status_code = 3;
     // 错误消息
     optional string message = 4;
 }
 
 // 11.实体查询请求结果
-message PBWorker_EntityQueryResponseOp
+message PBWorkerEntityQueryResponseOp
 {
     // 有响应的请求ID
     optional int64 request_id = 1;
     // 响应的状态代码，使用Worker_StatusCode
-    optional PBWorker_StatusCode status_code = 2;
+    optional PBWorkerStatusCode status_code = 2;
     // 错误消息
     optional string message = 3;
     // 实体数量
     optional uint32 result_count = 4;
     // 实体数组
-    repeated PBWorker_Entity results = 5;
+    repeated PBWorkerEntity results = 5;
 }
 
 // 12.实体添加组件
-message PBWorker_AddComponentOp
+message PBWorkerAddComponentOp
 {
    // 要添加组件的实体id 
    optional int64 entity_id = 1; 
    // 新组件的初始数据
-   optional PBWorker_ComponentData data = 2;
+   optional PBWorkerComponentData data = 2;
 }
 
 // 13.实体删除组件
-message PBWorker_RemoveComponentOp
+message PBWorkerRemoveComponentOp
 {
    // 要删除组件的实体id 
    optional int64 entity_id = 1; 
@@ -179,27 +181,27 @@ message PBWorker_RemoveComponentOp
 }
 
 // 14.权限更改操作
-message PBWorker_AuthorityChangeOp
+message PBWorkerAuthorityChangeOp
 {
    // 实体id 
    optional int64 entity_id = 1; 
    // 组件id
    optional uint32 component_id = 2;
    // 组件权限状态
-   optional PBWorker_Authority authority = 3;
+   optional PBWorkerAuthority authority = 3;
 }
 
 // 15.组件更新操作
-message PBWorker_ComponentUpdateOp
+message PBWorkerComponentUpdateOp
 {
    // 实体id 
    optional int64 entity_id = 1; 
    // 更新实体的新组件数据
-   optional PBWorker_ComponentUpdate update = 2;
+   optional PBWorkerComponentUpdate update = 2;
 }
 
 // 16.指令请求操作
-message PBWorker_CommandRequestOp
+message PBWorkerCommandRequestOp
 {
     // 有响应的请求ID
     optional int64 request_id = 1;
@@ -212,28 +214,28 @@ message PBWorker_CommandRequestOp
     // 调用者工作实体Id
     optional int64 caller_worker_entity_id = 5;
     // 调用者工作进程的属性
-    optional PBWorker_WorkerAttributes caller_attribute_set = 6;
+    optional PBWorkerWorkerAttributes caller_attribute_set = 6;
     // 
-    optional PBWorker_CommandRequest request = 7;
+    optional PBWorkerCommandRequest request = 7;
 }
 
 // 17.指令请求响应
-message PBWorker_CommandResponseOp
+message PBWorkerCommandResponseOp
 {
     // 有响应的请求ID
     optional int64 request_id = 1;
     // 实体id 
     optional int64 entity_id = 2;
     // 响应的状态代码，使用Worker_StatusCode
-    optional PBWorker_StatusCode status_code = 3;
+    optional PBWorkerStatusCode status_code = 3;
     // 错误消息
     optional string message = 4;
     // 指令响应数据
-    optional PBWorker_CommandResponse response = 4;
+    optional PBWorkerCommandResponse response = 5;
 }
 
 // 18.组件集权限操作
-message PBcomponent_set_authority_changeOp
+message PBWorkerComponentSetAuthorityChangeOp
 {
      
     // 实体id 
@@ -241,34 +243,34 @@ message PBcomponent_set_authority_changeOp
     // 组件集id
     optional uint32 component_set_id = 2;
     // 权限
-    optional PBWorker_Authority authority = 3;
+    optional PBWorkerAuthority authority = 3;
 }
 
 
 // Worker操作指令集
-message PBWorker_Op_Union
+message PBWorkerOpUnion
 {
-  optional PBWorker_DisconnectOp disconnect                                      = 1;
-  optional PBWorker_FlagUpdateOp flag_update                                     = 2;
-  optional PBWorker_LogMessageOp log_message                                     = 3;
-  optional PBWorker_MetricsOp metrics                                            = 4;
-  optional PBWorker_CriticalSectionOp critical_section                           = 5;
-  optional PBWorker_AddEntityOp add_entity                                       = 6;
-  optional PBWorker_RemoveEntityOp remove_entity                                 = 7;
-  optional PBWorker_ReserveEntityIdsResponseOp reserve_entity_ids_response       = 8;
-  optional PBWorker_CreateEntityResponseOp create_entity_response                = 9;
-  optional PBWorker_DeleteEntityResponseOp delete_entity_response                = 10;
-  optional PBWorker_EntityQueryResponseOp entity_query_response                  = 11;
-  optional PBWorker_AddComponentOp add_component                                 = 12;
-  optional PBWorker_RemoveComponentOp remove_component                           = 13;
-  optional PBWorker_AuthorityChangeOp authority_change                           = 14;
-  optional PBWorker_ComponentUpdateOp component_update                           = 15;
-  optional PBWorker_CommandRequestOp command_request                             = 16;
-  optional PBWorker_CommandResponseOp command_response                           = 17;
-  optional PBWorker_ComponentSetAuthorityChangeOp component_set_authority_change = 18;
+  optional PBWorkerDisconnectOp disconnect                                      = 1;
+  optional PBWorkerFlagUpdateOp flag_update                                     = 2;
+  optional PBWorkerLogMessageOp log_message                                     = 3;
+  optional PBWorkerMetricsOp metrics                                            = 4;
+  optional PBWorkerCriticalSectionOp critical_section                           = 5;
+  optional PBWorkerAddEntityOp add_entity                                       = 6;
+  optional PBWorkerRemoveEntityOp remove_entity                                 = 7;
+  optional PBWorkerReserveEntityIdsResponseOp reserve_entity_ids_response       = 8;
+  optional PBWorkerCreateEntityResponseOp create_entity_response                = 9;
+  optional PBWorkerDeleteEntityResponseOp delete_entity_response                = 10;
+  optional PBWorkerEntityQueryResponseOp entity_query_response                  = 11;
+  optional PBWorkerAddComponentOp add_component                                 = 12;
+  optional PBWorkerRemoveComponentOp remove_component                           = 13;
+  optional PBWorkerAuthorityChangeOp authority_change                           = 14;
+  optional PBWorkerComponentUpdateOp component_update                           = 15;
+  optional PBWorkerCommandRequestOp command_request                             = 16;
+  optional PBWorkerCommandResponseOp command_response                           = 17;
+  optional PBWorkerComponentSetAuthorityChangeOp component_set_authority_change = 18;
 }
-message PBWorker_Op
+message PBWorkerOp
 {
-   PBWorker_OpType op_type = 1;
-   PBWorker_Op_Union op = 2;
+   optional PBWorkerOpType op_type = 1;
+   optional PBWorkerOpUnion op = 2;
 }

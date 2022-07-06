@@ -83,6 +83,8 @@ protobuf_factory::type_to_protobuf_type {
   {schema::uint32, FieldDescriptorProto_Type::FieldDescriptorProto_Type_TYPE_UINT32},
   {schema::enum_type, FieldDescriptorProto_Type::FieldDescriptorProto_Type_TYPE_ENUM},
   {schema::message_type, FieldDescriptorProto_Type::FieldDescriptorProto_Type_TYPE_MESSAGE},
+  {schema::double_, FieldDescriptorProto_Type::FieldDescriptorProto_Type_TYPE_DOUBLE},
+  {schema::bytes, FieldDescriptorProto_Type::FieldDescriptorProto_Type_TYPE_BYTES},
 };
 
 const std::map<FieldDescriptor::Type, schema::field_type>
@@ -102,6 +104,8 @@ protobuf_factory::protobuf_type_to_type {
   {FieldDescriptor::TYPE_FIXED64, schema::uint64},
   {FieldDescriptor::TYPE_ENUM, schema::enum_type},
   {FieldDescriptor::TYPE_MESSAGE, schema::message_type},
+  {FieldDescriptor::TYPE_DOUBLE, schema::double_},
+  {FieldDescriptor::TYPE_BYTES, schema::bytes},
 };
 
 const std::map<FieldDescriptor::CppType, schema::field_type>
@@ -114,6 +118,7 @@ protobuf_factory::protobuf_ccptype_to_type {
   {FieldDescriptor::CPPTYPE_UINT64, schema::uint64},
   {FieldDescriptor::CPPTYPE_ENUM, schema::enum_type},
   {FieldDescriptor::CPPTYPE_MESSAGE, schema::message_type},
+  {FieldDescriptor::CPPTYPE_DOUBLE, schema::double_},
 };
 
 protobuf_factory::protobuf_factory() {
@@ -204,6 +209,7 @@ void protobuf_factory::import_from_file_proto(FileDescriptorProto* fdp,
       std::stringstream msg;
       msg << "Dependency <" << fdp->dependency(i) << "> was not found. Import it first.";
       LOG(WARNING) << msg.str() << '\n' << el::base::debug::StackTrace();
+      
       throw std::runtime_error(msg.str());
     }
   }

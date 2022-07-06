@@ -15,7 +15,8 @@ cd %~dp0
 for /f "delims=\" %%a in ('dir /b /a-d /o-d "*.proto"') do (
 "%PROTOC_PATH%\%PROTOC_EXE%" --proto_path="%PROTOC_PATH%" --cpp_out="%CPP_OUT_PATH%" "%PROTOC_PATH%\%%a"
 )
-
+::¿½±´pb
+xcopy .\*.proto ..\..\pb\ /y
 ::¿½±´µ½ÉÏ²ãÄ¿Â¼
 xcopy .\*.h ..\..\src\pb\  /y
 xcopy .\*.cc ..\..\src\pb\ /y

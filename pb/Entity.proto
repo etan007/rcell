@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+// 实体类型定义
+enum enPBEntityType {
+    ET_NONE = 1;	//未知实体
+    
+}
+
+
+message PBEntityMailbox
+{
+	optional uint64 entity_id = 1;					//实体id
+	optional uint32 server_id = 2;					//实体所在server
+}
+

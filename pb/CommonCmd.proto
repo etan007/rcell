@@ -1,0 +1,124 @@
+syntax = "proto2";
+
+import "xCommond.proto";
+import "Entity.proto";
+
+// 协议ID枚举
+enum PBCommonCmdType {
+	
+	//通知其他服务器玩家上线(通用的通知消息）
+	PB_LOBBYGATE_USER_ONLINE = 1;
+	//通知其他服务器玩家下线(通用的通知消息）
+	PB_LOBBYGATE_USER_OFFLINE = 2;
+	
+	//通知实体最新的Mailbox(通用的通知消息）
+	PB_NOTIFY_NEWER_MAILBOX = 3;
+	
+	//到UserMgr查询玩家信息
+	PB_USERMGR_SEARCH_USER_REQ = 4;
+	PB_USERMGR_SEARCH_USER_RSP = 5;
+	
+	//数据库相关的通用逻辑
+	PB_DbMgr_EXEC_SQL_REQ = 6;
+	PB_DbMgr_EXEC_SQL_RSP = 7;
+	PB_DbMgr_INSERT_SQL_REQ = 8;
+	PB_DbMgr_INSERT_SQL_RSP = 9;
+	PB_DbMgr_UPDATE_SQL_REQ = 10;
+	PB_DbMgr_UPDATE_SQL_RSP = 11;
+	PB_DbMgr_SELECT_SQL_REQ = 12;
+	PB_DbMgr_SELECT_SQL_RSP = 13;
+	PB_DbMgr_SELECT_COUNT_SQL_REQ = 14;
+	PB_DbMgr_SELECT_COUNT_SQL_RSP = 15;
+	
+	//获取玩家的简略基础数据
+	PB_UserMgr_GetPlayerBaseDataSimple_REQ = 16;
+	PB_UserMgr_GetPlayerBaseDataSimple_RSP = 17;
+	
+	//玩家远程call调用
+	PB_UserMgr_RpcCall_REQ = 18;
+	PB_UserMgr_RpcCall_RSP = 19;
+	//玩家简略信息同步
+    PB_PlayerBaseDataSimple_SYN = 20;	
+	//玩家充值同步（灵石）
+	PB_PlayerRecharge_SYN = 21;
+	
+	//通知GameMgr，自己已加载完毕
+	PB_NOTIFY_GAMEMGR_LOADED_SUCCESSED = 30;
+	//通知GameMgr，自己已初始化完毕
+	PB_NOTIFY_GAMEMGR_INITED_SUCCESSED = 31;
+	//通知各个全局实体，可以开始初始化了
+	PB_NOTIFY_GlobalEntity_START_INIT = 32;
+	//通知登陆服，游戏初始化完毕，可以开放玩家登录了
+	PB_NOTIFY_LOGIN_SERVER_OPEN_LOGIN = 40;
+}
+
+
+// 协议大类定义
+message PBCommonCmd
+{
+    optional CmdType cmd = 1 [default = PB_COMMON_CMD];
+}
+
+
+//通知实体的最新的mailbox
+message PBNotifyNewerMailboxReq
+{
+	enum MsgID { ID = 2009; }
+    // 协议类型定义
+    optional PBCommonCmd cmdID = 1; 
+    optional PBCommonCmdType param = 2 [default = PB_NOTIFY_NEWER_MAILBOX];
+    // 协议数据
+	optional string entity_name = 3;						//实体类型名称
+	optional PBEntityMailbox entity_mb = 4;					//实体的Mb
+	optional uint64 reserved1 = 5;								//预留参数1;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+//rpc 类型 数据
+enum PBSubRpcType {
+     RPC_REDUCE_Consume_REQ = 1;   //扣除物品
+     RPC_GUILD_DAYMISSINAWARD_REQ = 2;//完成帮会任务
+     RPC_GUILD_DAYMISSONAWARD_RSP = 3;//完成帮会任务返回	 
+}
+message PBRpcData_ReduceConsum_Req
+{
+    // 协议数据
+	optional PBSubRpcType subRpcCmd = 1 [default = RPC_REDUCE_Consume_REQ];
+	optional uint32 config_id = 2;					//扣除消耗
+	optional uint32 reduce_count = 3;				//扣除数量
+	optional uint32 reason = 4;					    //原因
+}
+message PBRpcGuildDayMissinAward_Req
+{
+    // 协议数据
+	optional PBSubRpcType subRpcCmd = 1 [default = RPC_GUILD_DAYMISSINAWARD_REQ];
+	optional bool      bDayMission   = 2;
+    optional int32     missionId         = 3;
+}
+ 
+/////////////////////////////////////////////////////////////
+//玩家远程call调用申请
+message PBUserMgrRpcCallReq
+{
+	enum MsgID { ID = 2022; }
+    // 协议类型定义
+    optional PBCommonCmd cmdID = 1; 
+    optional PBCommonCmdType param = 2 [default = PB_UserMgr_RpcCall_REQ];
+    // 协议数据
+	optional PBSubRpcType subRpcCmd = 3;            //RPC子消息
+	optional uint64 callback_id = 4;	            //回调参数
+	optional bytes reqParam = 5;                   //执行命令参数
+}
+//玩家远程call调用返回
+message PBUserMgrRpcCallRsp
+{
+	enum MsgID { ID = 2023; }
+    // 协议类型定义
+    optional PBCommonCmd cmdID = 1; 
+    optional PBCommonCmdType param = 2 [default = PB_UserMgr_RpcCall_RSP];
+    // 协议数据
+	optional PBSubRpcType subRpcCmd = 3;   //子消息类型
+	optional uint64 callback_id = 4;	   //回调参数
+	optional bool bSucess = 5;             //执行成功或者失败
+	optional bytes rspParam = 6;          //执行返回数据
+}

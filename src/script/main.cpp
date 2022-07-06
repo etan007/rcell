@@ -9,7 +9,9 @@ extern "C" {
 
 #include "sol/sol.hpp"
 #include "pb.h"
-
+#include "dynamic_msg_mgr.h"
+#include "g3log/g3log.hpp"
+#include "g3log/logworker.hpp"
 //extern void luabind_netserver(sol::state & lua);
 //extern void luabind_kcpserver(sol::state & lua);
 //extern void luabind_websocket(sol::state & lua);
@@ -21,7 +23,7 @@ extern "C" {
 //extern void luabind_csvpar(sol::state & lua);
 //extern void luabind_json(sol::state & lua);
 //extern void luabind_httpserver(sol::state & lua);
-
+const std::string path_to_log_file = "./";
 
 void init_lua_pb(lua_State* L)
 {
@@ -50,13 +52,21 @@ int main(int argc, char* argv[])
 	//luabind_httpserver(lua);
 
 	//lua.script_file(argv[1]);
-	init_lua_pb(lua.lua_state());
+	//init_lua_pb(lua.lua_state());
 
-	if (luaL_dofile(lua.lua_state(), argv[1]) == 1) {
+	/*if (luaL_dofile(lua.lua_state(), argv[1]) == 1) {
 		if (lua_isstring(lua.lua_state(), -1)) {
 			printf("load lua file error:%s\n", lua_tostring(lua.lua_state(), -1));
 		}
-	}
+	}*/
+	// test-begin
+	auto worker = g3::LogWorker::createLogWorker();
+	auto handle = worker->addDefaultLogger(argv[0], path_to_log_file);
+	g3::initializeLogging(worker.get());
+	 
+	 
+	dynamic_msg_mgr::getMe().load("../pb/");
+	// test-end
 
 	system("pause");
 	return 0;

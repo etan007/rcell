@@ -41,6 +41,8 @@ class schema {
     uint32 = 7,
     uint64 = 8,
     boolean = 9,
+    double_ = 10,
+    bytes = 11,
   };
 
   /**
@@ -72,6 +74,8 @@ class schema {
         case uint32: return "uint32";
         case uint64: return "uint64";
         case boolean: return "bool";
+        case double_: return "double";
+        case bytes: return "bytes";
         default: return "N/A";
       }
     }

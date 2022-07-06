@@ -127,6 +127,7 @@ project "rcell"
 		links {'Psapi'}
 		links {'Userenv'}
 		links {'libprotobuf'}
+		links {'g3log'}
 	filter "system:not windows"
 		links {'pthread'}
 		links {'dl', 'rt'}
