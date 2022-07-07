@@ -197,7 +197,8 @@ void protobuf_factory::import_from_file_proto(FileDescriptorProto* fdp,
     std::stringstream msg;
     msg << "File with name <" << name << "> already exists.";
     LOG(WARNING) << msg.str() << '\n' << el::base::debug::StackTrace();
-    throw std::runtime_error(msg.str());
+    return;
+    //throw std::runtime_error(msg.str());
   }
 
   // Check if all dependencies are imported.

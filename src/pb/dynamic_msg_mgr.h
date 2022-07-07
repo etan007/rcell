@@ -10,6 +10,7 @@ public:
     ~dynamic_msg_mgr();
     // 加载协议配置路径比如(pb/)
     bool load(const std::string& path);
+    void ImportDependsfile(const std::string& path,const std::string& filename);
 private:
   
     std::unordered_map<std::string, std::string> msgs_defs;
