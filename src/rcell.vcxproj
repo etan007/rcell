@@ -928,6 +928,7 @@
     <ClInclude Include="pb\CommonCmd.pb.h" />
     <ClInclude Include="pb\Entity.pb.h" />
     <ClInclude Include="pb\SystemInternalCmd.pb.h" />
+    <ClInclude Include="pb\WorkerCmd.pb.h" />
     <ClInclude Include="pb\WorkerData.pb.h" />
     <ClInclude Include="pb\dynamic_msg_mgr.h" />
     <ClInclude Include="pb\xCommond.pb.h" />
@@ -989,6 +990,7 @@
     <ClCompile Include="pb\CommonCmd.pb.cc" />
     <ClCompile Include="pb\Entity.pb.cc" />
     <ClCompile Include="pb\SystemInternalCmd.pb.cc" />
+    <ClCompile Include="pb\WorkerCmd.pb.cc" />
     <ClCompile Include="pb\WorkerData.pb.cc" />
     <ClCompile Include="pb\dynamic_msg_mgr.cpp" />
     <ClCompile Include="pb\xCommond.pb.cc" />

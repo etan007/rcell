@@ -63,9 +63,25 @@ int main(int argc, char* argv[])
 	auto worker = g3::LogWorker::createLogWorker();
 	auto handle = worker->addDefaultLogger(argv[0], path_to_log_file);
 	g3::initializeLogging(worker.get());
-	 
-	 
 	dynamic_msg_mgr::getMe().load("../pb/");
+	auto msg_factory = dynamic_msg_mgr::getMe().get_factory();
+	auto msg1 = msg_factory->new_message_by_name("PBWorkerCommandRequestOp");
+	auto msg2 = msg_factory->new_message_by_name("PBWorkerWorkerAttributes");
+	msg2->set_uint32(1, 1);
+	msg2->set_repeated_blob(2, "222222");
+	std::string aa = msg2->get_repeated_blob(2, 0);
+	msg1->set_int64(1, 1);
+	msg1->set_int64(2, 2);
+	msg1->set_uint32(3, 3);
+	msg1->set_uint32(4, 4);
+	msg1->set_int64(5, 5);
+	msg1->set_message(6, *msg2);
+	std::string strjson;
+	msg1->to_json(&strjson);
+	LOG(INFO) << "PBWorkerCommandRequestOp to_json "<<strjson;
+	std::string strmsg;
+	msg1->serialize_message(&strmsg);
+	LOG(INFO) << "PBWorkerCommandRequestOp serialize_message  " << strmsg;
 	// test-end
 
 	system("pause");

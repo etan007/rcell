@@ -2607,6 +2607,9 @@
     <ClInclude Include="pb\SystemInternalCmd.pb.h">
       <Filter>pb</Filter>
     </ClInclude>
+    <ClInclude Include="pb\WorkerCmd.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
     <ClInclude Include="pb\WorkerData.pb.h">
       <Filter>pb</Filter>
     </ClInclude>
@@ -2784,6 +2787,9 @@
       <Filter>pb</Filter>
     </ClCompile>
     <ClCompile Include="pb\SystemInternalCmd.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\WorkerCmd.pb.cc">
       <Filter>pb</Filter>
     </ClCompile>
     <ClCompile Include="pb\WorkerData.pb.cc">

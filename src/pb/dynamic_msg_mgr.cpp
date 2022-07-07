@@ -54,14 +54,19 @@ bool dynamic_msg_mgr::load(const std::string& path)
                 LOG(FATAL) << "Error while Import " << schemas_filenames[z];
             }*/
             auto& schema_name = schemas_filenames[z];
-            ImportDependsfile(path, schema_name);
+            import_dependsfile(path, schema_name);
         }
         
     }
     return true;
 }
 
-void dynamic_msg_mgr::ImportDependsfile(const std::string& path, const std::string& schema_name)
+std::shared_ptr<automaton::core::data::factory> dynamic_msg_mgr::get_factory()
+{
+    return factory;
+}
+
+void dynamic_msg_mgr::import_dependsfile(const std::string& path, const std::string& schema_name)
 {
     if (msgs_defs.find(schema_name) != msgs_defs.end())
     {
@@ -79,7 +84,7 @@ void dynamic_msg_mgr::ImportDependsfile(const std::string& path, const std::stri
         std::stringstream msg;
         msg << "Dependency <" << fdp->dependency(i) << ">";
         LOG(WARNING) << msg.str() << '\n';
-        ImportDependsfile(path, fdp->dependency(i));
+        import_dependsfile(path, fdp->dependency(i));
     }
 
     factory->import_schema(schema, schema_name, "");
@@ -92,4 +97,5 @@ dynamic_msg_mgr::dynamic_msg_mgr()
 
 dynamic_msg_mgr::~dynamic_msg_mgr()
 {
+  
 }
