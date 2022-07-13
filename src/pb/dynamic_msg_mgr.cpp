@@ -1,4 +1,6 @@
 ﻿#include "dynamic_msg_mgr.h"
+#include <io.h>
+#include <stdio.h>
 #include <fstream>
 #include <string>
 #include "g3log/g3log.hpp"
@@ -17,6 +19,8 @@ using automaton::core::data::schema;
 using automaton::core::data::factory;
 using automaton::core::io::get_file_contents;
 using namespace google::protobuf;
+using std::string;
+using std::vector;
 //compiler::DiskSourceTree disk_source_tree;
 //
 //
@@ -28,11 +32,49 @@ using namespace google::protobuf;
 //    }
 //};
 
-bool dynamic_msg_mgr::load(const std::string& path)
+ 
+
+void getFiles(string path, vector<string>& files, string postfix,string rootpath)
 {
-    std::ifstream i(path + "config.json");
+    //文件句柄    
+    intptr_t   hFile = 0;
+    //文件信息    
+     _finddata_t fileinfo;
+    string p;
+    if ((hFile = _findfirst(p.assign(path).append("/*").c_str(), &fileinfo)) != -1)
+    {
+        do
+        {
+            if ((fileinfo.attrib & _A_SUBDIR))
+            {
+                if (strcmp(fileinfo.name, ".") != 0 && strcmp(fileinfo.name, "..") != 0)
+                    getFiles(p.assign(path).append("/").append(fileinfo.name), files, postfix,rootpath);
+            }
+            else
+            {
+                string str = fileinfo.name;
+                if (str.substr(str.find_last_of('.')+1) == postfix.substr(1))
+                {
+                    //取相对路径
+                    string rpath = path.substr(rootpath.length());
+                    p.assign(rpath).append("/").append(fileinfo.name);
+                    files.push_back(p.substr(1));
+                    //files.push_back(p.assign(path).append("/").append(fileinfo.name));
+                }
+                    
+            }
+        } while (_findnext(hFile, &fileinfo) == 0);
+        _findclose(hFile);
+    }
+    //sort(files.begin(), files.end());
+}
+ 
+ 
+bool dynamic_msg_mgr::load(const std::string& path,const std::string& jsonpath)
+{
+    std::ifstream i(jsonpath + "schema.json");
     if (!i.is_open()) {
-        LOG(WARNING) << "Error while opening " << path << "config.json";
+        LOG(WARNING) << "Error while opening " << jsonpath << "config.json";
         return false;
     }
     else
@@ -46,7 +88,7 @@ bool dynamic_msg_mgr::load(const std::string& path)
         //compiler::Importer importer(&disk_source_tree, &error_collector);
         ////导入 proto 时，会自动导入所有依赖的 .proto 文件
         //compiler::Importer importer(&disk_source_tree, &error_collector);
-        std::vector<std::string> schemas_filenames = j["schemas"];
+        std::vector<std::string> schemas_filenames = j["schema_files"];
         for (uint32_t z = 0; z < schemas_filenames.size(); ++z)
         {
            /* const FileDescriptor* file_descriptor = importer.Import(schemas_filenames[z]);
@@ -98,4 +140,35 @@ dynamic_msg_mgr::dynamic_msg_mgr()
 dynamic_msg_mgr::~dynamic_msg_mgr()
 {
   
+}
+
+bool dynamic_msg_mgr::build_schema(const std::string& path,const std::string& out_path)
+{
+    string proto_path = path;
+    if( path == "")
+    {
+        
+       proto_path =  "D:/code/spatial/schema";
+    }
+    vector<string> files;
+    getFiles(proto_path, files, ".proto",proto_path);
+    sort(files.begin(), files.end());
+    /*
+    for(auto name:files)
+    {
+        LOG(INFO)<<name;
+    }*/
+    nlohmann::json jout;
+    jout["schema_files"] = files;
+
+    string json_outpath = out_path;
+    if( out_path == "")
+    {
+        json_outpath = "D:/code/spatial/build/assembly/schema/";
+    }
+    std::ofstream o(json_outpath+"schema.json");
+    o<<std::setw(4)<<jout;
+    o.close();
+    std::string proto_root = "D:/code/spatial/schema/";
+    return load(proto_root,json_outpath);
 }

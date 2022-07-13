@@ -43,6 +43,7 @@ class schema {
     boolean = 9,
     double_ = 10,
     bytes = 11,
+    float_ = 12
   };
 
   /**
@@ -76,6 +77,7 @@ class schema {
         case boolean: return "bool";
         case double_: return "double";
         case bytes: return "bytes";
+        case float_: return "float";
         default: return "N/A";
       }
     }

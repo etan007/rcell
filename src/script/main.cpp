@@ -10,8 +10,9 @@ extern "C" {
 #include "sol/sol.hpp"
 #include "pb.h"
 #include "dynamic_msg_mgr.h"
-#include "g3log/g3log.hpp"
-#include "g3log/logworker.hpp"
+//#include "g3log/g3log.hpp"
+//#include "g3log/logworker.hpp"
+#include "automaton/core/io/io.h"
 //extern void luabind_netserver(sol::state & lua);
 //extern void luabind_kcpserver(sol::state & lua);
 //extern void luabind_websocket(sol::state & lua);
@@ -24,7 +25,7 @@ extern "C" {
 //extern void luabind_json(sol::state & lua);
 //extern void luabind_httpserver(sol::state & lua);
 const std::string path_to_log_file = "./";
-
+using namespace automaton::core::io;
 void init_lua_pb(lua_State* L)
 {
 	luaL_requiref(L, "pb", luaopen_pb, 0);
@@ -60,10 +61,13 @@ int main(int argc, char* argv[])
 		}
 	}*/
 	// test-begin
+	
 	auto worker = g3::LogWorker::createLogWorker();
-	auto handle = worker->addDefaultLogger(argv[0], path_to_log_file);
+	auto handle = worker->addDefaultLogger("rcell", path_to_log_file);
 	g3::initializeLogging(worker.get());
-	dynamic_msg_mgr::getMe().load("../pb/");
+	
+	dynamic_msg_mgr::getMe().build_schema("","");
+	/*dynamic_msg_mgr::getMe().load("../pb/");
 	auto msg_factory = dynamic_msg_mgr::getMe().get_factory();
 	auto msg1 = msg_factory->new_message_by_name("PBWorkerCommandRequestOp");
 	auto msg2 = msg_factory->new_message_by_name("PBWorkerWorkerAttributes");
@@ -81,7 +85,7 @@ int main(int argc, char* argv[])
 	LOG(INFO) << "PBWorkerCommandRequestOp to_json "<<strjson;
 	std::string strmsg;
 	msg1->serialize_message(&strmsg);
-	LOG(INFO) << "PBWorkerCommandRequestOp serialize_message  " << strmsg;
+	LOG(INFO) << "PBWorkerCommandRequestOp serialize_message  " << strmsg;*/
 	// test-end
 
 	system("pause");

@@ -106,6 +106,7 @@ protobuf_factory::protobuf_type_to_type {
   {FieldDescriptor::TYPE_MESSAGE, schema::message_type},
   {FieldDescriptor::TYPE_DOUBLE, schema::double_},
   {FieldDescriptor::TYPE_BYTES, schema::bytes},
+  {FieldDescriptor::TYPE_FLOAT, schema::float_},
 };
 
 const std::map<FieldDescriptor::CppType, schema::field_type>
@@ -119,6 +120,7 @@ protobuf_factory::protobuf_ccptype_to_type {
   {FieldDescriptor::CPPTYPE_ENUM, schema::enum_type},
   {FieldDescriptor::CPPTYPE_MESSAGE, schema::message_type},
   {FieldDescriptor::CPPTYPE_DOUBLE, schema::double_},
+  {FieldDescriptor::CPPTYPE_FLOAT, schema::float_},
 };
 
 protobuf_factory::protobuf_factory() {
@@ -166,10 +168,10 @@ bool protobuf_factory::contain_invalid_data(const Descriptor* d) {
   uint32_t number_fields = d->field_count();
   for (uint32_t i = 0; i < number_fields; i++) {
     const FieldDescriptor* fd = d->field(i);
-    if (fd->is_map()) {
+    /*if (fd->is_map()) {
       LOG(WARNING) << d->name() << " contains Map which is not supported";
       return true;
-    }
+    }*/
     if (protobuf_type_to_type.find(fd->type()) == protobuf_type_to_type.end()) {
       LOG(WARNING) << d->full_name() << "." << fd->name() << " is of unsupported type";
       return true;
@@ -189,6 +191,7 @@ void protobuf_factory::import_from_file_proto(FileDescriptorProto* fdp,
                                               const string& package) {
   LOG(INFO) << "Importing schema from file proto name:[" << name << "] package:[" << package << "]";
   CHECK_NOTNULL(fdp) << "File descriptor proto is nullptr";
+  if(package!="")
   fdp->set_package(package);
   fdp->set_name(name);
 
