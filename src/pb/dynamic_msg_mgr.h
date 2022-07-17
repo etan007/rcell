@@ -9,6 +9,7 @@ public:
     dynamic_msg_mgr();
     ~dynamic_msg_mgr();
     bool build_schema(const std::string& path,const std::string& out_path);
+    void reset_schema();
     // 加载协议配置路径比如(pb/)
     bool load(const std::string& path,const std::string& jsonpath);
     void import_dependsfile(const std::string& path,const std::string& filename);

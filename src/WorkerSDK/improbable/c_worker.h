@@ -2367,6 +2367,10 @@ typedef struct Worker_TcpNetworkParameters {
 
    WORKERSDK_API Worker_EntityId Worker_Connection_GetWorkerEntityId(Worker_Connection* Connection);
 
+   WORKERSDK_API bool InitWorkLog();
+
+   WORKERSDK_API bool build_schema(const std::string& path,const std::string& out_path);
+
 #endif /* WORKER_SDK_C_INCLUDE_IMPROBABLE_C_WORKER_H */
 
  

@@ -2496,6 +2496,9 @@
     <ClInclude Include="common\base64.h">
       <Filter>common</Filter>
     </ClInclude>
+    <ClInclude Include="common\cmdline.h">
+      <Filter>common</Filter>
+    </ClInclude>
     <ClInclude Include="common\common.h">
       <Filter>common</Filter>
     </ClInclude>

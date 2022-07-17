@@ -1,4 +1,13 @@
 ﻿#include "WorkerSDK/improbable/c_worker.h"
+
+#include <stdbool.h>
+
+#include "dynamic_msg_mgr.h"
+#include "automaton/core/io/io.h"
+
+const std::string path_to_log_file = "./";
+using namespace automaton::core::io;
+
  
 uint32_t SKYCELL_APIVersion(void)
 {
@@ -642,4 +651,23 @@ const char* Worker_SnapshotOutputStream_GetLastWarning(Worker_SnapshotOutputStre
 {
 	Worker_EntityId id = -1;
 	return id;
+}
+ 
+ bool InitWorkLog()
+{
+	static bool bInitLog = false;
+	if(!bInitLog)
+	{
+		auto worker = g3::LogWorker::createLogWorker();
+		auto handle = worker->addDefaultLogger("worker", path_to_log_file);
+		g3::initializeLogging(worker.get());
+		bInitLog = true;
+	}
+	
+	return true;
+}
+bool build_schema(const std::string& path,const std::string& out_path)
+{
+	InitWorkLog();
+	return dynamic_msg_mgr::getMe().build_schema(path,out_path);
 }

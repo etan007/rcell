@@ -144,6 +144,7 @@ dynamic_msg_mgr::~dynamic_msg_mgr()
 
 bool dynamic_msg_mgr::build_schema(const std::string& path,const std::string& out_path)
 {
+    reset_schema();
     string proto_path = path;
     if( path == "")
     {
@@ -171,4 +172,16 @@ bool dynamic_msg_mgr::build_schema(const std::string& path,const std::string& ou
     o.close();
     std::string proto_root = "D:/code/spatial/schema/";
     return load(proto_root,json_outpath);
+}
+
+void dynamic_msg_mgr::reset_schema()
+{
+    for (schema* s : schemas) {
+        delete s;
+    }
+    schemas.clear();
+    msgs_defs.clear();
+    factory.reset();
+    factory = std::shared_ptr<protobuf_factory>(new protobuf_factory);
+    
 }

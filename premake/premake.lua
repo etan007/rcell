@@ -147,15 +147,31 @@ project "rcell"
 -- 附加包含目录
 includedirs {
     "../dependencies",
+    "../dependencies/asio2/include",
+	"../dependencies/asio2/3rd",
 	"../dependencies/automaton",
+	"../dependencies/json",
+	"../src/common",
+	"../src/network",
     "../src",
 	"../src/WorkerSDK",
+	"../src/pb",
 }
 language "C++"
 cppdialect "C++17"
 kind "SharedLib"
+local codedir = "../src/common";
+files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
+local codedir = "../src/network";
+files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
 local codedir = "../src/WorkerSDK/improbable";
 files { codedir .. "/**.h", codedir .. "/**.hpp", codedir .. "/**.c", codedir .. "/**.cc", codedir .. "/**.cpp",codedir .. "/Source.def" }
+local codedir = "../src/pb";
+files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
+local codedir = "../dependencies/asio2/include";
+files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
+local codedir = "../dependencies/json";
+files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
 
 
 libdirs{"../libs"}
@@ -172,4 +188,71 @@ filter "configurations:Release"
 		links {'r_automaton'}
 filter {}	 
 	 
+-------------------------------------------------------------------------------------------		
+project "testWorker"
+	-- 工程生成目录
+	location "../src"
+	-- 附加包含目录
+	includedirs{
+		"../dependencies",
+		"../src",
+	    "../src/WorkerSDK",
+	}
+	language "C++"
+	cppdialect "C++17"
+ 
+	kind "ConsoleApp"
+	local codedir = "../src/testWorker";
+	files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
+	 
 	
+	libdirs{"../bin"}
+	targetdir "../bin"
+	filter "system:windows"
+	     links {'WorkerSDK'}
+	filter "system:not windows"
+		links {'pthread'}
+		links {'dl', 'rt'}
+	filter "configurations:Debug"
+		 
+	filter "configurations:Release"
+		 
+	filter {}
+-------------------------------------------------------------------------------------------		
+project "schema_compiler"
+	-- 工程生成目录
+	location "../src"
+	-- 附加包含目录
+	includedirs{
+		"../dependencies",
+		"../dependencies/automaton",
+	    "../dependencies/json",
+		"../src",
+	    "../src/common",
+	}
+	language "C++"
+	cppdialect "C++17"
+ 
+	kind "ConsoleApp"
+	local codedir = "../src/schema_compiler";
+	files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
+	local codedir = "../src/common";
+	files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
+	local codedir = "../src/pb";
+	files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
+	local codedir = "../dependencies/json";
+	files { codedir.."/**.h",codedir.."/**.hpp", codedir.."/**.c", codedir.."/**.cc", codedir.."/**.cpp"}
+	
+	libdirs{"../libs"}
+    targetdir "../bin"
+    
+    filter "system:windows"
+            defines 'WorkerSDK_DLL_EXPORTS'
+    		links {'libprotobuf'}
+    		links {'g3log'}
+    filter "system:not windows"
+    filter "configurations:Debug"
+    		links {'d_automaton'}
+    filter "configurations:Release"
+    		links {'r_automaton'}
+    filter {}	 

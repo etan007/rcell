@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{AEFEE3F6-9AA0-0ECD-835B-22216F9C951D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies">
+      <UniqueIdentifier>{8CAD9F58-7810-2FFD-2196-67B30DD8FA7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\json">
+      <UniqueIdentifier>{D59C946A-41B3-9200-8A2A-1E22F67F6388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pb">
+      <UniqueIdentifier>{17795900-0305-880B-6CB3-880B585E880B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="schema_compiler">
+      <UniqueIdentifier>{F0B2B7B9-5C3E-257E-654F-A872D159817E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\dependencies\json\assertions.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\autolink.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\config.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\features.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\forwards.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\json.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\json_batchallocator.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\json_tool.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\reader.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\value.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\version.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\writer.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="common\BaseType.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ByteBuffer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ByteConverter.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CBase64.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonPool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CsvParser.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Define.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\GCBinarryReader.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\GameUserBase.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Heap.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\HttpParam.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MacroToolsDef.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MinHeap.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MyGameTimer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Objectpool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Platform.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\PoolObject.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ProcessLinux.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SMUManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ShareMemAO.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ShareMemAPI.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Singleton.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SpinLock.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\TQueue.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ThreadPool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Timer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Tools.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\UTF8.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\UTimer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XAssert.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XFile.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XLog.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XTime.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\base64.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cmdline.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\sha1.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xBitOperator.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xCRC32.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xDefine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xEntry.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xEntryManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xFileTool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xGUIDMaker.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xLanguage.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xNoncopyable.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xObjPool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xProtoJsonTool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xServerRouteDefine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xSingleton.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xStringTool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xTools.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xUniqueIDManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\CommonCmd.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\Entity.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\SystemInternalCmd.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\WorkerCmd.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\WorkerData.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\dynamic_msg_mgr.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\xCommond.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dependencies\json\json_reader.cpp">
+      <Filter>dependencies\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dependencies\json\json_value.cpp">
+      <Filter>dependencies\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dependencies\json\json_writer.cpp">
+      <Filter>dependencies\json</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ByteBuffer.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CBase64.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CsvParser.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\GCBinarryReader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Heap.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\HttpParam.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ProcessLinux.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\SMUManager.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ShareMemAO.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ShareMemAPI.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ThreadPool.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Timer.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Tools.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XAssert.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XFile.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XLog.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XTime.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\base64.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\sha1.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xGUIDMaker.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xLanguage.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xProtoJsonTool.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xStringTool.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xTools.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\CommonCmd.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\Entity.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\SystemInternalCmd.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\WorkerCmd.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\WorkerData.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\dynamic_msg_mgr.cpp">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\xCommond.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="schema_compiler\main.cpp">
+      <Filter>schema_compiler</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

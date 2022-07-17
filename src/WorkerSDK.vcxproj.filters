@@ -7,52 +7,2386 @@
     <Filter Include="WorkerSDK\improbable">
       <UniqueIdentifier>{CD9885B1-B927-0F7B-6246-23764EB41F21}</UniqueIdentifier>
     </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{AEFEE3F6-9AA0-0ECD-835B-22216F9C951D}</UniqueIdentifier>
+    </Filter>
     <Filter Include="dependencies">
       <UniqueIdentifier>{8CAD9F58-7810-2FFD-2196-67B30DD8FA7F}</UniqueIdentifier>
     </Filter>
-    <Filter Include="dependencies\automaton">
-      <UniqueIdentifier>{F38EF847-DF88-219A-C8F5-B7AAB48E8706}</UniqueIdentifier>
+    <Filter Include="dependencies\asio2">
+      <UniqueIdentifier>{B94185BC-A525-4612-0E86-4065FA883094}</UniqueIdentifier>
     </Filter>
-    <Filter Include="dependencies\automaton\core">
-      <UniqueIdentifier>{4B8FE179-B79C-0F60-4083-0B4BAC8FDB16}</UniqueIdentifier>
+    <Filter Include="dependencies\asio2\include">
+      <UniqueIdentifier>{2C12B132-1822-5D03-81DB-C1216D0A4C9C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="dependencies\automaton\core\data">
-      <UniqueIdentifier>{B4D7B012-A028-9C54-C98C-8A16B53C2FBE}</UniqueIdentifier>
+    <Filter Include="dependencies\asio2\include\asio2">
+      <UniqueIdentifier>{599E77FB-45EF-623D-6E53-51FF5A03F6A6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="dependencies\automaton\core\data\protobuf">
-      <UniqueIdentifier>{74F873E2-E012-D783-2935-E717958EFE8A}</UniqueIdentifier>
+    <Filter Include="dependencies\asio2\include\asio2\base">
+      <UniqueIdentifier>{A3660F20-0F2B-0E10-D890-3EDA4414AA45}</UniqueIdentifier>
     </Filter>
-    <Filter Include="dependencies\automaton\core\io">
-      <UniqueIdentifier>{5225D588-3E4B-9FEF-2791-24BB1356C4BB}</UniqueIdentifier>
+    <Filter Include="dependencies\asio2\include\asio2\base\component">
+      <UniqueIdentifier>{E5468EA7-5182-EE6A-5A77-6BFAC631739B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\base\detail">
+      <UniqueIdentifier>{05298554-F13B-85AD-9A25-629A861722FB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho">
+      <UniqueIdentifier>{61977C10-4D7E-3E08-F6CE-A425E294B76E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\assert">
+      <UniqueIdentifier>{02BB1593-6E20-A919-F7F8-4AF2635D9E88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast">
+      <UniqueIdentifier>{3FC1EBB6-2B29-B284-9494-C69A801BC970}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\core">
+      <UniqueIdentifier>{1711EC8B-834C-4C4F-8C41-C9DEF8FBD07F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\core\detail">
+      <UniqueIdentifier>{F9081316-E5B2-4825-CE83-5040BACCE813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\core\detail\impl">
+      <UniqueIdentifier>{9A7E9ACB-063C-4302-8F06-2F6AFBC2B556}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\core\impl">
+      <UniqueIdentifier>{784953C0-6488-FD3B-0D0B-DA6DF928B3A6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\http">
+      <UniqueIdentifier>{8EE4EE8B-FA1F-4F4F-0315-CCDE6FCFD37F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\http\detail">
+      <UniqueIdentifier>{9070E4D4-7C1A-1AE4-65EB-21FF5134BAD2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\http\impl">
+      <UniqueIdentifier>{4FDFA757-3B1E-52D3-E4A0-2E05D0BE073E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\ssl">
+      <UniqueIdentifier>{000774DD-EC84-C476-D57C-820EC199069F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\websocket">
+      <UniqueIdentifier>{950501F5-8144-AB70-2AC7-87A216E560DB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\websocket\detail">
+      <UniqueIdentifier>{B743F407-2301-9D3E-ACCB-88A618880F93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\websocket\impl">
+      <UniqueIdentifier>{B6BC8A46-222F-CD62-6BC3-02E7D774975B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\zlib">
+      <UniqueIdentifier>{DF9FF88B-4BDB-584F-54D0-D5DEC08ADD7F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\zlib\detail">
+      <UniqueIdentifier>{C1262228-ADD0-5737-96A1-5F5282EAF725}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\beast\zlib\impl">
+      <UniqueIdentifier>{4055F0B6-2C94-9A32-D516-7764C134509D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\config">
+      <UniqueIdentifier>{66EF7497-D254-081E-5B2D-AAF6C791FD8C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\config\abi">
+      <UniqueIdentifier>{E1A1A51D-4DDD-05E1-56D2-8270C28C8A11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\config\compiler">
+      <UniqueIdentifier>{B07DDEDA-9CBC-8856-453F-6588315D3EC1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\config\detail">
+      <UniqueIdentifier>{68D886D7-546C-7C7F-BD30-D633A9E3B671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\config\no_tr1">
+      <UniqueIdentifier>{883184EF-74C5-7997-DD89-D34BC93CB489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\config\platform">
+      <UniqueIdentifier>{9A7A90D7-86B9-3A53-2F3C-17851B5AF0BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\config\stdlib">
+      <UniqueIdentifier>{17128BFB-03A6-80A3-6C6A-DA57581DBB95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\core">
+      <UniqueIdentifier>{790CC2DE-E526-2580-2E49-35149AA24C87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\core\detail">
+      <UniqueIdentifier>{1B223444-07CB-9B73-3061-B7F21C69B6B4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\detail">
+      <UniqueIdentifier>{03581899-6FBD-AB1F-F895-4DF864FAA08E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\endian">
+      <UniqueIdentifier>{1FB8079C-8B1D-9B22-14F6-3CFB805A9091}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\endian\detail">
+      <UniqueIdentifier>{0177BBED-ED0A-B195-56CF-0A4A4282EB87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\logic">
+      <UniqueIdentifier>{3E4AA6B7-2AB2-6C85-931D-819B7FA48371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\mp11">
+      <UniqueIdentifier>{EF83C7DE-5B9E-2A80-A4C0-3A14101A5287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\mp11\detail">
+      <UniqueIdentifier>{D1D8E5EC-BD81-4D1C-E617-699BD21F685D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\pfr">
+      <UniqueIdentifier>{B80FE7A1-A48C-DAE4-CD09-DBF8B9E57678}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\pfr\detail">
+      <UniqueIdentifier>{7A286B55-E663-CB18-EF58-48A85B135049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef">
+      <UniqueIdentifier>{A650F9B5-12B6-8C3C-9B8E-2E1507F381AB}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\architecture">
+      <UniqueIdentifier>{D8831480-C458-5C33-ED07-9C2FD93B6A4A}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\architecture\x86">
+      <UniqueIdentifier>{8D7BFEBB-79E6-BEC7-2202-242D0E4C82AA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\compiler">
+      <UniqueIdentifier>{F0468491-DC85-2E0D-8508-0B3F7126E477}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\detail">
+      <UniqueIdentifier>{A851A9FB-94E5-9EA3-FDA9-F857E95CD995}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\hardware">
+      <UniqueIdentifier>{0342F603-EF80-A07F-9803-7DB1842156EA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\hardware\simd">
+      <UniqueIdentifier>{3F58C2EC-ABCA-0409-F45E-3A8D6010CF01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\hardware\simd\arm">
+      <UniqueIdentifier>{4ED1BDBA-BA99-8B3E-832A-9450EFB1BB79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\hardware\simd\ppc">
+      <UniqueIdentifier>{D110BEBA-3DD9-8B3E-066A-945072F1BB79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\hardware\simd\x86">
+      <UniqueIdentifier>{742BBEBA-E0F3-8B3E-A984-9450150CBC79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\hardware\simd\x86_amd">
+      <UniqueIdentifier>{858844FC-F1A6-58C9-3A74-5EDBA6D193D2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\language">
+      <UniqueIdentifier>{5922DEAB-4561-8827-EEE3-6459DA013E92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\library">
+      <UniqueIdentifier>{CA87BDE0-3699-6587-BFEA-F7C62BFBEEC0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\library\c">
+      <UniqueIdentifier>{BCA83E06-28C5-30F7-F19C-9D645D789AB8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\library\std">
+      <UniqueIdentifier>{241B8C90-9002-7786-99F0-780205571A49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\os">
+      <UniqueIdentifier>{972D934B-83AB-E3E4-6CA3-A17C58C0250D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\os\bsd">
+      <UniqueIdentifier>{FF962916-EB2A-1FBE-54EF-787240A259B0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\other">
+      <UniqueIdentifier>{772EB51F-E3F4-113C-2C50-A09E985580A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\bho\predef\platform">
+      <UniqueIdentifier>{DA43368E-C682-E009-6F05-BD3B5B239674}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\ecs">
+      <UniqueIdentifier>{83A37C10-6F8A-3E08-18DB-A42504A1B76E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\ecs\rdc">
+      <UniqueIdentifier>{0B65747D-F7E1-67C0-205F-68D40C3B0454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\ecs\socks">
+      <UniqueIdentifier>{B5023AAC-A16A-007A-0AD6-1490F65C1766}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\external">
+      <UniqueIdentifier>{CB80AE82-379B-1124-80BD-21B8EC16392B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\http">
+      <UniqueIdentifier>{E8011320-54C6-1110-1D2C-42DA89AFAD45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\http\component">
+      <UniqueIdentifier>{6A7C0CDB-D6B7-6C9E-DFAC-E92D4B67F1CE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\http\detail">
+      <UniqueIdentifier>{AAC4CA5C-96D7-CAB5-3FC1-A7A22BB36703}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\http\impl">
+      <UniqueIdentifier>{E964D699-D5CC-9C67-3E38-B17D2ABFB353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\icmp">
+      <UniqueIdentifier>{11451320-7D09-1210-466F-42DAB2F2AD45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\icmp\detail">
+      <UniqueIdentifier>{B3BF0C6E-9FD2-0CC7-48BC-E9B334AEA914}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\mqtt">
+      <UniqueIdentifier>{0EB31520-7A77-1410-43DD-44DAAF60B045}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\mqtt\detail">
+      <UniqueIdentifier>{10EF819C-FC01-82F5-A5EB-5EE291DD1E43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\mqtt\impl">
+      <UniqueIdentifier>{CFBDD324-BB25-9AF2-2491-AE081018B1DE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\rpc">
+      <UniqueIdentifier>{6DDC7C10-59C3-3E08-0214-A525EED9B76E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\rpc\component">
+      <UniqueIdentifier>{2F01395E-1B7F-89F7-0477-478FF093CB1F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\rpc\detail">
+      <UniqueIdentifier>{8FF78E6A-FB5C-22F1-8435-C4C9F0991760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\rpc\impl">
+      <UniqueIdentifier>{8E9AB6EE-FAB4-1990-43D7-2924AF304197}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\serial_port">
+      <UniqueIdentifier>{4CF47C97-3807-7DF0-E1F0-59DDCDE2193E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\tcp">
+      <UniqueIdentifier>{4FE37C10-3BCA-3E08-E41A-A525D0E0B76E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\tcp\component">
+      <UniqueIdentifier>{918A5046-7D08-A1DF-6600-5F77521DE307}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\tcp\impl">
+      <UniqueIdentifier>{B03ED8FC-1C59-3B9E-657B-4B32D1D462A5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\udp">
+      <UniqueIdentifier>{B1E77C10-9DCE-3E08-461F-A52532E5B76E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\udp\component">
+      <UniqueIdentifier>{73F1A2C6-5F6F-F35F-4867-B1F734843588}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\udp\detail">
+      <UniqueIdentifier>{532E3100-BF93-C486-486C-665FB4D0B9F5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\udp\impl">
+      <UniqueIdentifier>{52501436-BE6A-77D7-078D-876B73E69EDE}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\asio2\include\asio2\util">
+      <UniqueIdentifier>{66211A20-D2E5-1810-9B4B-49DA07CFB445}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dependencies\json">
+      <UniqueIdentifier>{D59C946A-41B3-9200-8A2A-1E22F67F6388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="network">
+      <UniqueIdentifier>{AF02550B-1BE2-D3A6-24FA-5E7D90583A08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pb">
+      <UniqueIdentifier>{17795900-0305-880B-6CB3-880B585E880B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\dependencies\automaton\core\data\data_exception.h">
-      <Filter>dependencies\automaton\core\data</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\asio2.hpp">
+      <Filter>dependencies\asio2\include\asio2</Filter>
     </ClInclude>
-    <ClInclude Include="..\dependencies\automaton\core\data\factory.h">
-      <Filter>dependencies\automaton\core\data</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\client.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
     </ClInclude>
-    <ClInclude Include="..\dependencies\automaton\core\data\msg.h">
-      <Filter>dependencies\automaton\core\data</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\alive_time_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
     </ClInclude>
-    <ClInclude Include="..\dependencies\automaton\core\data\protobuf\protobuf_factory.h">
-      <Filter>dependencies\automaton\core\data\protobuf</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\async_event_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
     </ClInclude>
-    <ClInclude Include="..\dependencies\automaton\core\data\protobuf\protobuf_msg.h">
-      <Filter>dependencies\automaton\core\data\protobuf</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\connect_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
     </ClInclude>
-    <ClInclude Include="..\dependencies\automaton\core\data\protobuf\protobuf_schema.h">
-      <Filter>dependencies\automaton\core\data\protobuf</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\connect_time_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
     </ClInclude>
-    <ClInclude Include="..\dependencies\automaton\core\data\schema.h">
-      <Filter>dependencies\automaton\core\data</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\connect_timeout_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
     </ClInclude>
-    <ClInclude Include="..\dependencies\automaton\core\io\blob.h">
-      <Filter>dependencies\automaton\core\io</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\data_persistence_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
     </ClInclude>
-    <ClInclude Include="..\dependencies\automaton\core\io\io.h">
-      <Filter>dependencies\automaton\core\io</Filter>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\disconnect_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\event_queue_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\post_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\reconnect_timer_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\send_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\silence_timer_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\socket_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\thread_id_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\user_data_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\component\user_timer_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\define.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\allocator.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\buffer_wrap.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\condition_wrap.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\function.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\function_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\linear_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\object.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\pop_options.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\push_options.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\detail\util.hpp">
+      <Filter>dependencies\asio2\include\asio2\base\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\iopool.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\listener.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\log.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\server.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\session.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\session_mgr.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\base\timer.hpp">
+      <Filter>dependencies\asio2\include\asio2\base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\assert.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\assert\source_location.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\assert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\async_base.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\basic_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\bind_handler.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\buffer_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\buffered_read_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\buffers_adaptor.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\buffers_cat.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\buffers_prefix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\buffers_range.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\buffers_suffix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\buffers_to_string.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\allocator.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\async_base.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\base64.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\bind_continuation.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\bind_default_executor.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\bind_handler.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\buffer_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\buffers_pair.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\buffers_range_adaptor.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\buffers_ref.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\chacha.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\char_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\clamp.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\config.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\cpu_info.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\flat_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\get_io_context.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\impl\read.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\is_invocable.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\ostream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\pcg.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\read.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\remap_post_to_defer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\service_base.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\sha1.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\static_const.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\static_ostream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\static_string.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\stream_base.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\stream_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\string.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\temporary_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\tuple.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\type_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\variant.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\varint.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detail\work_guard.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\detect_ssl.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\file.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\file_base.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\file_stdio.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\flat_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\flat_static_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\flat_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\async_base.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\basic_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\buffered_read_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\buffers_adaptor.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\buffers_cat.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\buffers_prefix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\buffers_suffix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\flat_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\flat_static_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\flat_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\multi_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\read_size.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\saved_handler.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\static_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\static_string.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\impl\string_param.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\make_printable.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\multi_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\ostream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\rate_policy.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\read_size.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\role.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\saved_handler.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\span.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\static_buffer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\static_string.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\stream_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\string.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\string_param.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\string_type.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\tcp_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\core\type_with_alignment.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\basic_dynamic_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\basic_file_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\basic_parser.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\buffer_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\chunk_encode.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\detail\basic_parsed_list.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\detail\basic_parser.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\detail\chunk_encode.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\detail\rfc7230.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\detail\type_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\dynamic_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\empty_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\field.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\fields.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\file_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\basic_parser.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\chunk_encode.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\fields.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\message.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\parser.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\read.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\rfc7230.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\serializer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\impl\write.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\message.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\parser.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\read.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\rfc7230.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\serializer.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\span_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\status.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\string_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\type_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\vector_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\verb.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\http\write.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\src.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\ssl.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\ssl\ssl_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\ssl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\version.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\decorator.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\frame.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\hybi13.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\impl_base.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\mask.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\pmd_extension.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\prng.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\service.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\soft_mutex.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\type_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\detail\utf8_checker.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\accept.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\close.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\handshake.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\ping.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\read.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\rfc6455.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\ssl.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\stream_impl.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\teardown.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\impl\write.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\option.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\rfc6455.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\ssl.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\stream_base.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\stream_fwd.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\websocket\teardown.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\websocket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\deflate_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\detail\bitstream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\detail\deflate_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\detail\inflate_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\detail\ranges.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\detail\window.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\impl\error.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\inflate_stream.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\beast\zlib\zlib.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\beast\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\abi\borland_prefix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\abi\borland_suffix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\abi\msvc_prefix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\abi\msvc_suffix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\abi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\abi_prefix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\abi_suffix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\assert_cxx03.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\assert_cxx11.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\assert_cxx14.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\assert_cxx17.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\assert_cxx20.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\assert_cxx98.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\auto_link.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\borland.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\clang.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\clang_version.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\codegear.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\comeau.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\common_edg.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\compaq_cxx.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\cray.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\diab.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\digitalmars.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\gcc.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\gcc_xml.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\greenhills.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\hp_acc.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\intel.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\kai.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\metrowerks.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\mpw.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\nvcc.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\pathscale.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\pgi.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\sgi_mipspro.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\sunpro_cc.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\vacpp.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\visualc.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\xlcpp.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\compiler\xlcpp_zos.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\detail\cxx_composite.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\detail\posix_features.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\detail\select_compiler_config.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\detail\select_platform_config.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\detail\select_stdlib_config.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\detail\suffix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\header_deprecated.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\helper_macros.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\no_tr1\cmath.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\no_tr1\complex.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\no_tr1\functional.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\no_tr1\memory.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\no_tr1\utility.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\no_tr1</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\aix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\amigaos.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\beos.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\bsd.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\cloudabi.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\cray.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\cygwin.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\haiku.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\hpux.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\irix.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\linux.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\macos.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\qnxnto.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\solaris.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\symbian.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\vms.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\vxworks.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\wasm.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\win32.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\platform\zos.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\pragma_message.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\requires_threads.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\dinkumware.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\libcomo.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\libcpp.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\libstdcpp3.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\modena.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\msl.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\roguewave.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\sgi.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\stlport.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\vacpp.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\stdlib\xlcpp_zos.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config\stdlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\user.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\warning_disable.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\config\workaround.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\addressof.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\alloc_construct.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\allocator_access.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\bit.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\checked_delete.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\cmath.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\default_allocator.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\demangle.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\detail\splitmix64.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\detail\string_view.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\empty_value.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\enable_if.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\exchange.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\explicit_operator_bool.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\first_scalar.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\ignore_unused.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\is_same.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\lightweight_test.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\lightweight_test_trait.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\no_exceptions_support.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\noinit_adaptor.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\noncopyable.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\null_deleter.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\nvp.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\pointer_traits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\quick_exit.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\ref.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\scoped_enum.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\span.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\swap.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\type_name.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\typeinfo.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\uncaught_exceptions.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\underlying_type.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\core\use_default.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\cstdint.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\current_function.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\detail\workaround.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\arithmetic.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\buffers.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\conversion.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\disable_warnings.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\disable_warnings_pop.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\endian_load.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\endian_reverse.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\endian_store.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\integral_by_size.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\intrinsic.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\is_scoped_enum.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\is_trivially_copyable.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\detail\order.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\endian\endian.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\endian</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\limits.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\logic\tribool.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\logic\tribool_fwd.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\logic\tribool_io.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\logic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\algorithm.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\bind.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\config.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_append.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_copy_if.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_count.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_fold.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_front.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_is_list.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_list.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_map_find.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_min_element.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_plus.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_remove_if.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_rename.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_void.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mp_with_index.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\detail\mpl_common.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\function.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\integer_sequence.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\integral.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\list.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\map.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\mpl.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\mpl_list.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\mpl_tuple.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\set.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\tuple.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\utility.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\mp11\version.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\mp11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\noncopyable.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\core.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\cast_to_layout_compatible.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\config.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\core.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\core14_classic.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\core14_loophole.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\core17.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\core17_generated.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\detectors.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\fields_count.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\for_each_field_impl.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\functional.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\io.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\make_flat_tuple_of_references.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\make_integer_sequence.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\offset_based_getter.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\rvalue_t.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\sequence_tuple.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\size_array.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\size_t_.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\stdtuple.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\tie_from_structure_tuple.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\detail\unsafe_declval.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\functions_for.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\functors.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\io.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\io_fields.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\ops.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\ops_fields.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\pfr\tuple_size.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho\pfr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef.h">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\alpha.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\arm.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\blackfin.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\convex.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\e2k.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\ia64.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\m68k.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\mips.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\parisc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\ppc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\ptx.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\pyramid.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\riscv.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\rs6k.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\sparc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\superh.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\sys370.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\sys390.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\x86.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\x86\32.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\x86\64.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\architecture\z.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\architecture</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\borland.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\clang.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\comeau.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\compaq.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\diab.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\digitalmars.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\dignus.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\edg.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\ekopath.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\gcc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\gcc_xml.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\greenhills.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\hp_acc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\iar.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\ibm.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\intel.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\kai.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\llvm.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\metaware.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\metrowerks.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\microtec.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\mpw.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\nvcc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\palm.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\pgi.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\sgi_mipspro.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\sunpro.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\tendra.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\visualc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\compiler\watcom.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\detail\_cassert.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\detail\_exception.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\detail\comp_detected.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\detail\os_detected.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\detail\platform_detected.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\detail\test.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\detail\test_def.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd\arm.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd\arm\versions.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware\simd\arm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd\ppc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd\ppc\versions.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware\simd\ppc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd\x86.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd\x86\versions.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware\simd\x86</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd\x86_amd.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware\simd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\hardware\simd\x86_amd\versions.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\hardware\simd\x86_amd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\language.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\language\cuda.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\language</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\language\objc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\language</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\language\stdc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\language</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\language\stdcpp.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\language</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\c.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\c\_prefix.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\c\cloudabi.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\c\gnu.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\c\uc.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\c\vms.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\c\zos.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\c</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\_prefix.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\cxx.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\dinkumware.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\libcomo.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\modena.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\msl.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\roguewave.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\sgi.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\stdcpp3.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\stlport.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\library\std\vacpp.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\library\std</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\make.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\aix.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\amigaos.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\beos.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\bsd.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\bsd\bsdi.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\bsd\dragonfly.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\bsd\free.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\bsd\net.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\bsd\open.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os\bsd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\cygwin.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\haiku.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\hpux.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\ios.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\irix.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\linux.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\macos.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\os400.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\qnxnto.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\solaris.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\unix.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\vms.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\os\windows.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\other.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\other\endian.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\other\wordsize.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\other\workaround.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\other</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\android.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\cloudabi.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\ios.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\mingw.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\mingw32.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\mingw64.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\windows_desktop.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\windows_phone.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\windows_runtime.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\windows_server.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\windows_store.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\windows_system.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\platform\windows_uwp.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef\platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\version.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\predef\version_number.h">
+      <Filter>dependencies\asio2\include\asio2\bho\predef</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\static_assert.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\throw_exception.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\bho\version.hpp">
+      <Filter>dependencies\asio2\include\asio2\bho</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\config.hpp">
+      <Filter>dependencies\asio2\include\asio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\ecs\rdc\rdc_call_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\ecs\rdc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\ecs\rdc\rdc_invoker.hpp">
+      <Filter>dependencies\asio2\include\asio2\ecs\rdc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\ecs\rdc\rdc_option.hpp">
+      <Filter>dependencies\asio2\include\asio2\ecs\rdc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\ecs\socks\socks5_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\ecs\socks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\ecs\socks\socks5_core.hpp">
+      <Filter>dependencies\asio2\include\asio2\ecs\socks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\ecs\socks\socks5_option.hpp">
+      <Filter>dependencies\asio2\include\asio2\ecs\socks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\ecs\socks\socks5_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\ecs\socks</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\external\asio.hpp">
+      <Filter>dependencies\asio2\include\asio2\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\external\beast.hpp">
+      <Filter>dependencies\asio2\include\asio2\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\external\cereal.hpp">
+      <Filter>dependencies\asio2\include\asio2\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\external\fmt.hpp">
+      <Filter>dependencies\asio2\include\asio2\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\external\json.hpp">
+      <Filter>dependencies\asio2\include\asio2\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\external\magic_enum.hpp">
+      <Filter>dependencies\asio2\include\asio2\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\external\pfr.hpp">
+      <Filter>dependencies\asio2\include\asio2\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\external\utf8.h">
+      <Filter>dependencies\asio2\include\asio2\external</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\component\ws_stream_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\detail\flex_body.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\detail\http_make.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\detail\http_parser.h">
+      <Filter>dependencies\asio2\include\asio2\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\detail\http_router.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\detail\http_url.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\detail\http_util.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\detail\mime_types.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\http_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\http_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\http_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\https_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\https_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\https_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\impl\http_recv_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\impl\http_send_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\impl\ws_send_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\http\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\multipart.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\request.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\response.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\ws_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\ws_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\ws_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\wss_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\wss_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\http\wss_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\http</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\icmp\detail\icmp_header.hpp">
+      <Filter>dependencies\asio2\include\asio2\icmp\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\icmp\detail\ipv4_header.hpp">
+      <Filter>dependencies\asio2\include\asio2\icmp\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\icmp\detail\ipv6_header.hpp">
+      <Filter>dependencies\asio2\include\asio2\icmp\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\icmp\ping.hpp">
+      <Filter>dependencies\asio2\include\asio2\icmp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\detect_websocket.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_handler.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_inflight_message.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_invoker.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_offline_message.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_options.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_packet_id_mgr.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_retained_message.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_session_state.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_shared_target.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_subscription_map.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_topic_alias.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\detail\mqtt_topic_util.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\impl\mqtt_recv_connect_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\impl\mqtt_send_connect_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\impl\mqtt_send_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_broker.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_core.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_error.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_protocol_util.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_protocol_v3.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_protocol_v4.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_protocol_v5.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtt_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtts_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtts_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\mqtt\mqtts_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\component\rpc_call_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\detail\rpc_invoker.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\detail\rpc_portable_binary.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\detail\rpc_protocol.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\detail\rpc_serialization.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\impl\rpc_recv_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\rpc_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\rpc_error.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\rpc_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\rpc\rpc_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\serial_port\serial_port.hpp">
+      <Filter>dependencies\asio2\include\asio2\serial_port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\component\ssl_context_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\component\ssl_stream_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\component\tcp_keepalive_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\impl\tcp_recv_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\impl\tcp_send_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\tcp_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\tcp_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\tcp_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\tcps_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\tcps_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\tcp\tcps_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\component\kcp_stream_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\udp\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\component\udp_send_cp.hpp">
+      <Filter>dependencies\asio2\include\asio2\udp\component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\detail\ikcp.h">
+      <Filter>dependencies\asio2\include\asio2\udp\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\detail\kcp_util.hpp">
+      <Filter>dependencies\asio2\include\asio2\udp\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\impl\udp_send_op.hpp">
+      <Filter>dependencies\asio2\include\asio2\udp\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\udp_cast.hpp">
+      <Filter>dependencies\asio2\include\asio2\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\udp_client.hpp">
+      <Filter>dependencies\asio2\include\asio2\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\udp_server.hpp">
+      <Filter>dependencies\asio2\include\asio2\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\udp\udp_session.hpp">
+      <Filter>dependencies\asio2\include\asio2\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\aes.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\base64.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\defer.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\des.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\event_dispatcher.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\ini.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\logger.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\md5.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\sha1.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\spin_lock.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\string.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\thread_pool.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\uuid.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\util\zlib.hpp">
+      <Filter>dependencies\asio2\include\asio2\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\asio2\include\asio2\version.hpp">
+      <Filter>dependencies\asio2\include\asio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\assertions.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\autolink.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\config.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\features.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\forwards.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\json.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\json_batchallocator.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\json_tool.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\reader.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\value.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\version.h">
+      <Filter>dependencies\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dependencies\json\writer.h">
+      <Filter>dependencies\json</Filter>
     </ClInclude>
     <ClInclude Include="WorkerSDK\improbable\c_io.h">
       <Filter>WorkerSDK\improbable</Filter>
@@ -69,31 +2403,226 @@
     <ClInclude Include="WorkerSDK\improbable\pch.h">
       <Filter>WorkerSDK\improbable</Filter>
     </ClInclude>
+    <ClInclude Include="common\BaseType.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ByteBuffer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ByteConverter.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CBase64.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CommonPool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\CsvParser.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Define.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\GCBinarryReader.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\GameUserBase.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Heap.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\HttpParam.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MacroToolsDef.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MinHeap.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MyGameTimer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Objectpool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Platform.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\PoolObject.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ProcessLinux.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SMUManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ShareMemAO.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ShareMemAPI.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Singleton.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SpinLock.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\TQueue.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ThreadPool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Timer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Tools.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\UTF8.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\UTimer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XAssert.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XFile.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XLog.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\XTime.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\base64.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\cmdline.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\sha1.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xBitOperator.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xCRC32.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xDefine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xEntry.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xEntryManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xFileTool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xGUIDMaker.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xLanguage.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xNoncopyable.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xObjPool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xProtoJsonTool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xServerRouteDefine.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xSingleton.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xStringTool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xTools.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\xUniqueIDManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="network\BasePacket.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\Connection.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\DataBuffer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\IBufferHandler.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\KcpClient.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\KcpServer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\PacketHeader.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\TcpClient.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\TcpServer.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="network\xMsgDispatcher.h">
+      <Filter>network</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\CommonCmd.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\Entity.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\SystemInternalCmd.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\WorkerCmd.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\WorkerData.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\dynamic_msg_mgr.h">
+      <Filter>pb</Filter>
+    </ClInclude>
+    <ClInclude Include="pb\xCommond.pb.h">
+      <Filter>pb</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\dependencies\automaton\core\data\factory.cc">
-      <Filter>dependencies\automaton\core\data</Filter>
+    <ClCompile Include="..\dependencies\json\json_reader.cpp">
+      <Filter>dependencies\json</Filter>
     </ClCompile>
-    <ClCompile Include="..\dependencies\automaton\core\data\msg.cc">
-      <Filter>dependencies\automaton\core\data</Filter>
+    <ClCompile Include="..\dependencies\json\json_value.cpp">
+      <Filter>dependencies\json</Filter>
     </ClCompile>
-    <ClCompile Include="..\dependencies\automaton\core\data\protobuf\protobuf_factory.cc">
-      <Filter>dependencies\automaton\core\data\protobuf</Filter>
-    </ClCompile>
-    <ClCompile Include="..\dependencies\automaton\core\data\protobuf\protobuf_msg.cc">
-      <Filter>dependencies\automaton\core\data\protobuf</Filter>
-    </ClCompile>
-    <ClCompile Include="..\dependencies\automaton\core\data\protobuf\protobuf_schema.cc">
-      <Filter>dependencies\automaton\core\data\protobuf</Filter>
-    </ClCompile>
-    <ClCompile Include="..\dependencies\automaton\core\data\schema.cc">
-      <Filter>dependencies\automaton\core\data</Filter>
-    </ClCompile>
-    <ClCompile Include="..\dependencies\automaton\core\io\blob.cc">
-      <Filter>dependencies\automaton\core\io</Filter>
-    </ClCompile>
-    <ClCompile Include="..\dependencies\automaton\core\io\io.cc">
-      <Filter>dependencies\automaton\core\io</Filter>
+    <ClCompile Include="..\dependencies\json\json_writer.cpp">
+      <Filter>dependencies\json</Filter>
     </ClCompile>
     <ClCompile Include="WorkerSDK\improbable\c_io.cpp">
       <Filter>WorkerSDK\improbable</Filter>
@@ -106,6 +2635,126 @@
     </ClCompile>
     <ClCompile Include="WorkerSDK\improbable\c_worker.cpp">
       <Filter>WorkerSDK\improbable</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ByteBuffer.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CBase64.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\CsvParser.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\GCBinarryReader.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Heap.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\HttpParam.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ProcessLinux.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\SMUManager.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ShareMemAO.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ShareMemAPI.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\ThreadPool.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Timer.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Tools.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XAssert.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XFile.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XLog.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\XTime.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\base64.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\common.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\sha1.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xGUIDMaker.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xLanguage.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xProtoJsonTool.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xStringTool.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\xTools.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="network\BasePacket.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\Connection.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\DataBuffer.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\KcpClient.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\KcpServer.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\TcpClient.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\TcpServer.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="network\xMsgDispatcher.cpp">
+      <Filter>network</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\CommonCmd.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\Entity.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\SystemInternalCmd.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\WorkerCmd.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\WorkerData.pb.cc">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\dynamic_msg_mgr.cpp">
+      <Filter>pb</Filter>
+    </ClCompile>
+    <ClCompile Include="pb\xCommond.pb.cc">
+      <Filter>pb</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
