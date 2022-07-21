@@ -99,6 +99,8 @@ class factory {
   virtual schema::field_info get_field_info(uint32_t schema_id, uint32_t index)
       const = 0;
 
+  // 根据组件id生成消息
+  virtual std::unique_ptr<msg> new_message_by_compmentid(uint32_t compmentid)= 0;
   /**
     Creates new message from a schema with message_type_id. Returns the
     created message that is used for setting and getting data,

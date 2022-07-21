@@ -4,10 +4,11 @@
 
 #include "dynamic_msg_mgr.h"
 #include "automaton/core/io/io.h"
+#include "core/data/protobuf/protobuf_msg.h"
 
 const std::string path_to_log_file = "./";
 using namespace automaton::core::io;
-
+using namespace automaton::core::data::protobuf;
  
 uint32_t SKYCELL_APIVersion(void)
 {
@@ -607,13 +608,16 @@ Worker_SnapshotState Worker_SnapshotInputStream_GetState(Worker_SnapshotInputStr
  */
 Worker_SnapshotOutputStream* Worker_SnapshotOutputStream_Create(const char* filename, const Worker_SnapshotParameters* params)
 {
-	return nullptr;
+	std::ofstream* o = new std::ofstream(filename);
+	return (Worker_SnapshotOutputStream*)o;
 }
 
 /** Closes the snapshot output stream and releases its resources. */
 void Worker_SnapshotOutputStream_Destroy(Worker_SnapshotOutputStream* output_stream)
 {
-	
+	std::ofstream* o = (std::ofstream*)output_stream;
+	if(o)
+		delete o;
 }
 
 /**
@@ -623,6 +627,25 @@ void Worker_SnapshotOutputStream_Destroy(Worker_SnapshotOutputStream* output_str
 void Worker_SnapshotOutputStream_WriteEntity(Worker_SnapshotOutputStream* output_stream,
 														const Worker_Entity* entity)
 {
+	std::ofstream& o = *(std::ofstream*)output_stream;
+	o << entity->entity_id << entity->component_count;
+	for(uint32_t i=0;i<entity->component_count;i++)
+	{
+		auto data = entity->components[i];
+		auto msg = (protobuf_msg*)data.schema_type;
+		std::string msgstr;
+		if (msg->serialize_message(&msgstr) )
+		{
+			o << data.component_id << msgstr.length();
+			o.write( msgstr.data(),msgstr.length());
+		}
+		else
+		{
+			//o << data.component_id << msgstr;
+		}
+		 
+	}
+	
 }
 
 /**

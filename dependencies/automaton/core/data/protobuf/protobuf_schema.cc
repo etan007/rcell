@@ -82,7 +82,7 @@ class io_error_collector : public google::protobuf::io::ErrorCollector {
 
 protobuf_schema::protobuf_schema() {
   file_descriptor_proto.reset(new FileDescriptorProto());
-  file_descriptor_proto->set_syntax("proto3");
+  file_descriptor_proto->set_syntax("proto2");
 }
 
 protobuf_schema::protobuf_schema(const std::string& proto_def) {

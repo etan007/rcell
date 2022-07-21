@@ -88,6 +88,9 @@ message PBWorkerMetrics
     // 直方图度量数组
     repeated PBWorkerHistogramMetric histogram_metrics = 5;
 }
+
+ 
+
 message PBSchemaComponentData
 {
     optional uint32 schema_id = 1;

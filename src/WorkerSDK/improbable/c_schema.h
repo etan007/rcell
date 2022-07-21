@@ -150,7 +150,7 @@
  WORKERSDK_API Schema_Object* Schema_GetCommandResponseObject(Schema_CommandResponse* response);
 
  /** Allocate a component data snapshot schema type instance. */
- WORKERSDK_API Schema_ComponentData* Schema_CreateComponentData(void);
+ WORKERSDK_API Schema_ComponentData* Schema_CreateComponentData(uint32_t id);
  /** Performs a deep copy of the source component data and returns the new copy. */
  WORKERSDK_API Schema_ComponentData* Schema_CopyComponentData(const Schema_ComponentData* source);
  /** Free the resources associated with a component data snapshot schema type instance. */
@@ -233,8 +233,7 @@
   * Returns 1 if success, 0 if there was a failure. Call
   * `Schema_GetError(Schema_GetComponentDataFields(target_data))` to get the error message.
   */
- WORKERSDK_API uint8_t Schema_ApplyComponentUpdateToData(const Schema_ComponentUpdate* update,
-                                                      Schema_ComponentData* target_data);
+ WORKERSDK_API uint8_t Schema_ApplyComponentUpdateToData(const Schema_ComponentUpdate* update,Schema_ComponentData* target_data);
  /**
   * Merges a component update 'update' into another component update object 'target_update'. This is
   * semantically equivalent to combining two component updates into a single component update such
@@ -252,8 +251,7 @@
   * Returns 1 if success, 0 if there was a failure. Call
   * `Schema_GetError(Schema_GetComponentUpdateFields(target_update))` to get the error message.
   */
- WORKERSDK_API uint8_t Schema_MergeComponentUpdateIntoUpdate(Schema_ComponentUpdate* update,
-                                                          Schema_ComponentUpdate* target_update);
+ WORKERSDK_API uint8_t Schema_MergeComponentUpdateIntoUpdate(Schema_ComponentUpdate* update,Schema_ComponentUpdate* target_update);
  /**
   * Takes an at-rest component data object 'data', and converts it into a component update with all
   * fields set. The resulting component update has the property that if applied to a component data
@@ -275,9 +273,7 @@
   * unused, or no error callback is specified, this parameter can be set to NULL.
   */
  WORKERSDK_API Schema_ComponentUpdate*
- Schema_ConvertComponentDataIntoUpdate(const Schema_Bundle* bundle, Schema_ComponentId component_id,
-                                       Schema_ComponentData* data, void* callback_user_data,
-                                       Schema_ErrorCallback* error_callback);
+ Schema_ConvertComponentDataIntoUpdate(const Schema_Bundle* bundle, Schema_ComponentId component_id,Schema_ComponentData* data, void* callback_user_data,Schema_ErrorCallback* error_callback);
 
  /** Completely clears all fields in the given object. */
  WORKERSDK_API void Schema_Clear(Schema_Object* object);
@@ -299,34 +295,16 @@
   * If `src == dst`, or if the objects are not associated with the same root schema type instance, no
   * operation is performed.
   */
- WORKERSDK_API void Schema_ShallowCopyField(const Schema_Object* src, Schema_Object* dst,
-                                         Schema_FieldId field_id);
+ WORKERSDK_API void Schema_ShallowCopyField(const Schema_Object* src, Schema_Object* dst,Schema_FieldId field_id);
 
- /**
-  * Allocates an orphaned Schema_Object in memory owned by the given Schema_Object instance. The
-  * returned object is owned by the associated schema type instance, but is not reachable from any
-  * other object. The memory is freed by a call to the Schema_DestroyX function associated with the
-  * parent object.
-  */
- WORKERSDK_API Schema_Object* Schema_AllocateObject(const Schema_Object* object);
-
- /**
-  * Allocates a buffer of the specified length in bytes from memory owned by the given Schema_Object
-  * instance. The memory is freed by a call to the Schema_DestroyX function associated with the
-  * parent object.
-  *
-  * Note: this is useful for allocating memory that must live as long as the root schema type
-  * instance, for example to pass to Schema_MergeFromBuffer.
-  */
- WORKERSDK_API uint8_t* Schema_AllocateBuffer(Schema_Object* object, uint32_t length);
+ 
  /**
   * Merges the given buffer into the given object, appending all fields. This function
   * can fail; if the return value is zero, call Schema_GetError to obtain an error string.
   *
   * Note: the provided buffer is not copied, and must live as long as the root schema type instance.
   */
- WORKERSDK_API uint8_t Schema_MergeFromBuffer(Schema_Object* object, const uint8_t* buffer,
-                                           uint32_t length);
+ WORKERSDK_API uint8_t Schema_MergeFromBuffer(Schema_Object* object, const uint8_t* buffer,uint32_t length);
  /** Computes the serialized length of the given Schema_Object. */
  WORKERSDK_API uint32_t Schema_GetWriteBufferLength(const Schema_Object* object);
  /**
@@ -337,8 +315,7 @@
   * `length` must equal the value returned by `Schema_GetWriteBufferLength`. Otherwise, the behavior
   * is undefined.
   */
- WORKERSDK_API uint8_t Schema_SerializeToBuffer(const Schema_Object* object, uint8_t* buffer,
-                                             uint32_t length);
+ WORKERSDK_API uint8_t Schema_SerializeToBuffer(const Schema_Object* object, uint8_t* buffer,uint32_t length);
 
  /**
   * Obtains the most recent error encountered by any object associated with the given object. The
@@ -367,17 +344,9 @@
  WORKERSDK_API void Schema_AddInt64(Schema_Object* object, Schema_FieldId field_id, int64_t value);
  WORKERSDK_API void Schema_AddUint32(Schema_Object* object, Schema_FieldId field_id, uint32_t value);
  WORKERSDK_API void Schema_AddUint64(Schema_Object* object, Schema_FieldId field_id, uint64_t value);
- WORKERSDK_API void Schema_AddSint32(Schema_Object* object, Schema_FieldId field_id, int32_t value);
- WORKERSDK_API void Schema_AddSint64(Schema_Object* object, Schema_FieldId field_id, int64_t value);
- WORKERSDK_API void Schema_AddFixed32(Schema_Object* object, Schema_FieldId field_id, uint32_t value);
- WORKERSDK_API void Schema_AddFixed64(Schema_Object* object, Schema_FieldId field_id, uint64_t value);
- WORKERSDK_API void Schema_AddSfixed32(Schema_Object* object, Schema_FieldId field_id, int32_t value);
- WORKERSDK_API void Schema_AddSfixed64(Schema_Object* object, Schema_FieldId field_id, int64_t value);
- WORKERSDK_API void Schema_AddEntityId(Schema_Object* object, Schema_FieldId field_id,
-                                    Schema_EntityId value);
+ WORKERSDK_API void Schema_AddEntityId(Schema_Object* object, Schema_FieldId field_id,Schema_EntityId value);
  WORKERSDK_API void Schema_AddEnum(Schema_Object* object, Schema_FieldId field_id, uint32_t value);
- WORKERSDK_API void Schema_AddBytes(Schema_Object* object, Schema_FieldId field_id,
-                                 const uint8_t* buffer, uint32_t length);
+ WORKERSDK_API void Schema_AddBytes(Schema_Object* object, Schema_FieldId field_id,const uint8_t* buffer, uint32_t length);
  WORKERSDK_API Schema_Object* Schema_AddObject(Schema_Object* object, Schema_FieldId field_id);
 
  /* Functions that append a list of primitive values for a particular field ID to an object. Note
@@ -385,36 +354,15 @@
   *
   * Note: no copy of the data is made. The source data must live as long as the root schema type
   * instance. */
- WORKERSDK_API void Schema_AddFloatList(Schema_Object* object, Schema_FieldId field_id,
-                                     const float* values, uint32_t count);
- WORKERSDK_API void Schema_AddDoubleList(Schema_Object* object, Schema_FieldId field_id,
-                                      const double* values, uint32_t count);
- WORKERSDK_API void Schema_AddBoolList(Schema_Object* object, Schema_FieldId field_id,
-                                    const uint8_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddInt32List(Schema_Object* object, Schema_FieldId field_id,
-                                     const int32_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddInt64List(Schema_Object* object, Schema_FieldId field_id,
-                                     const int64_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddUint32List(Schema_Object* object, Schema_FieldId field_id,
-                                      const uint32_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddUint64List(Schema_Object* object, Schema_FieldId field_id,
-                                      const uint64_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddSint32List(Schema_Object* object, Schema_FieldId field_id,
-                                      const int32_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddSint64List(Schema_Object* object, Schema_FieldId field_id,
-                                      const int64_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddFixed32List(Schema_Object* object, Schema_FieldId field_id,
-                                       const uint32_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddFixed64List(Schema_Object* object, Schema_FieldId field_id,
-                                       const uint64_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddSfixed32List(Schema_Object* object, Schema_FieldId field_id,
-                                        const int32_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddSfixed64List(Schema_Object* object, Schema_FieldId field_id,
-                                        const int64_t* values, uint32_t count);
- WORKERSDK_API void Schema_AddEntityIdList(Schema_Object* object, Schema_FieldId field_id,
-                                        const Schema_EntityId* values, uint32_t count);
- WORKERSDK_API void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,
-                                    const uint32_t* values, uint32_t count);
+ WORKERSDK_API void Schema_AddFloatList(Schema_Object* object, Schema_FieldId field_id,const float* values, uint32_t count);
+ WORKERSDK_API void Schema_AddDoubleList(Schema_Object* object, Schema_FieldId field_id,const double* values, uint32_t count);
+ WORKERSDK_API void Schema_AddBoolList(Schema_Object* object, Schema_FieldId field_id,const uint8_t* values, uint32_t count);
+ WORKERSDK_API void Schema_AddInt32List(Schema_Object* object, Schema_FieldId field_id,const int32_t* values, uint32_t count);
+ WORKERSDK_API void Schema_AddInt64List(Schema_Object* object, Schema_FieldId field_id,const int64_t* values, uint32_t count);
+ WORKERSDK_API void Schema_AddUint32List(Schema_Object* object, Schema_FieldId field_id,const uint32_t* values, uint32_t count);
+ WORKERSDK_API void Schema_AddUint64List(Schema_Object* object, Schema_FieldId field_id,const uint64_t* values, uint32_t count);
+ WORKERSDK_API void Schema_AddEntityIdList(Schema_Object* object, Schema_FieldId field_id,const Schema_EntityId* values, uint32_t count);
+ WORKERSDK_API void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,const uint32_t* values, uint32_t count);
 
  /* Functions that determine the number of occurrences of a particular field ID in an object.
   *
@@ -426,12 +374,6 @@
  WORKERSDK_API uint32_t Schema_GetInt64Count(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint32_t Schema_GetUint32Count(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint32_t Schema_GetUint64Count(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API uint32_t Schema_GetSint32Count(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API uint32_t Schema_GetSint64Count(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API uint32_t Schema_GetFixed32Count(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API uint32_t Schema_GetFixed64Count(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API uint32_t Schema_GetSfixed32Count(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API uint32_t Schema_GetSfixed64Count(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint32_t Schema_GetEntityIdCount(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint32_t Schema_GetEnumCount(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint32_t Schema_GetBytesCount(const Schema_Object* object, Schema_FieldId field_id);
@@ -453,12 +395,6 @@
  WORKERSDK_API int64_t Schema_GetInt64(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint32_t Schema_GetUint32(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint64_t Schema_GetUint64(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API int32_t Schema_GetSint32(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API int64_t Schema_GetSint64(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API uint32_t Schema_GetFixed32(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API uint64_t Schema_GetFixed64(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API int32_t Schema_GetSfixed32(const Schema_Object* object, Schema_FieldId field_id);
- WORKERSDK_API int64_t Schema_GetSfixed64(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API Schema_EntityId Schema_GetEntityId(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint32_t Schema_GetEnum(const Schema_Object* object, Schema_FieldId field_id);
  WORKERSDK_API uint32_t Schema_GetBytesLength(const Schema_Object* object, Schema_FieldId field_id);
@@ -472,78 +408,20 @@
   * the corresponding GetCount function above to to determine if the total number of fields.
   *
   * Note that, for best performance, fields should be accessed in field ID and index order. */
- WORKERSDK_API float Schema_IndexFloat(const Schema_Object* object, Schema_FieldId field_id,
-                                    uint32_t index);
- WORKERSDK_API double Schema_IndexDouble(const Schema_Object* object, Schema_FieldId field_id,
-                                      uint32_t index);
- WORKERSDK_API uint8_t Schema_IndexBool(const Schema_Object* object, Schema_FieldId field_id,
-                                     uint32_t index);
- WORKERSDK_API int32_t Schema_IndexInt32(const Schema_Object* object, Schema_FieldId field_id,
-                                      uint32_t index);
- WORKERSDK_API int64_t Schema_IndexInt64(const Schema_Object* object, Schema_FieldId field_id,
-                                      uint32_t index);
- WORKERSDK_API uint32_t Schema_IndexUint32(const Schema_Object* object, Schema_FieldId field_id,
-                                        uint32_t index);
- WORKERSDK_API uint64_t Schema_IndexUint64(const Schema_Object* object, Schema_FieldId field_id,
-                                        uint32_t index);
- WORKERSDK_API int32_t Schema_IndexSint32(const Schema_Object* object, Schema_FieldId field_id,
-                                       uint32_t index);
- WORKERSDK_API int64_t Schema_IndexSint64(const Schema_Object* object, Schema_FieldId field_id,
-                                       uint32_t index);
- WORKERSDK_API uint32_t Schema_IndexFixed32(const Schema_Object* object, Schema_FieldId field_id,
-                                         uint32_t index);
- WORKERSDK_API uint64_t Schema_IndexFixed64(const Schema_Object* object, Schema_FieldId field_id,
-                                         uint32_t index);
- WORKERSDK_API int32_t Schema_IndexSfixed32(const Schema_Object* object, Schema_FieldId field_id,
-                                         uint32_t index);
- WORKERSDK_API int64_t Schema_IndexSfixed64(const Schema_Object* object, Schema_FieldId field_id,
-                                         uint32_t index);
- WORKERSDK_API Schema_EntityId Schema_IndexEntityId(const Schema_Object* object,
-                                                 Schema_FieldId field_id, uint32_t index);
- WORKERSDK_API uint32_t Schema_IndexEnum(const Schema_Object* object, Schema_FieldId field_id,
-                                      uint32_t index);
- WORKERSDK_API uint32_t Schema_IndexBytesLength(const Schema_Object* object, Schema_FieldId field_id,
-                                             uint32_t index);
- WORKERSDK_API const uint8_t* Schema_IndexBytes(const Schema_Object* object, Schema_FieldId field_id,
-                                             uint32_t index);
- WORKERSDK_API Schema_Object* Schema_IndexObject(Schema_Object* object, Schema_FieldId field_id,
-                                              uint32_t index);
+ WORKERSDK_API float Schema_IndexFloat(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API double Schema_IndexDouble(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API uint8_t Schema_IndexBool(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API int32_t Schema_IndexInt32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API int64_t Schema_IndexInt64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API uint32_t Schema_IndexUint32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API uint64_t Schema_IndexUint64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API Schema_EntityId Schema_IndexEntityId(const Schema_Object* object,Schema_FieldId field_id, uint32_t index);
+ WORKERSDK_API uint32_t Schema_IndexEnum(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API uint32_t Schema_IndexBytesLength(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API const uint8_t* Schema_IndexBytes(const Schema_Object* object, Schema_FieldId field_id,uint32_t index);
+ WORKERSDK_API Schema_Object* Schema_IndexObject(Schema_Object* object, Schema_FieldId field_id,uint32_t index);
 
- /* Functions that copy the complete list of values for a particular field ID in an object. Boolean
-  * values are guaranteed to be either 0 or 1. The provided output array must have space for at least
-  * as many elements as returned by the corresponding GetCount function.
-  *
-  * Note that, for best performance, fields should be accessed in field ID and index order. */
- WORKERSDK_API void Schema_GetFloatList(const Schema_Object* object, Schema_FieldId field_id,
-                                     float* output_array);
- WORKERSDK_API void Schema_GetDoubleList(const Schema_Object* object, Schema_FieldId field_id,
-                                      double* output_array);
- WORKERSDK_API void Schema_GetBoolList(const Schema_Object* object, Schema_FieldId field_id,
-                                    uint8_t* output_array);
- WORKERSDK_API void Schema_GetInt32List(const Schema_Object* object, Schema_FieldId field_id,
-                                     int32_t* output_array);
- WORKERSDK_API void Schema_GetInt64List(const Schema_Object* object, Schema_FieldId field_id,
-                                     int64_t* output_array);
- WORKERSDK_API void Schema_GetUint32List(const Schema_Object* object, Schema_FieldId field_id,
-                                      uint32_t* output_array);
- WORKERSDK_API void Schema_GetUint64List(const Schema_Object* object, Schema_FieldId field_id,
-                                      uint64_t* output_array);
- WORKERSDK_API void Schema_GetSint32List(const Schema_Object* object, Schema_FieldId field_id,
-                                      int32_t* output_array);
- WORKERSDK_API void Schema_GetSint64List(const Schema_Object* object, Schema_FieldId field_id,
-                                      int64_t* output_array);
- WORKERSDK_API void Schema_GetFixed32List(const Schema_Object* object, Schema_FieldId field_id,
-                                       uint32_t* output_array);
- WORKERSDK_API void Schema_GetFixed64List(const Schema_Object* object, Schema_FieldId field_id,
-                                       uint64_t* output_array);
- WORKERSDK_API void Schema_GetSfixed32List(const Schema_Object* object, Schema_FieldId field_id,
-                                        int32_t* output_array);
- WORKERSDK_API void Schema_GetSfixed64List(const Schema_Object* object, Schema_FieldId field_id,
-                                        int64_t* output_array);
- WORKERSDK_API void Schema_GetEntityIdList(const Schema_Object* object, Schema_FieldId field_id,
-                                        Schema_EntityId* output_array);
- WORKERSDK_API void Schema_GetEnumList(const Schema_Object* object, Schema_FieldId field_id,
-                                    uint32_t* output_array);
+ 
 
  /** Free the resources associated with a Schema_Json instance. */
  WORKERSDK_API void Schema_Json_Destroy(Schema_Json* json);
@@ -584,9 +462,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API uint8_t Schema_Json_LoadObject(const Schema_Bundle* bundle,
-                                           const char* qualified_type_name, const char* json_string,
-                                           Schema_Object* object);
+ WORKERSDK_API uint8_t Schema_Json_LoadObject(const Schema_Bundle* bundle,const char* qualified_type_name, const char* json_string,Schema_Object* object);
  /**
   * Dumps the given Schema_Object instance into a Schema_Json using the provided bundle and
   * qualified type name.
@@ -600,9 +476,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_Json* Schema_Json_DumpObject(const Schema_Bundle* bundle,
-                                                const char* qualified_type_name,
-                                                Schema_Object* object);
+ WORKERSDK_API Schema_Json* Schema_Json_DumpObject(const Schema_Bundle* bundle,const char* qualified_type_name,Schema_Object* object);
 
  /**
   * Loads a Schema_ComponentData from the provided JSON string given the provided schema bundle and
@@ -617,9 +491,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_ComponentData* Schema_Json_LoadComponentData(const Schema_Bundle* bundle,
-                                                                Schema_ComponentId component_id,
-                                                                const char* json_string);
+ WORKERSDK_API Schema_ComponentData* Schema_Json_LoadComponentData(const Schema_Bundle* bundle,Schema_ComponentId component_id,const char* json_string);
  /**
   * Dumps the given Schema_ComponentData instance into a Schema_Json using the provided
   * bundle and component ID.
@@ -633,9 +505,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_Json* Schema_Json_DumpComponentData(const Schema_Bundle* bundle,
-                                                       Schema_ComponentId component_id,
-                                                       Schema_ComponentData* data);
+ WORKERSDK_API Schema_Json* Schema_Json_DumpComponentData(const Schema_Bundle* bundle,Schema_ComponentId component_id,Schema_ComponentData* data);
  /**
   * Loads a Schema_ComponentUpdate from the provided JSON string given the provided schema bundle and
   * component ID.
@@ -649,9 +519,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_ComponentUpdate* Schema_Json_LoadComponentUpdate(const Schema_Bundle* bundle,
-                                                                    Schema_ComponentId component_id,
-                                                                    const char* json_string);
+ WORKERSDK_API Schema_ComponentUpdate* Schema_Json_LoadComponentUpdate(const Schema_Bundle* bundle,Schema_ComponentId component_id,const char* json_string);
  /**
   * Dumps the given Schema_ComponentUpdate instance into a Schema_Json using the provided
   * bundle and component ID.
@@ -665,9 +533,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_Json* Schema_Json_DumpComponentUpdate(const Schema_Bundle* bundle,
-                                                         Schema_ComponentId component_id,
-                                                         Schema_ComponentUpdate* update);
+ WORKERSDK_API Schema_Json* Schema_Json_DumpComponentUpdate(const Schema_Bundle* bundle,Schema_ComponentId component_id,Schema_ComponentUpdate* update);
  /**
   * Loads a Schema_CommandRequest from the provided JSON string given the provided schema bundle and
   * component ID.
@@ -681,10 +547,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_CommandRequest* Schema_Json_LoadCommandRequest(const Schema_Bundle* bundle,
-                                                                  Schema_ComponentId component_id,
-                                                                  Schema_FieldId command_index,
-                                                                  const char* json_string);
+ WORKERSDK_API Schema_CommandRequest* Schema_Json_LoadCommandRequest(const Schema_Bundle* bundle,Schema_ComponentId component_id,Schema_FieldId command_index,const char* json_string);
  /**
   * Dumps the given Schema_CommandRequest instance into a Schema_Json using the provided schema
   * bundle, component ID and command index.
@@ -698,10 +561,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_Json* Schema_Json_DumpCommandRequest(const Schema_Bundle* bundle,
-                                                        Schema_ComponentId component_id,
-                                                        Schema_FieldId command_index,
-                                                        Schema_CommandRequest* request);
+ WORKERSDK_API Schema_Json* Schema_Json_DumpCommandRequest(const Schema_Bundle* bundle,Schema_ComponentId component_id,Schema_FieldId command_index,Schema_CommandRequest* request);
  /**
   * Loads a Schema_CommandResponse from the provided JSON string given the provided bundle, component
   * ID, and command index.
@@ -715,10 +575,7 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_CommandResponse* Schema_Json_LoadCommandResponse(const Schema_Bundle* bundle,
-                                                                    Schema_ComponentId component_id,
-                                                                    Schema_FieldId command_index,
-                                                                    const char* json_string);
+ WORKERSDK_API Schema_CommandResponse* Schema_Json_LoadCommandResponse(const Schema_Bundle* bundle,Schema_ComponentId component_id,Schema_FieldId command_index,const char* json_string);
  /**
   * Dumps the given Schema_CommandResponse instance into a Schema_Json using the provided
   * schema bundle, component ID and command index.
@@ -732,9 +589,6 @@
   * Note: Warnings may also be generated in some cases. Use Schema_Json_GetLastWarning to get a
   * string description of any warning that occurred during this operation.
   */
- WORKERSDK_API Schema_Json* Schema_Json_DumpCommandResponse(const Schema_Bundle* bundle,
-                                                         Schema_ComponentId component_id,
-                                                         Schema_FieldId command_index,
-                                                         Schema_CommandResponse* response);
+ WORKERSDK_API Schema_Json* Schema_Json_DumpCommandResponse(const Schema_Bundle* bundle,Schema_ComponentId component_id,Schema_FieldId command_index,Schema_CommandResponse* response);
  
 #endif  

@@ -97,6 +97,8 @@ class protobuf_msg : public msg {
 
     std::string get_repeated_blob(uint32_t field_tag, int32_t index) const;
 
+    uint32_t get_repeated_blob_count(uint32_t field_tag);
+
     /// Int 32
 
     void set_int32(uint32_t field_tag, int32_t value);
@@ -106,6 +108,8 @@ class protobuf_msg : public msg {
     void set_repeated_int32(uint32_t field_tag, int32_t value, int32_t index);
 
     int32_t get_repeated_int32(uint32_t field_tag, int32_t index) const;
+
+    uint32_t get_repeated_int32_count(uint32_t field_tag);
 
     /// uint32_t 32
 
@@ -117,6 +121,8 @@ class protobuf_msg : public msg {
 
     uint32_t get_repeated_uint32(uint32_t field_tag, int32_t index) const;
 
+    uint32_t get_repeated_uint32_count(uint32_t field_tag);
+
     /// Int 64
 
     void set_int64(uint32_t field_tag, int64_t value);
@@ -126,6 +132,8 @@ class protobuf_msg : public msg {
     void set_repeated_int64(uint32_t field_tag, int64_t value, int32_t index);
 
     int64_t get_repeated_int64(uint32_t field_tag, int32_t index) const;
+
+    uint32_t get_repeated_int64_count(uint32_t field_tag);
 
     /// uint32_t 64
 
@@ -137,6 +145,7 @@ class protobuf_msg : public msg {
 
     uint64_t get_repeated_uint64(uint32_t field_tag, int32_t index) const;
 
+    uint32_t get_repeated_uint64_count(uint32_t field_tag);
     /// Boolean
 
     void set_boolean(uint32_t field_tag, bool value);
@@ -146,6 +155,30 @@ class protobuf_msg : public msg {
     void set_repeated_boolean(uint32_t field_tag, bool value, int32_t index);
 
     bool get_repeated_boolean(uint32_t field_tag, int32_t index) const;
+
+    uint32_t get_repeated_boolean_count(uint32_t field_tag);
+
+    /// float
+    void set_float(uint32_t field_tag, float value);
+   
+    float get_float(uint32_t field_tag) const;
+   
+    void set_repeated_float(uint32_t field_tag, float value, int32_t index);
+   
+    float get_repeated_float(uint32_t field_tag, int32_t index) const;
+
+    uint32_t get_repeated_float_count(uint32_t field_tag);
+
+    /// double
+    void set_double(uint32_t field_tag, double value);
+     
+    double get_double(uint32_t field_tag) const;
+     
+    void set_repeated_double(uint32_t field_tag, double value, int32_t index);
+     
+    double get_repeated_double(uint32_t field_tag, int32_t index) const;
+
+    uint32_t get_repeated_double_count(uint32_t field_tag);
 
   /*
     Setters and getters for message type fields. When you use setters, you
@@ -161,12 +194,18 @@ class protobuf_msg : public msg {
   */
   void set_message(uint32_t field_tag, const msg& sub_message);
 
+  // 取消息的拷贝
   std::unique_ptr<msg> get_message(uint32_t field_tag) const;
+
+  // 返回可以修改的消息指针
+  std::unique_ptr<msg> mutable_message(uint32_t field_tag);
+
 
   void set_repeated_message(uint32_t field_tag, const msg& sub_message, int32_t index);
 
   std::unique_ptr<msg> get_repeated_message(uint32_t field_tag, int32_t index) const;
 
+  uint32_t get_repeated_message_count(uint32_t field_tag);
   /*
     Setters and getters for enum type fields. If any tag or id is invalid, or if
     you try to use these functions on non-enum fields, exception will be thrown.
@@ -181,6 +220,9 @@ class protobuf_msg : public msg {
   void set_repeated_enum(uint32_t field_tag, int32_t value, int32_t index);
 
   int32_t get_repeated_enum(uint32_t field_tag, int32_t index) const;
+
+  uint32_t get_repeated_enum_count(uint32_t field_tag);
+  
 
   uint32_t get_field_tag(const std::string& name) const;
 

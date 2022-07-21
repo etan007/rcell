@@ -244,6 +244,15 @@ void protobuf_factory::import_from_file_proto(FileDescriptorProto* fdp,
     const Descriptor* desc = fd->message_type(i);
     schemas.push_back(dynamic_message_factory->GetPrototype(desc));
     schemas_names[desc->full_name()] = static_cast<uint32_t>(schemas.size()) - 1;
+    //判断是不是compment optional uint32 id = 1[default = xxx];
+    if(auto fildinfo =  desc->FindFieldByNumber(1))
+    {
+       if( fildinfo->name()=="id" && fildinfo->cpp_type() == FieldDescriptor::CPPTYPE_UINT32)
+       {
+          auto compmentid = fildinfo->default_value_uint32();
+          compmentid2msgid[compmentid] = static_cast<uint32_t>(schemas.size()) - 1;
+       }
+    }
     extract_nested_messages(desc);
     extract_nested_enums(desc);
   }
@@ -440,6 +449,14 @@ schema::field_info protobuf_factory::get_field_info(uint32_t schema_id, uint32_t
       fdesc->name(),
       full_type,
       fdesc->is_repeated());
+}
+
+std::unique_ptr<msg> protobuf_factory::new_message_by_compmentid(uint32_t compmentid)
+{
+  auto iter = compmentid2msgid.find(compmentid);
+  if(iter == compmentid2msgid.end())
+    return nullptr;
+  return new_message_by_id(iter->second);
 }
 
 uint32_t protobuf_factory::get_schema_id(const string& message_name) const {

@@ -35,6 +35,8 @@ class protobuf_factory: public factory {
   /// Message type name to index in vector<const Message*> schemas
   std::map<std::string, uint32_t> schemas_names;
 
+  // 组件id 消息id
+  std::map<uint32_t,uint32_t> compmentid2msgid;
   /// Message schemas
   std::vector<const google::protobuf::Message*> schemas;
 
@@ -163,6 +165,9 @@ class protobuf_factory: public factory {
     exception will be thrown.
   */
   schema::field_info get_field_info(uint32_t schema_id, uint32_t index) const;
+
+  // 根据组件id生成消息
+  std::unique_ptr<msg> new_message_by_compmentid(uint32_t compmentid);
 
   /*
     Creates new message from a schema with schema_id. Returns id of the

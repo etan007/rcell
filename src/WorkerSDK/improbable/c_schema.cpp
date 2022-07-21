@@ -1,8 +1,23 @@
 ﻿#include "WorkerSDK/improbable/c_schema.h"
+#include "automaton/core/data/protobuf/protobuf_schema.h"
+#include "automaton/core/data/protobuf/protobuf_msg.h"
+#include "pb/dynamic_msg_mgr.h"
+using automaton::core::data::protobuf::protobuf_schema;
+using automaton::core::data::protobuf::protobuf_msg;
+using automaton::core::data::schema;
+using std::string;
  
-
- 
-
+struct pbs_ComponentData
+{
+   protobuf_schema* cs;
+   int32_t  MsgComponentDataID;
+   int32_t  MsgComponentDataFiledID;
+};
+struct pbs_Object
+{
+   protobuf_schema* cs;
+   int32_t msg_obj_id;
+};
  
  /**
   * Load a serialized schema bundle from a byte buffer. This byte buffer should contain a fully
@@ -95,24 +110,26 @@ Schema_Object* Schema_GetCommandResponseObject(Schema_CommandResponse* response)
  }
 
  /** Allocate a component data snapshot schema type instance. */
-Schema_ComponentData* Schema_CreateComponentData(void)
+Schema_ComponentData* Schema_CreateComponentData(uint32_t id)
  {
-  return  nullptr;
+    auto msg_factory = dynamic_msg_mgr::getMe().get_factory();
+    return (Schema_ComponentData*)msg_factory->new_message_by_compmentid(id).get();
+  
  }
  /** Performs a deep copy of the source component data and returns the new copy. */
 Schema_ComponentData* Schema_CopyComponentData(const Schema_ComponentData* source)
  {
-  return nullptr;
+   return nullptr;
  }
  /** Free the resources associated with a component data snapshot schema type instance. */
 void Schema_DestroyComponentData(Schema_ComponentData* data)
  {
-  
+ 
  }
  /** Get the component data snapshot as a Schema_Object. */
  Schema_Object* Schema_GetComponentDataFields(Schema_ComponentData* data)
  {
-  return  nullptr;
+    return (Schema_Object*)data;
  }
 
  /** Allocate a component update schema type instance. */
@@ -162,8 +179,7 @@ void Schema_ClearComponentUpdateClearedFields(Schema_ComponentUpdate* update)
  /**
   * Checks whether this updates sets an option, list of map field in a component to the empty value.
   */
-uint8_t Schema_IsComponentUpdateFieldCleared(Schema_ComponentUpdate* update,
-                                                         Schema_FieldId field_id)
+uint8_t Schema_IsComponentUpdateFieldCleared(Schema_ComponentUpdate* update,Schema_FieldId field_id)
  {
   return 0;
  }
@@ -171,8 +187,7 @@ uint8_t Schema_IsComponentUpdateFieldCleared(Schema_ComponentUpdate* update,
   * Specifies that this update sets an option, list or map field in a component to the empty
   * value.
   */
-void Schema_AddComponentUpdateClearedField(Schema_ComponentUpdate* update,
-                                                       Schema_FieldId field_id)
+void Schema_AddComponentUpdateClearedField(Schema_ComponentUpdate* update,Schema_FieldId field_id)
  {
   
  }
@@ -198,8 +213,7 @@ Schema_FieldId Schema_IndexComponentUpdateClearedField(const Schema_ComponentUpd
   * component. The output_array should have space for
   * Schema_GetComponentUpdateClearedFieldCount(update) field IDs.
   */
-void Schema_GetComponentUpdateClearedFieldList(const Schema_ComponentUpdate* update,
-                                                           Schema_FieldId* output_array)
+void Schema_GetComponentUpdateClearedFieldList(const Schema_ComponentUpdate* update,Schema_FieldId* output_array)
  {
   
  }
@@ -222,8 +236,7 @@ void Schema_GetComponentUpdateClearedFieldList(const Schema_ComponentUpdate* upd
   * Returns 1 if success, 0 if there was a failure. Call
   * `Schema_GetError(Schema_GetComponentDataFields(target_data))` to get the error message.
   */
-uint8_t Schema_ApplyComponentUpdateToData(const Schema_ComponentUpdate* update,
-                                                      Schema_ComponentData* target_data)
+uint8_t Schema_ApplyComponentUpdateToData(const Schema_ComponentUpdate* update,Schema_ComponentData* target_data)
  {
   return 0;
  }
@@ -244,8 +257,7 @@ uint8_t Schema_ApplyComponentUpdateToData(const Schema_ComponentUpdate* update,
   * Returns 1 if success, 0 if there was a failure. Call
   * `Schema_GetError(Schema_GetComponentUpdateFields(target_update))` to get the error message.
   */
-uint8_t Schema_MergeComponentUpdateIntoUpdate(Schema_ComponentUpdate* update,
-                                                          Schema_ComponentUpdate* target_update)
+uint8_t Schema_MergeComponentUpdateIntoUpdate(Schema_ComponentUpdate* update,Schema_ComponentUpdate* target_update)
  {
   return 0;
  }
@@ -269,10 +281,7 @@ uint8_t Schema_MergeComponentUpdateIntoUpdate(Schema_ComponentUpdate* update,
   * failed. 'callback_user_data' is an arbitrary value that will be passed to the callback. If
   * unused, or no error callback is specified, this parameter can be set to NULL.
   */
-Schema_ComponentUpdate*
- Schema_ConvertComponentDataIntoUpdate(const Schema_Bundle* bundle, Schema_ComponentId component_id,
-                                       Schema_ComponentData* data, void* callback_user_data,
-                                       Schema_ErrorCallback* error_callback)
+Schema_ComponentUpdate* Schema_ConvertComponentDataIntoUpdate(const Schema_Bundle* bundle, Schema_ComponentId component_id,Schema_ComponentData* data, void* callback_user_data,Schema_ErrorCallback* error_callback)
  {
   return nullptr;
  }
@@ -306,43 +315,20 @@ void Schema_ShallowCopy(const Schema_Object* src, Schema_Object* dst)
   * If `src == dst`, or if the objects are not associated with the same root schema type instance, no
   * operation is performed.
   */
-void Schema_ShallowCopyField(const Schema_Object* src, Schema_Object* dst,
-                                         Schema_FieldId field_id)
+void Schema_ShallowCopyField(const Schema_Object* src, Schema_Object* dst,Schema_FieldId field_id)
  {
   
  }
 
- /**
-  * Allocates an orphaned Schema_Object in memory owned by the given Schema_Object instance. The
-  * returned object is owned by the associated schema type instance, but is not reachable from any
-  * other object. The memory is freed by a call to the Schema_DestroyX function associated with the
-  * parent object.
-  */
-Schema_Object* Schema_AllocateObject(const Schema_Object* object)
- {
-  return nullptr;
- }
-
- /**
-  * Allocates a buffer of the specified length in bytes from memory owned by the given Schema_Object
-  * instance. The memory is freed by a call to the Schema_DestroyX function associated with the
-  * parent object.
-  *
-  * Note: this is useful for allocating memory that must live as long as the root schema type
-  * instance, for example to pass to Schema_MergeFromBuffer.
-  */
-uint8_t* Schema_AllocateBuffer(Schema_Object* object, uint32_t length)
- {
-  return nullptr;
- }
+ 
+ 
  /**
   * Merges the given buffer into the given object, appending all fields. This function
   * can fail; if the return value is zero, call Schema_GetError to obtain an error string.
   *
   * Note: the provided buffer is not copied, and must live as long as the root schema type instance.
   */
-uint8_t Schema_MergeFromBuffer(Schema_Object* object, const uint8_t* buffer,
-                                           uint32_t length)
+uint8_t Schema_MergeFromBuffer(Schema_Object* object, const uint8_t* buffer,uint32_t length)
  {
   return 0;
  }
@@ -359,8 +345,7 @@ uint32_t Schema_GetWriteBufferLength(const Schema_Object* object)
   * `length` must equal the value returned by `Schema_GetWriteBufferLength`. Otherwise, the behavior
   * is undefined.
   */
-uint8_t Schema_SerializeToBuffer(const Schema_Object* object, uint8_t* buffer,
-                                             uint32_t length)
+uint8_t Schema_SerializeToBuffer(const Schema_Object* object, uint8_t* buffer,uint32_t length)
  {
   return 0;
  }
@@ -394,97 +379,211 @@ void Schema_GetUniqueFieldIds(const Schema_Object* object, uint32_t* buffer)
   * functions below; however, making a single call to an AddList function is the most efficient way
   * to construct a list of values. Note that, for best performance, fields should be added to the
   * object in field ID order. */
-void Schema_AddFloat(Schema_Object* object, Schema_FieldId field_id, float value){}
-void Schema_AddDouble(Schema_Object* object, Schema_FieldId field_id, double value){}
-void Schema_AddBool(Schema_Object* object, Schema_FieldId field_id, uint8_t value){}
-void Schema_AddInt32(Schema_Object* object, Schema_FieldId field_id, int32_t value){}
-void Schema_AddInt64(Schema_Object* object, Schema_FieldId field_id, int64_t value){}
-void Schema_AddUint32(Schema_Object* object, Schema_FieldId field_id, uint32_t value){}
-void Schema_AddUint64(Schema_Object* object, Schema_FieldId field_id, uint64_t value){}
-void Schema_AddSint32(Schema_Object* object, Schema_FieldId field_id, int32_t value){}
-void Schema_AddSint64(Schema_Object* object, Schema_FieldId field_id, int64_t value){}
-void Schema_AddFixed32(Schema_Object* object, Schema_FieldId field_id, uint32_t value){}
-void Schema_AddFixed64(Schema_Object* object, Schema_FieldId field_id, uint64_t value){}
-void Schema_AddSfixed32(Schema_Object* object, Schema_FieldId field_id, int32_t value){}
-void Schema_AddSfixed64(Schema_Object* object, Schema_FieldId field_id, int64_t value){}
-void Schema_AddEntityId(Schema_Object* object, Schema_FieldId field_id,Schema_EntityId value){}
-void Schema_AddEnum(Schema_Object* object, Schema_FieldId field_id, uint32_t value){}
-void Schema_AddBytes(Schema_Object* object, Schema_FieldId field_id,const uint8_t* buffer, uint32_t length){}
-Schema_Object* Schema_AddObject(Schema_Object* object, Schema_FieldId field_id){return  nullptr;}
+void Schema_AddFloat(Schema_Object* object, Schema_FieldId field_id, float value)
+ {
+   protobuf_msg* msg = (protobuf_msg*)object;
+   msg->set_float(field_id,value);
+ }
+
+void Schema_AddDouble(Schema_Object* object, Schema_FieldId field_id, double value)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  msg->set_double(field_id,value);
+ }
+
+void Schema_AddBool(Schema_Object* object, Schema_FieldId field_id, uint8_t value)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  msg->set_boolean(field_id,value);
+ }
+
+void Schema_AddInt32(Schema_Object* object, Schema_FieldId field_id, int32_t value)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  msg->set_int32(field_id,value);
+ }
+
+void Schema_AddInt64(Schema_Object* object, Schema_FieldId field_id, int64_t value)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  msg->set_int64(field_id,value);
+ }
+
+void Schema_AddUint32(Schema_Object* object, Schema_FieldId field_id, uint32_t value)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  msg->set_uint32(field_id,value);
+ }
+
+void Schema_AddUint64(Schema_Object* object, Schema_FieldId field_id, uint64_t value)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  msg->set_uint64(field_id,value);
+ }
+ 
+void Schema_AddEntityId(Schema_Object* object, Schema_FieldId field_id,Schema_EntityId value)
+ {
+    Schema_AddInt64(object,field_id,value);
+ }
+
+void Schema_AddEnum(Schema_Object* object, Schema_FieldId field_id, uint32_t value)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  msg->set_enum(field_id,value);
+ }
+
+void Schema_AddBytes(Schema_Object* object, Schema_FieldId field_id,const uint8_t* buffer, uint32_t length)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  std::string blob((const char*)buffer,length);
+  msg->set_blob(field_id,blob);
+ }
+
+Schema_Object* Schema_AddObject(Schema_Object* object, Schema_FieldId field_id)
+ {
+    protobuf_msg* msg = (protobuf_msg*)object;
+    auto field_info =  msg->get_field_info_by_tag(field_id);
+    auto factory  = dynamic_msg_mgr::getMe().get_factory();
+    auto field_msg = factory->new_message_by_name(field_info.fully_qualified_type.c_str());
+    msg->set_message(field_id,*field_msg);
+    return  (Schema_Object*)msg->mutable_message(field_id).get();
+ }
 
  /* Functions that append a list of primitive values for a particular field ID to an object. Note
   * that, for best performance, fields should be added to the object in field ID order.
   *
   * Note: no copy of the data is made. The source data must live as long as the root schema type
   * instance. */
-void Schema_AddFloatList(Schema_Object* object, Schema_FieldId field_id,
-                        const float* values, uint32_t count)
+void Schema_AddFloatList(Schema_Object* object, Schema_FieldId field_id,const float* values, uint32_t count)
  {
-  
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+    msg->set_repeated_float(field_id,values[i],i);
  }
-void Schema_AddDoubleList(Schema_Object* object, Schema_FieldId field_id,
-                         const double* values, uint32_t count)
-{}
-void Schema_AddBoolList(Schema_Object* object, Schema_FieldId field_id,
-                       const uint8_t* values, uint32_t count)
-{}
-void Schema_AddInt32List(Schema_Object* object, Schema_FieldId field_id,
-                        const int32_t* values, uint32_t count)
-{}
-void Schema_AddInt64List(Schema_Object* object, Schema_FieldId field_id,
-                        const int64_t* values, uint32_t count)
-{}
-void Schema_AddUint32List(Schema_Object* object, Schema_FieldId field_id,
-                         const uint32_t* values, uint32_t count)
-{}
-void Schema_AddUint64List(Schema_Object* object, Schema_FieldId field_id,
-                         const uint64_t* values, uint32_t count)
-{}
-void Schema_AddSint32List(Schema_Object* object, Schema_FieldId field_id,
-                         const int32_t* values, uint32_t count)
-{}
-void Schema_AddSint64List(Schema_Object* object, Schema_FieldId field_id,
-                         const int64_t* values, uint32_t count)
-{}
-void Schema_AddFixed32List(Schema_Object* object, Schema_FieldId field_id,
-                          const uint32_t* values, uint32_t count)
-{}
-void Schema_AddFixed64List(Schema_Object* object, Schema_FieldId field_id,
-                          const uint64_t* values, uint32_t count)
-{}
-void Schema_AddSfixed32List(Schema_Object* object, Schema_FieldId field_id,
-                           const int32_t* values, uint32_t count)
-{}
-void Schema_AddSfixed64List(Schema_Object* object, Schema_FieldId field_id,
-                           const int64_t* values, uint32_t count)
-{}
-void Schema_AddEntityIdList(Schema_Object* object, Schema_FieldId field_id,
-                           const Schema_EntityId* values, uint32_t count)
-{}
-void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,
-                                    const uint32_t* values, uint32_t count)
-{}
+
+void Schema_AddDoubleList(Schema_Object* object, Schema_FieldId field_id,const double* values, uint32_t count)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+   msg->set_repeated_double(field_id,values[i],i);
+ }
+
+void Schema_AddBoolList(Schema_Object* object, Schema_FieldId field_id,const uint8_t* values, uint32_t count)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+   msg->set_repeated_boolean(field_id,values[i],i);
+ }
+
+void Schema_AddInt32List(Schema_Object* object, Schema_FieldId field_id,const int32_t* values, uint32_t count)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+   msg->set_repeated_int32(field_id,values[i],i);
+ }
+
+void Schema_AddInt64List(Schema_Object* object, Schema_FieldId field_id,const int64_t* values, uint32_t count)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+   msg->set_repeated_int64(field_id,values[i],i);
+ }
+
+void Schema_AddUint32List(Schema_Object* object, Schema_FieldId field_id,const uint32_t* values, uint32_t count)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+   msg->set_repeated_uint32(field_id,values[i],i);
+ }
+
+void Schema_AddUint64List(Schema_Object* object, Schema_FieldId field_id,const uint64_t* values, uint32_t count)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+   msg->set_repeated_uint64(field_id,values[i],i);
+ }
+
+void Schema_AddEntityIdList(Schema_Object* object, Schema_FieldId field_id,const Schema_EntityId* values, uint32_t count)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+   msg->set_repeated_int64(field_id,values[i],i);
+ }
+void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,const uint32_t* values, uint32_t count)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  for(int i=0; i<count; i++)
+   msg->set_repeated_enum(field_id,(int32_t)values[i],i);
+ }
 
  /* Functions that determine the number of occurrences of a particular field ID in an object.
   *
   * Note that, for best performance, fields should be accessed in field ID order. */
- uint32_t Schema_GetFloatCount(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetDoubleCount(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetBoolCount(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetInt32Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetInt64Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetUint32Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetUint64Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetSint32Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetSint64Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetFixed32Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetFixed64Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetSfixed32Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetSfixed64Count(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetEntityIdCount(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetEnumCount(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetBytesCount(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetObjectCount(const Schema_Object* object, Schema_FieldId field_id){return 0;}
+ uint32_t Schema_GetFloatCount(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_float_count(field_id);
+ }
+
+ uint32_t Schema_GetDoubleCount(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_double_count(field_id);
+ }
+
+ uint32_t Schema_GetBoolCount(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_boolean_count(field_id);
+ }
+
+ uint32_t Schema_GetInt32Count(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_int32_count(field_id);
+ }
+
+ uint32_t Schema_GetInt64Count(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_int64_count(field_id);
+ }
+
+ uint32_t Schema_GetUint32Count(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_uint32_count(field_id);
+ }
+
+ uint32_t Schema_GetUint64Count(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_uint64_count(field_id);
+ }
+ 
+ uint32_t Schema_GetEntityIdCount(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_int64_count(field_id);
+ }
+
+ uint32_t Schema_GetEnumCount(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_enum_count(field_id);
+ }
+
+ uint32_t Schema_GetBytesCount(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_blob_count(field_id);
+ }
+
+ uint32_t Schema_GetObjectCount(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_message_count(field_id);
+ }
 
  /* Functions that access a single value for a particular field ID in an object. Boolean values are
   * guaranteed to be either 0 or 1. These functions assume the field is non-repeated, i.e. if the
@@ -495,24 +594,76 @@ void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,
   * function above to determine if the field is present.
   *
   * Note that, for best performance, fields should be accessed in field ID order. */
- float Schema_GetFloat(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- double Schema_GetDouble(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint8_t Schema_GetBool(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- int32_t Schema_GetInt32(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- int64_t Schema_GetInt64(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetUint32(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint64_t Schema_GetUint64(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- int32_t Schema_GetSint32(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- int64_t Schema_GetSint64(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetFixed32(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint64_t Schema_GetFixed64(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- int32_t Schema_GetSfixed32(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- int64_t Schema_GetSfixed64(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- Schema_EntityId Schema_GetEntityId(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetEnum(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- uint32_t Schema_GetBytesLength(const Schema_Object* object, Schema_FieldId field_id){return 0;}
- const uint8_t* Schema_GetBytes(const Schema_Object* object, Schema_FieldId field_id){return nullptr;}
- Schema_Object* Schema_GetObject(Schema_Object* object, Schema_FieldId field_id){return nullptr;}
+ float Schema_GetFloat(const Schema_Object* object, Schema_FieldId field_id)
+ {
+   protobuf_msg* msg = (protobuf_msg*)object;
+   return msg->get_float(field_id);
+ }
+
+ double Schema_GetDouble(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_double(field_id);
+ }
+
+ uint8_t Schema_GetBool(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_boolean(field_id);
+ }
+
+ int32_t Schema_GetInt32(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_int32(field_id);
+ }
+
+ int64_t Schema_GetInt64(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_int64(field_id);
+ }
+ uint32_t Schema_GetUint32(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_uint32(field_id);
+ }
+
+ uint64_t Schema_GetUint64(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_uint64(field_id);
+ }
+
+ Schema_EntityId Schema_GetEntityId(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_int64(field_id);
+ }
+
+ uint32_t Schema_GetEnum(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_enum(field_id);
+ }
+
+ uint32_t Schema_GetBytesLength(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_blob(field_id).length();
+ }
+
+ const uint8_t* Schema_GetBytes(const Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return (uint8_t*)msg->get_blob(field_id).data();
+ }
+
+ Schema_Object* Schema_GetObject(Schema_Object* object, Schema_FieldId field_id)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return ( Schema_Object*)msg->get_message(field_id).get();
+ }
 
  /* Functions that access a value by index for a particular field ID in an object. Boolean values are
   * guaranteed to be either 0 or 1.
@@ -521,45 +672,79 @@ void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,
   * the corresponding GetCount function above to to determine if the total number of fields.
   *
   * Note that, for best performance, fields should be accessed in field ID and index order. */
-float Schema_IndexFloat(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-double Schema_IndexDouble(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-uint8_t Schema_IndexBool(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-int32_t Schema_IndexInt32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-int64_t Schema_IndexInt64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-uint32_t Schema_IndexUint32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-uint64_t Schema_IndexUint64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-int32_t Schema_IndexSint32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-int64_t Schema_IndexSint64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-uint32_t Schema_IndexFixed32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-uint64_t Schema_IndexFixed64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-int32_t Schema_IndexSfixed32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-int64_t Schema_IndexSfixed64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-Schema_EntityId Schema_IndexEntityId(const Schema_Object* object,Schema_FieldId field_id, uint32_t index){return 0;}
-uint32_t Schema_IndexEnum(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-uint32_t Schema_IndexBytesLength(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return 0;}
-const uint8_t* Schema_IndexBytes(const Schema_Object* object, Schema_FieldId field_id,uint32_t index){return nullptr;}
-Schema_Object* Schema_IndexObject(Schema_Object* object, Schema_FieldId field_id,uint32_t index){return nullptr;}
+float Schema_IndexFloat(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_float(field_id,index);
+ }
 
- /* Functions that copy the complete list of values for a particular field ID in an object. Boolean
-  * values are guaranteed to be either 0 or 1. The provided output array must have space for at least
-  * as many elements as returned by the corresponding GetCount function.
-  *
-  * Note that, for best performance, fields should be accessed in field ID and index order. */
-void Schema_GetFloatList(const Schema_Object* object, Schema_FieldId field_id,float* output_array){}
-void Schema_GetDoubleList(const Schema_Object* object, Schema_FieldId field_id,double* output_array){}
-void Schema_GetBoolList(const Schema_Object* object, Schema_FieldId field_id,uint8_t* output_array){}
-void Schema_GetInt32List(const Schema_Object* object, Schema_FieldId field_id,int32_t* output_array){}
-void Schema_GetInt64List(const Schema_Object* object, Schema_FieldId field_id,int64_t* output_array){}
-void Schema_GetUint32List(const Schema_Object* object, Schema_FieldId field_id,uint32_t* output_array){}
-void Schema_GetUint64List(const Schema_Object* object, Schema_FieldId field_id,uint64_t* output_array){}
-void Schema_GetSint32List(const Schema_Object* object, Schema_FieldId field_id,int32_t* output_array){}
-void Schema_GetSint64List(const Schema_Object* object, Schema_FieldId field_id,int64_t* output_array){}
-void Schema_GetFixed32List(const Schema_Object* object, Schema_FieldId field_id,uint32_t* output_array){}
-void Schema_GetFixed64List(const Schema_Object* object, Schema_FieldId field_id,uint64_t* output_array){}
-void Schema_GetSfixed32List(const Schema_Object* object, Schema_FieldId field_id,int32_t* output_array){}
-void Schema_GetSfixed64List(const Schema_Object* object, Schema_FieldId field_id,int64_t* output_array){}
-void Schema_GetEntityIdList(const Schema_Object* object, Schema_FieldId field_id,Schema_EntityId* output_array){}
-void Schema_GetEnumList(const Schema_Object* object, Schema_FieldId field_id,uint32_t* output_array){}
+double Schema_IndexDouble(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_double(field_id,index);
+ }
+
+uint8_t Schema_IndexBool(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_boolean(field_id,index);
+ }
+
+int32_t Schema_IndexInt32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_int32(field_id,index);
+ }
+
+int64_t Schema_IndexInt64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_int64(field_id,index);
+ }
+
+uint32_t Schema_IndexUint32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_uint32(field_id,index);
+ }
+
+uint64_t Schema_IndexUint64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_uint64(field_id,index);
+ }
+
+Schema_EntityId Schema_IndexEntityId(const Schema_Object* object,Schema_FieldId field_id, uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_int64(field_id,index);
+ }
+
+uint32_t Schema_IndexEnum(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_enum(field_id,index);
+ }
+
+uint32_t Schema_IndexBytesLength(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return msg->get_repeated_blob(field_id,index).length();
+ }
+
+const uint8_t* Schema_IndexBytes(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return (uint8_t*)msg->get_repeated_blob(field_id,index).data();
+ }
+
+Schema_Object* Schema_IndexObject(Schema_Object* object, Schema_FieldId field_id,uint32_t index)
+ {
+  protobuf_msg* msg = (protobuf_msg*)object;
+  return (Schema_Object*)msg->get_repeated_message(field_id,index).get();
+ }
+
+ 
 
  /** Free the resources associated with a Schema_Json instance. */
  void Schema_Json_Destroy(Schema_Json* json){}

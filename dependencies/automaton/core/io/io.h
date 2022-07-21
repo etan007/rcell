@@ -7,7 +7,12 @@
 #include <g3log/g3log.hpp>
 #include <g3log/logworker.hpp>
 #include <g3log/loglevels.hpp>
-
+#include <cerrno>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <memory>
+#include <string>
 
 // Backward compatibility with easylogging++
 
