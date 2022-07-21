@@ -67,10 +67,14 @@ int main(int argc, char* argv[])
 	g3::initializeLogging(worker.get());
 	
 	dynamic_msg_mgr::getMe().build_schema("","");
-	/*dynamic_msg_mgr::getMe().load("../pb/");
+	/*dynamic_msg_mgr::getMe().load("../pb/");*/
 	auto msg_factory = dynamic_msg_mgr::getMe().get_factory();
+	auto msg1 = msg_factory->new_message_by_name("improbable.Position");
+	auto field_info =  msg1->get_field_info_by_tag(2);
+	/*
 	auto msg1 = msg_factory->new_message_by_name("PBWorkerCommandRequestOp");
 	auto msg2 = msg_factory->new_message_by_name("PBWorkerWorkerAttributes");
+	auto field_info =  msg1->get_field_info_by_tag(1);
 	msg2->set_uint32(1, 1);
 	msg2->set_repeated_blob(2, "222222");
 	std::string aa = msg2->get_repeated_blob(2, 0);

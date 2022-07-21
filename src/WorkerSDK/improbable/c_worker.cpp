@@ -689,8 +689,8 @@ const char* Worker_SnapshotOutputStream_GetLastWarning(Worker_SnapshotOutputStre
 	
 	return true;
 }
-bool build_schema(const std::string& path,const std::string& out_path)
+bool LoadAllSchema(const std::string& path,const std::string& json_path)
 {
 	InitWorkLog();
-	return dynamic_msg_mgr::getMe().build_schema(path,out_path);
+	return dynamic_msg_mgr::getMe().load(path,json_path);
 }

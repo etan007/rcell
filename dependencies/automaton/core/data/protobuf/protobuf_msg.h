@@ -226,7 +226,7 @@ class protobuf_msg : public msg {
 
   uint32_t get_field_tag(const std::string& name) const;
 
-  schema::field_info get_field_info_by_tag(uint32_t field_tag) const;
+  virtual schema::field_info get_field_info_by_tag(uint32_t field_tag) const override;
 
  private:
   std::unique_ptr<google::protobuf::Message> m;

@@ -5,19 +5,14 @@
 using automaton::core::data::protobuf::protobuf_schema;
 using automaton::core::data::protobuf::protobuf_msg;
 using automaton::core::data::schema;
+using automaton::core::data::msg;
 using std::string;
  
 struct pbs_ComponentData
 {
-   protobuf_schema* cs;
-   int32_t  MsgComponentDataID;
-   int32_t  MsgComponentDataFiledID;
+  std::unique_ptr<msg> msg;
 };
-struct pbs_Object
-{
-   protobuf_schema* cs;
-   int32_t msg_obj_id;
-};
+ 
  
  /**
   * Load a serialized schema bundle from a byte buffer. This byte buffer should contain a fully
@@ -112,8 +107,12 @@ Schema_Object* Schema_GetCommandResponseObject(Schema_CommandResponse* response)
  /** Allocate a component data snapshot schema type instance. */
 Schema_ComponentData* Schema_CreateComponentData(uint32_t id)
  {
+    pbs_ComponentData * pdata = new pbs_ComponentData();
+  
     auto msg_factory = dynamic_msg_mgr::getMe().get_factory();
-    return (Schema_ComponentData*)msg_factory->new_message_by_compmentid(id).get();
+    pdata->msg = msg_factory->new_message_by_compmentid(id);
+  
+    return (Schema_ComponentData*)pdata;
   
  }
  /** Performs a deep copy of the source component data and returns the new copy. */
@@ -129,7 +128,8 @@ void Schema_DestroyComponentData(Schema_ComponentData* data)
  /** Get the component data snapshot as a Schema_Object. */
  Schema_Object* Schema_GetComponentDataFields(Schema_ComponentData* data)
  {
-    return (Schema_Object*)data;
+    pbs_ComponentData * pdata = (pbs_ComponentData*)data;
+    return (Schema_Object*)pdata->msg.get();
  }
 
  /** Allocate a component update schema type instance. */
