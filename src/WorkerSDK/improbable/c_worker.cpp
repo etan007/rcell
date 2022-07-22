@@ -5,11 +5,28 @@
 #include "dynamic_msg_mgr.h"
 #include "automaton/core/io/io.h"
 #include "core/data/protobuf/protobuf_msg.h"
-
+#include "core/data/msg.h"
 const std::string path_to_log_file = "./";
 using namespace automaton::core::io;
-using namespace automaton::core::data::protobuf;
- 
+using automaton::core::data::protobuf::protobuf_msg;
+using automaton::core::data::msg;
+
+struct pbs_object
+{
+	std::unique_ptr<msg> msg_;
+	std::vector<std::unique_ptr<pbs_object>> subobj;
+};
+
+struct pbs_ComponentData
+{
+	pbs_object obj;
+};
+struct Worker_SnapshotOutputStream_R
+{
+	std::ofstream* o;
+	Worker_SnapshotState state;
+};
+
 uint32_t SKYCELL_APIVersion(void)
 {
 	return 0;
@@ -608,16 +625,21 @@ Worker_SnapshotState Worker_SnapshotInputStream_GetState(Worker_SnapshotInputStr
  */
 Worker_SnapshotOutputStream* Worker_SnapshotOutputStream_Create(const char* filename, const Worker_SnapshotParameters* params)
 {
-	std::ofstream* o = new std::ofstream(filename);
-	return (Worker_SnapshotOutputStream*)o;
+	Worker_SnapshotOutputStream_R* p = new Worker_SnapshotOutputStream_R();
+	p->o = new std::ofstream(filename);
+	p->state.stream_state = WORKER_STREAM_STATE_GOOD;
+	p->state.error_message = nullptr;
+	return (Worker_SnapshotOutputStream*)p;
 }
 
 /** Closes the snapshot output stream and releases its resources. */
 void Worker_SnapshotOutputStream_Destroy(Worker_SnapshotOutputStream* output_stream)
 {
-	std::ofstream* o = (std::ofstream*)output_stream;
-	if(o)
-		delete o;
+	Worker_SnapshotOutputStream_R* p = (Worker_SnapshotOutputStream_R*)output_stream;
+	
+	 p->o->close();
+	 delete p->o;
+	 delete p;
 }
 
 /**
@@ -627,14 +649,17 @@ void Worker_SnapshotOutputStream_Destroy(Worker_SnapshotOutputStream* output_str
 void Worker_SnapshotOutputStream_WriteEntity(Worker_SnapshotOutputStream* output_stream,
 														const Worker_Entity* entity)
 {
-	std::ofstream& o = *(std::ofstream*)output_stream;
+	Worker_SnapshotOutputStream_R* p = (Worker_SnapshotOutputStream_R*)output_stream;
+	
+	std::ofstream& o = *p->o;
+	
 	o << entity->entity_id << entity->component_count;
 	for(uint32_t i=0;i<entity->component_count;i++)
 	{
 		auto data = entity->components[i];
-		auto msg = (protobuf_msg*)data.schema_type;
+		auto pbdata =  (pbs_ComponentData*)data.schema_type;
 		std::string msgstr;
-		if (msg->serialize_message(&msgstr) )
+		if (pbdata->obj.msg_->serialize_message(&msgstr) )
 		{
 			o << data.component_id << msgstr.length();
 			o.write( msgstr.data(),msgstr.length());

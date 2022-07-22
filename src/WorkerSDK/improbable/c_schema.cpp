@@ -8,11 +8,18 @@ using automaton::core::data::schema;
 using automaton::core::data::msg;
 using std::string;
  
+
+
+struct pbs_object
+{
+ std::unique_ptr<msg> msg_;
+ std::vector<std::unique_ptr<pbs_object>> subobj;
+};
+
 struct pbs_ComponentData
 {
-  std::unique_ptr<msg> msg;
+ pbs_object obj;
 };
- 
  
  /**
   * Load a serialized schema bundle from a byte buffer. This byte buffer should contain a fully
@@ -110,7 +117,7 @@ Schema_ComponentData* Schema_CreateComponentData(uint32_t id)
     pbs_ComponentData * pdata = new pbs_ComponentData();
   
     auto msg_factory = dynamic_msg_mgr::getMe().get_factory();
-    pdata->msg = msg_factory->new_message_by_compmentid(id);
+    pdata->obj.msg_ = msg_factory->new_message_by_compmentid(id);
   
     return (Schema_ComponentData*)pdata;
   
@@ -129,7 +136,7 @@ void Schema_DestroyComponentData(Schema_ComponentData* data)
  Schema_Object* Schema_GetComponentDataFields(Schema_ComponentData* data)
  {
     pbs_ComponentData * pdata = (pbs_ComponentData*)data;
-    return (Schema_Object*)pdata->msg.get();
+    return (Schema_Object*)(&pdata->obj);
  }
 
  /** Allocate a component update schema type instance. */
@@ -381,44 +388,38 @@ void Schema_GetUniqueFieldIds(const Schema_Object* object, uint32_t* buffer)
   * object in field ID order. */
 void Schema_AddFloat(Schema_Object* object, Schema_FieldId field_id, float value)
  {
-   protobuf_msg* msg = (protobuf_msg*)object;
-   msg->set_float(field_id,value);
+   ((pbs_object *)object)->msg_->set_float(field_id,value);
+   
  }
 
 void Schema_AddDouble(Schema_Object* object, Schema_FieldId field_id, double value)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  msg->set_double(field_id,value);
+  ((pbs_object *)object)->msg_->set_double(field_id,value);
  }
 
 void Schema_AddBool(Schema_Object* object, Schema_FieldId field_id, uint8_t value)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  msg->set_boolean(field_id,value);
+  ((pbs_object *)object)->msg_->set_boolean(field_id,value);
  }
 
 void Schema_AddInt32(Schema_Object* object, Schema_FieldId field_id, int32_t value)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  msg->set_int32(field_id,value);
+  ((pbs_object *)object)->msg_->set_int32(field_id,value);
  }
 
 void Schema_AddInt64(Schema_Object* object, Schema_FieldId field_id, int64_t value)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  msg->set_int64(field_id,value);
+  ((pbs_object *)object)->msg_->set_int64(field_id,value);
  }
 
 void Schema_AddUint32(Schema_Object* object, Schema_FieldId field_id, uint32_t value)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  msg->set_uint32(field_id,value);
+  ((pbs_object *)object)->msg_->set_uint32(field_id,value);
  }
 
 void Schema_AddUint64(Schema_Object* object, Schema_FieldId field_id, uint64_t value)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  msg->set_uint64(field_id,value);
+  ((pbs_object *)object)->msg_->set_uint64(field_id,value);
  }
  
 void Schema_AddEntityId(Schema_Object* object, Schema_FieldId field_id,Schema_EntityId value)
@@ -428,161 +429,254 @@ void Schema_AddEntityId(Schema_Object* object, Schema_FieldId field_id,Schema_En
 
 void Schema_AddEnum(Schema_Object* object, Schema_FieldId field_id, uint32_t value)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  msg->set_enum(field_id,value);
+  ((pbs_object *)object)->msg_->set_enum(field_id,value);
  }
 
 void Schema_AddBytes(Schema_Object* object, Schema_FieldId field_id,const uint8_t* buffer, uint32_t length)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+   
   std::string blob((const char*)buffer,length);
-  msg->set_blob(field_id,blob);
+  ((pbs_object *)object)->msg_->set_blob(field_id,blob);
  }
 
 Schema_Object* Schema_AddObject(Schema_Object* object, Schema_FieldId field_id)
  {
-    protobuf_msg* msg = (protobuf_msg*)object;
-    auto field_info =  msg->get_field_info_by_tag(field_id);
+     
+    auto pb_obj = (pbs_object*)object;
+    auto field_info =  pb_obj->msg_->get_field_info_by_tag(field_id);
     auto factory  = dynamic_msg_mgr::getMe().get_factory();
     auto field_msg = factory->new_message_by_name(field_info.fully_qualified_type.c_str());
-    msg->set_message(field_id,*field_msg);
-    return  (Schema_Object*)msg->mutable_message(field_id).get();
+    pb_obj->msg_->set_message(field_id,*field_msg);
+    pb_obj->subobj.push_back(std::unique_ptr<pbs_object>(new pbs_object()));
+    auto& obj =  pb_obj->subobj.back();
+    obj->msg_ = pb_obj->msg_->mutable_message(field_id);
+    return (Schema_Object*)obj.get();
  }
 
- /* Functions that append a list of primitive values for a particular field ID to an object. Note
+void Schema_AddFloat_Index(Schema_Object* object, Schema_FieldId field_id, float value,int32_t index )
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_float(field_id,value,index);
+}
+
+void Schema_AddDouble_Index(Schema_Object* object, Schema_FieldId field_id, double value,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_double(field_id,value,index);
+}
+
+void Schema_AddBool_Index(Schema_Object* object, Schema_FieldId field_id, uint8_t value,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_boolean(field_id,value,index);
+}
+
+void Schema_AddInt32_Index(Schema_Object* object, Schema_FieldId field_id, int32_t value,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_int32(field_id,value,index);
+}
+
+void Schema_AddInt64_Index(Schema_Object* object, Schema_FieldId field_id, int64_t value,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_int64(field_id,value,index);
+}
+
+void Schema_AddUint32_Index(Schema_Object* object, Schema_FieldId field_id, uint32_t value,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_uint32(field_id,value,index);
+}
+
+void Schema_AddUint64_Index(Schema_Object* object, Schema_FieldId field_id, uint64_t value,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_uint64(field_id,value,index);
+}
+
+void Schema_AddEntityId_Index(Schema_Object* object, Schema_FieldId field_id, Schema_EntityId value,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_int64(field_id,value,index);
+}
+
+void Schema_AddEnum_Index(Schema_Object* object, Schema_FieldId field_id, uint32_t value,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  pb_obj->msg_->set_repeated_enum(field_id,value,index);
+}
+
+void Schema_AddBytes_Index(Schema_Object* object, Schema_FieldId field_id, const uint8_t* buffer, uint32_t length,int32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  std::string blob((const char*)buffer,length);
+  pb_obj->msg_->set_repeated_blob(field_id,blob,index);
+}
+
+Schema_Object* Schema_AddObject_Index(Schema_Object* object, Schema_FieldId field_id, uint32_t index)
+{
+  auto pb_obj = (pbs_object*)object;
+  auto field_info =  pb_obj->msg_->get_field_info_by_tag(field_id);
+  auto factory  = dynamic_msg_mgr::getMe().get_factory();
+  auto field_msg = factory->new_message_by_name(field_info.fully_qualified_type.c_str());
+  pb_obj->msg_->set_repeated_message(field_id,*field_msg,index);
+ 
+  pb_obj->subobj.push_back(std::unique_ptr<pbs_object>(new pbs_object()));
+  auto& obj = pb_obj->subobj.back();
+  obj->msg_ = pb_obj->msg_->mutable_repeated_message(field_id,index);
+  return  (Schema_Object*)obj.get();
+}
+
+/* Functions that append a list of primitive values for a particular field ID to an object. Note
   * that, for best performance, fields should be added to the object in field ID order.
   *
   * Note: no copy of the data is made. The source data must live as long as the root schema type
   * instance. */
 void Schema_AddFloatList(Schema_Object* object, Schema_FieldId field_id,const float* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-    msg->set_repeated_float(field_id,values[i],i);
+    pb_obj->msg_->set_repeated_float(field_id,values[i],i);
  }
 
 void Schema_AddDoubleList(Schema_Object* object, Schema_FieldId field_id,const double* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-   msg->set_repeated_double(field_id,values[i],i);
+   pb_obj->msg_->set_repeated_double(field_id,values[i],i);
  }
 
 void Schema_AddBoolList(Schema_Object* object, Schema_FieldId field_id,const uint8_t* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-   msg->set_repeated_boolean(field_id,values[i],i);
+   pb_obj->msg_->set_repeated_boolean(field_id,values[i],i);
  }
 
 void Schema_AddInt32List(Schema_Object* object, Schema_FieldId field_id,const int32_t* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-   msg->set_repeated_int32(field_id,values[i],i);
+   pb_obj->msg_->set_repeated_int32(field_id,values[i],i);
  }
 
 void Schema_AddInt64List(Schema_Object* object, Schema_FieldId field_id,const int64_t* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-   msg->set_repeated_int64(field_id,values[i],i);
+   pb_obj->msg_->set_repeated_int64(field_id,values[i],i);
  }
 
 void Schema_AddUint32List(Schema_Object* object, Schema_FieldId field_id,const uint32_t* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-   msg->set_repeated_uint32(field_id,values[i],i);
+   pb_obj->msg_->set_repeated_uint32(field_id,values[i],i);
  }
 
 void Schema_AddUint64List(Schema_Object* object, Schema_FieldId field_id,const uint64_t* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-   msg->set_repeated_uint64(field_id,values[i],i);
+   pb_obj->msg_->set_repeated_uint64(field_id,values[i],i);
  }
 
 void Schema_AddEntityIdList(Schema_Object* object, Schema_FieldId field_id,const Schema_EntityId* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-   msg->set_repeated_int64(field_id,values[i],i);
+   pb_obj->msg_->set_repeated_int64(field_id,values[i],i);
  }
 void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,const uint32_t* values, uint32_t count)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
+  auto pb_obj = (pbs_object*)object;
   for(int i=0; i<count; i++)
-   msg->set_repeated_enum(field_id,(int32_t)values[i],i);
+   pb_obj->msg_->set_repeated_enum(field_id,(int32_t)values[i],i);
  }
 
- /* Functions that determine the number of occurrences of a particular field ID in an object.
+Schema_Object* Schema_AddObjectList(Schema_Object* object, Schema_FieldId field_id, uint32_t index)
+{
+  
+  auto pb_obj = (pbs_object*)object;
+  auto field_info =  pb_obj->msg_->get_field_info_by_tag(field_id);
+  auto factory  = dynamic_msg_mgr::getMe().get_factory();
+  auto field_msg = factory->new_message_by_name(field_info.fully_qualified_type.c_str());
+  pb_obj->msg_->set_repeated_message(field_id,*field_msg,index);
+ 
+  pb_obj->subobj.push_back(std::unique_ptr<pbs_object>(new pbs_object()));
+  auto& obj = pb_obj->subobj.back();
+  obj->msg_ = pb_obj->msg_->mutable_repeated_message(field_id,index);
+  return  (Schema_Object*)obj.get();
+}
+
+/* Functions that determine the number of occurrences of a particular field ID in an object.
   *
   * Note that, for best performance, fields should be accessed in field ID order. */
  uint32_t Schema_GetFloatCount(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_float_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_float_count(field_id);
  }
 
  uint32_t Schema_GetDoubleCount(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_double_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_double_count(field_id);
  }
 
  uint32_t Schema_GetBoolCount(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_boolean_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_boolean_count(field_id);
  }
 
  uint32_t Schema_GetInt32Count(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_int32_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_int32_count(field_id);
  }
 
  uint32_t Schema_GetInt64Count(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_int64_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_int64_count(field_id);
  }
 
  uint32_t Schema_GetUint32Count(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_uint32_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_uint32_count(field_id);
  }
 
  uint32_t Schema_GetUint64Count(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_uint64_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_uint64_count(field_id);
  }
  
  uint32_t Schema_GetEntityIdCount(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_int64_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_int64_count(field_id);
  }
 
  uint32_t Schema_GetEnumCount(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_enum_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_enum_count(field_id);
  }
 
  uint32_t Schema_GetBytesCount(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_blob_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_blob_count(field_id);
  }
 
  uint32_t Schema_GetObjectCount(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_message_count(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_message_count(field_id);
  }
 
  /* Functions that access a single value for a particular field ID in an object. Boolean values are
@@ -596,73 +690,73 @@ void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,const uin
   * Note that, for best performance, fields should be accessed in field ID order. */
  float Schema_GetFloat(const Schema_Object* object, Schema_FieldId field_id)
  {
-   protobuf_msg* msg = (protobuf_msg*)object;
-   return msg->get_float(field_id);
+   auto pb_obj = (pbs_object*)object;
+   return pb_obj->msg_->get_float(field_id);
  }
 
  double Schema_GetDouble(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_double(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_double(field_id);
  }
 
  uint8_t Schema_GetBool(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_boolean(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_boolean(field_id);
  }
 
  int32_t Schema_GetInt32(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_int32(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_int32(field_id);
  }
 
  int64_t Schema_GetInt64(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_int64(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_int64(field_id);
  }
  uint32_t Schema_GetUint32(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_uint32(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_uint32(field_id);
  }
 
  uint64_t Schema_GetUint64(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_uint64(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_uint64(field_id);
  }
 
  Schema_EntityId Schema_GetEntityId(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_int64(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_int64(field_id);
  }
 
  uint32_t Schema_GetEnum(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_enum(field_id);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_enum(field_id);
  }
 
  uint32_t Schema_GetBytesLength(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_blob(field_id).length();
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_blob(field_id).length();
  }
 
  const uint8_t* Schema_GetBytes(const Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return (uint8_t*)msg->get_blob(field_id).data();
+  auto pb_obj = (pbs_object*)object;
+  return (uint8_t*)pb_obj->msg_->get_blob(field_id).data();
  }
 
  Schema_Object* Schema_GetObject(Schema_Object* object, Schema_FieldId field_id)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return ( Schema_Object*)msg->get_message(field_id).get();
+  auto pb_obj = (pbs_object*)object;
+  return ( Schema_Object*)pb_obj->msg_->get_message(field_id).get();
  }
 
  /* Functions that access a value by index for a particular field ID in an object. Boolean values are
@@ -674,74 +768,74 @@ void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,const uin
   * Note that, for best performance, fields should be accessed in field ID and index order. */
 float Schema_IndexFloat(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_float(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_float(field_id,index);
  }
 
 double Schema_IndexDouble(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_double(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_double(field_id,index);
  }
 
 uint8_t Schema_IndexBool(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_boolean(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_boolean(field_id,index);
  }
 
 int32_t Schema_IndexInt32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_int32(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_int32(field_id,index);
  }
 
 int64_t Schema_IndexInt64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_int64(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_int64(field_id,index);
  }
 
 uint32_t Schema_IndexUint32(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_uint32(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_uint32(field_id,index);
  }
 
 uint64_t Schema_IndexUint64(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_uint64(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_uint64(field_id,index);
  }
 
 Schema_EntityId Schema_IndexEntityId(const Schema_Object* object,Schema_FieldId field_id, uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_int64(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_int64(field_id,index);
  }
 
 uint32_t Schema_IndexEnum(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_enum(field_id,index);
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_enum(field_id,index);
  }
 
 uint32_t Schema_IndexBytesLength(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return msg->get_repeated_blob(field_id,index).length();
+  auto pb_obj = (pbs_object*)object;
+  return pb_obj->msg_->get_repeated_blob(field_id,index).length();
  }
 
 const uint8_t* Schema_IndexBytes(const Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return (uint8_t*)msg->get_repeated_blob(field_id,index).data();
+  auto pb_obj = (pbs_object*)object;
+  return (uint8_t*)pb_obj->msg_->get_repeated_blob(field_id,index).data();
  }
 
 Schema_Object* Schema_IndexObject(Schema_Object* object, Schema_FieldId field_id,uint32_t index)
  {
-  protobuf_msg* msg = (protobuf_msg*)object;
-  return (Schema_Object*)msg->get_repeated_message(field_id,index).get();
+  auto pb_obj = (pbs_object*)object;
+  return (Schema_Object*)pb_obj->msg_->get_repeated_message(field_id,index).get();
  }
 
  

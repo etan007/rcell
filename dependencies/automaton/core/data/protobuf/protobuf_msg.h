@@ -205,6 +205,8 @@ class protobuf_msg : public msg {
 
   std::unique_ptr<msg> get_repeated_message(uint32_t field_tag, int32_t index) const;
 
+  std::unique_ptr<msg> mutable_repeated_message(uint32_t field_tag, int32_t index);
+
   uint32_t get_repeated_message_count(uint32_t field_tag);
   /*
     Setters and getters for enum type fields. If any tag or id is invalid, or if
@@ -226,7 +228,7 @@ class protobuf_msg : public msg {
 
   uint32_t get_field_tag(const std::string& name) const;
 
-  virtual schema::field_info get_field_info_by_tag(uint32_t field_tag) const override;
+  schema::field_info get_field_info_by_tag(uint32_t field_tag) const;
 
  private:
   std::unique_ptr<google::protobuf::Message> m;

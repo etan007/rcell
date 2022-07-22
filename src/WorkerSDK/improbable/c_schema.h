@@ -349,6 +349,18 @@
  WORKERSDK_API void Schema_AddBytes(Schema_Object* object, Schema_FieldId field_id,const uint8_t* buffer, uint32_t length);
  WORKERSDK_API Schema_Object* Schema_AddObject(Schema_Object* object, Schema_FieldId field_id);
 
+ WORKERSDK_API void Schema_AddFloat_Index(Schema_Object* object, Schema_FieldId field_id, float value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddDouble_Index(Schema_Object* object, Schema_FieldId field_id, double value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddBool_Index(Schema_Object* object, Schema_FieldId field_id, uint8_t value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddInt32_Index(Schema_Object* object, Schema_FieldId field_id, int32_t value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddInt64_Index(Schema_Object* object, Schema_FieldId field_id, int64_t value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddUint32_Index(Schema_Object* object, Schema_FieldId field_id, uint32_t value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddUint64_Index(Schema_Object* object, Schema_FieldId field_id, uint64_t value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddEntityId_Index(Schema_Object* object, Schema_FieldId field_id,Schema_EntityId value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddEnum_Index(Schema_Object* object, Schema_FieldId field_id, uint32_t value,int32_t index = -1);
+ WORKERSDK_API void Schema_AddBytes_Index(Schema_Object* object, Schema_FieldId field_id,const uint8_t* buffer, uint32_t length,int32_t index = -1);
+ WORKERSDK_API Schema_Object* Schema_AddObject_Index(Schema_Object* object, Schema_FieldId field_id,uint32_t index = -1);
+
  /* Functions that append a list of primitive values for a particular field ID to an object. Note
   * that, for best performance, fields should be added to the object in field ID order.
   *
@@ -363,7 +375,7 @@
  WORKERSDK_API void Schema_AddUint64List(Schema_Object* object, Schema_FieldId field_id,const uint64_t* values, uint32_t count);
  WORKERSDK_API void Schema_AddEntityIdList(Schema_Object* object, Schema_FieldId field_id,const Schema_EntityId* values, uint32_t count);
  WORKERSDK_API void Schema_AddEnumList(Schema_Object* object, Schema_FieldId field_id,const uint32_t* values, uint32_t count);
-
+ WORKERSDK_API Schema_Object* Schema_AddObjectList(Schema_Object* object, Schema_FieldId field_id,uint32_t index);
  /* Functions that determine the number of occurrences of a particular field ID in an object.
   *
   * Note that, for best performance, fields should be accessed in field ID order. */

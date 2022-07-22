@@ -1442,6 +1442,46 @@ std::unique_ptr<msg> protobuf_msg::get_repeated_message(uint32_t field_tag, int3
   }
 }
 
+std::unique_ptr<msg> protobuf_msg::mutable_repeated_message(uint32_t field_tag, int32_t index)
+{
+  CHECK_NOTNULL(m);
+  CHECK_NOTNULL(m->GetDescriptor());
+  const FieldDescriptor* fdesc = m->GetDescriptor()->FindFieldByNumber(field_tag);
+  if (fdesc == nullptr) {
+    std::stringstream msg;
+    msg << "No field with tag: " << field_tag;
+    LOG(WARNING) << msg.str() << '\n' << el::base::debug::StackTrace();
+    throw std::invalid_argument(msg.str());
+  }
+  if (fdesc->cpp_type() != FieldDescriptor::CPPTYPE_MESSAGE) {
+    std::stringstream msg;
+    msg << "Field is not message!";
+    LOG(WARNING) << msg.str() << '\n' << el::base::debug::StackTrace();
+    throw std::invalid_argument(msg.str());
+  }
+  if (!(fdesc->is_repeated())) {
+    std::stringstream msg;
+    msg << "Field is not repeated!";
+    LOG(WARNING) << msg.str() << '\n' << el::base::debug::StackTrace();
+    throw std::invalid_argument(msg.str());
+  }
+  const Reflection* reflect = m->GetReflection();
+  if (index >= 0 && index < reflect->FieldSize(*m, fdesc)) {
+    /*const Message* original = &reflect->GetRepeatedMessage(*m, fdesc, index);
+    Message* copy = original->New();
+    copy->CopyFrom(*original);*/
+    Message* original = reflect->MutableRepeatedMessage(m.get(), fdesc,index);
+    return std::unique_ptr<msg>(new protobuf_msg(original, msg_factory,
+        msg_factory->get_schema_id(original->GetTypeName())));
+  } else {
+    std::stringstream msg;
+    msg << "Index out of range: " << index;
+    LOG(WARNING) << msg.str() << '\n' << el::base::debug::StackTrace();
+    throw std::out_of_range(msg.str());
+  }
+  
+}
+
 uint32_t protobuf_msg::get_repeated_message_count(uint32_t field_tag)
 {
   CHECK_NOTNULL(m);

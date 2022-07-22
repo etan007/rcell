@@ -135,6 +135,27 @@ class msg {
 
   virtual bool get_repeated_boolean(uint32_t field_tag, int32_t index) const = 0;
 
+    /// float
+  virtual void set_float(uint32_t field_tag, float value) = 0;
+  
+  virtual float get_float(uint32_t field_tag) const = 0;
+  
+  virtual void set_repeated_float(uint32_t field_tag, float value, int32_t index = -1) = 0;
+  
+  virtual float get_repeated_float(uint32_t field_tag, int32_t index) const = 0;
+
+  virtual uint32_t get_repeated_float_count(uint32_t field_tag) = 0;
+  /// double
+  virtual void set_double(uint32_t field_tag, double value) = 0;
+    
+  virtual double get_double(uint32_t field_tag) const = 0;
+    
+  virtual void set_repeated_double(uint32_t field_tag, double value, int32_t index = -1) = 0;
+    
+  virtual double get_repeated_double(uint32_t field_tag, int32_t index) const = 0;
+
+  virtual uint32_t get_repeated_double_count(uint32_t field_tag) = 0;
+
   /*
     Setters and getters for message type fields. When you use setters, you
     should already have the sub_message created and initialized. This function
@@ -150,6 +171,10 @@ class msg {
   virtual void set_message(uint32_t field_tag, const msg& sub_message) = 0;
 
   virtual std::unique_ptr<msg> get_message(uint32_t field_tag) const = 0;
+    
+  // 返回可以修改的消息指针
+  virtual std::unique_ptr<msg> mutable_message(uint32_t field_tag) = 0;
+  virtual std::unique_ptr<msg> mutable_repeated_message(uint32_t field_tag, int32_t index) = 0;
 
   virtual void set_repeated_message(uint32_t field_tag, const msg& sub_message, int32_t index = -1)
       = 0;
@@ -174,6 +199,22 @@ class msg {
   virtual uint32_t get_field_tag(const std::string& name) const = 0;
 
   virtual schema::field_info get_field_info_by_tag(uint32_t field_tag) const = 0;
+
+  virtual uint32_t get_repeated_boolean_count(uint32_t field_tag) = 0;
+    
+  virtual uint32_t get_repeated_int32_count(uint32_t field_tag) = 0;
+    
+  virtual uint32_t get_repeated_int64_count(uint32_t field_tag) = 0;
+    
+  virtual uint32_t get_repeated_uint32_count(uint32_t field_tag) = 0;
+    
+  virtual uint32_t get_repeated_uint64_count(uint32_t field_tag) = 0;
+    
+  virtual uint32_t get_repeated_enum_count(uint32_t field_tag) = 0;
+    
+  virtual uint32_t get_repeated_blob_count(uint32_t field_tag) = 0;
+
+  virtual uint32_t get_repeated_message_count(uint32_t field_tag) = 0;
 };
 
 }  // namespace data
